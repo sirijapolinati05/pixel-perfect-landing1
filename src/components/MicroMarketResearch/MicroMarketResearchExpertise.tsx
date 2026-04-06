@@ -1,0 +1,100 @@
+import starImg from "@/assets/MicroMarketResearch/Star.png";
+
+const expertiseItems = [
+  {
+    title: "Granular Market Sizing",
+    description:
+      "Bottom-up TAM/SAM/SOM modeling for hyper-specific technology verticals, validating assumptions against real-world supply chain data.",
+  },
+  {
+    title: "Competitive Landscape",
+    description:
+      "Identifying emerging players and start-ups before they appear on the radar of traditional research firms. We map the innovators, not just the incumbents.",
+  },
+  {
+    title: "CX-Tech Stack Assessment",
+    description:
+      "Rigorous benchmarking of competing technical standards and protocols to determine which solutions will achieve commercial scale.",
+  },
+  {
+    title: "Supply Chain Dynamics",
+    description:
+      "Mapping the flow of critical components and materials to identify bottlenecks, geopolitical risks, and pricing pressures.",
+  },
+  {
+    title: "End-User Sentiment",
+    description:
+      'Direct engagement with early adopters and enterprise buyers to understand the "Why" behind procurement decisions in niche markets.',
+  },
+  {
+    title: "M&A Target Identification",
+    description:
+      "Helping strategic investors identify high-value acquisition targets with unique IP portfolios in emerging micro-sectors.",
+  },
+];
+
+const MicroMarketResearchExpertise = () => {
+  return (
+    <section
+      id="expertise"
+      className="relative overflow-hidden bg-[#101341] px-6 py-20 text-white lg:px-14 lg:py-24"
+    >
+      <div className="absolute left-[-80px] top-[-70px] h-[320px] w-[320px] rounded-full border border-white/20" />
+      <div className="absolute left-[-64px] top-[-56px] h-[290px] w-[290px] rounded-full border border-white/20" />
+      <div className="absolute left-[-48px] top-[-42px] h-[260px] w-[260px] rounded-full border border-white/20" />
+      <div className="absolute left-[-32px] top-[-28px] h-[230px] w-[230px] rounded-full border border-white/20" />
+      <div className="absolute left-[-16px] top-[-14px] h-[200px] w-[200px] rounded-full border border-white/20" />
+      <div className="absolute left-[0px] top-[0px] h-[170px] w-[170px] rounded-full border border-white/20" />
+      <div className="absolute bottom-[-60px] right-[-60px] h-[200px] w-[200px] rounded-full border border-white/20" />
+      <div className="absolute bottom-[-44px] right-[-44px] h-[168px] w-[168px] rounded-full border border-white/20" />
+      <div className="absolute bottom-[-28px] right-[-28px] h-[136px] w-[136px] rounded-full border border-white/20" />
+
+      <div className="relative z-10 mx-auto max-w-[1180px]">
+        <div className="mx-auto max-w-[900px] text-center">
+          <p className="text-[17px] font-semibold text-[#18afe5]">
+            <span className="inline-flex items-center gap-3">
+              <span className="h-px w-10 bg-[#18afe5]" />
+              Our Expertise
+              <span className="h-px w-10 bg-[#18afe5]" />
+            </span>
+          </p>
+          <h2 className="mt-6 text-[2.7rem] leading-none tracking-[-0.02em] md:text-[3.45rem]">
+            Micro-Market Competencies
+          </h2>
+          <p className="mx-auto mt-5 max-w-[860px] text-[17px] leading-9 text-white/90">
+            Our proprietary framework allows us to dissect complex value chains
+            and isolate the specific variables driving growth in emerging
+            technology sectors.
+          </p>
+        </div>
+
+        <div className="mt-14 grid gap-x-10 gap-y-10 md:grid-cols-3 xl:gap-x-16 xl:gap-y-12">
+          {expertiseItems.map((item) => {
+            return (
+              <article key={item.title} className="max-w-[320px]">
+                <div className="flex h-[48px] w-[48px] items-center justify-center">
+                  <img
+                    src={starImg}
+                    alt=""
+                    aria-hidden="true"
+                    className="h-[28px] w-[28px] object-contain"
+                  />
+                </div>
+
+                <h3 className="mt-4 text-[1.22rem] leading-tight tracking-[-0.01em] md:text-[1.42rem]">
+                  {item.title}
+                </h3>
+
+                <p className="mt-3 text-[15px] leading-8 text-white/92">
+                  {item.description}
+                </p>
+              </article>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default MicroMarketResearchExpertise;

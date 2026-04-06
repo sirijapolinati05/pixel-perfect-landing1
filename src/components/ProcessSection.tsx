@@ -1,0 +1,127 @@
+import { useState } from "react";
+import process1 from "@/assets/LandingPage/Landscape-Mapping.png";
+import process2 from "@/assets/LandingPage/Analyst-Pairing.png";
+import process3 from "@/assets/LandingPage/Narrative-Architecture.png";
+import process4 from "@/assets/LandingPage/Strategic-Release.png";
+import typographicImg from "@/assets/LandingPage/Typographic.png";
+
+const steps = [
+  {
+    image: process1,
+    title: "Landscape Mapping",
+    description:
+      "Comprehensive scanning of patents, projects, earnings calls, and expert interviews to identify the signal in the noise.",
+  },
+  {
+    image: process2,
+    title: "Analyst Pairing",
+    description:
+      "We match each research question with the most authoritative analyst voice — ensuring domain-specific credibility.",
+  },
+  {
+    image: process3,
+    title: "Narrative Architecture",
+    description:
+      "Data, insight, and foresight are woven into a compelling strategic narrative designed to shape decisions.",
+  },
+  {
+    image: process4,
+    title: "Strategic Release",
+    description:
+      "Papers are launched with precision timing — aligned to industry events, earnings cycles, and decision windows.",
+  },
+];
+
+const ProcessSection = () => {
+  const [activeStep, setActiveStep] = useState<number | null>(null);
+
+  return (
+    <section id="about" className="py-14 bg-process-blue overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 text-center">
+
+        <div className="flex items-center justify-center gap-3 mb-4">
+          <span className="w-6 h-[1px] bg-current opacity-40"></span>
+          <p className="text-navy font-sans text-sm tracking-widest whitespace-nowrap">
+            Our Process
+          </p>
+          <span className="w-6 h-[1px] bg-current opacity-40"></span>
+        </div>
+
+        <h2 className="text-3xl md:text-4xl font-bold text-navy mb-4">
+          From Inquiry to Industry Narrative
+        </h2>
+
+        <p className="text-navy/70 font-sans text-sm mb-10 max-w-2xl mx-auto">
+          Every Thought Shaping Paper follows a rigorous four-phase methodology that ensures depth, accuracy, and strategic relevance.
+        </p>
+
+        <div className="relative">
+          <div className="hidden lg:block absolute top-[12px] left-0 right-0 h-[2px] bg-navy/30 z-0" />
+
+          <div className="hidden lg:grid grid-cols-4 mb-8 relative z-10">
+            {steps.map((step, index) => (
+              <div key={step.title} className="flex justify-center">
+                <button
+                  type="button"
+                  onClick={() => setActiveStep(index)}
+                  className="flex h-6 w-6 items-center justify-center rounded-full bg-process-blue transition-transform duration-300 hover:scale-110"
+                >
+                  <div
+                    className={`h-6 w-6 rounded-full border border-navy/20 transition-colors duration-300 ${
+                      activeStep === index ? "bg-white" : "bg-navy/30"
+                    }`}
+                  />
+                </button>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
+          {steps.map((step, index) => (
+            <div key={step.title} className="relative">
+
+              {/* TYPO IMAGE */}
+              {index === 3 && (
+                <img
+                  src={typographicImg}
+                  alt=""
+                  aria-hidden="true"
+                  className="pointer-events-none absolute -right-40 -top-32 z-0 w-[400px] scale-[1.6] opacity-80 invert brightness-0"
+                />
+              )}
+
+              <button
+                type="button"
+                onClick={() => setActiveStep(index)}
+                onMouseEnter={() => setActiveStep(index)}
+                onMouseLeave={() => setActiveStep(null)} // 🔥 FIX HERE
+                className={`relative z-10 group p-4 text-left transition-all duration-300 ${
+                  activeStep === index
+                    ? "bg-white shadow-[0_18px_40px_rgba(10,31,68,0.16)]"
+                    : "hover:bg-white hover:shadow-[0_18px_40px_rgba(10,31,68,0.16)]"
+                }`}
+              >
+                <img
+                  src={step.image}
+                  alt={step.title}
+                  className="w-full h-40 object-cover mb-4"
+                />
+
+                <h4 className="text-navy font-bold text-lg font-serif italic mb-2">
+                  {step.title}
+                </h4>
+
+                <p className="text-navy/70 font-sans text-xs leading-relaxed">
+                  {step.description}
+                </p>
+              </button>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default ProcessSection;
