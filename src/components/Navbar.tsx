@@ -71,7 +71,7 @@ const Navbar = () => {
 
   const getTextClass = (isActive: boolean) => {
     if (!showLightNavbar) return "text-white";
-    return isActive ? "text-black" : "text-black/80 hover:text-black";
+    return isActive ? "text-black" : "text-black/80 hover:text-[#2F80ED]";
   };
 
   const logoFrameClass =
@@ -180,7 +180,7 @@ const Navbar = () => {
                     ? "text-white"
                     : isActive
                     ? "text-black border-b border-[#63d3c5]"
-                    : "text-black/80"
+                    : "text-black/80 hover:text-[#2F80ED]"
                 }`}
               >
                 {item.label}

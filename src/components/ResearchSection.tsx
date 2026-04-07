@@ -7,13 +7,13 @@ import whiteTypographyImg from "../assets/LandingPage/White-Typography.png";
 
 const ResearchSection = () => {
   return (
-    <section id="latest-research" className="overflow-hidden bg-[#F7F9FC] py-20">
+    <section id="latest-research" className="overflow-hidden bg-[#F7F9FC] py-10">
       <div className="mx-auto max-w-6xl px-6 text-center">
 
         <div className="mb-3 flex items-center justify-center gap-3">
           <span className="h-[1px] w-6 bg-current opacity-40"></span>
 
-          <p className="whitespace-nowrap text-xs tracking-widest text-gray-500">
+          <p className="whitespace-nowrap text-xs font-bold tracking-widest text-gray-500">
             Latest Research
           </p>
 
@@ -24,7 +24,7 @@ const ResearchSection = () => {
           Fresh from the <span className="text-blue-600">ResearchFabric</span>
         </h2>
 
-        <p className="mb-12 text-xs text-gray-500">
+        <p className="mb-8 text-sm text-gray-500">
           Our most recent Thought Shaping Papers and strategic briefings.
         </p>
 
@@ -42,7 +42,7 @@ const ResearchSection = () => {
             transform transition-all duration-300 hover:scale-[1.05] hover:bg-[#0A1F44]">
 
               <div className="flex-1 p-4">
-                <span className="rounded-full bg-gradient-to-r from-blue-800 to-sky-400 px-2 py-1 text-[10px] text-white">
+                <span className="rounded-full bg-gradient-to-r from-blue-800 to-sky-400 px-3 py-1 text-xs text-white">
                   AI / IA
                 </span>
 
@@ -50,18 +50,18 @@ const ResearchSection = () => {
                   The Agentic Enterprise: When AI Stops Assisting and Starts Acting
                 </h3>
 
-                <p className="mt-2 text-[11px] text-gray-500 group-hover:text-white/80">
+                <p className="mt-2 text-sm leading-6 text-gray-500 group-hover:text-white/80">
                   A framework for how autonomous AI agents reshape enterprise operations.
                 </p>
 
                 <div className="mt-3 flex items-center justify-between whitespace-nowrap">
-                  <p className="text-[10px] font-medium text-gray-700 group-hover:text-white/80">
+                  <p className="text-xs font-medium text-gray-700 group-hover:text-white/80">
                     FEB 2026 · Thought Shaping Paper
                   </p>
 
                   <div className="flex items-center text-black group-hover:text-white">
                     <img src={linkedinIcon} className="h-5 w-5 object-contain" />
-                    <span className="-ml-1 text-[9px] leading-none">
+                    <span className="-ml-1 text-[11px] leading-none">
                       Releasing soon on <span className="font-semibold">LinkedIn</span>
                     </span>
                   </div>
@@ -81,7 +81,7 @@ const ResearchSection = () => {
               <img src={research2} className="h-32 w-full object-cover" />
 
               <div className="absolute inset-0 flex flex-col justify-between bg-black/60 p-3 text-left">
-                <span className="w-fit rounded-full bg-gradient-to-r from-blue-800 to-sky-400 px-2 py-1 text-[10px] text-white">
+                <span className="w-fit rounded-full bg-gradient-to-r from-blue-800 to-sky-400 px-3 py-1 text-xs text-white">
                   Chipset
                 </span>
 
@@ -90,13 +90,13 @@ const ResearchSection = () => {
                     Beyond Moore: Custom Silicon in AI Infrastructure
                   </h4>
 
-                  <p className="mt-1 text-[10px] text-white/80">
+                  <p className="mt-1 text-xs text-white/80">
                     How hyperscalers in-house chip programs are reshaping the semiconductor landscape
                   </p>
 
                   <div className="mt-2 flex items-center text-white">
                     <img src={linkedinIcon} className="h-4 w-4 object-contain" />
-                    <span className="ml-1 text-[9px] leading-none">
+                    <span className="ml-1 text-[11px] leading-none">
                       Releasing soon on <span className="font-semibold">LinkedIn</span>
                     </span>
                   </div>
@@ -111,22 +111,22 @@ const ResearchSection = () => {
 
               <div className="flex flex-1 flex-col justify-between p-3">
                 <div>
-                  <span className="rounded-full bg-gradient-to-r from-blue-800 to-sky-400 px-2 py-1 text-[10px] text-white">
+                  <span className="rounded-full bg-gradient-to-r from-blue-800 to-sky-400 px-3 py-1 text-xs text-white">
                     Quantum
                   </span>
 
-                  <h4 className="mt-2 text-xs font-semibold group-hover:text-white">
+                  <h4 className="mt-2 text-sm font-semibold group-hover:text-white">
                     Quantum Readiness Index 2026: Enterprise Preparedness Assessment
                   </h4>
 
-                  <p className="mt-1 text-[11px] leading-relaxed text-gray-500 group-hover:text-white/80">
+                  <p className="mt-1 text-sm leading-6 text-gray-500 group-hover:text-white/80">
                     Benchmarking Fortune 500 quantum strategies across readiness, talent, and investment vectors.
                   </p>
                 </div>
 
                 <div className="mt-3 flex items-center text-black group-hover:text-white">
                   <img src={linkedinIcon} className="h-5 w-5 object-contain" />
-                  <span className="-ml-1 text-[9px] leading-none">
+                  <span className="-ml-1 text-[11px] leading-none">
                     Releasing soon on <span className="font-semibold">LinkedIn</span>
                   </span>
                 </div>
@@ -139,7 +139,7 @@ const ResearchSection = () => {
           transform transition-all duration-300 hover:scale-[1.05] hover:bg-[#0A1F44]">
 
             <div className="flex-1 p-4">
-              <span className="rounded-full bg-gradient-to-r from-blue-800 to-sky-400 px-2 py-1 text-[10px] text-white">
+              <span className="rounded-full bg-gradient-to-r from-blue-800 to-sky-400 px-3 py-1 text-xs text-white">
                 AI / IA
               </span>
 
@@ -147,18 +147,18 @@ const ResearchSection = () => {
                 The Agentic Enterprise: When AI Stops Assisting and Starts Acting
               </h3>
 
-              <p className="mt-2 text-[11px] text-gray-500 group-hover:text-white/80">
+              <p className="mt-2 text-sm leading-6 text-gray-500 group-hover:text-white/80">
                 A framework for how autonomous AI agents reshape enterprise operations.
               </p>
 
               <div className="mt-3 flex items-center justify-between whitespace-nowrap">
-                <p className="text-[10px] font-medium text-gray-700 group-hover:text-white/80">
+                <p className="text-xs font-medium text-gray-700 group-hover:text-white/80">
                   FEB 2026 · Thought Shaping Paper
                 </p>
 
                 <div className="flex items-center text-black group-hover:text-white">
                   <img src={linkedinIcon} className="h-5 w-5 object-contain" />
-                  <span className="-ml-1 text-[9px] leading-none">
+                  <span className="-ml-1 text-[11px] leading-none">
                     Releasing soon on <span className="font-semibold">LinkedIn</span>
                   </span>
                 </div>

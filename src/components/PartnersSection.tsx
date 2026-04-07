@@ -42,7 +42,7 @@ const PartnersSection = () => {
         <div className="flex items-center justify-center gap-3 mb-3">
           <span className="w-6 h-[1px] bg-current opacity-40"></span>
 
-          <p className="text-muted-foreground font-sans text-sm tracking-widest whitespace-nowrap">
+          <p className="text-muted-foreground font-sans text-sm font-bold tracking-widest whitespace-nowrap">
             Research Partners
           </p>
 

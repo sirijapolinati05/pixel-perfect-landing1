@@ -28,7 +28,7 @@ const TechnologyResearchDomains = () => {
   return (
     <section
       id="domains"
-      className="relative overflow-hidden bg-[#f8f7f3] px-6 py-20 text-[#141742] lg:px-14"
+      className="relative overflow-hidden bg-[#f8f7f3] px-6 py-14 text-[#141742] lg:px-14"
     >
       <img
         src={whiteTypographyImg}
@@ -42,23 +42,23 @@ const TechnologyResearchDomains = () => {
         <div className="flex items-center gap-3 mb-2">
           <span className="w-6 h-[1px] bg-current opacity-40"></span>
 
-          <p className="text-[18px] font-semibold text-[#202453] whitespace-nowrap">
+          <p className="text-[18px] font-bold tracking-[0.01em] text-[#202453] whitespace-nowrap">
             Research Domains
           </p>
 
           <span className="w-6 h-[1px] bg-current opacity-40"></span>
         </div>
 
-        <h2 className="mt-4 max-w-none text-[2.4rem] leading-[1.05] tracking-[-0.02em] md:text-[3rem] lg:text-[3.35rem]">
+        <h2 className="mt-3 max-w-none text-[2.4rem] font-bold leading-[1.05] tracking-[-0.02em] md:text-[3rem] lg:text-[3.35rem]">
           Three Pillars Shaping the Future of Technology
         </h2>
 
-        <p className="mt-5 max-w-[900px] text-xl leading-9 text-[#202453]/88">
+        <p className="mt-4 max-w-[900px] text-xl leading-9 text-[#202453]/88">
           Our research is concentrated across three transformative domains where deep
           analysis and expert perspective create outsized strategic value.
         </p>
 
-        <div className="relative mt-10 grid gap-5 lg:grid-cols-3">
+        <div className="relative mt-6 grid gap-4 lg:grid-cols-3">
           {domains.map((domain) => (
             <article
               key={domain.title}
@@ -76,19 +76,19 @@ const TechnologyResearchDomains = () => {
               </div>
 
               {/* TITLE */}
-              <h3 className="mt-3 max-w-[250px] text-[1.45rem] leading-[1.04] transition-colors duration-300 group-hover:text-[#0A1F44]">
+              <h3 className="mt-2.5 max-w-[250px] text-[1.45rem] leading-[1.04] transition-colors duration-300 group-hover:text-[#0A1F44]">
                 {domain.title}
               </h3>
 
               {/* DESCRIPTION */}
-              <p className="mt-2.5 max-w-[285px] text-[14px] leading-6 text-[#202453]/88 flex-grow transition-colors duration-300 group-hover:text-[#202453]">
+              <p className="mt-2 max-w-[285px] text-[14px] leading-6 text-[#202453]/88 flex-grow transition-colors duration-300 group-hover:text-[#202453]">
                 {domain.description}
               </p>
 
               {/* BUTTON */}
               <a
                 href="#papers"
-                className="mt-4 inline-flex items-center gap-2 text-[13px] font-semibold uppercase tracking-[0.02em] text-[#161a46]
+                className="mt-3 inline-flex items-center gap-2 text-[13px] font-semibold uppercase tracking-[0.02em] text-[#161a46]
                 transition-all duration-300 group-hover:gap-3"
               >
                 Explore Research

@@ -26,7 +26,7 @@ const microMarketTags = [
 ];
 
 const tagClassName =
-  "rounded-full border border-[#C7D2E2] bg-white px-3 py-[6px] text-[11px] leading-none text-[#0A1F44]";
+  "rounded-full border border-[#C7D2E2] bg-white px-3 py-[6px] text-[13px] leading-none text-[#0A1F44]";
 
 const buttonClassName =
   "mt-auto inline-flex h-10 items-center justify-center gap-2 rounded-full bg-[#111B4D] px-5 text-[12px] font-medium text-white shadow-[0_8px_18px_rgba(17,27,77,0.18)]";
@@ -35,9 +35,10 @@ const PracticesSection = () => {
   return (
     <section
       id="practices"
-      className="relative overflow-hidden bg-[#F7F9FC] py-20"
+      className="relative overflow-hidden bg-[#F7F9FC] py-10"
     >
-      <div className="mx-auto mb-10 max-w-7xl px-6">
+      {/* HEADER */}
+      <div className="mx-auto mb-6 max-w-7xl px-6">
         <h2 className="relative max-w-[1120px] text-[32px] font-serif font-semibold leading-[1.15] text-[#0A1F44] md:text-[56px]">
           Two Practices on the Future of{" "}
           <span className="relative inline-block">
@@ -52,15 +53,16 @@ const PracticesSection = () => {
           </span>
         </h2>
 
-        <p className="mt-5 max-w-[760px] text-[13px] leading-[1.85] text-[#5A6B85]">
+        <p className="mt-3 max-w-[760px] text-[13px] leading-[1.85] text-[#5A6B85]">
           RESEARCHFABRIC™ operates through two focused research practices.
         </p>
       </div>
 
+      {/* GRID */}
       <div className="mx-auto grid max-w-6xl items-stretch gap-3 px-6 md:grid-cols-3">
 
-        {/* 1st IMAGE CARD */}
-        <div className="h-[364px] overflow-hidden rounded-[10px] border border-[#E2E6EE] bg-white shadow-[0_10px_24px_rgba(17,27,77,0.10)] 
+        {/* IMAGE CARD */}
+        <div className="h-full min-h-[380px] overflow-hidden rounded-[10px] border border-[#E2E6EE] bg-white shadow-[0_10px_24px_rgba(17,27,77,0.10)] 
         transform transition-all duration-300 hover:scale-[0.95] hover:z-10">
           <img
             src={techImg}
@@ -69,8 +71,8 @@ const PracticesSection = () => {
           />
         </div>
 
-        {/* 2nd CARD */}
-        <div className="flex h-[364px] flex-col rounded-[10px] border border-[#E2E6EE] bg-white p-4 shadow-[0_10px_24px_rgba(17,27,77,0.10)] 
+        {/* TECHNOLOGY CARD */}
+        <div className="flex h-full min-h-[380px] flex-col rounded-[10px] border border-[#E2E6EE] bg-white p-4 shadow-[0_10px_24px_rgba(17,27,77,0.10)] 
         transform transition-all duration-300 hover:bg-[#E6F2FF] hover:scale-[0.95] hover:z-10">
 
           <div className="flex flex-1 flex-col">
@@ -80,11 +82,12 @@ const PracticesSection = () => {
               Technology Research
             </h3>
 
-            <p className="mb-4 text-[11px] text-[#5A6B85]">
+            {/* 🔥 UPDATED */}
+            <p className="mb-3 text-sm leading-6 text-[#5A6B85]">
               Macro-level research on Generative AI, Quantum Computing, and advanced architectures.
             </p>
 
-            <div className="mb-4 flex min-h-[126px] flex-wrap content-start gap-2">
+            <div className="mb-3 flex flex-wrap content-start gap-2">
               {technologyTags.map((tag) => (
                 <span key={tag} className={tagClassName}>
                   {tag}
@@ -99,8 +102,8 @@ const PracticesSection = () => {
           </Link>
         </div>
 
-        {/* 3rd CARD */}
-        <div className="relative h-[364px] rounded-[10px]">
+        {/* MICRO MARKET CARD */}
+        <div className="relative h-full min-h-[380px]">
           <img
             src={whitePattern}
             alt="pattern"
@@ -121,11 +124,12 @@ const PracticesSection = () => {
                 Micro-Market Research
               </h3>
 
-              <p className="mb-4 text-[11px] text-[#5A6B85]">
+              {/* 🔥 UPDATED */}
+              <p className="mb-3 text-sm leading-6 text-[#5A6B85]">
                 Granular analysis of high-growth market segments.
               </p>
 
-              <div className="mb-4 flex min-h-[126px] flex-wrap content-start gap-2">
+              <div className="mb-3 flex flex-wrap content-start gap-2">
                 {microMarketTags.map((tag) => (
                   <span key={tag} className={tagClassName}>
                     {tag}

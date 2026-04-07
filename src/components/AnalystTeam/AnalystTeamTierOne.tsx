@@ -37,7 +37,7 @@ const AnalystTeamTierOne = () => {
     <section className="relative overflow-hidden bg-[#f8f7f3] px-6 py-16 text-[#141948] lg:px-14 lg:py-20">
       <div className="relative z-10 mx-auto max-w-[1240px]">
         <div className="max-w-[760px]">
-          <p className="text-[17px] font-semibold leading-none text-[#20254d]">
+            <p className="text-[17px] font-bold leading-none tracking-[0.01em] text-[#20254d]">
             <span className="inline-flex items-center gap-4">
               <span className="h-px w-[48px] bg-[#20254d]" />
               Core Leadership Team
@@ -52,7 +52,7 @@ const AnalystTeamTierOne = () => {
 
         <div className="mt-14 grid gap-8 lg:grid-cols-[150px_minmax(0,1fr)] lg:items-center">
           <div className="flex items-center lg:min-h-[220px]">
-            <p className="whitespace-nowrap text-[1.05rem] leading-none text-[#101535] md:text-[1.22rem]">
+            <p className="whitespace-nowrap text-[1.05rem] font-bold leading-none tracking-[0.01em] text-[#101535] md:text-[1.22rem]">
               Research Partners
             </p>
           </div>

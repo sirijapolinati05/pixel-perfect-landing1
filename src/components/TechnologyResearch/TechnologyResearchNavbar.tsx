@@ -6,7 +6,8 @@ const TechnologyResearchNavbar = () => {
   const { pathname } = useLocation();
   const isTechnologyResearch = pathname === "/technology-research";
   const isMicroMarketResearch = pathname === "/micro-market-research";
-  const navLinkClassName = "inline-flex items-center pb-1 text-[#13153b]";
+  const navLinkClassName =
+    "inline-flex items-center pb-1 text-[#13153b] transition-colors hover:text-[#2F80ED]";
   const activeNavLinkClassName =
     "border-b border-[#63d3c5] text-[#13153b]";
 
@@ -48,10 +49,10 @@ const TechnologyResearchNavbar = () => {
           >
             Micro- Market Research
           </Link>
-          <Link to="/" className="text-[#13153b]">
+          <Link to="/" className="text-[#13153b] transition-colors hover:text-[#2F80ED]">
             Home
           </Link>
-          <a href="#cta" className="text-[#13153b]">
+          <a href="#cta" className="text-[#13153b] transition-colors hover:text-[#2F80ED]">
             Download Approach Note
           </a>
         </nav>

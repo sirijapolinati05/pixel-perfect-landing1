@@ -1,35 +1,31 @@
 import cxoBg from "@/assets/LandingPage/CXO-image.jpg";
 
-import surfaceIcon from "@/assets/LandingPage/surface-value-pathways.png"; // ✅ NEW
-import strategyIcon from "@/assets/LandingPage/keep-strategy-dynamic.png"; // ✅ NEW
-import adviseIcon from "@/assets/LandingPage/advice-leadership.png"; // ✅ NEW
-import readinessIcon from "@/assets/LandingPage/build-readiness.png"; // ✅ NEW
+import surfaceIcon from "@/assets/LandingPage/surface-value-pathways.png";
+import strategyIcon from "@/assets/LandingPage/keep-strategy-dynamic.png";
+import adviseIcon from "@/assets/LandingPage/advice-leadership.png";
+import readinessIcon from "@/assets/LandingPage/build-readiness.png";
 
 const deliverables = [
   {
     icon: surfaceIcon,
-    num: "1",
     title: "Surface Value Pathways",
     description:
       "We help find new products, services, efficiencies, and revenue streams powered by AI.",
   },
   {
     icon: strategyIcon,
-    num: "2",
     title: "Keep Strategy Dynamic",
     description:
       "We continuously refresh your AI roadmap and decisions as the landscape evolves.",
   },
   {
     icon: adviseIcon,
-    num: "3",
     title: "Advise Leadership",
     description:
       "We act as your on-call AI partner for strategic choices and direction at the board level.",
   },
   {
     icon: readinessIcon,
-    num: "4",
     title: "Build Readiness",
     description:
       "We prepare your organization for responsible, scalable AI adoption across all functions.",
@@ -67,12 +63,8 @@ const DeliverSection = () => {
               hover:scale-105
               transition-all duration-300 ease-in-out"
             >
-              {/* Number */}
-              <span className="absolute right-4 top-3 text-5xl font-serif font-bold text-[#C7D2E0]/60">
-                {item.num}
-              </span>
-
-              {/* ✅ ICON */}
+              
+              {/* ICON */}
               <img
                 src={item.icon}
                 alt={item.title}
@@ -85,7 +77,7 @@ const DeliverSection = () => {
               </h4>
 
               {/* Description */}
-              <p className="font-sans text-xs leading-6 text-[#5A6B85]">
+              <p className="font-sans text-base leading-7 text-[#5A6B85]">
                 {item.description}
               </p>
             </div>

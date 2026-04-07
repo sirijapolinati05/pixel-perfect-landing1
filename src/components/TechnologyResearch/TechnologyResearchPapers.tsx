@@ -13,7 +13,7 @@ const TechnologyResearchPapers = () => {
   return (
     <section
       id="papers"
-      className="relative overflow-hidden bg-[#f8f7f3] px-6 py-16 text-[#121742] lg:px-14"
+      className="relative overflow-hidden bg-[#f8f7f3] px-6 py-12 text-[#121742] lg:px-14"
     >
       <div className="relative mx-auto max-w-[1440px]">
         
@@ -22,7 +22,7 @@ const TechnologyResearchPapers = () => {
           Thought Shaping Papers
         </h2>
 
-        <div className="relative mt-8">
+        <div className="relative mt-5">
           
           {/* TYPOGRAPHIC IMAGE */}
           <img
@@ -33,24 +33,24 @@ const TechnologyResearchPapers = () => {
           />
 
           {/* CARDS */}
-          <div className="relative z-10 grid gap-6 lg:grid-cols-3">
+          <div className="relative z-10 grid gap-4 lg:grid-cols-3">
             {papers.map((paper) => (
               <article
                 key={paper.id}
-                className="relative overflow-hidden bg-[#0c1044] p-6 text-white 
+                className="relative overflow-hidden bg-[#0c1044] p-5 text-white 
                 shadow-[0_16px_35px_rgba(12,16,68,0.15)]
-                transform transition-all duration-300 ease-in-out
+                transition-all duration-300 ease-in-out
                 hover:scale-[1.05] hover:shadow-xl"
               >
                 <h3 className="relative max-w-[420px] text-[1.6rem] leading-[1.1]">
                   {paper.title}
                 </h3>
 
-                <p className="relative mt-4 max-w-[420px] text-[15px] leading-6 text-white/85">
+                <p className="relative mt-3 max-w-[420px] text-[15px] leading-6 text-white/85">
                   {paper.description}
                 </p>
 
-                <div className="relative mt-6 border-t border-white/25 pt-4">
+                <div className="relative mt-4 border-t border-white/25 pt-3">
                   <div className="flex items-center gap-2">
                     <img
                       src={authorImage}
@@ -67,7 +67,7 @@ const TechnologyResearchPapers = () => {
                     </div>
                   </div>
 
-                  <div className="mt-3 inline-flex items-center gap-1.5 rounded-md bg-[#d9eef8] px-2.5 py-1 text-[10px] font-semibold text-[#0d1440]">
+                  <div className="mt-2 inline-flex items-center gap-1.5 rounded-md bg-[#d9eef8] px-2.5 py-1 text-[10px] font-semibold text-[#0d1440]">
                     <img src={linkedinBadge} alt="" className="h-3.5 w-3.5 object-contain" />
                     Releasing soon on LinkedIn
                   </div>
@@ -78,7 +78,7 @@ const TechnologyResearchPapers = () => {
         </div>
 
         {/* BUTTON */}
-        <div className="mt-8 flex justify-center">
+        <div className="mt-5 flex justify-center">
           <button
             type="button"
             className="rounded-lg border border-[#18204e] bg-white px-8 py-2.5 text-[15px] font-semibold text-[#111741] shadow-[0_8px_18px_rgba(17,23,65,0.1)] transition-transform hover:-translate-y-0.5"

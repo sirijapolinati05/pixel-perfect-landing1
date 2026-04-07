@@ -41,7 +41,7 @@ const ProcessSection = () => {
 
         <div className="flex items-center justify-center gap-3 mb-4">
           <span className="w-6 h-[1px] bg-current opacity-40"></span>
-          <p className="text-navy font-sans text-sm tracking-widest whitespace-nowrap">
+          <p className="text-navy font-sans text-sm font-bold tracking-widest whitespace-nowrap">
             Our Process
           </p>
           <span className="w-6 h-[1px] bg-current opacity-40"></span>
@@ -95,7 +95,7 @@ const ProcessSection = () => {
                 type="button"
                 onClick={() => setActiveStep(index)}
                 onMouseEnter={() => setActiveStep(index)}
-                onMouseLeave={() => setActiveStep(null)} // 🔥 FIX HERE
+                onMouseLeave={() => setActiveStep(null)}
                 className={`relative z-10 group p-4 text-left transition-all duration-300 ${
                   activeStep === index
                     ? "bg-white shadow-[0_18px_40px_rgba(10,31,68,0.16)]"
@@ -112,7 +112,8 @@ const ProcessSection = () => {
                   {step.title}
                 </h4>
 
-                <p className="text-navy/70 font-sans text-xs leading-relaxed">
+                {/* 🔥 UPDATED TEXT */}
+                <p className="text-navy/70 font-sans text-sm leading-6">
                   {step.description}
                 </p>
               </button>
