@@ -74,30 +74,37 @@ const Navbar = () => {
   };
 
   const logoFrameClass =
-    "relative h-12 w-[160px] sm:h-14 sm:w-[200px] md:h-16 md:w-[240px]";
+    "relative h-14 w-[180px] sm:h-16 sm:w-[220px] md:h-20 md:w-[250px]";
 
   const darkLogoClass =
-    "absolute left-0 top-0 h-[115%] w-auto object-contain transition-all duration-500 " +
-    (showLightNavbar ? "opacity-0" : "opacity-100");
+    "absolute left-0 -top-2 h-[125%] w-auto object-contain transition-all duration-500 " +
+    (showLightNavbar ? "opacity-0 translate-y-1" : "opacity-100 translate-y-0");
 
+  // ✅ FIXED LIGHT LOGO (DOWN + SMOOTH)
   const lightLogoClass =
-    "absolute -left-6 -top-6 sm:-left-7 sm:-top-7 h-[170%] sm:h-[180%] w-auto object-contain transition-all duration-500 " +
-    (showLightNavbar ? "opacity-100" : "opacity-0");
+    "absolute -left-8 sm:-left-10 h-[190%] sm:h-[200%] w-auto object-contain transition-all duration-500 " +
+    (showLightNavbar
+      ? "opacity-100 translate-y-2"
+      : "opacity-0 translate-y-0");
 
   return (
     <nav
       ref={navRef}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        showLightNavbar ? "bg-white shadow-sm backdrop-blur-md" : "bg-transparent"
+        showLightNavbar
+          ? "bg-white shadow-sm backdrop-blur-md"
+          : "bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-2 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-1 flex items-center justify-between">
 
         {/* MOBILE */}
         <div className="flex items-center gap-3 lg:hidden">
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className={`p-1 ${showLightNavbar ? "text-black" : "text-white"}`}
+            className={`p-1 ${
+              showLightNavbar ? "text-black" : "text-white"
+            }`}
           >
             {mobileOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
@@ -110,7 +117,10 @@ const Navbar = () => {
 
         {/* DESKTOP */}
         <div className="hidden lg:block">
-          <Link to="/" className={`ml-2 md:ml-5 flex items-center ${logoFrameClass}`}>
+          <Link
+            to="/"
+            className={`ml-2 md:ml-5 flex items-center ${logoFrameClass}`}
+          >
             <img src={logo} alt="logo" className={darkLogoClass} />
             <img src={lightLogo} alt="logo" className={lightLogoClass} />
           </Link>

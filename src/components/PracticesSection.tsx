@@ -18,11 +18,17 @@ const technologyTags = [
   "Economics of Technology & Business Impact",
 ];
 
+// ✅ UPDATED FULL BADGES LIST
 const microMarketTags = [
   "Market Sizing",
-  "Competitive Landscape",
   "Growth Vectors",
   "Forecasting",
+  "Competitive Landscaping",
+  "Value Chain Mapping",
+  "Regulatory Frameworks",
+  "Ecosystem Dynamics",
+  "Segment Archetyping",
+  "Propensity Modelling",
 ];
 
 const tagClassName =
@@ -102,7 +108,7 @@ const PracticesSection = () => {
               Macro-level research on Generative AI, Quantum Computing, and advanced architectures.
             </p>
 
-            <div className="mb-3 flex flex-wrap content-start gap-2 sm:gap-3 md:gap-4 lg:gap-4 xl:gap-5">
+            <div className="mb-3 flex flex-wrap gap-2 sm:gap-3 md:gap-4">
               {technologyTags.map((tag) => (
                 <span key={tag} className={tagClassName}>
                   {tag}
@@ -123,12 +129,7 @@ const PracticesSection = () => {
           <img
             src={whitePattern}
             alt="pattern"
-            className="pointer-events-none absolute 
-            right-[-20%] sm:right-[-30%] md:right-[-35%] 
-            top-[-30%] sm:top-[-45%] md:top-[-55%] 
-            h-[120%] sm:h-[130%] md:h-[140%] 
-            w-[120%] sm:w-[130%] md:w-[140%] 
-            scale-x-[-1] object-cover opacity-[0.15]"
+            className="pointer-events-none absolute right-[-30%] top-[-40%] opacity-[0.15]"
           />
 
           <div className="relative flex h-full flex-col overflow-hidden rounded-[10px] 
@@ -137,22 +138,19 @@ const PracticesSection = () => {
           shadow-[0_10px_24px_rgba(17,27,77,0.10)] 
           transition-all duration-300 hover:bg-[#E6F2FF] hover:scale-[0.95] hover:z-10">
 
-            <div className="relative z-10 flex flex-1 flex-col">
-              <img
-                src={microIcon}
-                alt="micro market icon"
-                className="mb-2 sm:mb-3 h-6 w-6 sm:h-7 sm:w-7"
-              />
+            <div className="flex flex-1 flex-col">
+              <img src={microIcon} alt="icon" className="mb-2 h-6 w-6" />
 
-              <h3 className="mb-2 text-base sm:text-lg md:text-xl lg:text-xl xl:text-2xl font-serif font-semibold text-[#0A1F44]">
+              <h3 className="mb-2 text-lg font-semibold text-[#0A1F44]">
                 Micro-Market Research
               </h3>
 
-              <p className="mb-3 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl leading-5 sm:leading-6 text-[#5A6B85]">
+              <p className="mb-3 text-sm text-[#5A6B85]">
                 Granular analysis of high-growth market segments.
               </p>
 
-              <div className="mb-3 flex flex-wrap content-start gap-2 sm:gap-3 md:gap-4 lg:gap-4 xl:gap-5">
+              {/* ✅ BADGES ADDED HERE */}
+              <div className="mb-3 flex flex-wrap gap-2">
                 {microMarketTags.map((tag) => (
                   <span key={tag} className={tagClassName}>
                     {tag}
@@ -161,10 +159,7 @@ const PracticesSection = () => {
               </div>
             </div>
 
-            <Link
-              to="/micro-market-research"
-              className={`relative z-10 ${buttonClassName}`}
-            >
+            <Link to="/micro-market-research" className={buttonClassName}>
               Explore Micro-Market Research
               <ArrowRight size={14} />
             </Link>
