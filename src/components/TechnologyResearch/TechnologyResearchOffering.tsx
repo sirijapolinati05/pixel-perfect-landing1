@@ -1,6 +1,6 @@
 import researchImage from "@/assets/TechnologyResearch/signature-offering.png";
 import peopleIcon from "@/assets/TechnologyResearch/People.png";
-import starIcon from "@/assets/TechnologyResearch/star1.png"; // ✅ FIXED
+import starIcon from "@/assets/TechnologyResearch/star1.png";
 import bookIcon from "@/assets/TechnologyResearch/Book.png";
 
 const features = [
@@ -34,33 +34,35 @@ const TechnologyResearchOffering = () => {
     >
       <div
         className="
-        mx-auto grid
+        mx-auto grid items-center
         max-w-[1440px] xl:max-w-[1400px] 2xl:max-w-[1600px]
         gap-6 sm:gap-8 md:gap-8 lg:gap-10 xl:gap-10 2xl:gap-12
-        grid-cols-1 lg:grid-cols-[0.9fr_1.1fr]
-        lg:items-center"
+        grid-cols-1 lg:grid-cols-[minmax(0,0.95fr)_minmax(360px,1.05fr)]"
       >
         {/* LEFT CONTENT */}
         <div>
           {/* LABEL */}
           <div className="mb-2 flex items-center gap-2 sm:gap-3">
-            <span className="h-[1px] w-4 sm:w-6 md:w-8 lg:w-6 bg-white/40"></span>
+            <span className="h-[1px] w-4 bg-white/40 sm:w-6 md:w-8 lg:w-6"></span>
 
-            <p className="
+            <p
+              className="
               text-xs sm:text-sm md:text-base lg:text-xl xl:text-2xl 2xl:text-[1.75rem]
-              font-bold tracking-[0.01em] text-[#2fa7e8] whitespace-nowrap">
+              font-bold tracking-[0.01em] text-[#2fa7e8] whitespace-nowrap"
+            >
               Our Signature Offering
             </p>
 
-            <span className="h-[1px] w-4 sm:w-6 md:w-8 lg:w-6 bg-white/40"></span>
+            <span className="h-[1px] w-4 bg-white/40 sm:w-6 md:w-8 lg:w-6"></span>
           </div>
 
           {/* HEADING */}
-          <h2 className="
+          <h2
+            className="
             mt-2 sm:mt-3
             text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-[3.8rem]
-            font-bold leading-[1.1] tracking-[-0.03em] lg:whitespace-nowrap">
-            
+            font-bold leading-[1.1] tracking-[-0.03em] lg:whitespace-nowrap"
+          >
             <span className="bg-gradient-to-r from-[#7dd3fc] to-white bg-clip-text text-transparent">
               Thought Shaping Papers
             </span>{" "}
@@ -68,12 +70,14 @@ const TechnologyResearchOffering = () => {
           </h2>
 
           {/* SUBTEXT */}
-          <p className="
+          <p
+            className="
             mt-3 sm:mt-4
             max-w-[600px] sm:max-w-[760px] xl:max-w-[900px]
             text-xs sm:text-sm md:text-base lg:text-xl xl:text-2xl 2xl:text-[1.75rem]
             leading-6 sm:leading-7 md:leading-8 lg:leading-9 xl:leading-10
-            text-white/84">
+            text-white/84"
+          >
             Our Thought Shaping Papers are co-authored with renowned industry analysts and
             domain experts. These aren't ordinary whitepapers. They are strategic
             instruments designed to frame industry narratives, guide enterprise decisions,
@@ -81,46 +85,46 @@ const TechnologyResearchOffering = () => {
           </p>
 
           {/* SMALL CARDS */}
-          <div className="
+          <div
+            className="
             mt-4 sm:mt-5
-            grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3
-            gap-2 sm:gap-3 md:gap-4
-            md:max-w-[760px] xl:max-w-[900px]">
-
+            grid grid-cols-1 gap-2 sm:grid-cols-2 sm:gap-3 md:grid-cols-3 md:gap-4
+            md:max-w-[760px] xl:max-w-[900px]"
+          >
             {features.map((feature) => (
               <div
                 key={feature.title}
                 className="
                 flex flex-col items-center justify-start
-                min-h-[90px] sm:min-h-[100px] md:min-h-[110px]
-                rounded-[8px]
-                bg-[#f8f7f3]
-                px-2 sm:px-3 md:px-3
-                py-2 sm:py-3 md:py-3
-                text-center text-[#0d1440]
+                min-h-[90px] rounded-[8px] bg-[#f8f7f3]
+                px-2 py-2 text-center text-[#0d1440]
                 shadow-[0_8px_20px_rgba(0,0,0,0.08)]
-                hover:bg-[#cfe8ff] hover:scale-105
-                transition-all duration-300 ease-in-out"
+                transition-all duration-300 ease-in-out hover:scale-105 hover:bg-[#cfe8ff]
+                sm:min-h-[100px] sm:px-3 sm:py-3 md:min-h-[110px] md:px-3 md:py-3"
               >
                 <img
                   src={feature.icon}
                   alt={feature.title}
-                  className="h-5 w-5 sm:h-6 sm:w-6 md:h-6 md:w-6 object-contain"
+                  className="h-5 w-5 object-contain sm:h-6 sm:w-6 md:h-6 md:w-6"
                 />
 
-                <h3 className="
+                <h3
+                  className="
                   mt-1
-                  max-w-[110px] sm:max-w-[120px] md:max-w-[130px]
-                  text-[11px] sm:text-xs md:text-sm
-                  font-semibold leading-tight">
+                  max-w-[110px] text-[11px]
+                  font-semibold leading-tight
+                  sm:max-w-[120px] sm:text-xs md:max-w-[130px] md:text-sm"
+                >
                   {feature.title}
                 </h3>
 
-                <p className="
+                <p
+                  className="
                   mt-1
-                  max-w-[130px] sm:max-w-[140px] md:max-w-[150px]
-                  text-[9px] sm:text-[10px] md:text-xs
-                  leading-[1.3] text-[#0d1440]/85">
+                  max-w-[130px] text-[9px]
+                  leading-[1.3] text-[#0d1440]/85
+                  sm:max-w-[140px] sm:text-[10px] md:max-w-[150px] md:text-xs"
+                >
                   {feature.description}
                 </p>
               </div>
@@ -129,25 +133,23 @@ const TechnologyResearchOffering = () => {
         </div>
 
         {/* RIGHT IMAGE */}
-        <div className="
-          relative mx-auto w-full
-          max-w-[220px] sm:max-w-[300px] md:max-w-[400px] lg:max-w-[500px] xl:max-w-[600px]
-          lg:mr-0">
-
-          <div className="flex items-end justify-center">
+        <div
+          className="
+          relative mx-auto flex w-full justify-center lg:justify-end
+          max-w-[260px] sm:max-w-[340px] md:max-w-[430px] lg:max-w-[560px] xl:max-w-[660px] 2xl:max-w-[720px]
+          lg:mr-0"
+        >
+          <div className="w-full">
             <img
               src={researchImage}
               alt="Technology strategy workshop"
               className="
-              w-full object-contain
-              scale-[1] sm:scale-[1.05] md:scale-[1.1] lg:scale-[1.2]
-              -translate-x-2 sm:-translate-x-4 md:-translate-x-6 lg:-translate-x-8
-              translate-y-10 sm:translate-y-12 md:translate-y-14 lg:translate-y-18
+              block h-auto w-full object-contain
+              drop-shadow-[0_22px_50px_rgba(0,0,0,0.28)]
               "
             />
           </div>
         </div>
-
       </div>
     </section>
   );

@@ -61,9 +61,9 @@ const PartnersSection = () => {
         </p>
 
         {/* GRID */}
-        <div className="grid gap-4 sm:gap-5 md:gap-6 lg:gap-8 xl:gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-1 items-stretch gap-4 sm:grid-cols-2 sm:gap-5 md:gap-6 lg:grid-cols-4 lg:gap-8 xl:gap-10">
           {partners.map((partner) => (
-            <div key={partner.name} className="relative">
+            <div key={partner.name} className="relative h-full">
 
               {/* BACKGROUND TYPOGRAPHY IMAGE */}
               {partner.name === "Ashwin Gaidhani" && (
@@ -79,13 +79,13 @@ const PartnersSection = () => {
                 />
               )}
 
-              <div className="relative z-10 overflow-hidden rounded-xl bg-navy 
-              p-4 sm:p-5 pt-6 sm:pt-7 text-center 
+              <div className="relative z-10 flex h-full min-h-[320px] flex-col overflow-hidden rounded-xl bg-navy
+              p-4 pt-6 text-center sm:p-5 sm:pt-7
               transition-transform duration-300 hover:scale-[0.97]">
                 
                 {/* IMAGE */}
                 <div className="relative z-10 mx-auto mb-3 sm:mb-4 
-                h-20 w-20 sm:h-24 sm:w-24 
+                h-20 w-20 shrink-0 sm:h-24 sm:w-24
                 overflow-hidden rounded-full border-4 border-teal/30">
                   <img
                     src={partner.image}
@@ -95,17 +95,17 @@ const PartnersSection = () => {
                 </div>
 
                 {/* NAME */}
-                <h4 className="relative z-10 text-base sm:text-lg md:text-xl lg:text-xl xl:text-2xl font-bold font-sans text-primary-foreground">
+                <h4 className="relative z-10 min-h-[2.75rem] text-base font-bold font-sans text-primary-foreground sm:min-h-[3rem] sm:text-lg md:text-xl lg:min-h-[3.25rem] lg:text-xl xl:min-h-[3.5rem] xl:text-2xl">
                   {partner.name}
                 </h4>
 
                 {/* ROLE */}
-                <div className="relative z-10 mt-2 mb-2">
-                  <p className="text-xs sm:text-sm md:text-base lg:text-base xl:text-lg font-medium font-sans text-[#38BDF8]">
+                <div className="relative z-10 mt-2 mb-2 flex min-h-[5.75rem] flex-col">
+                  <p className="min-h-[1.5rem] text-xs font-medium font-sans text-[#38BDF8] sm:text-sm md:text-base lg:text-base xl:text-lg">
                     {partner.role}
                   </p>
 
-                  <p className="mt-1 text-[10px] sm:text-xs md:text-sm lg:text-sm xl:text-base font-sans text-[#38BDF8]">
+                  <p className="mt-1 min-h-[2.75rem] text-[10px] font-sans text-[#38BDF8] sm:text-xs md:text-sm lg:text-sm xl:text-base">
                     {partner.subtitle}
                   </p>
 
@@ -113,7 +113,7 @@ const PartnersSection = () => {
                 </div>
 
                 {/* ICONS */}
-                <div className="relative z-10 mt-4 sm:mt-5 flex justify-center gap-3">
+                <div className="relative z-10 mt-auto flex justify-center gap-3 pt-4 sm:pt-5">
                   <a
                     href="#"
                     className="flex h-7 w-7 sm:h-8 sm:w-8 items-center justify-center rounded-full bg-teal/20 text-teal transition-colors hover:bg-teal/30"
