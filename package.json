@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "ui:screenshots": "playwright test tests/responsive-snapshots.spec.ts --config=playwright.config.ts"
   },
   "dependencies": {
     "@tanstack/react-query": "^5.59.0",
@@ -16,6 +17,7 @@
     "react-router-dom": "^6.28.0"
   },
   "devDependencies": {
+    "@playwright/test": "^1.59.1",
     "@vitejs/plugin-react-swc": "^3.7.1",
     "autoprefixer": "^10.4.20",
     "postcss": "^8.4.49",

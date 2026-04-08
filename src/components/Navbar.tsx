@@ -2,7 +2,6 @@ import { useEffect, useRef, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 
-// ✅ FIXED PATHS (IMPORTANT)
 import logo from "../assets/LandingPage/research-fabric.png";
 import lightLogo from "../assets/LandingPage/research-fabric-footer.png";
 
@@ -19,7 +18,7 @@ const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeSection, setActiveSection] = useState(navItems[0].href);
   const [isScrolled, setIsScrolled] = useState(false);
-  const navRef = useRef<HTMLElement | null>(null);
+  const navRef = useRef(null);
 
   const isHomePage = pathname === "/";
   const showLightNavbar = isScrolled || !isHomePage;
@@ -52,8 +51,8 @@ const Navbar = () => {
       navItems.forEach((item) => {
         const section = document.querySelector(item.href);
         if (section) {
-          const top = (section as HTMLElement).offsetTop;
-          const height = (section as HTMLElement).offsetHeight;
+          const top = section.offsetTop;
+          const height = section.offsetHeight;
 
           if (scrollPos >= top && scrollPos < top + height) {
             current = item.href;
@@ -69,20 +68,20 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [isHomePage]);
 
-  const getTextClass = (isActive: boolean) => {
+  const getTextClass = (isActive) => {
     if (!showLightNavbar) return "text-white";
     return isActive ? "text-black" : "text-black/80 hover:text-[#2F80ED]";
   };
 
   const logoFrameClass =
-    "relative h-14 w-[200px] overflow-hidden md:h-16 md:w-[240px]";
+    "relative h-12 w-[160px] sm:h-14 sm:w-[200px] md:h-16 md:w-[240px]";
 
   const darkLogoClass =
     "absolute left-0 top-0 h-[115%] w-auto object-contain transition-all duration-500 " +
     (showLightNavbar ? "opacity-0" : "opacity-100");
 
   const lightLogoClass =
-    "absolute -left-7 -top-7 h-[180%] w-auto object-contain transition-all duration-500 " +
+    "absolute -left-6 -top-6 sm:-left-7 sm:-top-7 h-[170%] sm:h-[180%] w-auto object-contain transition-all duration-500 " +
     (showLightNavbar ? "opacity-100" : "opacity-0");
 
   return (
@@ -92,13 +91,13 @@ const Navbar = () => {
         showLightNavbar ? "bg-white shadow-sm backdrop-blur-md" : "bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 py-2 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-2 flex items-center justify-between">
 
-        {/* ✅ MOBILE ONLY (MENU + LOGO SIDE BY SIDE) */}
+        {/* MOBILE */}
         <div className="flex items-center gap-3 lg:hidden">
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className={showLightNavbar ? "text-black" : "text-white"}
+            className={`p-1 ${showLightNavbar ? "text-black" : "text-white"}`}
           >
             {mobileOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
@@ -109,16 +108,16 @@ const Navbar = () => {
           </Link>
         </div>
 
-        {/* ✅ DESKTOP ONLY (UNCHANGED) */}
+        {/* DESKTOP */}
         <div className="hidden lg:block">
-          <Link to="/" className={`ml-[14px] md:ml-5 flex items-center ${logoFrameClass}`}>
+          <Link to="/" className={`ml-2 md:ml-5 flex items-center ${logoFrameClass}`}>
             <img src={logo} alt="logo" className={darkLogoClass} />
             <img src={lightLogo} alt="logo" className={lightLogoClass} />
           </Link>
         </div>
 
         {/* NAV ITEMS */}
-        <div className="hidden lg:flex items-center gap-6">
+        <div className="hidden lg:flex items-center gap-4 xl:gap-6">
           {navItems.map((item) => {
             const isActive = activeSection === item.href;
 
@@ -127,7 +126,7 @@ const Navbar = () => {
                 key={item.label}
                 href={isHomePage ? item.href : `/${item.href}`}
                 onClick={() => setActiveSection(item.href)}
-                className={`relative pb-2 text-sm transition-colors ${getTextClass(
+                className={`relative pb-2 text-sm md:text-base transition-colors ${getTextClass(
                   isActive
                 )}`}
               >
@@ -139,16 +138,16 @@ const Navbar = () => {
                       ? "opacity-100 scale-x-100"
                       : "opacity-0 scale-x-0"
                   }`}
-                ></span>
+                />
               </a>
             );
           })}
         </div>
 
         {/* RIGHT */}
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-3 sm:gap-4">
           <span
-            className={`hidden md:inline text-sm ${
+            className={`hidden sm:inline text-xs sm:text-sm ${
               showLightNavbar ? "text-black/70" : "text-white/70"
             }`}
           >
@@ -160,7 +159,7 @@ const Navbar = () => {
       {/* MOBILE MENU */}
       {mobileOpen && (
         <div
-          className={`lg:hidden px-6 pb-4 ${
+          className={`lg:hidden px-4 sm:px-6 pb-4 ${
             showLightNavbar ? "bg-white" : "bg-[#081A34]/95"
           }`}
         >

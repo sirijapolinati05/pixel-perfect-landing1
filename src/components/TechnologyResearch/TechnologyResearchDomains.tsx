@@ -28,41 +28,72 @@ const TechnologyResearchDomains = () => {
   return (
     <section
       id="domains"
-      className="relative overflow-hidden bg-[#f8f7f3] px-6 py-14 text-[#141742] lg:px-14"
+      className="
+      relative overflow-hidden bg-[#f8f7f3]
+      px-4 sm:px-6 md:px-8 lg:px-14 xl:px-20 2xl:px-28
+      py-10 sm:py-12 md:py-14 lg:py-16 xl:py-20 2xl:py-24
+      text-[#141742]"
     >
+      {/* BACKGROUND TYPO */}
       <img
         src={whiteTypographyImg}
         alt=""
         aria-hidden="true"
-        className="pointer-events-none absolute right-[-22%] top-[-12%] w-[520px] opacity-20 scale-x-[-1] rotate-90 -rotate-[30deg]"
+        className="
+        pointer-events-none absolute 
+        right-[-45%] sm:right-[-34%] md:right-[-25%] lg:right-[-22%] xl:right-[-18%] 2xl:right-[-15%]
+        top-[-8%] sm:top-[-10%] md:top-[-14%] lg:top-[-12%]
+        w-[180px] sm:w-[260px] md:w-[400px] lg:w-[520px] xl:w-[600px] 2xl:w-[700px]
+        opacity-20 scale-x-[-1] rotate-90 -rotate-[30deg]"
       />
 
-      <div className="relative mx-auto max-w-[1440px]">
+      <div className="relative mx-auto max-w-[1440px] xl:max-w-[1400px] 2xl:max-w-[1600px]">
 
-        <div className="flex items-center gap-3 mb-2">
-          <span className="w-6 h-[1px] bg-current opacity-40"></span>
+        {/* TOP LABEL */}
+        <div className="mb-2 flex items-center gap-2 sm:gap-3">
+          <span className="h-[1px] w-4 sm:w-6 md:w-8 lg:w-6 bg-current opacity-40"></span>
 
-          <p className="text-[18px] font-bold tracking-[0.01em] text-[#202453] whitespace-nowrap">
+          <p className="
+          text-xs sm:text-sm md:text-base lg:text-xl xl:text-2xl 2xl:text-[1.75rem]
+          font-bold tracking-[0.01em] text-[#202453] whitespace-nowrap">
             Research Domains
           </p>
 
-          <span className="w-6 h-[1px] bg-current opacity-40"></span>
+          <span className="h-[1px] w-4 sm:w-6 md:w-8 lg:w-6 bg-current opacity-40"></span>
         </div>
 
-        <h2 className="mt-3 max-w-none text-[2.4rem] font-bold leading-[1.05] tracking-[-0.02em] md:text-[3rem] lg:text-[3.35rem]">
+        {/* HEADING */}
+        <h2 className="
+        mt-2 sm:mt-3
+        text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-[3.8rem]
+        font-bold leading-[1.1] tracking-[-0.02em]">
           Three Pillars Shaping the Future of Technology
         </h2>
 
-        <p className="mt-4 max-w-[900px] text-xl leading-9 text-[#202453]/88">
+        {/* SUBTEXT */}
+        <p className="
+        mt-3 sm:mt-4
+        max-w-[600px] sm:max-w-[800px] lg:max-w-[900px] xl:max-w-[1000px]
+        text-xs sm:text-sm md:text-base lg:text-xl xl:text-2xl 2xl:text-[1.75rem]
+        leading-6 sm:leading-7 md:leading-8 lg:leading-9 xl:leading-10
+        text-[#202453]/88">
           Our research is concentrated across three transformative domains where deep
           analysis and expert perspective create outsized strategic value.
         </p>
 
-        <div className="relative mt-6 grid gap-4 lg:grid-cols-3">
+        {/* GRID */}
+        <div className="
+        relative mt-5 sm:mt-6 lg:mt-8 xl:mt-10
+        grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-3
+        gap-4 sm:gap-5 md:gap-6 lg:gap-6 xl:gap-8 2xl:gap-10">
+
           {domains.map((domain) => (
             <article
               key={domain.title}
-              className="group relative w-full flex flex-col h-full p-4 rounded-xl
+              className="
+              group relative w-full flex flex-col h-full
+              p-3 sm:p-4 md:p-5 lg:p-6
+              rounded-xl
               transition-all duration-300 ease-in-out
               hover:scale-[1.04] hover:bg-white hover:shadow-xl"
             >
@@ -76,19 +107,33 @@ const TechnologyResearchDomains = () => {
               </div>
 
               {/* TITLE */}
-              <h3 className="mt-2.5 max-w-[250px] text-[1.45rem] leading-[1.04] transition-colors duration-300 group-hover:text-[#0A1F44]">
+              <h3 className="
+              mt-2 sm:mt-2.5 md:mt-3
+              max-w-[240px] sm:max-w-[250px]
+              text-base sm:text-lg md:text-xl lg:text-2xl xl:text-[1.6rem]
+              leading-tight
+              transition-colors duration-300 group-hover:text-[#0A1F44]">
                 {domain.title}
               </h3>
 
               {/* DESCRIPTION */}
-              <p className="mt-2 max-w-[285px] text-[14px] leading-6 text-[#202453]/88 flex-grow transition-colors duration-300 group-hover:text-[#202453]">
+              <p className="
+              mt-2
+              max-w-[260px] sm:max-w-[285px] md:max-w-[320px]
+              text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl
+              leading-5 sm:leading-6 md:leading-7
+              text-[#202453]/88 flex-grow
+              transition-colors duration-300 group-hover:text-[#202453]">
                 {domain.description}
               </p>
 
               {/* BUTTON */}
               <a
                 href="#papers"
-                className="mt-3 inline-flex items-center gap-2 text-[13px] font-semibold uppercase tracking-[0.02em] text-[#161a46]
+                className="
+                mt-3 inline-flex items-center gap-2
+                text-xs sm:text-sm md:text-base lg:text-[13px] xl:text-sm 2xl:text-base
+                font-semibold uppercase tracking-[0.02em] text-[#161a46]
                 transition-all duration-300 group-hover:gap-3"
               >
                 Explore Research

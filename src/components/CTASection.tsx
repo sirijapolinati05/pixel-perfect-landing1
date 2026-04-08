@@ -1,22 +1,24 @@
 const CTASection = () => {
   return (
-    <section className="py-12 md:py-14 bg-gradient-to-r from-navy-dark via-navy to-sky/80">
-      <div className="max-w-3xl mx-auto px-6 text-center">
+    <section className="py-10 sm:py-12 md:py-14 bg-gradient-to-r from-navy-dark via-navy to-sky/80">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
 
-        <h2 className="text-2xl md:text-3xl font-bold text-primary-foreground mb-3 leading-tight">
-          Ready to Shape the<br />Technology Narrative?
+        <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-primary-foreground mb-3 leading-snug md:leading-tight">
+          Ready to Shape the
+          <br className="hidden sm:block" /> Technology Narrative?
         </h2>
 
-        <p className="text-primary-foreground/70 font-sans text-sm mb-6 max-w-lg mx-auto">
+        <p className="text-primary-foreground/70 font-sans text-xs sm:text-sm md:text-base mb-5 sm:mb-6 max-w-md sm:max-w-lg mx-auto">
           Whether you're looking to commission a Thought Shaping Paper, partner as an analyst, or subscribe to our research — we'd love to hear from you.
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-3 justify-center">
+        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
           
           {/* 🔥 PRIMARY BUTTON */}
           <a
             href="#"
-            className="bg-teal text-navy font-sans font-semibold px-6 py-2.5 rounded-full text-sm
+            className="w-full sm:w-auto text-center bg-teal text-navy font-sans font-semibold 
+            px-5 sm:px-6 py-2.5 md:py-3 rounded-full text-sm md:text-base
             transition-all duration-300 ease-in-out
             hover:scale-110 hover:-translate-y-1
             hover:bg-teal-light
@@ -29,7 +31,8 @@ const CTASection = () => {
           {/* 🔥 SECONDARY BUTTON */}
           <a
             href="#"
-            className="border border-primary-foreground/40 text-primary-foreground font-sans font-semibold px-6 py-2.5 rounded-full text-sm
+            className="w-full sm:w-auto text-center border border-primary-foreground/40 text-primary-foreground font-sans font-semibold 
+            px-5 sm:px-6 py-2.5 md:py-3 rounded-full text-sm md:text-base
             transition-all duration-300 ease-in-out
             hover:scale-110 hover:-translate-y-1
             hover:bg-primary-foreground/10

@@ -25,44 +25,44 @@ const methodCards = [
 
 const MicroMarketResearchMethodology = () => {
   return (
-    <section className="relative bg-[#f8f7f3] px-6 py-14 text-[#141742] lg:pl-14 lg:pr-0">
+    <section className="relative overflow-hidden bg-[#f8f7f3] px-4 sm:px-6 md:px-8 lg:pl-14 lg:pr-0 xl:pl-20 2xl:pl-28 py-10 sm:py-12 md:py-14 lg:py-16 xl:py-20 2xl:py-24 text-[#141742]">
       
-      <div className="pointer-events-none absolute right-[-6%] -top-20 z-0">
+      <div className="pointer-events-none absolute right-[-18%] sm:right-[-12%] md:right-[-8%] lg:right-[-6%] -top-10 sm:-top-14 md:-top-20 z-0">
         <img
           src={whiteTypographyImg}
           alt=""
           aria-hidden="true"
-          className="w-[340px] opacity-20 rotate-[120deg]"
+          className="w-[180px] sm:w-[240px] md:w-[300px] lg:w-[340px] opacity-20 rotate-[120deg]"
         />
       </div>
 
-      <div className="relative mx-auto max-w-[1440px]">
+      <div className="relative mx-auto max-w-[1440px] xl:max-w-[1400px] 2xl:max-w-[1600px]">
 
-        <p className="relative z-10 text-[16px] font-bold tracking-[0.01em] text-[#1d214f]">
+        <p className="relative z-10 text-sm sm:text-base md:text-[16px] lg:text-[16px] font-bold tracking-[0.01em] text-[#1d214f]">
           Methodology
         </p>
 
-        <h2 className="relative z-10 mt-3 text-[3rem] font-bold leading-[1.05]">
+        <h2 className="relative z-10 mt-3 text-3xl sm:text-4xl md:text-[3rem] lg:text-[3rem] font-bold leading-[1.05]">
           The "Signal-to-Noise" Approach
         </h2>
 
-        <p className="relative z-10 mt-3 max-w-[720px] text-[16px] leading-6 text-[#1d214f]/80">
+        <p className="relative z-10 mt-3 max-w-[720px] text-sm sm:text-base md:text-[16px] lg:text-[16px] leading-6 text-[#1d214f]/80">
           In micro-markets, data is scarce and often unreliable. Our methodology is
           designed to synthesize fragmented data points into a coherent strategic picture.
         </p>
 
-        <div className="relative z-10 mt-6 grid items-start gap-6 lg:grid-cols-[1.05fr_1.2fr]">
+        <div className="relative z-10 mt-6 grid items-start gap-6 sm:gap-8 lg:grid-cols-[1.05fr_1.2fr]">
 
           {/* CARDS */}
-          <div className="grid items-start gap-5 md:grid-cols-2">
+          <div className="grid items-start gap-5 sm:gap-6 md:grid-cols-2">
             {methodCards.map((card) => (
               <article
                 key={card.step}
-                className={`group relative h-fit self-start border border-[#e6e8f0] bg-white px-5 pb-3 pt-5 
+                className={`group relative h-full self-stretch border border-[#e6e8f0] bg-white px-4 sm:px-5 md:px-6 lg:px-5 pb-3 sm:pb-4 pt-5 
                 shadow-[0_8px_18px_rgba(0,0,0,0.08)] 
                 transition-all duration-300 ease-in-out
                 hover:-translate-y-2 hover:shadow-xl hover:border-transparent
-                ${card.className}`}
+                ${card.className || ""}`}
               >
 
                 {/* GRADIENT HOVER */}
@@ -72,8 +72,8 @@ const MicroMarketResearchMethodology = () => {
                 transition duration-500" />
 
                 {/* STEP */}
-                <div className="absolute top-0 left-0 -translate-x-1/2 -translate-y-1/2 h-9 w-9 flex items-center justify-center rounded-full 
-                bg-[#64dfc6] text-[13px] font-semibold text-[#141742] shadow
+                <div className="absolute top-0 left-0 -translate-x-1/2 -translate-y-1/2 flex h-8 w-8 items-center justify-center rounded-full 
+                bg-[#64dfc6] text-xs sm:h-9 sm:w-9 sm:text-[13px] font-semibold text-[#141742] shadow
                 transition-all duration-300
                 group-hover:scale-110 group-hover:bg-white group-hover:text-[#0b1f3a]">
                   {card.step}
@@ -81,13 +81,13 @@ const MicroMarketResearchMethodology = () => {
 
                 {/* CONTENT */}
                 <div className="relative z-10">
-                  <h3 className="text-[1.4rem] leading-[1.15] font-medium 
+                  <h3 className="text-xl sm:text-[1.3rem] md:text-[1.4rem] lg:text-[1.4rem] leading-[1.15] font-medium 
                   transition-colors duration-300 
                   group-hover:text-white">
                     {card.title}
                   </h3>
 
-                  <p className="mt-2 text-[14px] leading-6 text-[#141742]/75 
+                  <p className="mt-2 text-sm sm:text-[14px] md:text-[14px] leading-6 text-[#141742]/75 
                   transition-colors duration-300 
                   group-hover:text-white/85">
                     {card.description}
@@ -99,11 +99,11 @@ const MicroMarketResearchMethodology = () => {
           </div>
 
           {/* IMAGE */}
-          <div className="relative flex items-start justify-end -mt-3">
+          <div className="relative -mt-1 sm:-mt-2 md:-mt-3 flex items-start justify-center lg:justify-end">
             <img
               src={methodologyImage}
               alt="Micro-market methodology"
-              className="h-[360px] w-auto object-contain transition-transform duration-500 hover:scale-105"
+              className="h-[220px] sm:h-[280px] md:h-[320px] lg:h-[360px] w-auto max-w-full object-contain transition-transform duration-500 hover:scale-105"
             />
           </div>
 

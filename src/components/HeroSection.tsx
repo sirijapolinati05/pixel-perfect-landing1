@@ -2,38 +2,34 @@ import heroImg from "@/assets/LandingPage/home-hero.png";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen bg-[#081A34] overflow-hidden">
-      
-      <div className="absolute inset-0 w-full h-full bg-[#081A34]" />
+    <section className="relative min-h-screen overflow-hidden bg-[#081A34]">
+      <div className="absolute inset-0 h-full w-full bg-[#081A34]" />
 
-      {/* IMAGE */}
-      <div className="absolute top-0 right-0 w-[60%] h-[58%] overflow-hidden">
+      {/* IMAGE + RIGHT TEXT */}
+      <div className="absolute top-0 right-0 flex flex-col items-end w-full md:w-auto">
         <img
           src={heroImg}
           alt="Abstract 3D"
-          className="w-full h-full object-cover object-top scale-[1.44]"
+          className="h-auto w-[300px] sm:w-[450px] md:w-[600px] lg:w-[750px] max-w-full object-contain"
         />
-      </div>
 
-      {/* RIGHT TEXT */}
-      <div className="absolute right-6 top-[58%] w-[60%] px-6">
-        <p className="text-white/70 text-sm leading-relaxed text-left">
-          RESEARCHFABRIC™ delivers practitioner-led Smart research on{" "}
-          <strong className="text-white">Perpetuating Technologies</strong>{" "}
-          and maps the{" "}
-          <strong className="text-white">Micro-Markets</strong>{" "}
-          where these technologies create commercial value. We identify high-growth segments,
-          forecast competitive dynamics, and deliver decision-grade intelligence
-          for enterprise strategy and investment.
-        </p>
+        <div className="w-full md:w-[600px] lg:w-[750px] max-w-full md:-translate-x-6 px-4 sm:px-6">
+          <p className="text-left text-xs sm:text-sm md:text-base leading-relaxed text-white/70">
+            RESEARCHFABRIC delivers practitioner-led Smart research on{" "}
+            <strong className="text-white">Perpetuating Technologies</strong>{" "}
+            and maps the <strong className="text-white">Micro-Markets</strong>{" "}
+            where these technologies create commercial value. We identify
+            high-growth segments, forecast competitive dynamics, and deliver
+            decision-grade intelligence for enterprise strategy and investment.
+          </p>
+        </div>
       </div>
 
       {/* MAIN CONTENT */}
-      <div className="relative z-20 max-w-7xl mx-auto px-8 pt-32 pb-12 flex flex-col min-h-screen">
+      <div className="relative z-20 mx-auto flex min-h-screen max-w-7xl flex-col px-4 sm:px-6 md:px-8 pt-24 sm:pt-28 md:pt-32 pb-10 sm:pb-12">
         
-        <div className="max-w-2xl">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold leading-[1.2] text-white mb-6">
-            
+        <div className="max-w-xl sm:max-w-2xl mt-16 sm:mt-20">
+          <h1 className="mb-5 sm:mb-6 font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold leading-[1.2] text-white">
             <span className="block">Thought-Shaping</span>
             <span className="block">Intelligence on</span>
 
@@ -57,14 +53,13 @@ const HeroSection = () => {
               <span className="text-white">and </span>
               <span className="text-[#2FE6D6]">Micro-Markets</span>
             </span>
-
           </h1>
 
           {/* BUTTONS */}
-          <div className="flex flex-col gap-4 w-fit">
+          <div className="flex w-full sm:w-fit flex-col sm:flex-row gap-3 sm:gap-4">
             <a
               href="#practices"
-              className="flex items-center justify-center bg-[#3CC8FF] text-[#081A34] px-6 py-3 rounded-full text-sm font-semibold 
+              className="flex items-center justify-center rounded-full bg-[#3CC8FF] px-5 sm:px-6 py-2.5 sm:py-3 text-sm md:text-base font-semibold text-[#081A34]
               transition-all duration-300 ease-in-out
               hover:scale-105 hover:-translate-y-1 hover:shadow-[0_10px_25px_rgba(60,200,255,0.5)]"
             >
@@ -73,7 +68,7 @@ const HeroSection = () => {
 
             <a
               href="#cxo"
-              className="flex items-center justify-center bg-[#43E0B1] text-[#081A34] px-6 py-3 rounded-full text-sm font-semibold 
+              className="flex items-center justify-center rounded-full bg-[#43E0B1] px-5 sm:px-6 py-2.5 sm:py-3 text-sm md:text-base font-semibold text-[#081A34]
               transition-all duration-300 ease-in-out
               hover:scale-105 hover:-translate-y-1 hover:shadow-[0_10px_25px_rgba(67,224,177,0.5)]"
             >
@@ -82,9 +77,8 @@ const HeroSection = () => {
           </div>
         </div>
 
-        {/* GRID SECTION */}
-        <div className="mt-12 pt-4">
-          
+        {/* 🔥 FIXED: BOTTOM GRID (MOVED DOWN) */}
+        <div className="mt-32 sm:mt-40 md:mt-52 lg:mt-56 pt-4">
           <div className="grid grid-cols-2 md:grid-cols-4 text-center">
             {[
               { title: "Technology", sub: "Deep Tech Capabilities" },
@@ -94,16 +88,16 @@ const HeroSection = () => {
             ].map((item, index) => (
               <div
                 key={item.title}
-                className={`group px-4 py-6 cursor-pointer transition-all duration-300 ${
+                className={`group cursor-pointer px-3 sm:px-4 py-5 sm:py-6 transition-all duration-300 ${
                   index !== 3 ? "border-r border-white/20" : ""
                 }`}
               >
-                <h3 className="text-[#2FE6D6] font-serif text-xl font-semibold 
+                <h3 className="font-serif text-base sm:text-lg md:text-xl font-semibold text-[#2FE6D6]
                 transition-transform duration-300 group-hover:scale-90">
                   {item.title}
                 </h3>
 
-                <p className="text-white/60 text-sm mt-2 
+                <p className="mt-1 sm:mt-2 text-xs sm:text-sm text-white/60
                 transition-transform duration-300 group-hover:scale-90">
                   {item.sub}
                 </p>
@@ -111,20 +105,19 @@ const HeroSection = () => {
             ))}
           </div>
 
-          {/* PRACTICES CARD */}
-          <div className="group text-center mt-2 pt-2 border-t border-white/20 cursor-pointer">
-            <h3 className="text-[#2FE6D6] font-serif text-xl font-semibold 
+          <div className="group mt-[-1px] cursor-pointer border-t border-white/20 pt-3 sm:pt-4 text-center">
+            <h3 className="font-serif text-base sm:text-lg md:text-xl font-semibold text-[#2FE6D6]
             transition-transform duration-300 group-hover:scale-90">
               Practices
             </h3>
 
-            <p className="text-white/60 text-sm mt-1 
+            <p className="mt-1 text-xs sm:text-sm text-white/60
             transition-transform duration-300 group-hover:scale-90">
               Research Engineering
             </p>
           </div>
-
         </div>
+
       </div>
     </section>
   );

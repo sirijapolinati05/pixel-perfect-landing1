@@ -34,7 +34,7 @@ const deliverables = [
 
 const DeliverSection = () => {
   return (
-    <section className="relative overflow-hidden bg-[#031126] py-12">
+    <section className="relative overflow-hidden bg-[#031126] py-10 sm:py-12 md:py-14">
       
       {/* Background */}
       <div className="absolute inset-0">
@@ -45,17 +45,18 @@ const DeliverSection = () => {
         />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
         
-        <h3 className="mb-6 inline-block border-b border-white/40 pb-2 text-2xl font-serif text-white">
+        <h3 className="mb-5 sm:mb-6 inline-block border-b border-white/40 pb-2 
+        text-xl sm:text-2xl md:text-3xl font-serif text-white">
           What We Deliver
         </h3>
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
           {deliverables.map((item) => (
             <div
               key={item.title}
-              className="relative rounded-xl bg-white p-5 
+              className="relative rounded-xl bg-white p-4 sm:p-5 
               border border-[#E6ECF5] 
               shadow-[0_15px_40px_rgba(0,0,0,0.12)] 
               hover:shadow-[0_25px_60px_rgba(0,0,0,0.20)] 
@@ -68,16 +69,16 @@ const DeliverSection = () => {
               <img
                 src={item.icon}
                 alt={item.title}
-                className="mb-4 h-8 w-8 object-contain"
+                className="mb-3 sm:mb-4 h-7 w-7 sm:h-8 sm:w-8 object-contain"
               />
 
               {/* Title */}
-              <h4 className="mb-2 text-lg font-bold text-[#0A1F44] font-serif">
+              <h4 className="mb-2 text-base sm:text-lg font-bold text-[#0A1F44] font-serif">
                 {item.title}
               </h4>
 
               {/* Description */}
-              <p className="font-sans text-base leading-7 text-[#5A6B85]">
+              <p className="font-sans text-sm sm:text-base leading-6 sm:leading-7 text-[#5A6B85]">
                 {item.description}
               </p>
             </div>
