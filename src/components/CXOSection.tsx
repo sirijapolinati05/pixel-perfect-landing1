@@ -11,7 +11,7 @@ const CXOSection = () => {
         <div className="flex items-center gap-2 sm:gap-3 mb-5 sm:mb-6">
           <span className="w-4 sm:w-6 h-[1px] bg-white/40"></span>
 
-          <p className="text-primary-foreground/60 font-sans text-xs sm:text-sm tracking-widest">
+          <p className="text-white font-sans text-[24px] tracking-widest">
             CXO AI Research
           </p>
 
@@ -26,7 +26,8 @@ const CXOSection = () => {
               AI Leadership is Now a C-Suite Imperative
             </h2>
 
-            <p className="text-primary-foreground/70 font-sans text-xs sm:text-sm md:text-base leading-relaxed mb-5 sm:mb-6 max-w-sm sm:max-w-md">
+            {/* 16.06px */}
+            <p className="text-primary-foreground/70 font-sans text-[16.06px] leading-relaxed mb-5 sm:mb-6 max-w-sm sm:max-w-md">
               The AI landscape is noisy, volatile, and impossible for busy leaders to track.
               CEOs and CXOs are expected to drive growth, innovation, and new revenue with AI
               yet few have the bandwidth or in-house capability to stay ahead. We bridge that gap.
@@ -58,13 +59,14 @@ const CXOSection = () => {
                   className="mb-3 sm:mb-4 h-6 w-6 sm:h-7 sm:w-7 object-contain"
                 />
 
-                <h3 className="mb-2 text-base sm:text-lg font-bold text-[#0A1F44]">
+                {/* ✅ Reduced line spacing */}
+                <h3 className="mb-2 text-[32px] leading-tight font-bold text-[#0A1F44]">
                   Cut Through Noise
                 </h3>
 
-                <p className="font-sans text-sm sm:text-base leading-6 text-[#5A6B85] flex-grow">
+                <p className="font-sans text-[13px] leading-6 text-[#5A6B85] flex-grow">
                   Quantitative assessment of industry landscapes, competitive frameworks
-                  and macro-economic metrics.
+                  & macro-economic metrics.
                 </p>
               </div>
             </div>
@@ -82,11 +84,12 @@ const CXOSection = () => {
                   className="mb-3 sm:mb-4 h-6 w-6 sm:h-7 sm:w-7 object-contain"
                 />
 
-                <h3 className="mb-2 text-base sm:text-lg font-bold text-[#0A1F44]">
+                {/* ✅ Same fix here for consistency */}
+                <h3 className="mb-2 text-[32px] leading-tight font-bold text-[#0A1F44]">
                   Translate Into Action
                 </h3>
 
-                <p className="font-sans text-sm sm:text-base leading-6 text-[#5A6B85] flex-grow">
+                <p className="font-sans text-[13px] leading-6 text-[#5A6B85] flex-grow">
                   We turn complex AI trends into clear business implications your
                   leadership team can act on immediately.
                 </p>
