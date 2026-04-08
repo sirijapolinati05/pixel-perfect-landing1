@@ -3,7 +3,7 @@ import heroImage from "@/assets/hero-3d.jpg";
 const AnalystTeamHero = () => {
   return (
     <section className="relative overflow-hidden pb-10 text-white md:pb-12 lg:pb-12">
-      <div className="absolute inset-x-0 top-0 h-[320px] overflow-hidden sm:h-[340px] md:h-[400px]">
+      <div className="absolute inset-x-0 top-0 h-[360px] overflow-hidden sm:h-[390px] md:h-[460px]">
         <img
           src={heroImage}
           alt=""
@@ -24,7 +24,7 @@ const AnalystTeamHero = () => {
       <div className="absolute bottom-0 right-0 h-[122px] w-[144px] sm:h-[145px] sm:w-[170px] md:h-[170px] md:w-[200px] rounded-tl-[70px] sm:rounded-tl-[82px] md:rounded-tl-[96px] border-l border-t border-[#2A49A5]/60 opacity-60" />
 
       {/* Content */}
-      <div className="relative z-10 mx-auto flex max-w-[1100px] items-start justify-center px-4 sm:px-6 md:px-8 lg:px-6 pt-[156px] sm:pt-[170px] md:pt-[205px] text-center">
+      <div className="relative z-10 mx-auto flex max-w-[1100px] -translate-y-5 items-start justify-center px-4 pt-[98px] text-center sm:-translate-y-6 sm:px-6 sm:pt-[112px] md:-translate-y-8 md:px-8 md:pt-[146px] lg:px-6">
         <div className="max-w-4xl">
           
           {/* Heading - Single Line */}

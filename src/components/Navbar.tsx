@@ -68,7 +68,6 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [isHomePage]);
 
-  // ✅ UPDATED TEXT COLOR LOGIC
   const getTextClass = (isActive) => {
     if (showLightNavbar) {
       return isActive
@@ -147,11 +146,10 @@ const Navbar = () => {
               >
                 {item.label}
 
+                {/* ✅ ACTIVE UNDERLINE COLOR CHANGED */}
                 <span
                   className={`absolute left-0 bottom-0 h-[2px] w-full transition-all duration-300 ${
-                    showLightNavbar
-                      ? "bg-[#0B1F3A]"
-                      : "bg-white"
+                    "bg-[#5AE0BB]"
                   } ${
                     isActive
                       ? "opacity-100 scale-x-100"
@@ -196,7 +194,7 @@ const Navbar = () => {
                 className={`block py-2 text-sm ${
                   showLightNavbar
                     ? isActive
-                      ? "text-[#0B1F3A] border-b border-[#0B1F3A]"
+                      ? "text-[#0B1F3A] border-b border-[#5AE0BB]"
                       : "text-[#0B1F3A] hover:text-[#0B1F3A]"
                     : "text-white"
                 }`}

@@ -8,19 +8,19 @@ const TechnologyResearchNavbar = () => {
   const isMicroMarketResearch = pathname === "/micro-market-research";
 
   const navLinkClassName =
-    "inline-flex items-center pb-1 text-[#13153b] transition-colors hover:text-[#2F80ED]";
+    "inline-flex items-center pb-1 text-[#0B1F3A] transition-colors hover:text-[#0B1F3A]";
 
   const activeNavLinkClassName =
-    "border-b border-[#63d3c5] text-[#13153b]";
+    "border-b border-[#63d3c5] text-[#0B1F3A] font-semibold";
 
   return (
-    <header className="fixed left-0 right-0 top-0 z-50 border-b border-slate-200 bg-white text-[#13153b] shadow-sm">
+    <header className="fixed left-0 right-0 top-0 z-50 border-b border-slate-200 bg-white text-[#0B1F3A] shadow-sm">
       
       <div className="
       mx-auto flex items-center justify-between
       max-w-[1440px] xl:max-w-[1400px] 2xl:max-w-[1600px]
       px-3 sm:px-4 md:px-6 lg:px-4 xl:px-8 2xl:px-12
-      py-2 sm:py-2.5 md:py-3 lg:py-3 xl:py-4">
+      py-2 sm:py-3 md:py-3 lg:py-4 xl:py-4">
 
         {/* LEFT */}
         <div className="flex items-center gap-2 sm:gap-3 md:gap-4">
@@ -29,29 +29,29 @@ const TechnologyResearchNavbar = () => {
           <button
             type="button"
             aria-label="Open navigation"
-            className="flex h-9 w-9 sm:h-10 sm:w-10 md:h-11 md:w-11 items-center justify-center text-[#1f2348]"
+            className="flex h-9 w-9 sm:h-10 sm:w-10 md:h-11 md:w-11 items-center justify-center text-[#0B1F3A]"
           >
             <Menu size={20} className="sm:hidden" />
             <Menu size={22} className="hidden sm:block" />
           </button>
 
-          {/* LOGO */}
+          {/* ✅ SLIGHTLY INCREASED LOGO */}
           <Link
             to="/"
             className="
-            -ml-1 sm:-ml-2 md:-ml-4 lg:-ml-7
+            -ml-2 sm:-ml-3 md:-ml-5 lg:-ml-7 xl:-ml-9
             block overflow-hidden
-            h-[38px] w-[150px]
-            sm:h-[48px] sm:w-[200px]
-            md:h-[52px] md:w-[220px]
-            lg:h-[56px] lg:w-[260px]
-            xl:h-[60px] xl:w-[280px]
-            2xl:h-[64px] 2xl:w-[300px]"
+            h-[48px] w-[170px]
+            sm:h-[53px] sm:w-[190px]
+            md:h-[58px] md:w-[220px]
+            lg:h-[63px] lg:w-[250px]
+            xl:h-[68px] xl:w-[270px]
+            2xl:h-[72px] 2xl:w-[290px]"
           >
             <img
               src={logo}
               alt="Research Fabric"
-              className="h-full w-full max-w-full origin-left scale-[2.1] sm:scale-[2.15] md:scale-[2.16] object-contain object-left"
+              className="h-full w-full max-w-full origin-left scale-[2.05] sm:scale-[2.1] md:scale-[2.15] object-contain object-left"
             />
           </Link>
         </div>
@@ -82,24 +82,24 @@ const TechnologyResearchNavbar = () => {
 
           <Link
             to="/"
-            className="text-[#13153b] transition-colors hover:text-[#2F80ED]"
+            className="text-[#0B1F3A] transition-colors hover:text-[#0B1F3A]"
           >
             Home
           </Link>
 
           <a
             href="#cta"
-            className="text-[#13153b] transition-colors hover:text-[#2F80ED]"
+            className="text-[#0B1F3A] transition-colors hover:text-[#0B1F3A]"
           >
             Download Approach Note
           </a>
         </nav>
 
-        {/* RIGHT (ONLY SUBSCRIBE) */}
+        {/* RIGHT */}
         <div className="flex items-center">
           <span className="
           text-xs sm:text-sm md:text-sm lg:text-[13px] xl:text-sm 2xl:text-base
-          text-[#13153b] cursor-pointer hover:text-[#2F80ED] transition-colors">
+          text-[#0B1F3A] cursor-pointer hover:text-[#0B1F3A] transition-colors">
             Subscribe
           </span>
         </div>
