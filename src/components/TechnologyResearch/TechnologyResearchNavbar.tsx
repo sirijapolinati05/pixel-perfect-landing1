@@ -1,4 +1,4 @@
-import { Menu, Search } from "lucide-react";
+import { Menu } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import logo from "@/assets/LandingPage/research-fabric-footer.png";
 
@@ -95,24 +95,13 @@ const TechnologyResearchNavbar = () => {
           </a>
         </nav>
 
-        {/* RIGHT */}
-        <div className="flex items-center gap-3 sm:gap-4 md:gap-5 lg:gap-6">
-
+        {/* RIGHT (ONLY SUBSCRIBE) */}
+        <div className="flex items-center">
           <span className="
-          hidden md:inline
           text-xs sm:text-sm md:text-sm lg:text-[13px] xl:text-sm 2xl:text-base
-          text-[#13153b]">
-            Sign In | Subscribe
+          text-[#13153b] cursor-pointer hover:text-[#2F80ED] transition-colors">
+            Subscribe
           </span>
-
-          <button
-            type="button"
-            aria-label="Search"
-            className="text-[#13153b]"
-          >
-            <Search size={18} className="sm:hidden" />
-            <Search size={19} className="hidden sm:block" />
-          </button>
         </div>
 
       </div>

@@ -68,9 +68,17 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [isHomePage]);
 
+  // ✅ FINAL TEXT COLOR LOGIC
   const getTextClass = (isActive) => {
-    if (!showLightNavbar) return "text-white";
-    return isActive ? "text-black" : "text-black/80 hover:text-[#2F80ED]";
+    if (!showLightNavbar) {
+      return isActive
+        ? "text-white font-semibold"
+        : "text-white/80 hover:text-white";
+    }
+
+    return isActive
+      ? "text-[#0B1F3A] font-semibold"
+      : "text-[#0B1F3A]/80 hover:text-[#0B1F3A]";
   };
 
   const logoFrameClass =
@@ -78,14 +86,11 @@ const Navbar = () => {
 
   const darkLogoClass =
     "absolute left-0 -top-2 h-[125%] w-auto object-contain transition-all duration-500 " +
-    (showLightNavbar ? "opacity-0 translate-y-1" : "opacity-100 translate-y-0");
+    (showLightNavbar ? "opacity-0 translate-y-1" : "opacity-100");
 
-  // ✅ FIXED LIGHT LOGO (DOWN + SMOOTH)
   const lightLogoClass =
     "absolute -left-8 sm:-left-10 h-[190%] sm:h-[200%] w-auto object-contain transition-all duration-500 " +
-    (showLightNavbar
-      ? "opacity-100 translate-y-2"
-      : "opacity-0 translate-y-0");
+    (showLightNavbar ? "opacity-100 translate-y-2" : "opacity-0");
 
   return (
     <nav
@@ -103,7 +108,7 @@ const Navbar = () => {
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
             className={`p-1 ${
-              showLightNavbar ? "text-black" : "text-white"
+              showLightNavbar ? "text-[#0B1F3A]" : "text-white"
             }`}
           >
             {mobileOpen ? <X size={20} /> : <Menu size={20} />}
@@ -143,8 +148,12 @@ const Navbar = () => {
                 {item.label}
 
                 <span
-                  className={`absolute left-0 bottom-0 h-[2px] w-full bg-[#63d3c5] transition-all duration-300 ${
-                    isScrolled && isActive
+                  className={`absolute left-0 bottom-0 h-[2px] w-full transition-all duration-300 ${
+                    showLightNavbar
+                      ? "bg-[#0B1F3A]"
+                      : "bg-white"
+                  } ${
+                    isActive
                       ? "opacity-100 scale-x-100"
                       : "opacity-0 scale-x-0"
                   }`}
@@ -158,7 +167,7 @@ const Navbar = () => {
         <div className="flex items-center gap-3 sm:gap-4">
           <span
             className={`hidden sm:inline text-xs sm:text-sm ${
-              showLightNavbar ? "text-black/70" : "text-white/70"
+              showLightNavbar ? "text-[#0B1F3A]" : "text-white"
             }`}
           >
             Subscribe
@@ -188,8 +197,8 @@ const Navbar = () => {
                   !showLightNavbar
                     ? "text-white"
                     : isActive
-                    ? "text-black border-b border-[#63d3c5]"
-                    : "text-black/80 hover:text-[#2F80ED]"
+                    ? "text-[#0B1F3A] border-b border-[#0B1F3A]"
+                    : "text-[#0B1F3A]/80 hover:text-[#0B1F3A]"
                 }`}
               >
                 {item.label}
