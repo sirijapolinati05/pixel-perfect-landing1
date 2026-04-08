@@ -6,6 +6,7 @@ import tapatiImg from "@/assets/LandingPage/Tapati-Bandhopadhyay.png";
 import markImg from "@/assets/LandingPage/Mark-Purdy.png";
 import gaurangImg from "@/assets/LandingPage/Gaurang-Padgi.png";
 import whiteTypographyImg from "@/assets/LandingPage/White-Typography.png";
+import circleBg from "@/assets/ResearchTeam/ResearchTeam-Background.jpeg";
 
 const partners = [
   {
@@ -28,22 +29,25 @@ const partners = [
   },
   {
     name: "Gaurang Pagdi",
-    role: "Global Capability Centers(GCC) &",
-    subtitle: "BPO Services",
+    role: "Research Partner",
+    subtitle: "GCC & BPO Services",
     image: gaurangImg,
   },
 ];
 
 const PartnersSection = () => {
   return (
-    <section id="analysts" className="bg-background py-10 sm:py-12 md:py-14 lg:py-16 xl:py-20 2xl:py-24 overflow-hidden">
+    <section
+      id="analysts"
+      className="bg-background py-10 sm:py-12 md:py-14 lg:py-16 xl:py-20 2xl:py-24 overflow-hidden font-['Abhaya Libre']"
+    >
       <div className="max-w-7xl xl:max-w-[1400px] 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 text-center">
 
         {/* TOP LABEL */}
         <div className="flex items-center justify-center gap-2 sm:gap-3 mb-3">
           <span className="w-4 sm:w-6 h-[1px] bg-current opacity-40"></span>
 
-          <p className="text-muted-foreground font-sans text-xs sm:text-sm font-bold tracking-widest whitespace-nowrap">
+          <p className="text-black text-[24px] font-bold tracking-widest whitespace-nowrap">
             Research Partners
           </p>
 
@@ -51,12 +55,14 @@ const PartnersSection = () => {
         </div>
 
         {/* HEADING */}
-        <h2 className="mb-3 text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold text-foreground">
+        <h2 className="mb-3 text-[48px] font-bold leading-tight 
+          bg-gradient-to-r from-[#0B3F60] to-[#26A9E0] 
+          bg-clip-text text-transparent">
           Renowned Minds, Rigorous Perspectives
         </h2>
 
         {/* SUBTEXT */}
-        <p className="mx-auto mb-6 sm:mb-8 max-w-xl sm:max-w-2xl text-muted-foreground font-sans text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl">
+        <p className="mx-auto mb-6 sm:mb-8 max-w-xl sm:max-w-2xl text-muted-foreground text-[20px] font-normal">
           Our research is shaped by partners who have spent decades at the forefront of technology research and advisory.
         </p>
 
@@ -65,7 +71,6 @@ const PartnersSection = () => {
           {partners.map((partner) => (
             <div key={partner.name} className="relative h-full">
 
-              {/* BACKGROUND TYPOGRAPHY IMAGE */}
               {partner.name === "Ashwin Gaidhani" && (
                 <img
                   src={whiteTypographyImg}
@@ -83,57 +88,54 @@ const PartnersSection = () => {
               p-4 pt-6 text-center sm:p-5 sm:pt-7
               transition-transform duration-300 hover:scale-[0.97]">
                 
-                {/* IMAGE */}
-                <div className="relative z-10 mx-auto mb-3 sm:mb-4 
-                h-20 w-20 shrink-0 sm:h-24 sm:w-24
-                overflow-hidden rounded-full border-4 border-teal/30">
+                {/* ✅ FIXED IMAGE */}
+                <div
+                  className="relative z-10 mx-auto mb-3 sm:mb-4 
+                  h-20 w-20 sm:h-24 sm:w-24 rounded-full overflow-hidden"
+                  style={{
+                    backgroundImage: `url(${circleBg})`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                  }}
+                >
                   <img
                     src={partner.image}
                     alt={partner.name}
-                    className="h-full w-full object-cover"
+                    className="h-full w-full object-cover rounded-full"
                   />
                 </div>
 
-                {/* NAME */}
-                <h4 className="relative z-10 min-h-[2.75rem] text-base font-bold font-sans text-primary-foreground sm:min-h-[3rem] sm:text-lg md:text-xl lg:min-h-[3.25rem] lg:text-xl xl:min-h-[3.5rem] xl:text-2xl">
+                <h4 className="relative z-10 text-base font-bold text-primary-foreground sm:text-lg md:text-xl lg:text-xl xl:text-2xl">
                   {partner.name}
                 </h4>
 
-                {/* ROLE */}
-                <div className="relative z-10 mt-2 mb-2 flex min-h-[5.75rem] flex-col">
-                  <p className="min-h-[1.5rem] text-xs font-medium font-sans text-[#38BDF8] sm:text-sm md:text-base lg:text-base xl:text-lg">
+                <div className="relative z-10 mt-1 mb-2 flex flex-col">
+                  <p className="text-xs font-medium text-[#38BDF8] sm:text-sm md:text-base lg:text-base xl:text-lg">
                     {partner.role}
                   </p>
 
-                  <p className="mt-1 min-h-[2.75rem] text-[10px] font-sans text-[#38BDF8] sm:text-xs md:text-sm lg:text-sm xl:text-base">
+                  <p className="mt-1 text-[10px] text-[#38BDF8] sm:text-xs md:text-sm lg:text-sm xl:text-base">
                     {partner.subtitle}
                   </p>
 
                   <div className="mx-auto mt-3 h-[2px] w-20 sm:w-24 bg-gray-400 opacity-70" />
                 </div>
 
-                {/* ICONS */}
                 <div className="relative z-10 mt-auto flex justify-center gap-3 pt-4 sm:pt-5">
-                  <a
-                    href="#"
-                    className="flex h-7 w-7 sm:h-8 sm:w-8 items-center justify-center rounded-full bg-teal/20 text-teal transition-colors hover:bg-teal/30"
-                  >
+                  <a className="flex h-7 w-7 sm:h-8 sm:w-8 items-center justify-center rounded-full bg-teal/20 text-teal hover:bg-teal/30">
                     <Linkedin size={14} />
                   </a>
 
-                  <a
-                    href="#"
-                    className="flex h-7 w-7 sm:h-8 sm:w-8 items-center justify-center rounded-full bg-teal/20 text-teal transition-colors hover:bg-teal/30"
-                  >
+                  <a className="flex h-7 w-7 sm:h-8 sm:w-8 items-center justify-center rounded-full bg-teal/20 text-teal hover:bg-teal/30">
                     <Mail size={14} />
                   </a>
                 </div>
+
               </div>
             </div>
           ))}
         </div>
 
-        {/* BUTTON */}
         <div className="mt-8 sm:mt-10 flex justify-center">
           <Link
             to="/analyst-team"

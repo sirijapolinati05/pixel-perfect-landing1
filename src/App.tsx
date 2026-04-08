@@ -41,9 +41,9 @@ const HomePage = () => (
     <PracticesSection />
     <CXOSection />
     <DeliverSection />
+    <PartnersSection />
     <ProcessSection />
     <ResearchSection />
-    <PartnersSection />
     <CTASection />
     <Footer />
   </div>

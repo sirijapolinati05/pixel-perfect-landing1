@@ -72,13 +72,13 @@ const DeliverSection = () => {
                 className="mb-3 sm:mb-4 h-7 w-7 sm:h-8 sm:w-8 object-contain"
               />
 
-              {/* Title */}
-              <h4 className="mb-2 text-base sm:text-lg font-bold text-[#0A1F44] font-serif">
+              {/* Title - 32px */}
+              <h4 className="mb-2 text-[32px] leading-tight font-bold text-[#0A1F44] font-serif">
                 {item.title}
               </h4>
 
-              {/* Description */}
-              <p className="font-sans text-sm sm:text-base leading-6 sm:leading-7 text-[#5A6B85]">
+              {/* ✅ Description - 13px */}
+              <p className="font-sans text-[13px] leading-5 text-[#5A6B85]">
                 {item.description}
               </p>
             </div>

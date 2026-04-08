@@ -4,22 +4,23 @@ import lalithaImg from "@/assets/ResearchTeam/Lalitha-Yanamandra.png";
 import meghnaImg from "@/assets/ResearchTeam/Meghna-Dodke.png";
 import sameenImg from "@/assets/ResearchTeam/Sameen-Siddique.png";
 import sauravImg from "@/assets/ResearchTeam/Saurav-Patra.png";
+import johnBurnellImg from "@/assets/ResearchTeam/John-Burnell.png";
 import AnalystTeamAvatar from "@/components/AnalystTeam/AnalystTeamAvatar";
 
 const leadAnalysts = [
   {
-    name: "Meghna Dodke",
-    subtitle: "Technology Platforms",
+    name: "Mega Dodke",
+    subtitle: "Enterprise Platform",
     image: meghnaImg,
   },
   {
     name: "Sameen Siddique",
-    subtitle: "Technology Platforms",
+    subtitle: "Enterprise Cloud",
     image: sameenImg,
   },
   {
     name: "Lalitha Yanamandra",
-    subtitle: "Technology Platforms",
+    subtitle: "Enterprise Services",
     image: lalithaImg,
   },
 ];
@@ -27,9 +28,9 @@ const leadAnalysts = [
 const featuredAnalyst = {
   name: "John Burnell",
   subtitle: "Custom research & Editor",
-  cardName: "Lalitha Yanamandra",
+  cardName: "John Burnell",
   cardSubtitle: "Technology Platforms",
-  image: lalithaImg,
+  image: johnBurnellImg,
 };
 
 const cardClassName =
@@ -177,3 +178,4 @@ const AnalystTeamTierTwo = () => {
 };
 
 export default AnalystTeamTierTwo;
+
