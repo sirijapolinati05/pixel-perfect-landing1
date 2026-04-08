@@ -68,17 +68,17 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [isHomePage]);
 
-  // ✅ FINAL TEXT COLOR LOGIC
+  // ✅ UPDATED TEXT COLOR LOGIC
   const getTextClass = (isActive) => {
-    if (!showLightNavbar) {
+    if (showLightNavbar) {
       return isActive
-        ? "text-white font-semibold"
-        : "text-white/80 hover:text-white";
+        ? "text-[#0B1F3A] font-semibold"
+        : "text-[#0B1F3A] hover:text-[#0B1F3A]";
     }
 
     return isActive
-      ? "text-[#0B1F3A] font-semibold"
-      : "text-[#0B1F3A]/80 hover:text-[#0B1F3A]";
+      ? "text-white font-semibold"
+      : "text-white/80 hover:text-white";
   };
 
   const logoFrameClass =
@@ -194,11 +194,11 @@ const Navbar = () => {
                   setMobileOpen(false);
                 }}
                 className={`block py-2 text-sm ${
-                  !showLightNavbar
-                    ? "text-white"
-                    : isActive
-                    ? "text-[#0B1F3A] border-b border-[#0B1F3A]"
-                    : "text-[#0B1F3A]/80 hover:text-[#0B1F3A]"
+                  showLightNavbar
+                    ? isActive
+                      ? "text-[#0B1F3A] border-b border-[#0B1F3A]"
+                      : "text-[#0B1F3A] hover:text-[#0B1F3A]"
+                    : "text-white"
                 }`}
               >
                 {item.label}
