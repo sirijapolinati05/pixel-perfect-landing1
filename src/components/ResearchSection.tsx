@@ -7,11 +7,14 @@ import whiteTypographyImg from "../assets/LandingPage/White-Typography.png";
 
 const ResearchSection = () => {
   return (
-    <section id="latest-research" className="overflow-hidden bg-[#F7F9FC] py-10 sm:py-12 md:py-14 lg:py-16 xl:py-20 2xl:py-24">
+    <section
+      id="latest-research"
+      className="overflow-hidden bg-[#F7F9FC] py-10 sm:py-12 md:py-14 lg:py-6 xl:py-8 2xl:py-10"
+    >
       <div className="mx-auto max-w-6xl xl:max-w-[1400px] 2xl:max-w-[1600px] px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 text-center">
 
         {/* TOP LABEL */}
-        <div className="mb-3 flex items-center justify-center gap-2 sm:gap-3">
+        <div className="mb-2 flex items-center justify-center gap-2 sm:gap-3 lg:mb-3">
           <span className="h-[1px] w-4 sm:w-6 bg-current opacity-40"></span>
 
           <p className="whitespace-nowrap text-[10px] sm:text-xs font-bold tracking-widest text-gray-500">
@@ -22,17 +25,17 @@ const ResearchSection = () => {
         </div>
 
         {/* HEADING */}
-        <h2 className="mb-2 text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold">
+        <h2 className="mb-2 text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-[52px] 2xl:text-[60px] font-bold leading-[1.05]">
           Fresh from the <span className="text-blue-600">ResearchFabric</span>
         </h2>
 
         {/* SUBTEXT */}
-        <p className="mb-6 sm:mb-8 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl text-gray-500 max-w-xl sm:max-w-2xl mx-auto">
+        <p className="mx-auto mb-4 max-w-xl text-xs text-gray-500 sm:mb-4 sm:max-w-2xl sm:text-sm md:text-base lg:mb-6 lg:max-w-3xl lg:text-lg xl:text-[19px]">
           Our most recent Thought Shaping Papers and strategic briefings.
         </p>
 
         {/* GRID */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-6 lg:gap-8 xl:gap-10 items-stretch">
+        <div className="grid grid-cols-1 items-stretch gap-4 md:grid-cols-2 md:gap-6 lg:grid-cols-3 lg:gap-5 xl:gap-6">
 
           {/* FIRST CARD */}
           <div className="relative">
@@ -81,9 +84,8 @@ const ResearchSection = () => {
           </div>
 
           {/* SECOND COLUMN */}
-          <div className="flex h-full flex-col gap-4">
+          <div className="flex h-full flex-col gap-4 lg:gap-5">
 
-            {/* TOP CARD */}
             <div className="relative overflow-hidden rounded-2xl shadow-md
             transition-all duration-300 hover:scale-[1.05]">
 
@@ -113,8 +115,7 @@ const ResearchSection = () => {
               </div>
             </div>
 
-            {/* BOTTOM CARD */}
-            <div className="group flex min-h-[260px] sm:min-h-[300px] md:min-h-[320px] flex-1 flex-col overflow-hidden rounded-2xl bg-white text-left shadow-md
+            <div className="group flex min-h-[260px] sm:min-h-[300px] md:min-h-[300px] lg:min-h-[280px] xl:min-h-[300px] flex-1 flex-col overflow-hidden rounded-2xl bg-white text-left shadow-md
             transition-all duration-300 hover:scale-[1.05] hover:bg-[#0A1F44]">
 
               <img src={research3} className="h-28 sm:h-32 md:h-36 w-full object-cover" />

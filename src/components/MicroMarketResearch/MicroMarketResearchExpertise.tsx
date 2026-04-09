@@ -37,7 +37,7 @@ const MicroMarketResearchExpertise = () => {
   return (
     <section
       id="expertise"
-      className="relative overflow-hidden bg-[#101341] px-4 sm:px-6 md:px-8 lg:px-14 xl:px-20 2xl:px-28 py-10 sm:py-12 md:py-14 lg:py-16 xl:py-20 2xl:py-24 text-white"
+      className="relative overflow-hidden bg-[#101341] px-4 sm:px-6 md:px-8 lg:px-14 xl:px-20 2xl:px-28 py-10 sm:py-12 md:py-14 lg:py-8 xl:py-10 2xl:py-12 text-white"
     >
       {/* BACKGROUND */}
       <div className="absolute left-[-56px] top-[-48px] h-[220px] w-[220px] sm:left-[-68px] sm:top-[-58px] sm:h-[270px] sm:w-[270px] md:left-[-80px] md:top-[-70px] md:h-[320px] md:w-[320px] rounded-full border border-white/20" />
@@ -72,7 +72,7 @@ const MicroMarketResearchExpertise = () => {
         </div>
 
         {/* CARDS */}
-        <div className="mt-8 grid grid-cols-1 gap-x-4 gap-y-5 sm:grid-cols-2 sm:gap-x-6 sm:gap-y-6 md:grid-cols-3 md:gap-x-8">
+        <div className="mt-7 grid grid-cols-1 gap-x-4 gap-y-5 sm:grid-cols-2 sm:gap-x-6 sm:gap-y-6 md:grid-cols-3 md:gap-x-8 lg:mt-6">
           {expertiseItems.map((item) => {
             return (
               <article

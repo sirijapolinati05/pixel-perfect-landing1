@@ -19,11 +19,11 @@ const TechnologyResearchNavbar = () => {
       <div className="
       mx-auto flex items-center justify-between
       max-w-[1440px] xl:max-w-[1400px] 2xl:max-w-[1600px]
-      px-3 sm:px-4 md:px-6 lg:px-4 xl:px-8 2xl:px-12
+      pl-0 pr-3 sm:px-4 md:px-6 lg:px-4 xl:px-8 2xl:px-12
       py-2 sm:py-3 md:py-3 lg:py-4 xl:py-4">
 
         {/* LEFT */}
-        <div className="flex items-center gap-2 sm:gap-3 md:gap-4">
+        <div className="flex items-center gap-0">
 
           {/* MENU BUTTON */}
           <button
@@ -35,13 +35,13 @@ const TechnologyResearchNavbar = () => {
             <Menu size={22} className="hidden sm:block" />
           </button>
 
-          {/* ✅ SLIGHTLY INCREASED LOGO */}
+          {/* ✅ FINAL LEFT PUSH */}
           <Link
             to="/"
             className="
-            -ml-2 sm:-ml-3 md:-ml-5 lg:-ml-7 xl:-ml-9
+            -ml-4 sm:-ml-3 md:-ml-5 lg:-ml-7 xl:-ml-9
             block overflow-hidden
-            h-[48px] w-[170px]
+            h-[42px] w-[145px]
             sm:h-[53px] sm:w-[190px]
             md:h-[58px] md:w-[220px]
             lg:h-[63px] lg:w-[250px]

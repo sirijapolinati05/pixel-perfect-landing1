@@ -15,7 +15,7 @@ const AnalystTeamAvatar = ({
 }: AnalystTeamAvatarProps) => {
   return (
     <div
-      className={`relative mx-auto h-[84px] w-[84px] sm:h-[90px] sm:w-[90px] md:h-[94px] md:w-[94px] overflow-hidden rounded-full bg-[#e9eef5] ring-0 transition-all duration-300 group-hover:bg-white/15 group-hover:ring-4 group-hover:ring-white/25 ${className}`}
+      className={`relative mx-auto h-24 w-24 sm:h-[92px] sm:w-[92px] md:h-[94px] md:w-[94px] overflow-hidden rounded-full bg-[#e9eef5] ring-0 transition-all duration-300 group-hover:bg-white/15 group-hover:ring-4 group-hover:ring-white/25 ${className}`}
       style={{
         backgroundImage: `url(${fallbackBg})`,
         backgroundPosition: "center",

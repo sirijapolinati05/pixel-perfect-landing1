@@ -11,7 +11,7 @@ const CXOSection = () => {
         <div className="flex items-center gap-2 sm:gap-3 mb-5 sm:mb-6">
           <span className="w-4 sm:w-6 h-[1px] bg-white/40"></span>
 
-          <p className="text-white font-sans text-[24px] tracking-widest">
+          <p className="text-white font-serif text-[24px] tracking-widest">
             CXO AI Research
           </p>
 
@@ -26,17 +26,17 @@ const CXOSection = () => {
               AI Leadership is Now a C-Suite Imperative
             </h2>
 
-            {/* 16.06px */}
-            <p className="text-primary-foreground/70 font-sans text-[16.06px] leading-relaxed mb-5 sm:mb-6 max-w-sm sm:max-w-md">
+            <p className="text-primary-foreground/70 font-serif text-[16.06px] leading-relaxed mb-5 sm:mb-6 max-w-sm sm:max-w-md">
               The AI landscape is noisy, volatile, and impossible for busy leaders to track.
               CEOs and CXOs are expected to drive growth, innovation, and new revenue with AI
               yet few have the bandwidth or in-house capability to stay ahead. We bridge that gap.
             </p>
 
+            {/* ✅ BUTTON WIDTH REDUCED ON MOBILE */}
             <a
               href="#"
-              className="inline-block w-full sm:w-auto text-center bg-teal text-navy font-sans font-semibold 
-              px-5 sm:px-6 py-2.5 md:py-3 rounded text-sm md:text-base 
+              className="inline-block w-fit mx-auto sm:mx-0 text-center bg-teal text-navy font-serif font-semibold 
+              px-4 sm:px-6 py-2.5 md:py-3 rounded text-sm md:text-base 
               hover:bg-teal-light transition-colors"
             >
               Download approach note
@@ -59,12 +59,11 @@ const CXOSection = () => {
                   className="mb-3 sm:mb-4 h-6 w-6 sm:h-7 sm:w-7 object-contain"
                 />
 
-                {/* ✅ Reduced line spacing */}
                 <h3 className="mb-2 text-[32px] leading-tight font-bold text-[#0A1F44]">
                   Cut Through Noise
                 </h3>
 
-                <p className="font-sans text-[13px] leading-6 text-[#5A6B85] flex-grow">
+                <p className="font-serif text-[13px] leading-6 text-[#5A6B85] flex-grow">
                   Quantitative assessment of industry landscapes, competitive frameworks
                   & macro-economic metrics.
                 </p>
@@ -84,12 +83,11 @@ const CXOSection = () => {
                   className="mb-3 sm:mb-4 h-6 w-6 sm:h-7 sm:w-7 object-contain"
                 />
 
-                {/* ✅ Same fix here for consistency */}
                 <h3 className="mb-2 text-[32px] leading-tight font-bold text-[#0A1F44]">
                   Translate Into Action
                 </h3>
 
-                <p className="font-sans text-[13px] leading-6 text-[#5A6B85] flex-grow">
+                <p className="font-serif text-[13px] leading-6 text-[#5A6B85] flex-grow">
                   We turn complex AI trends into clear business implications your
                   leadership team can act on immediately.
                 </p>

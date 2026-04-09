@@ -30,7 +30,7 @@ const partnerCards = [
 ];
 
 const cardClassName =
-  "group flex min-h-[220px] sm:min-h-[228px] md:min-h-[236px] w-full max-w-full sm:max-w-[184px] flex-col border border-[#dfe4ea] bg-white px-4 pb-5 pt-3 text-center shadow-[0_4px_10px_rgba(8,18,59,0.15)] transition-all duration-300 ease-out hover:-translate-y-2 hover:border-[#0d4f96] hover:bg-[#0d4f96] hover:shadow-[0_20px_34px_rgba(8,18,59,0.24)]";
+  "group flex min-h-[300px] sm:min-h-[236px] md:min-h-[244px] w-full max-w-full sm:max-w-[184px] flex-col rounded-xl border border-[#dfe4ea] bg-white px-4 pb-4 pt-4 text-center shadow-[0_4px_10px_rgba(8,18,59,0.15)] transition-all duration-300 ease-out hover:-translate-y-2 hover:border-[#0d4f96] hover:bg-[#0d4f96] hover:shadow-[0_20px_34px_rgba(8,18,59,0.24)]";
 
 const AnalystTeamTierOne = () => {
   return (
@@ -57,17 +57,17 @@ const AnalystTeamTierOne = () => {
             </p>
           </div>
 
-          <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 sm:gap-4 md:gap-6 lg:gap-3">
+          <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 sm:gap-4 md:gap-6 lg:gap-3">
             {partnerCards.map((member) => (
               <article key={member.name} className={cardClassName}>
                 <AnalystTeamAvatar name={member.name} image={member.image} />
 
-                <h3 className="mt-4 text-base sm:text-[1.02rem] md:text-[1.02rem] leading-[1.15] tracking-[-0.02em] text-[#17204c] transition-colors duration-300 group-hover:text-white">
+                <h3 className="mt-4 text-lg sm:text-[1.02rem] md:text-[1.02rem] leading-[1.15] tracking-[-0.02em] text-[#17204c] transition-colors duration-300 group-hover:text-white">
                   {member.name}
                 </h3>
 
                 <p
-                  className={`mt-1 min-h-[32px] text-[11px] sm:text-[0.68rem] md:text-[0.68rem] leading-[1.2] text-[#5ab5eb] transition-colors duration-300 group-hover:text-white/85 ${
+                  className={`mt-1 min-h-[36px] text-xs sm:text-[0.68rem] md:text-[0.68rem] leading-[1.25] text-[#5ab5eb] transition-colors duration-300 group-hover:text-white/85 ${
                     member.name === "Gaurang Pagdi"
                       ? "mx-auto max-w-[150px]"
                       : ""
@@ -84,14 +84,14 @@ const AnalystTeamTierOne = () => {
                     aria-label={`${member.name} LinkedIn`}
                     className="flex h-8 w-8 items-center justify-center rounded-full bg-[#58dec5] text-[#0d173f] transition-all duration-300 group-hover:bg-white group-hover:text-[#0d4f96] hover:-translate-y-1"
                   >
-                    <Linkedin size={14} strokeWidth={2.2} />
+                    <Linkedin size={16} strokeWidth={2.2} />
                   </button>
                   <button
                     type="button"
                     aria-label={`${member.name} email`}
                     className="flex h-8 w-8 items-center justify-center rounded-full bg-[#58dec5] text-[#0d173f] transition-all duration-300 group-hover:bg-white group-hover:text-[#0d4f96] hover:-translate-y-1"
                   >
-                    <Mail size={14} strokeWidth={2.2} />
+                    <Mail size={16} strokeWidth={2.2} />
                   </button>
                 </div>
               </article>

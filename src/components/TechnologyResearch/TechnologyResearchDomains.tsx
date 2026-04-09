@@ -31,7 +31,7 @@ const TechnologyResearchDomains = () => {
       className="
       relative overflow-hidden bg-[#f8f7f3]
       px-4 sm:px-6 md:px-8 lg:px-14 xl:px-20 2xl:px-28
-      py-10 sm:py-12 md:py-14 lg:py-16 xl:py-20 2xl:py-24
+      py-10 sm:py-12 md:py-14 lg:py-8 xl:py-10 2xl:py-12
       text-[#141742]"
     >
       {/* BACKGROUND TYPO */}
@@ -83,7 +83,7 @@ const TechnologyResearchDomains = () => {
 
         {/* GRID */}
         <div className="
-        relative mt-5 sm:mt-6 lg:mt-8 xl:mt-10
+        relative mt-5 sm:mt-6 lg:mt-6 xl:mt-7
         grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-3
         gap-4 sm:gap-5 md:gap-6 lg:gap-6 xl:gap-8 2xl:gap-10">
 

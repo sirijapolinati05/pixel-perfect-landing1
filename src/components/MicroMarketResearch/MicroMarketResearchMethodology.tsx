@@ -25,7 +25,7 @@ const methodCards = [
 
 const MicroMarketResearchMethodology = () => {
   return (
-    <section className="relative overflow-hidden bg-[#f8f7f3] px-4 sm:px-6 md:px-8 lg:pl-14 lg:pr-0 xl:pl-20 2xl:pl-28 py-10 sm:py-12 md:py-14 lg:py-16 xl:py-20 2xl:py-24 text-[#141742]">
+    <section className="relative overflow-hidden bg-[#f8f7f3] px-4 sm:px-6 md:px-8 lg:pl-14 lg:pr-0 xl:pl-20 2xl:pl-28 py-10 sm:py-12 md:py-14 lg:py-8 xl:py-10 2xl:py-12 text-[#141742]">
       
       <div className="pointer-events-none absolute right-[-18%] sm:right-[-12%] md:right-[-8%] lg:right-[-6%] -top-10 sm:-top-14 md:-top-20 z-0">
         <img
@@ -51,7 +51,7 @@ const MicroMarketResearchMethodology = () => {
           designed to synthesize fragmented data points into a coherent strategic picture.
         </p>
 
-        <div className="relative z-10 mt-6 grid items-start gap-6 sm:gap-8 lg:grid-cols-[1.05fr_1.2fr]">
+        <div className="relative z-10 mt-5 grid items-start gap-6 sm:gap-8 lg:mt-4 lg:grid-cols-[1.05fr_1.2fr]">
 
           {/* CARDS */}
           <div className="grid items-start gap-5 sm:gap-6 md:grid-cols-2">

@@ -30,13 +30,13 @@ const TechnologyResearchOffering = () => {
       className="
       bg-[#0c1044] text-white
       px-4 sm:px-6 md:px-8 lg:px-14 xl:px-20 2xl:px-28
-      py-10 sm:py-12 md:py-14 lg:py-16 xl:py-20 2xl:py-24"
+      py-10 sm:py-12 md:py-14 lg:py-8 xl:py-10 2xl:py-12"
     >
       <div
         className="
         mx-auto
         max-w-[1440px] xl:max-w-[1400px] 2xl:max-w-[1600px]
-        flex flex-col gap-10"
+        flex flex-col gap-8 lg:gap-7 xl:gap-8"
       >
         {/* TOP CONTENT */}
         <div>
@@ -81,7 +81,7 @@ const TechnologyResearchOffering = () => {
         <div className="
           flex flex-col lg:flex-row
           items-start lg:items-center
-          gap-10
+          gap-8 lg:gap-7
         ">
           
           {/* LEFT → 3 BOXES */}

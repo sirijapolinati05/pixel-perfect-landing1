@@ -6,11 +6,16 @@ const HeroSection = () => {
       <div className="absolute inset-0 h-full w-full bg-[#081A34]" />
 
       {/* IMAGE + RIGHT TEXT */}
-      <div className="absolute top-0 right-0 flex flex-col items-end w-full md:w-auto">
+      <div className="absolute top-0 right-0 w-full md:w-auto flex flex-col items-end">
+
         <img
           src={heroImg}
           alt="Abstract 3D"
-          className="h-auto w-[300px] sm:w-[450px] md:w-[600px] lg:w-[750px] max-w-full object-contain"
+          className="
+            w-full h-[45vh] object-cover
+            sm:h-[55vh]
+            md:h-auto md:w-[600px] lg:w-[750px]
+          "
         />
 
         <div className="w-full md:w-[600px] lg:w-[750px] max-w-full md:-translate-x-6 px-4 sm:px-6 mt-3 sm:mt-4">
@@ -18,18 +23,17 @@ const HeroSection = () => {
             RESEARCHFABRIC delivers practitioner-led Smart research on{" "}
             <strong className="text-white">Perpetuating Technologies</strong>{" "}
             and maps the <strong className="text-white">Micro-Markets</strong>{" "}
-            where these technologies create commercial value. We identify
-            high-growth segments, forecast competitive dynamics, and deliver
-            decision-grade intelligence for enterprise strategy and investment.
+            where these technologies create commercial value.
           </p>
         </div>
       </div>
 
       {/* MAIN CONTENT */}
-      <div className="relative z-20 mx-auto flex min-h-screen max-w-7xl flex-col px-4 sm:px-6 md:px-8 pt-24 sm:pt-28 md:pt-32 pb-10 sm:pb-12">
+      <div className="relative z-20 mx-auto flex min-h-screen max-w-7xl flex flex-col px-4 sm:px-6 md:px-8 pt-24 sm:pt-28 md:pt-32 pb-10">
         
-        <div className="max-w-xl sm:max-w-2xl mt-16 sm:mt-20">
-          <h1 className="mb-5 sm:mb-6 font-serif text-[36px] sm:text-[48px] md:text-[58px] lg:text-[58px] font-semibold leading-none text-white">
+        <div className="max-w-xl sm:max-w-2xl mt-4 sm:mt-20">
+
+          <h1 className="mb-5 sm:mb-6 font-serif text-[36px] sm:text-[48px] md:text-[58px] font-semibold leading-none text-white">
             <span className="block">Thought-Shaping</span>
             <span className="block">Intelligence on</span>
 
@@ -55,20 +59,27 @@ const HeroSection = () => {
             </span>
           </h1>
 
-          {/* BUTTONS */}
-          <div className="flex w-full sm:w-fit flex-col sm:flex-row gap-3 sm:gap-4">
-            <a href="#practices" className="flex items-center justify-center rounded-full bg-[#3CC8FF] px-5 sm:px-6 py-2.5 sm:py-3 text-sm md:text-base font-semibold text-[#081A34] hover:scale-105">
+          {/* ✅ BUTTONS MOVED DOWN (MOBILE ONLY) */}
+          <div className="mt-40 sm:mt-28 md:mt-12 flex w-fit flex-col sm:flex-row gap-3 sm:gap-4">
+            <a
+              href="#practices"
+              className="flex items-center justify-center rounded-full bg-[#3CC8FF] px-4 sm:px-5 py-2.5 text-sm md:text-base font-semibold text-[#081A34] hover:scale-105 transition"
+            >
               Explore Our Practices
             </a>
 
-            <a href="#cxo" className="flex items-center justify-center rounded-full bg-[#43E0B1] px-5 sm:px-6 py-2.5 sm:py-3 text-sm md:text-base font-semibold text-[#081A34] hover:scale-105">
+            <a
+              href="#cxo"
+              className="flex items-center justify-center rounded-full bg-[#43E0B1] px-4 sm:px-5 py-2.5 text-sm md:text-base font-semibold text-[#081A34] hover:scale-105 transition"
+            >
               CXO AI Research
             </a>
           </div>
+
         </div>
 
-        {/* 🔥 GRID WITH LINES + TIGHT GAP */}
-        <div className="mt-40 sm:mt-48 md:mt-60 lg:mt-64 pt-4">
+        {/* GRID */}
+        <div className="mt-4 sm:mt-28 md:mt-40 lg:mt-44 pt-4">
           <div className="grid grid-cols-2 md:grid-cols-4 text-center">
             {[
               { title: "Technology", sub: "Deep Tech Capabilities" },
@@ -86,7 +97,6 @@ const HeroSection = () => {
                   {item.title}
                 </h3>
 
-                {/* 🔥 NEGATIVE GAP */}
                 <p className="-mt-1 text-[16px] sm:text-[18px] md:text-[20px] text-white/60">
                   {item.sub}
                 </p>
@@ -94,7 +104,6 @@ const HeroSection = () => {
             ))}
           </div>
 
-          {/* 🔥 TOP BORDER LINE BACK */}
           <div className="mt-[-1px] border-t border-white/20 text-center pt-3 sm:pt-4">
             <h3 className="font-serif text-[24px] sm:text-[30px] md:text-[35px] font-semibold text-[#5AE0BB]">
               Practices

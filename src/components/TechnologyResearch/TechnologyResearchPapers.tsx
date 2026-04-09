@@ -13,7 +13,7 @@ const TechnologyResearchPapers = () => {
   return (
     <section
       id="papers"
-      className="relative overflow-hidden bg-[#f8f7f3] px-4 sm:px-6 md:px-8 lg:px-14 xl:px-20 2xl:px-28 py-10 sm:py-12 md:py-14 lg:py-16 xl:py-20 2xl:py-24 text-[#121742]"
+      className="relative overflow-hidden bg-[#f8f7f3] px-4 sm:px-6 md:px-8 lg:px-14 xl:px-20 2xl:px-28 py-10 sm:py-12 md:py-14 lg:py-8 xl:py-10 2xl:py-12 text-[#121742]"
     >
       <div className="relative mx-auto max-w-[1440px] xl:max-w-[1400px] 2xl:max-w-[1600px]">
         
@@ -22,7 +22,7 @@ const TechnologyResearchPapers = () => {
           Thought Shaping Papers
         </h2>
 
-        <div className="relative mt-5">
+        <div className="relative mt-4 lg:mt-5">
           
           {/* TYPOGRAPHIC IMAGE */}
           <img
@@ -78,7 +78,7 @@ const TechnologyResearchPapers = () => {
         </div>
 
         {/* BUTTON */}
-        <div className="mt-5 flex justify-center sm:mt-6">
+        <div className="mt-4 flex justify-center sm:mt-5">
           <button
             type="button"
             className="w-full sm:w-auto rounded-lg border border-[#18204e] bg-white px-6 sm:px-8 md:px-10 lg:px-8 py-2.5 sm:py-3 text-sm sm:text-base md:text-lg lg:text-[15px] font-semibold text-[#111741] shadow-[0_8px_18px_rgba(17,23,65,0.1)] transition-transform hover:-translate-y-0.5"

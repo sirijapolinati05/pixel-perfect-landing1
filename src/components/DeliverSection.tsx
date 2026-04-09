@@ -78,7 +78,7 @@ const DeliverSection = () => {
               </h4>
 
               {/* ✅ Description - 13px */}
-              <p className="font-sans text-[13px] leading-5 text-[#5A6B85]">
+              <p className="font-serif text-[13px] leading-5 text-[#5A6B85]">
                 {item.description}
               </p>
             </div>

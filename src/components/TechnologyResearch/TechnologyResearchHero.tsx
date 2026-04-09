@@ -40,7 +40,7 @@ const TechnologyResearchHero = () => {
             <h1 className="
             text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-[4.5rem]
             leading-[1.1] tracking-[-0.02em] text-white">
-              Thought Shaping Research for Quantum, Chipsets &amp; AI
+              Thought Shaping Research for Quantum, Chipsets & AI
             </h1>
 
             {/* SUBTEXT */}
@@ -57,7 +57,7 @@ const TechnologyResearchHero = () => {
             {/* GLASS CARD */}
             <div className="
             group relative mt-6 sm:mt-8
-            max-w-full sm:max-w-[480px] md:max-w-[520px] lg:max-w-[520px]
+            w-full
             overflow-hidden rounded-[20px] sm:rounded-[24px] md:rounded-[26px]
             border border-white/20 bg-white/10
             shadow-[0_25px_60px_rgba(2,6,34,0.34)]
@@ -75,18 +75,14 @@ const TechnologyResearchHero = () => {
               group-hover:bg-[#68e1d0]/30 transition duration-500" />
 
               {/* STATS */}
-              <div className="relative flex flex-col md:flex-row">
-                {stats.map((stat, index) => (
+              <div className="relative flex flex-row divide-x divide-white/15">
+                {stats.map((stat) => (
                   <div
                     key={stat.label}
-                    className={`flex-1 px-4 sm:px-5 md:px-6 lg:px-7 py-4 sm:py-5 md:py-5 ${
-                      index < stats.length - 1
-                        ? "border-b border-white/15 md:border-b-0 md:border-r"
-                        : ""
-                    } border-white/15`}
+                    className="flex-1 px-3 sm:px-5 md:px-6 lg:px-7 py-4 sm:py-5 text-center"
                   >
                     <p className="
-                    text-3xl sm:text-4xl md:text-5xl lg:text-6xl
+                    text-2xl sm:text-4xl md:text-5xl lg:text-6xl
                     font-semibold leading-none text-[#68e1d0]
                     transition duration-300 group-hover:text-white">
                       {stat.value}
@@ -94,8 +90,8 @@ const TechnologyResearchHero = () => {
 
                     <p className="
                     mt-1 sm:mt-2
-                    text-xs sm:text-sm md:text-base lg:text-xl xl:text-2xl
-                    leading-5 sm:leading-6 md:leading-7 text-white">
+                    text-[10px] sm:text-sm md:text-base lg:text-xl xl:text-2xl
+                    leading-4 sm:leading-6 md:leading-7 text-white">
                       {stat.label}
                     </p>
                   </div>
@@ -103,18 +99,18 @@ const TechnologyResearchHero = () => {
               </div>
             </div>
 
-            {/* BUTTONS */}
-            <div className="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:gap-4 md:gap-6 lg:gap-4">
+            {/* ✅ UPDATED BUTTONS (SIDE-BY-SIDE ON MOBILE) */}
+            <div className="mt-6 flex flex-row gap-3 sm:mt-8 sm:gap-4 md:gap-6 lg:gap-4">
 
               <a
                 href="#papers"
                 className="
-                inline-flex w-full sm:w-auto min-w-0 sm:min-w-[220px]
+                flex-1 inline-flex
                 items-center justify-center
                 rounded-full bg-[#33ace5]
-                px-6 sm:px-8 md:px-10 lg:px-8 py-3 sm:py-4
-                text-sm sm:text-base md:text-lg lg:text-lg
-                font-semibold text-white
+                px-4 sm:px-8 md:px-10 lg:px-8 py-2.5 sm:py-4
+                text-xs sm:text-base md:text-lg lg:text-lg
+                font-semibold text-white text-center
                 transition-all duration-300 ease-in-out
                 hover:scale-105 hover:-translate-y-1 hover:shadow-[0_12px_30px_rgba(51,172,229,0.5)]"
               >
@@ -124,12 +120,12 @@ const TechnologyResearchHero = () => {
               <a
                 href="#domains"
                 className="
-                inline-flex w-full sm:w-auto min-w-0 sm:min-w-[220px]
+                flex-1 inline-flex
                 items-center justify-center
                 rounded-full bg-[#64d7bf]
-                px-6 sm:px-8 md:px-10 lg:px-8 py-3 sm:py-4
-                text-sm sm:text-base md:text-lg lg:text-lg
-                font-semibold text-white
+                px-4 sm:px-8 md:px-10 lg:px-8 py-2.5 sm:py-4
+                text-xs sm:text-base md:text-lg lg:text-lg
+                font-semibold text-white text-center
                 transition-all duration-300 ease-in-out
                 hover:scale-105 hover:-translate-y-1 hover:shadow-[0_12px_30px_rgba(100,215,191,0.5)]"
               >

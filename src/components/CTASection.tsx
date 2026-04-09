@@ -8,31 +8,32 @@ const CTASection = () => {
           <br className="hidden sm:block" /> Technology Narrative?
         </h2>
 
-        <p className="text-primary-foreground/70 font-sans text-xs sm:text-sm md:text-base mb-5 sm:mb-6 max-w-md sm:max-w-lg mx-auto">
+        <p className="text-primary-foreground/70 font-serif text-xs sm:text-sm md:text-base mb-5 sm:mb-6 max-w-md sm:max-w-lg mx-auto">
           Whether you're looking to commission a Thought Shaping Paper, partner as an analyst, or subscribe to our research — we'd love to hear from you.
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
+        {/* ✅ ALWAYS SIDE-BY-SIDE */}
+        <div className="flex flex-row flex-wrap gap-3 justify-center items-center">
           
-          {/* 🔥 PRIMARY BUTTON */}
+          {/* PRIMARY BUTTON */}
           <a
             href="#"
-            className="w-full sm:w-auto text-center bg-teal text-navy font-sans font-semibold 
-            px-5 sm:px-6 py-2.5 md:py-3 rounded-full text-sm md:text-base
+            className="w-fit text-center bg-teal text-navy font-serif font-semibold 
+            px-4 sm:px-6 py-2.5 md:py-3 rounded-full text-sm md:text-base
             transition-all duration-300 ease-in-out
             hover:scale-110 hover:-translate-y-1
             hover:bg-teal-light
             hover:shadow-[0_10px_25px_rgba(45,212,191,0.5)]
             active:scale-95"
           >
-            Download approach note
+            Download Approach Note
           </a>
 
-          {/* 🔥 SECONDARY BUTTON */}
+          {/* SECONDARY BUTTON */}
           <a
             href="#"
-            className="w-full sm:w-auto text-center border border-primary-foreground/40 text-primary-foreground font-sans font-semibold 
-            px-5 sm:px-6 py-2.5 md:py-3 rounded-full text-sm md:text-base
+            className="w-fit text-center border border-primary-foreground/40 text-primary-foreground font-serif font-semibold 
+            px-4 sm:px-6 py-2.5 md:py-3 rounded-full text-sm md:text-base
             transition-all duration-300 ease-in-out
             hover:scale-110 hover:-translate-y-1
             hover:bg-primary-foreground/10
