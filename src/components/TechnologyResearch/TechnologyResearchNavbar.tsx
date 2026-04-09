@@ -1,9 +1,11 @@
-import { Menu } from "lucide-react";
+import { useState } from "react";
+import { Menu, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import logo from "@/assets/LandingPage/research-fabric-footer.png";
 
 const TechnologyResearchNavbar = () => {
   const { pathname } = useLocation();
+  const [mobileOpen, setMobileOpen] = useState(false);
   const isTechnologyResearch = pathname === "/technology-research";
   const isMicroMarketResearch = pathname === "/micro-market-research";
 
@@ -28,11 +30,21 @@ const TechnologyResearchNavbar = () => {
           {/* MENU BUTTON */}
           <button
             type="button"
+            onClick={() => setMobileOpen((prev) => !prev)}
             aria-label="Open navigation"
             className="flex h-9 w-9 sm:h-10 sm:w-10 md:h-11 md:w-11 items-center justify-center text-[#0B1F3A]"
           >
-            <Menu size={20} className="sm:hidden" />
-            <Menu size={22} className="hidden sm:block" />
+            {mobileOpen ? (
+              <>
+                <X size={20} className="sm:hidden" />
+                <X size={22} className="hidden sm:block" />
+              </>
+            ) : (
+              <>
+                <Menu size={20} className="sm:hidden" />
+                <Menu size={22} className="hidden sm:block" />
+              </>
+            )}
           </button>
 
           {/* ✅ FINAL LEFT PUSH */}
@@ -105,6 +117,48 @@ const TechnologyResearchNavbar = () => {
         </div>
 
       </div>
+
+      {mobileOpen && (
+        <div className="border-t border-slate-200 bg-white px-4 py-3 shadow-sm lg:hidden">
+          <nav className="flex flex-col gap-1 text-sm font-medium text-[#0B1F3A]">
+            <Link
+              to="/technology-research"
+              onClick={() => setMobileOpen(false)}
+              className={`rounded-md px-2 py-2 transition-colors hover:bg-slate-100 ${
+                isTechnologyResearch ? "bg-slate-100 font-semibold" : ""
+              }`}
+            >
+              Technology Research
+            </Link>
+
+            <Link
+              to="/micro-market-research"
+              onClick={() => setMobileOpen(false)}
+              className={`rounded-md px-2 py-2 transition-colors hover:bg-slate-100 ${
+                isMicroMarketResearch ? "bg-slate-100 font-semibold" : ""
+              }`}
+            >
+              Micro- Market Research
+            </Link>
+
+            <Link
+              to="/"
+              onClick={() => setMobileOpen(false)}
+              className="rounded-md px-2 py-2 transition-colors hover:bg-slate-100"
+            >
+              Home
+            </Link>
+
+            <a
+              href="#cta"
+              onClick={() => setMobileOpen(false)}
+              className="rounded-md px-2 py-2 transition-colors hover:bg-slate-100"
+            >
+              Download Approach Note
+            </a>
+          </nav>
+        </div>
+      )}
     </header>
   );
 };

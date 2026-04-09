@@ -60,17 +60,17 @@ const HeroSection = () => {
           </h1>
 
           {/* ✅ BUTTONS MOVED DOWN (MOBILE ONLY) */}
-          <div className="mt-40 sm:mt-28 md:mt-12 flex w-fit flex-col sm:flex-row gap-3 sm:gap-4">
+          <div className="mt-52 flex w-full max-w-[360px] flex-row gap-3 sm:mt-28 sm:max-w-none sm:w-fit sm:gap-4 md:mt-12">
             <a
               href="#practices"
-              className="flex items-center justify-center rounded-full bg-[#3CC8FF] px-4 sm:px-5 py-2.5 text-sm md:text-base font-semibold text-[#081A34] hover:scale-105 transition"
+              className="flex flex-1 items-center justify-center rounded-full bg-[#3CC8FF] px-3 py-2.5 text-center text-[13px] font-semibold text-[#081A34] transition hover:scale-105 sm:flex-none sm:px-5 sm:text-sm md:text-base"
             >
               Explore Our Practices
             </a>
 
             <a
               href="#cxo"
-              className="flex items-center justify-center rounded-full bg-[#43E0B1] px-4 sm:px-5 py-2.5 text-sm md:text-base font-semibold text-[#081A34] hover:scale-105 transition"
+              className="flex flex-1 items-center justify-center rounded-full bg-[#43E0B1] px-3 py-2.5 text-center text-[13px] font-semibold text-[#081A34] transition hover:scale-105 sm:flex-none sm:px-5 sm:text-sm md:text-base"
             >
               CXO AI Research
             </a>
