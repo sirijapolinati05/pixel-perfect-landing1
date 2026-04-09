@@ -91,11 +91,13 @@ const Navbar = () => {
     "absolute -left-8 sm:-left-10 h-[190%] sm:h-[200%] w-auto object-contain transition-all duration-500 " +
     (showLightNavbar ? "opacity-100 translate-y-2" : "opacity-0");
 
+  const mobileNavbarOpen = mobileOpen || showLightNavbar;
+
   return (
     <nav
       ref={navRef}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        showLightNavbar
+        mobileNavbarOpen || showLightNavbar
           ? "bg-white shadow-sm backdrop-blur-md"
           : "bg-transparent"
       }`}
@@ -107,7 +109,7 @@ const Navbar = () => {
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
             className={`p-1 ${
-              showLightNavbar ? "text-[#0B1F3A]" : "text-white"
+              mobileNavbarOpen ? "text-[#0B1F3A]" : "text-white"
             }`}
           >
             {mobileOpen ? <X size={20} /> : <Menu size={20} />}
@@ -115,7 +117,14 @@ const Navbar = () => {
 
           <Link to="/" className={`flex items-center ${logoFrameClass}`}>
             <img src={logo} alt="logo" className={darkLogoClass} />
-            <img src={lightLogo} alt="logo" className={lightLogoClass} />
+            <img
+              src={lightLogo}
+              alt="logo"
+              className={
+                "absolute -left-8 sm:-left-10 h-[190%] sm:h-[200%] w-auto object-contain transition-all duration-500 " +
+                (mobileNavbarOpen ? "opacity-100 translate-y-2" : "opacity-0")
+              }
+            />
           </Link>
         </div>
 
@@ -175,11 +184,7 @@ const Navbar = () => {
 
       {/* MOBILE MENU */}
       {mobileOpen && (
-        <div
-          className={`lg:hidden px-4 sm:px-6 pb-4 ${
-            showLightNavbar ? "bg-white" : "bg-[#081A34]/95"
-          }`}
-        >
+        <div className="bg-white px-4 pb-4 sm:px-6 lg:hidden">
           {navItems.map((item) => {
             const isActive = activeSection === item.href;
 
@@ -192,11 +197,9 @@ const Navbar = () => {
                   setMobileOpen(false);
                 }}
                 className={`block py-2 text-sm ${
-                  showLightNavbar
-                    ? isActive
-                      ? "text-[#0B1F3A] border-b border-[#5AE0BB]"
-                      : "text-[#0B1F3A] hover:text-[#0B1F3A]"
-                    : "text-white"
+                  isActive
+                    ? "text-[#0B1F3A] border-b border-[#5AE0BB]"
+                    : "text-[#0B1F3A] hover:text-[#0B1F3A]"
                 }`}
               >
                 {item.label}
