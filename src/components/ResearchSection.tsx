@@ -6,7 +6,7 @@ import research4 from "../assets/LandingPage/Agentic-Enterprise1.png";
 
 const ResearchSection = () => {
   return (
-    <section id="latest-research" className="scroll-mt-24 bg-[#F7F9FC] py-8">
+    <section id="latest-research" className="scroll-mt-24 bg-white py-8">
       <div className="mx-auto max-w-6xl px-4">
 
         {/* SMALL HEADING */}
@@ -160,6 +160,8 @@ const ResearchSection = () => {
 
         </div>
       </div>
+
+      <div className="mt-6 h-6 bg-white sm:mt-8 sm:h-10 lg:h-12" />
     </section>
   );
 };
