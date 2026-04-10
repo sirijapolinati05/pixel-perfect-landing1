@@ -48,7 +48,7 @@ const DeliverSection = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
         
         <h3 className="mb-5 sm:mb-6 inline-block border-b border-white/40 pb-2 
-        text-xl sm:text-2xl md:text-3xl font-serif text-white">
+        text-[28px] sm:text-[34px] md:text-[40px] font-serif text-white">
           What We Deliver
         </h3>
 
@@ -73,12 +73,12 @@ const DeliverSection = () => {
               />
 
               {/* Title - 32px */}
-              <h4 className="mb-2 text-[32px] leading-tight font-bold text-[#0A1F44] font-serif">
+              <h4 className="mb-2 text-[24px] sm:text-[26px] md:text-[28px] leading-tight font-bold text-[#0A1F44] font-serif">
                 {item.title}
               </h4>
 
               {/* ✅ Description - 13px */}
-              <p className="font-serif text-[13px] leading-5 text-[#5A6B85]">
+              <p className="font-serif text-[16px] leading-6 text-[#5A6B85]">
                 {item.description}
               </p>
             </div>

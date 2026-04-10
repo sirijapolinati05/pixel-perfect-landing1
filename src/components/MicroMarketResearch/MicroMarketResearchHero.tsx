@@ -17,14 +17,14 @@ const MicroMarketResearchHero = () => {
         <div className="max-w-[760px] pt-6 sm:pt-8 md:pt-10 lg:pt-20">
 
           {/* TITLE */}
-          <h1 className="max-w-[680px] text-4xl sm:text-5xl md:text-[5rem] lg:text-[5rem] leading-[0.95] tracking-[-0.03em]">
+          <h1 className="max-w-[680px] text-[36px] sm:text-[40px] md:text-[48px] lg:text-[50px] leading-[0.95] tracking-[-0.03em]">
             Decoding the Niche.
             <br />
             Defining the Future.
           </h1>
 
           {/* DESCRIPTION */}
-          <p className="mt-4 sm:mt-5 max-w-[860px] text-sm sm:text-base md:text-[18px] lg:text-[19px] leading-6 sm:leading-7 md:leading-8 text-white/95">
+          <p className="mt-4 sm:mt-5 max-w-[860px] text-[16px] sm:text-[18px] md:text-[20px] lg:text-[20px] leading-6 sm:leading-7 md:leading-8 text-white/95">
             We specialize in identifying, sizing, and forecasting
             high-potential micro-markets within broader technology ecosystems.
             Where others see a rounding error, we see the next billion-dollar
@@ -53,7 +53,7 @@ const MicroMarketResearchHero = () => {
                   <p className="text-2xl sm:text-4xl md:text-5xl font-semibold leading-none text-[#68e1d0] transition duration-300 group-hover:text-white">
                     {value}
                   </p>
-                  <p className="mt-2 text-xs sm:text-lg md:text-xl leading-5 sm:leading-7 text-white">
+                  <p className="mt-2 text-[16px] sm:text-[18px] md:text-[20px] leading-5 sm:leading-7 text-white">
                     {lineOne}
                     <br />
                     {lineTwo}
@@ -70,7 +70,7 @@ const MicroMarketResearchHero = () => {
             bg-[linear-gradient(180deg,#31b9ee_0%,#249fd8_100%)] 
             px-5 sm:px-8 md:px-10 
             py-2.5 sm:py-3 
-            text-sm sm:text-base md:text-lg lg:text-[15px] font-semibold text-white 
+            text-[16px] sm:text-[17px] md:text-[18px] lg:text-[18px] font-semibold text-white 
             shadow-[0_10px_22px_rgba(18,130,193,0.42)]
             transition-all duration-300 ease-in-out
             hover:scale-105 hover:-translate-y-1 hover:shadow-[0_15px_35px_rgba(18,130,193,0.6)]"

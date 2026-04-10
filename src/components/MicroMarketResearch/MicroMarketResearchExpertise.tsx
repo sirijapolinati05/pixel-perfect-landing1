@@ -60,11 +60,11 @@ const MicroMarketResearchExpertise = () => {
             </span>
           </p>
 
-          <h2 className="mt-4 text-3xl sm:text-4xl md:text-[3.2rem] lg:text-[3.2rem] font-bold leading-none tracking-[-0.02em]">
+          <h2 className="mt-4 text-[32px] sm:text-[40px] md:text-[48px] lg:text-[50px] font-bold leading-none tracking-[-0.02em]">
             Micro-Market Competencies
           </h2>
 
-          <p className="mx-auto mt-3 max-w-[820px] text-sm sm:text-base md:text-[16px] lg:text-[16px] leading-6 sm:leading-7 text-white/90">
+          <p className="mx-auto mt-3 max-w-[820px] text-[16px] sm:text-[18px] md:text-[18px] lg:text-[20px] leading-6 sm:leading-7 text-white/90">
             Our proprietary framework allows us to dissect complex value chains
             and isolate the specific variables driving growth in emerging
             technology sectors.
@@ -94,12 +94,12 @@ const MicroMarketResearchExpertise = () => {
                 </div>
 
                 {/* TITLE */}
-                <h3 className="mt-3 text-lg sm:text-xl md:text-[1.2rem] lg:text-[1.2rem] leading-tight tracking-[-0.01em]">
+                <h3 className="mt-3 text-[20px] sm:text-[22px] md:text-[22px] lg:text-[24px] leading-tight tracking-[-0.01em]">
                   {item.title}
                 </h3>
 
                 {/* DESCRIPTION */}
-                <p className="mt-2 text-sm sm:text-[14px] md:text-[14px] leading-6 text-white/90">
+                <p className="mt-2 text-[16px] sm:text-[16px] md:text-[18px] leading-6 text-white/90">
                   {item.description}
                 </p>
               </article>

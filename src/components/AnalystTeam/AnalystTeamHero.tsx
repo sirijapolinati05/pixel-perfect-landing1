@@ -28,12 +28,12 @@ const AnalystTeamHero = () => {
         <div className="max-w-4xl">
           
           {/* Heading - Single Line */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-semibold leading-[1.1] text-white md:whitespace-nowrap">
+          <h1 className="text-[32px] sm:text-[38px] md:text-[46px] lg:text-[50px] font-semibold leading-[1.1] text-white md:whitespace-nowrap">
             The Minds Behind the Research
           </h1>
 
           {/* Description - Smaller */}
-          <p className="mx-auto mt-4 sm:mt-5 md:mt-6 max-w-3xl text-base sm:text-lg md:text-xl lg:text-xl leading-[1.5] text-white/85">
+          <p className="mx-auto mt-4 sm:mt-5 md:mt-6 max-w-3xl text-[16px] sm:text-[18px] md:text-[20px] lg:text-[20px] leading-[1.5] text-white/85">
             A carefully assembled team of practitioners, strategists, and
             researchers delivering thought-shaping intelligence across
             Perpetuating Technologies and Micro-Markets.

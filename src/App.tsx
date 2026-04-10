@@ -89,8 +89,8 @@ const TechnologyResearchPage = () => (
 const NotFoundPage = () => (
   <div className="flex min-h-screen items-center justify-center bg-muted">
     <div className="text-center">
-      <h1 className="mb-4 text-4xl font-bold">404</h1>
-      <p className="mb-4 text-xl text-muted-foreground">Oops! Page not found</p>
+      <h1 className="mb-4 text-[36px] md:text-[44px] font-bold">404</h1>
+      <p className="mb-4 text-[16px] md:text-[18px] text-muted-foreground">Oops! Page not found</p>
       <a href="/" className="text-primary underline hover:text-primary/90">
         Return to Home
       </a>

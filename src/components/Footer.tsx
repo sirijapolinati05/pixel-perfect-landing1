@@ -29,7 +29,7 @@ const Footer = () => {
 
           {/* ✅ Menu (Moved Up ONLY on Mobile) */}
           <div className="-mt-6 text-center sm:-mt-4 md:mt-0 md:text-left">
-            <h4 className="text-sm font-bold text-foreground mb-2">
+            <h4 className="text-[16px] font-bold text-foreground mb-2">
               Menu
             </h4>
 
@@ -38,7 +38,7 @@ const Footer = () => {
                 <li key={link}>
                   <a 
                     href="#" 
-                    className="text-muted-foreground text-xs transition-all duration-300 
+                    className="text-muted-foreground text-[14px] transition-all duration-300 
                     hover:text-foreground hover:translate-x-1 inline-block"
                   >
                     {link}
@@ -50,7 +50,7 @@ const Footer = () => {
 
           {/* Subscribe */}
           <div className="self-start pt-1 text-center sm:pt-0 md:text-left">
-            <h4 className="text-sm font-bold text-foreground mb-2">
+            <h4 className="text-[16px] font-bold text-foreground mb-2">
               Subscribe
             </h4>
 
@@ -58,7 +58,7 @@ const Footer = () => {
               <input
                 type="email"
                 placeholder="Email Address"
-                className="flex-1 bg-muted rounded-l px-3 py-1.5 text-xs text-foreground 
+                className="flex-1 bg-muted rounded-l px-3 py-1.5 text-[16px] text-foreground 
                 placeholder:text-muted-foreground outline-none 
                 transition-all duration-300
                 focus:ring-2 focus:ring-primary focus:shadow-lg"
@@ -76,7 +76,7 @@ const Footer = () => {
               </button>
             </div>
 
-            <p className="text-muted-foreground text-[10px] mt-1">
+            <p className="text-muted-foreground text-[14px] mt-1">
               *Send Message
             </p>
           </div>
@@ -89,11 +89,11 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-1.5 
         flex flex-col gap-1 md:flex-row justify-between items-center text-center md:text-left">
           
-          <p className="text-muted-foreground text-[10px]">
+          <p className="text-muted-foreground text-[14px]">
             © 2022 DIGITALFABRIC®. All Rights Reserved
           </p>
 
-          <p className="text-muted-foreground text-[10px]">
+          <p className="text-muted-foreground text-[14px]">
             Hyderabad, Telangana, India
           </p>
 

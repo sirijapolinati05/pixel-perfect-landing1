@@ -54,12 +54,12 @@ const ProcessSection = () => {
         </div>
 
         {/* HEADING */}
-        <h2 className="mb-2 text-2xl font-bold text-navy sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl 2xl:text-6xl">
+        <h2 className="mb-2 text-[32px] font-bold text-navy sm:text-[38px] md:text-[44px] lg:text-[46px] xl:text-[48px] 2xl:text-[50px]">
           From Inquiry to Industry Narrative
         </h2>
 
         {/* SUBTEXT */}
-        <p className="mx-auto mb-6 max-w-xl font-serif text-xs text-navy/70 sm:mb-8 sm:max-w-2xl sm:text-sm md:text-base lg:mb-7 lg:text-lg xl:text-xl 2xl:text-2xl">
+        <p className="mx-auto mb-6 max-w-xl font-serif text-[16px] text-navy/70 sm:mb-8 sm:max-w-2xl sm:text-[17px] md:text-[18px] lg:mb-7 lg:text-[19px] xl:text-[20px] 2xl:text-[20px]">
           Every Thought Shaping Paper follows a rigorous four-phase methodology that ensures depth, accuracy, and strategic relevance.
         </p>
 
@@ -125,7 +125,7 @@ const ProcessSection = () => {
                 />
 
                 {/* ✅ TITLE → 22px */}
-                <h4 className="mb-2 font-serif text-[22px] font-bold text-navy leading-[28px]">
+                <h4 className="mb-2 font-serif text-[24px] font-bold text-navy leading-[30px]">
                   {step.title}
                 </h4>
 

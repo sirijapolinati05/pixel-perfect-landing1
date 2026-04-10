@@ -55,14 +55,14 @@ const PartnersSection = () => {
         </div>
 
         {/* HEADING */}
-        <h2 className="mb-2 text-[32px] font-bold leading-[1.1] tracking-tight sm:text-[48px] md:text-[44px] lg:text-[48px]
+        <h2 className="mb-2 text-[32px] font-bold leading-[1.1] tracking-tight sm:text-[40px] md:text-[44px] lg:text-[48px]
           bg-gradient-to-r from-[#0B3F60] to-[#26A9E0] 
           bg-clip-text text-transparent">
           Renowned Minds, Rigorous Perspectives
         </h2>
 
         {/* SUBTEXT */}
-        <p className="mx-auto mb-5 max-w-xl text-[20px] text-muted-foreground sm:mb-7 sm:max-w-2xl md:max-w-3xl md:text-[18px] lg:text-[20px]">
+        <p className="mx-auto mb-5 max-w-xl text-[16px] text-muted-foreground sm:mb-7 sm:max-w-2xl md:max-w-3xl md:text-[18px] lg:text-[20px]">
           Our research is shaped by partners who have spent decades at the forefront of technology research and advisory.
         </p>
 
@@ -103,17 +103,17 @@ const PartnersSection = () => {
                 </div>
 
                 {/* NAME */}
-                <h4 className="text-lg font-bold text-white">
+                <h4 className="text-[20px] font-bold text-white">
                   {partner.name}
                 </h4>
 
                 {/* ROLE */}
                 <div className="mt-1 mb-2 flex flex-col">
-                  <p className="text-sm font-medium text-[#38BDF8]">
+                  <p className="text-[16px] font-medium text-[#38BDF8]">
                     {partner.role}
                   </p>
 
-                  <p className="mt-1 text-xs text-[#38BDF8] opacity-80">
+                  <p className="mt-1 text-[14px] text-[#38BDF8] opacity-80">
                     {partner.subtitle}
                   </p>
 
@@ -142,7 +142,7 @@ const PartnersSection = () => {
         <div className="mt-6 flex justify-center">
           <Link
             to="/analyst-team"
-            className="inline-flex px-5 py-2.5 border border-[#203A72] bg-white text-[#0A1F44] rounded
+            className="inline-flex px-5 py-2.5 border border-[#203A72] bg-white text-[#0A1F44] rounded text-[16px]
             transition-all duration-300 hover:bg-[#0A1F44] hover:text-white hover:scale-95"
           >
             Meet the Analyst Team

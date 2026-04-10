@@ -65,7 +65,7 @@ const TechnologyResearchDomains = () => {
         {/* HEADING */}
         <h2 className="
         mt-2 sm:mt-3
-        text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-[3.8rem]
+        text-[32px] sm:text-[40px] md:text-[44px] lg:text-[48px] xl:text-[50px] 2xl:text-[50px]
         font-bold leading-[1.1] tracking-[-0.02em]">
           Three Pillars Shaping the Future of Technology
         </h2>
@@ -74,7 +74,7 @@ const TechnologyResearchDomains = () => {
         <p className="
         mt-3 sm:mt-4
         max-w-[600px] sm:max-w-[800px] lg:max-w-[900px] xl:max-w-[1000px]
-        text-xs sm:text-sm md:text-base lg:text-xl xl:text-2xl 2xl:text-[1.75rem]
+        text-[16px] sm:text-[18px] md:text-[18px] lg:text-[20px] xl:text-[20px] 2xl:text-[20px]
         leading-6 sm:leading-7 md:leading-8 lg:leading-9 xl:leading-10
         text-[#202453]/88">
           Our research is concentrated across three transformative domains where deep
@@ -110,7 +110,7 @@ const TechnologyResearchDomains = () => {
               <h3 className="
               mt-2 sm:mt-2.5 md:mt-3
               max-w-[240px] sm:max-w-[250px]
-              text-base sm:text-lg md:text-xl lg:text-2xl xl:text-[1.6rem]
+              text-[20px] sm:text-[22px] md:text-[24px] lg:text-[24px] xl:text-[24px]
               leading-tight
               transition-colors duration-300 group-hover:text-[#0A1F44]">
                 {domain.title}
@@ -120,7 +120,7 @@ const TechnologyResearchDomains = () => {
               <p className="
               mt-2
               max-w-[260px] sm:max-w-[285px] md:max-w-[320px]
-              text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl
+              text-[16px] sm:text-[17px] md:text-[18px] lg:text-[18px] xl:text-[20px]
               leading-5 sm:leading-6 md:leading-7
               text-[#202453]/88 flex-grow
               transition-colors duration-300 group-hover:text-[#202453]">
@@ -132,7 +132,7 @@ const TechnologyResearchDomains = () => {
                 href="#papers"
                 className="
                 mt-3 inline-flex items-center gap-2
-                text-xs sm:text-sm md:text-base lg:text-[13px] xl:text-sm 2xl:text-base
+                text-[14px] sm:text-[15px] md:text-[16px] lg:text-[16px] xl:text-[16px] 2xl:text-[18px]
                 font-semibold uppercase tracking-[0.02em] text-[#161a46]
                 transition-all duration-300 group-hover:gap-3"
               >

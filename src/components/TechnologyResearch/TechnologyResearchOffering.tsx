@@ -54,7 +54,7 @@ const TechnologyResearchOffering = () => {
           {/* HEADING */}
           <h2 className="
             mt-3
-            text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl
+            text-[32px] sm:text-[40px] md:text-[44px] lg:text-[48px] xl:text-[50px]
             font-bold leading-[1.1]"
           >
             <span className="bg-gradient-to-r from-[#7dd3fc] to-white bg-clip-text text-transparent">
@@ -67,7 +67,7 @@ const TechnologyResearchOffering = () => {
           <p className="
             mt-4
             max-w-[750px]
-            text-sm md:text-base lg:text-lg xl:text-xl
+            text-[16px] md:text-[18px] lg:text-[20px] xl:text-[20px]
             text-white/85"
           >
             Our Thought Shaping Papers are co-authored with renowned industry analysts and
@@ -107,12 +107,12 @@ const TechnologyResearchOffering = () => {
                     className="h-8 w-8 object-contain"
                   />
 
-                  <h3 className="text-base md:text-lg font-semibold">
+                  <h3 className="text-[18px] md:text-[20px] font-semibold">
                     {feature.title}
                   </h3>
                 </div>
 
-                <p className="mt-3 text-sm md:text-base text-[#0d1440]/85">
+                <p className="mt-3 text-[16px] md:text-[18px] text-[#0d1440]/85">
                   {feature.description}
                 </p>
               </div>

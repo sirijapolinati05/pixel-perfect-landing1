@@ -159,7 +159,7 @@ const Navbar = () => {
                 key={item.label}
                 href={isHomePage ? item.href : `/${item.href}`}
                 onClick={() => setActiveSection(item.href)}
-                className={`relative pb-2 text-sm md:text-base transition-colors ${getTextClass(
+                className={`relative pb-2 text-[16px] md:text-[18px] transition-colors ${getTextClass(
                   isActive
                 )}`}
               >
@@ -183,7 +183,7 @@ const Navbar = () => {
         {/* RIGHT */}
         <div className="flex items-center gap-3 sm:gap-4">
           <span
-            className={`hidden sm:inline text-xs sm:text-sm ${
+            className={`hidden sm:inline text-[14px] sm:text-[16px] ${
               showLightNavbar ? "text-[#0B1F3A]" : "text-white"
             }`}
           >
@@ -209,7 +209,7 @@ const Navbar = () => {
                   setActiveSection(item.href);
                   setMobileOpen(false);
                 }}
-                className={`block py-2 text-sm ${
+                className={`block py-2 text-[16px] ${
                   isActive
                     ? "text-[#0B1F3A] border-b border-[#5AE0BB]"
                     : "text-[#0B1F3A] hover:text-[#0B1F3A]"

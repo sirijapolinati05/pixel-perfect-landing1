@@ -65,7 +65,7 @@ const TechnologyResearchNavbar = () => {
           className="
           hidden lg:flex items-center
           gap-5 lg:gap-6 xl:gap-8 2xl:gap-10
-          text-sm md:text-[15px] lg:text-[15px] xl:text-base 2xl:text-lg font-medium"
+          text-[16px] md:text-[17px] lg:text-[18px] xl:text-[18px] 2xl:text-[20px] font-medium"
         >
           <Link
             to="/technology-research"
@@ -103,7 +103,7 @@ const TechnologyResearchNavbar = () => {
         <div className="flex items-center">
           <span
             className="
-            text-xs sm:text-sm md:text-sm lg:text-[13px] xl:text-sm 2xl:text-base
+            text-[14px] sm:text-[16px] md:text-[16px] lg:text-[16px] xl:text-[16px] 2xl:text-[18px]
             text-[#0B1F3A] cursor-pointer hover:text-[#0B1F3A] transition-colors"
           >
             Subscribe
@@ -116,7 +116,7 @@ const TechnologyResearchNavbar = () => {
           id="technology-research-mobile-nav"
           className="border-t border-slate-200 bg-white px-4 py-3 shadow-sm lg:hidden"
         >
-          <nav className="flex flex-col gap-1 text-sm font-medium text-[#0B1F3A]">
+          <nav className="flex flex-col gap-1 text-[16px] font-medium text-[#0B1F3A]">
             <Link
               to="/technology-research"
               onClick={() => setMobileOpen(false)}

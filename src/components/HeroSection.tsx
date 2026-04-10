@@ -14,7 +14,7 @@ const HeroSection = () => {
         />
 
         <div className="mt-3 w-[750px] -translate-x-6 px-4">
-          <p className="text-[20px] leading-relaxed text-white/70">
+          <p className="text-[18px] leading-relaxed text-white/70">
             RESEARCHFABRIC delivers practitioner-led Smart research on{" "}
             <strong className="text-white">Perpetuating Technologies</strong>{" "}
             and maps the <strong className="text-white">Micro-Markets</strong>{" "}
@@ -40,7 +40,7 @@ const HeroSection = () => {
             <div className="absolute inset-0 bg-black/40" />
 
             <div className="absolute inset-0 flex flex-col justify-center px-6 pt-10">
-              <h1 className="font-serif text-[30px] sm:text-[34px] font-semibold leading-tight">
+              <h1 className="font-serif text-[32px] sm:text-[38px] font-semibold leading-tight">
                 <span className="block">Thought-Shaping</span>
                 <span className="block">Intelligence on</span>
 
@@ -71,16 +71,16 @@ const HeroSection = () => {
 
           {/* BUTTONS */}
           <div className="flex w-full max-w-[360px] gap-3">
-            <a className="flex flex-1 justify-center rounded-full bg-[#3CC8FF] px-4 py-3 text-sm font-semibold text-[#081A34]">
+            <a className="flex flex-1 justify-center rounded-full bg-[#3CC8FF] px-4 py-3 text-[16px] font-semibold text-[#081A34]">
               Explore Our Practices
             </a>
 
-            <a className="flex flex-1 justify-center rounded-full bg-[#43E0B1] px-4 py-3 text-sm font-semibold text-[#081A34]">
+            <a className="flex flex-1 justify-center rounded-full bg-[#43E0B1] px-4 py-3 text-[16px] font-semibold text-[#081A34]">
               CXO AI Research
             </a>
           </div>
 
-          <p className="text-[15px] leading-relaxed text-white/70">
+          <p className="text-[16px] leading-relaxed text-white/70">
             RESEARCHFABRIC delivers practitioner-led Smart research on{" "}
             <strong className="text-white">Perpetuating Technologies</strong>{" "}
             and maps the <strong className="text-white">Micro-Markets</strong>{" "}
@@ -93,7 +93,7 @@ const HeroSection = () => {
         <div className="hidden lg:block">
           <div className="mt-20 max-w-[42rem]">
 
-            <h1 className="mb-5 font-serif text-[58px] font-semibold leading-none text-white">
+            <h1 className="mb-5 font-serif text-[50px] font-semibold leading-none text-white">
               <span className="block">Thought-Shaping</span>
               <span className="block">Intelligence on</span>
 
@@ -120,11 +120,11 @@ const HeroSection = () => {
             </h1>
 
             <div className="mt-12 flex gap-4">
-              <a className="rounded-full bg-[#3CC8FF] px-5 py-3 font-semibold text-[#081A34]">
+              <a className="rounded-full bg-[#3CC8FF] px-5 py-3 text-[16px] font-semibold text-[#081A34]">
                 Explore Our Practices
               </a>
 
-              <a className="rounded-full bg-[#43E0B1] px-5 py-3 font-semibold text-[#081A34]">
+              <a className="rounded-full bg-[#43E0B1] px-5 py-3 text-[16px] font-semibold text-[#081A34]">
                 CXO AI Research
               </a>
             </div>
@@ -149,11 +149,11 @@ const HeroSection = () => {
                   index < 3 ? "lg:border-r lg:border-white/20" : "lg:border-r-0"
                 }`}
               >
-                <h3 className="font-serif text-[24px] sm:text-[30px] md:text-[35px] font-semibold text-[#5AE0BB]">
+                <h3 className="font-serif text-[28px] sm:text-[32px] md:text-[36px] font-semibold text-[#5AE0BB]">
                   {item.title}
                 </h3>
 
-                <p className="-mt-1 text-[16px] sm:text-[18px] md:text-[20px] text-white/60">
+                <p className="-mt-1 text-[14px] sm:text-[16px] md:text-[18px] text-white/60">
                   {item.sub}
                 </p>
               </div>
@@ -161,11 +161,11 @@ const HeroSection = () => {
           </div>
 
           <div className="mt-[-1px] border-t border-white/20 text-center pt-3 sm:pt-4">
-            <h3 className="font-serif text-[24px] sm:text-[30px] md:text-[35px] font-semibold text-[#5AE0BB]">
+            <h3 className="font-serif text-[28px] sm:text-[32px] md:text-[36px] font-semibold text-[#5AE0BB]">
               Practices
             </h3>
 
-            <p className="-mt-1 text-[16px] sm:text-[18px] md:text-[20px] text-white/60">
+            <p className="-mt-1 text-[14px] sm:text-[16px] md:text-[18px] text-white/60">
               Research Engineering
             </p>
           </div>

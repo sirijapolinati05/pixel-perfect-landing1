@@ -52,10 +52,10 @@ const TierTwoCard = ({
       fallbackText={image ? undefined : "SP"}
     />
 
-    <h3 className="mt-4 text-lg sm:text-[1.02rem] md:text-[1.02rem] leading-[1.15] tracking-[-0.02em] text-[#17204c] transition-colors duration-300 group-hover:text-white">
+    <h3 className="mt-4 text-[18px] sm:text-[20px] leading-[1.15] tracking-[-0.02em] text-[#17204c] transition-colors duration-300 group-hover:text-white">
       {name}
     </h3>
-    <p className="mt-1 min-h-[36px] text-xs sm:text-[0.68rem] md:text-[0.68rem] leading-[1.25] text-[#5ab5eb] transition-colors duration-300 group-hover:text-white/85">
+    <p className="mt-1 min-h-[36px] text-[14px] sm:text-[16px] leading-[1.25] text-[#5ab5eb] transition-colors duration-300 group-hover:text-white/85">
       {subtitle}
     </p>
 
@@ -92,7 +92,7 @@ const AnalystTeamTierTwo = () => {
         
         {/* HEADER */}
         <div className="max-w-[660px]">
-          <p className="text-sm sm:text-base md:text-[17px] lg:text-[17px] font-semibold leading-none text-[#111948]">
+          <p className="text-[18px] md:text-[20px] font-semibold leading-none text-[#111948]">
             <span className="inline-flex items-center gap-4">
               <span className="h-px w-8 sm:w-10 md:w-[44px] bg-[#111948]" />
               Enabling Leaders
@@ -100,7 +100,7 @@ const AnalystTeamTierTwo = () => {
             </span>
           </p>
 
-          <h2 className="mt-4 sm:mt-5 text-3xl sm:text-4xl md:text-[3.2rem] lg:text-[3.2rem] leading-[1.02] tracking-[-0.03em]">
+          <h2 className="mt-4 sm:mt-5 text-[32px] sm:text-[40px] md:text-[48px] lg:text-[50px] leading-[1.02] tracking-[-0.03em]">
             Lead &amp; Business Analysts
           </h2>
         </div>
@@ -111,7 +111,7 @@ const AnalystTeamTierTwo = () => {
           <div className="grid gap-y-6 sm:gap-y-8 lg:grid-cols-[150px_minmax(0,1fr)] lg:gap-x-8">
 
             <div className="flex items-center">
-              <p className="text-base sm:text-[1.05rem] md:text-[1.22rem] lg:text-[1.22rem] leading-none text-[#101535]">
+              <p className="text-[18px] md:text-[20px] leading-none text-[#101535]">
                 Lead Analysts
               </p>
             </div>
@@ -123,7 +123,7 @@ const AnalystTeamTierTwo = () => {
             </div>
 
             <div className="flex items-center">
-              <p className="text-base sm:text-[1.05rem] md:text-[1.22rem] lg:text-[1.22rem] leading-none text-[#101535]">
+              <p className="text-[18px] md:text-[20px] leading-none text-[#101535]">
                 Business Analyst
               </p>
             </div>
@@ -156,10 +156,10 @@ const AnalystTeamTierTwo = () => {
             {/* FEATURED CARD */}
             <div className="flex flex-col items-center text-center">
               <div className="mb-6 sm:mb-8">
-                <h3 className="text-base sm:text-[1.02rem] md:text-[1.02rem] text-[#101535]">
+                <h3 className="text-[18px] sm:text-[20px] text-[#101535]">
                   {featuredAnalyst.name}
                 </h3>
-                <p className="mt-1 text-base sm:text-[1.02rem] md:text-[1.02rem] text-[#101535]">
+                <p className="mt-1 text-[16px] sm:text-[18px] text-[#101535]">
                   {featuredAnalyst.subtitle}
                 </p>
               </div>

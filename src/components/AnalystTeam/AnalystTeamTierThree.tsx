@@ -1,6 +1,7 @@
 import { Linkedin, Mail } from "lucide-react";
 
 import arnabImg from "@/assets/ResearchTeam/Arnab-Das.png";
+import apoorvaImg from "@/assets/ResearchTeam/Apoorva-Rao.png";
 import sachinImg from "@/assets/ResearchTeam/Sachin-Birajdar.png";
 import shatakshiImg from "@/assets/ResearchTeam/Shatakshi-Singh.png";
 import virajImg from "@/assets/ResearchTeam/Viraj-Narvekar.png";
@@ -27,8 +28,8 @@ const researchAnalysts = [
     image: arnabImg,
   },
   {
-    name: "Shatakshi Singh",
-    image: shatakshiImg,
+    name: "Apoorva Rao",
+    image: apoorvaImg,
   },
 ];
 
@@ -49,11 +50,11 @@ const TierThreeCard = ({
   <article className={cardClassName}>
     <AnalystTeamAvatar name={name} image={image} />
 
-    <h3 className="mt-4 text-lg sm:text-[1.02rem] md:text-[1.02rem] leading-[1.15] tracking-[-0.02em] text-[#17204c] transition-colors duration-300 group-hover:text-white">
+    <h3 className="mt-4 text-[18px] sm:text-[20px] leading-[1.15] tracking-[-0.02em] text-[#17204c] transition-colors duration-300 group-hover:text-white">
       {name}
     </h3>
 
-    <p className="mt-1 min-h-[36px] text-xs sm:text-[0.68rem] md:text-[0.68rem] leading-[1.25] text-[#5ab5eb] transition-colors duration-300 group-hover:text-white/85">
+    <p className="mt-1 min-h-[36px] text-[14px] sm:text-[16px] leading-[1.25] text-[#5ab5eb] transition-colors duration-300 group-hover:text-white/85">
       {subtitle}
     </p>
 
@@ -90,7 +91,7 @@ const AnalystTeamTierThree = () => {
 
       <div className="relative z-10 mx-auto max-w-[1120px] xl:max-w-[1400px] 2xl:max-w-[1600px]">
         <div className="max-w-[760px]">
-          <p className="text-sm sm:text-base md:text-[17px] lg:text-[17px] font-semibold leading-none text-[#20254d]">
+          <p className="text-[18px] md:text-[20px] font-semibold leading-none text-[#20254d]">
             <span className="inline-flex items-center gap-4">
               <span className="h-px w-8 sm:w-10 md:w-[48px] bg-[#20254d]" />
               Support Leads
@@ -98,14 +99,14 @@ const AnalystTeamTierThree = () => {
             </span>
           </p>
 
-          <h2 className="mt-4 sm:mt-5 text-3xl sm:text-4xl md:text-[3.15rem] lg:text-[3.15rem] leading-[1.05] tracking-[-0.03em] text-[#17204c]">
+          <h2 className="mt-4 sm:mt-5 text-[32px] sm:text-[40px] md:text-[48px] lg:text-[50px] leading-[1.05] tracking-[-0.03em] text-[#17204c]">
             Research Specialists &amp; Analysts
           </h2>
         </div>
 
         <div className="mt-8 sm:mt-10 md:mt-14 grid gap-y-6 sm:gap-y-8 lg:grid-cols-[155px_minmax(0,1fr)] lg:gap-x-8">
           <div className="flex items-center lg:min-h-[180px]">
-            <p className="text-sm sm:text-[0.95rem] md:text-[1.08rem] lg:text-[1.08rem] leading-none text-[#101535] sm:whitespace-nowrap">
+            <p className="text-[18px] md:text-[20px] leading-none text-[#101535] sm:whitespace-nowrap">
               Research Specialists
             </p>
           </div>
@@ -121,7 +122,7 @@ const AnalystTeamTierThree = () => {
           </div>
 
           <div className="flex items-center lg:min-h-[180px]">
-            <p className="text-sm sm:text-[0.95rem] md:text-[1.08rem] lg:text-[1.08rem] leading-none text-[#101535] sm:whitespace-nowrap">
+            <p className="text-[18px] md:text-[20px] leading-none text-[#101535] sm:whitespace-nowrap">
               Research Analysts
             </p>
           </div>

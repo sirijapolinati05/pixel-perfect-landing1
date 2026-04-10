@@ -30,10 +30,10 @@ const microMarketTags = [
 ];
 
 const tagClassName =
-  "rounded-full border border-[#C7D2E2] bg-white px-3 py-[6px] text-[11px] sm:text-[12px] md:text-[13px] leading-none text-[#0A1F44]";
+  "rounded-full border border-[#C7D2E2] bg-white px-3 py-[6px] text-[14px] sm:text-[15px] md:text-[16px] leading-none text-[#0A1F44]";
 
 const buttonClassName =
-  "mt-auto inline-flex h-9 sm:h-10 items-center justify-center gap-2 rounded-full bg-[#111B4D] px-4 sm:px-5 text-[11px] sm:text-[12px] md:text-sm font-medium text-white shadow-[0_8px_18px_rgba(17,27,77,0.18)]";
+  "mt-auto inline-flex h-9 sm:h-10 items-center justify-center gap-2 rounded-full bg-[#111B4D] px-4 sm:px-5 text-[14px] sm:text-[15px] md:text-[16px] font-medium text-white shadow-[0_8px_18px_rgba(17,27,77,0.18)]";
 
 const cardBaseClass =
   "h-full min-h-[300px] flex flex-col rounded-[10px] border border-[#E2E6EE] bg-white shadow-[0_10px_24px_rgba(17,27,77,0.10)] transition-all duration-300 hover:scale-[0.95] hover:z-10";
@@ -45,7 +45,7 @@ const PracticesSection = () => {
       className="relative overflow-hidden bg-[#F7F9FC] py-10 sm:py-12 md:py-14 lg:py-8 xl:py-10 2xl:py-12"
     >
       <div className="mx-auto mb-5 sm:mb-6 max-w-7xl px-4 sm:px-6 md:px-8 lg:px-12 text-center sm:text-left">
-        <h2 className="relative max-w-[1120px] text-center sm:text-left text-[34px] sm:text-[48px] font-serif font-semibold leading-[1.2] text-[#0A1F44]">
+        <h2 className="relative max-w-[1120px] text-center sm:text-left text-[32px] sm:text-[40px] md:text-[46px] font-serif font-semibold leading-[1.2] text-[#0A1F44]">
           Two Practices on the <br className="sm:hidden" />
           Future of{" "}
           <span className="relative inline-block">
@@ -60,7 +60,7 @@ const PracticesSection = () => {
           </span>
         </h2>
 
-        <p className="mt-2 sm:mt-3 max-w-[920px] text-center sm:text-left text-[20px] leading-[1.6] text-[#5A6B85]">
+        <p className="mt-2 sm:mt-3 max-w-[920px] text-center sm:text-left text-[16px] sm:text-[18px] md:text-[20px] leading-[1.6] text-[#5A6B85]">
           RESEARCHFABRIC™ operates through two focused research practices, each
           designed to deliver deep, SME-led intelligence at different scales of
           the technology landscape.
@@ -82,11 +82,11 @@ const PracticesSection = () => {
           <div className="flex flex-1 flex-col">
             <img src={tickImg} alt="tick" className="mb-3 h-7 w-7" />
 
-            <h3 className="mb-2 text-base sm:text-lg md:text-xl font-serif font-semibold text-[#0A1F44]">
+            <h3 className="mb-2 text-[18px] sm:text-[20px] md:text-[22px] font-serif font-semibold text-[#0A1F44]">
               Technology Research
             </h3>
 
-            <p className="mb-3 text-sm md:text-base text-[#5A6B85]">
+            <p className="mb-3 text-[16px] md:text-[18px] text-[#5A6B85]">
               Macro-level research on Generative AI, Quantum Computing.
             </p>
 
@@ -109,11 +109,11 @@ const PracticesSection = () => {
           <div className="flex flex-1 flex-col">
             <img src={microIcon} alt="icon" className="mb-3 h-7 w-7" />
 
-            <h3 className="mb-2 text-base sm:text-lg md:text-xl font-serif font-semibold text-[#0A1F44]">
+            <h3 className="mb-2 text-[18px] sm:text-[20px] md:text-[22px] font-serif font-semibold text-[#0A1F44]">
               Micro-Market Research
             </h3>
 
-            <p className="mb-3 text-sm md:text-base text-[#5A6B85]">
+            <p className="mb-3 text-[16px] md:text-[18px] text-[#5A6B85]">
               Granular analysis of high-growth market segments.
             </p>
 

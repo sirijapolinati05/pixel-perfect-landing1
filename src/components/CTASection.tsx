@@ -3,12 +3,12 @@ const CTASection = () => {
     <section className="py-10 sm:py-12 md:py-14 bg-gradient-to-r from-navy-dark via-navy to-sky/80">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
 
-        <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-primary-foreground mb-3 leading-snug md:leading-tight">
+        <h2 className="text-[30px] sm:text-[36px] md:text-[40px] font-bold text-primary-foreground mb-3 leading-snug md:leading-tight">
           Ready to Shape the
           <br className="hidden sm:block" /> Technology Narrative?
         </h2>
 
-        <p className="text-primary-foreground/70 font-serif text-xs sm:text-sm md:text-base mb-5 sm:mb-6 max-w-md sm:max-w-lg mx-auto">
+        <p className="text-primary-foreground/70 font-serif text-[16px] sm:text-[17px] md:text-[18px] mb-5 sm:mb-6 max-w-md sm:max-w-lg mx-auto">
           Whether you're looking to commission a Thought Shaping Paper, partner as an analyst, or subscribe to our research — we'd love to hear from you.
         </p>
 
@@ -19,7 +19,7 @@ const CTASection = () => {
           <a
             href="#"
             className="w-fit text-center bg-teal text-navy font-serif font-semibold 
-            px-4 sm:px-6 py-2.5 md:py-3 rounded-full text-sm md:text-base
+            px-4 sm:px-6 py-2.5 md:py-3 rounded-full text-[16px] md:text-[18px]
             transition-all duration-300 ease-in-out
             hover:scale-110 hover:-translate-y-1
             hover:bg-teal-light
@@ -33,7 +33,7 @@ const CTASection = () => {
           <a
             href="#"
             className="w-fit text-center border border-primary-foreground/40 text-primary-foreground font-serif font-semibold 
-            px-4 sm:px-6 py-2.5 md:py-3 rounded-full text-sm md:text-base
+            px-4 sm:px-6 py-2.5 md:py-3 rounded-full text-[16px] md:text-[18px]
             transition-all duration-300 ease-in-out
             hover:scale-110 hover:-translate-y-1
             hover:bg-primary-foreground/10

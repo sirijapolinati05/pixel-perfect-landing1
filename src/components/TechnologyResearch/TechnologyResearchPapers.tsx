@@ -18,7 +18,7 @@ const TechnologyResearchPapers = () => {
       <div className="relative mx-auto max-w-[1440px] xl:max-w-[1400px] 2xl:max-w-[1600px]">
         
         {/* HEADING */}
-        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.8rem] xl:text-5xl 2xl:text-6xl leading-none text-[#31a8e4]">
+        <h2 className="text-[32px] sm:text-[40px] md:text-[44px] lg:text-[48px] xl:text-[50px] 2xl:text-[50px] leading-none text-[#31a8e4]">
           Thought Shaping Papers
         </h2>
 
@@ -42,11 +42,11 @@ const TechnologyResearchPapers = () => {
                 transition-all duration-300 ease-in-out
                 hover:scale-[1.05] hover:shadow-xl"
               >
-                <h3 className="relative max-w-[420px] text-xl sm:text-2xl md:text-[1.6rem] lg:text-[1.6rem] xl:text-3xl leading-[1.1]">
+                <h3 className="relative max-w-[420px] text-[22px] sm:text-[24px] md:text-[24px] lg:text-[24px] xl:text-[26px] leading-[1.1]">
                   {paper.title}
                 </h3>
 
-                <p className="relative mt-3 max-w-[420px] text-sm sm:text-base md:text-[15px] lg:text-[15px] xl:text-lg leading-6 sm:leading-7 text-white/85">
+                <p className="relative mt-3 max-w-[420px] text-[16px] sm:text-[17px] md:text-[18px] lg:text-[18px] xl:text-[18px] leading-6 sm:leading-7 text-white/85">
                   {paper.description}
                 </p>
 
@@ -58,16 +58,16 @@ const TechnologyResearchPapers = () => {
                       className="h-9 w-9 sm:h-10 sm:w-10 rounded-full object-cover"
                     />
                     <div>
-                      <p className="text-sm sm:text-[15px] xl:text-base font-semibold leading-none">
+                      <p className="text-[16px] sm:text-[16px] xl:text-[18px] font-semibold leading-none">
                         Ashwin Gaidhani
                       </p>
-                      <p className="mt-0.5 text-[10px] sm:text-[11px] xl:text-xs text-white/75">
+                      <p className="mt-0.5 text-[14px] sm:text-[14px] xl:text-[16px] text-white/75">
                         Research Partner, ResearchFabric
                       </p>
                     </div>
                   </div>
 
-                  <div className="mt-2 inline-flex items-center gap-1.5 rounded-md bg-[#d9eef8] px-2.5 py-1 text-[10px] sm:text-xs font-semibold text-[#0d1440]">
+                  <div className="mt-2 inline-flex items-center gap-1.5 rounded-md bg-[#d9eef8] px-2.5 py-1 text-[14px] sm:text-[14px] font-semibold text-[#0d1440]">
                     <img src={linkedinBadge} alt="" className="h-3.5 w-3.5 sm:h-4 sm:w-4 object-contain" />
                     Releasing soon on LinkedIn
                   </div>
@@ -81,7 +81,7 @@ const TechnologyResearchPapers = () => {
         <div className="mt-4 flex justify-center sm:mt-5">
           <button
             type="button"
-            className="w-full sm:w-auto rounded-lg border border-[#18204e] bg-white px-6 sm:px-8 md:px-10 lg:px-8 py-2.5 sm:py-3 text-sm sm:text-base md:text-lg lg:text-[15px] font-semibold text-[#111741] shadow-[0_8px_18px_rgba(17,23,65,0.1)] transition-transform hover:-translate-y-0.5"
+            className="w-full sm:w-auto rounded-lg border border-[#18204e] bg-white px-6 sm:px-8 md:px-10 lg:px-8 py-2.5 sm:py-3 text-[16px] sm:text-[17px] md:text-[18px] lg:text-[18px] font-semibold text-[#111741] shadow-[0_8px_18px_rgba(17,23,65,0.1)] transition-transform hover:-translate-y-0.5"
           >
             Load More
           </button>

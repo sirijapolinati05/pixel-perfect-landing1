@@ -38,7 +38,7 @@ const TechnologyResearchHero = () => {
 
             {/* HEADING */}
             <h1 className="
-            text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-[4.5rem]
+            text-[34px] sm:text-[40px] md:text-[46px] lg:text-[50px] xl:text-[50px] 2xl:text-[50px]
             leading-[1.1] tracking-[-0.02em] text-white">
               Thought Shaping Research for Quantum, Chipsets & AI
             </h1>
@@ -46,7 +46,7 @@ const TechnologyResearchHero = () => {
             {/* SUBTEXT */}
             <p className="
             mt-4 sm:mt-6
-            text-xs sm:text-sm md:text-base lg:text-xl xl:text-2xl 2xl:text-[1.75rem]
+            text-[16px] sm:text-[18px] md:text-[18px] lg:text-[20px] xl:text-[20px] 2xl:text-[20px]
             leading-6 sm:leading-7 md:leading-8 lg:leading-9 xl:leading-10
             text-white/90">
               ResearchFabric partners with the world's foremost technology analysts to
@@ -90,7 +90,7 @@ const TechnologyResearchHero = () => {
 
                     <p className="
                     mt-1 sm:mt-2
-                    text-[10px] sm:text-sm md:text-base lg:text-xl xl:text-2xl
+                    text-[16px] sm:text-[17px] md:text-[18px] lg:text-[20px] xl:text-[20px]
                     leading-4 sm:leading-6 md:leading-7 text-white">
                       {stat.label}
                     </p>
@@ -109,7 +109,7 @@ const TechnologyResearchHero = () => {
                 items-center justify-center
                 rounded-full bg-[#33ace5]
                 px-4 sm:px-8 md:px-10 lg:px-8 py-2.5 sm:py-4
-                text-xs sm:text-base md:text-lg lg:text-lg
+                text-[16px] sm:text-[17px] md:text-[18px] lg:text-[18px]
                 font-semibold text-white text-center
                 transition-all duration-300 ease-in-out
                 hover:scale-105 hover:-translate-y-1 hover:shadow-[0_12px_30px_rgba(51,172,229,0.5)]"
@@ -124,7 +124,7 @@ const TechnologyResearchHero = () => {
                 items-center justify-center
                 rounded-full bg-[#64d7bf]
                 px-4 sm:px-8 md:px-10 lg:px-8 py-2.5 sm:py-4
-                text-xs sm:text-base md:text-lg lg:text-lg
+                text-[16px] sm:text-[17px] md:text-[18px] lg:text-[18px]
                 font-semibold text-white text-center
                 transition-all duration-300 ease-in-out
                 hover:scale-105 hover:-translate-y-1 hover:shadow-[0_12px_30px_rgba(100,215,191,0.5)]"
