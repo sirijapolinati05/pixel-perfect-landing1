@@ -30,7 +30,7 @@ const TechnologyResearchDomains = () => {
       id="domains"
       className="
       relative overflow-hidden bg-white
-      px-4 sm:px-6 md:px-8 lg:px-14 xl:px-20 2xl:px-28
+      px-4 sm:px-6
       py-10 sm:py-12 md:py-14 lg:py-8 xl:py-10 2xl:py-12
       text-[#141742]"
     >
@@ -46,7 +46,7 @@ const TechnologyResearchDomains = () => {
         opacity-20 scale-x-[-1] rotate-90 -rotate-[30deg]"
       />
 
-      <div className="relative mx-auto max-w-[1440px] xl:max-w-[1400px] 2xl:max-w-[1600px]">
+      <div className="relative mx-auto max-w-7xl">
 
         <div className="mb-2 flex items-center gap-2 sm:gap-3">
           <span className="h-[1px] w-4 sm:w-6 md:w-8 lg:w-6 bg-current opacity-40"></span>

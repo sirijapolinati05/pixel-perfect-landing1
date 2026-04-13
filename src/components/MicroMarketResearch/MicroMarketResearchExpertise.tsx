@@ -37,7 +37,7 @@ const MicroMarketResearchExpertise = () => {
   return (
     <section
       id="expertise"
-      className="relative overflow-hidden bg-[#101341] px-4 sm:px-6 md:px-8 lg:px-14 xl:px-20 2xl:px-28 py-10 sm:py-12 md:py-14 lg:py-8 xl:py-10 2xl:py-12 text-white"
+      className="relative overflow-hidden bg-[#101341] px-4 sm:px-6 py-10 sm:py-12 md:py-14 lg:py-8 xl:py-10 2xl:py-12 text-white"
     >
       {/* BACKGROUND */}
       <div className="absolute left-[-56px] top-[-48px] h-[220px] w-[220px] sm:left-[-68px] sm:top-[-58px] sm:h-[270px] sm:w-[270px] md:left-[-80px] md:top-[-70px] md:h-[320px] md:w-[320px] rounded-full border border-white/20" />
@@ -50,7 +50,7 @@ const MicroMarketResearchExpertise = () => {
       <div className="absolute bottom-[-26px] right-[-26px] h-[100px] w-[100px] sm:bottom-[-34px] sm:right-[-34px] sm:h-[132px] sm:w-[132px] md:bottom-[-44px] md:right-[-44px] md:h-[168px] md:w-[168px] rounded-full border border-white/20" />
       <div className="absolute bottom-[-16px] right-[-16px] h-[80px] w-[80px] sm:bottom-[-22px] sm:right-[-22px] sm:h-[106px] sm:w-[106px] md:bottom-[-28px] md:right-[-28px] md:h-[136px] md:w-[136px] rounded-full border border-white/20" />
 
-      <div className="relative z-10 mx-auto max-w-[1180px]">
+      <div className="relative z-10 mx-auto max-w-7xl">
         <div className="mx-auto max-w-[900px] text-center">
           <p className="text-[18px] md:text-[20px] font-bold tracking-normal text-[#18afe5]">
             <span className="inline-flex items-center gap-3">

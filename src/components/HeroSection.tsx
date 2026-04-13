@@ -1,6 +1,9 @@
 import heroImg from "@/assets/LandingPage/home-hero.png";
 
 const HeroSection = () => {
+  const ctaBaseClass =
+    "flex justify-center rounded-full px-3 py-2 text-[14px] font-semibold text-[#081A34] transition-transform duration-200 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-[#081A34] sm:px-5 sm:py-3 sm:text-[16px]";
+
   return (
     <section className="relative bg-[#081A34] text-white">
 
@@ -68,11 +71,17 @@ const HeroSection = () => {
 
           {/* BUTTONS */}
           <div className="flex w-full max-w-[360px] gap-3">
-            <a className="flex flex-1 justify-center rounded-full bg-[#3CC8FF] px-3 py-2 text-[14px] font-semibold text-[#081A34]">
+            <a
+              href="#practices"
+              className={`${ctaBaseClass} flex-1 bg-[#3CC8FF]`}
+            >
               Explore Our Practices
             </a>
 
-            <a className="flex flex-1 justify-center rounded-full bg-[#43E0B1] px-3 py-2 text-[14px] font-semibold text-[#081A34]">
+            <a
+              href="#cxo"
+              className={`${ctaBaseClass} flex-1 bg-[#43E0B1]`}
+            >
               CXO AI Research
             </a>
           </div>
@@ -115,11 +124,17 @@ const HeroSection = () => {
             </h1>
 
             <div className="mt-12 flex gap-4">
-              <a className="rounded-full bg-[#3CC8FF] px-5 py-3 text-[16px] font-semibold text-[#081A34]">
+              <a
+                href="#practices"
+                className={`${ctaBaseClass} bg-[#3CC8FF]`}
+              >
                 Explore Our Practices
               </a>
 
-              <a className="rounded-full bg-[#43E0B1] px-5 py-3 text-[16px] font-semibold text-[#081A34]">
+              <a
+                href="#cxo"
+                className={`${ctaBaseClass} bg-[#43E0B1]`}
+              >
                 CXO AI Research
               </a>
             </div>

@@ -7,9 +7,8 @@ import research4 from "../assets/LandingPage/Agentic-Enterprise1.png";
 const ResearchSection = () => {
   return (
     <section id="latest-research" className="scroll-mt-24 bg-white py-8">
-      <div className="mx-auto max-w-6xl px-4">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
 
-        {/* SMALL HEADING */}
         <div className="mb-2 flex items-center justify-center gap-2 sm:gap-3 lg:mb-3">
           <span className="w-4 sm:w-6 h-[1px] bg-current opacity-40"></span>
 
@@ -20,22 +19,20 @@ const ResearchSection = () => {
           <span className="w-4 sm:w-6 h-[1px] bg-current opacity-40"></span>
         </div>
 
-        {/* MAIN HEADING (NOW BELOW) */}
         <h2 className="mb-2 text-center text-[32px] font-bold leading-[1.1] tracking-tight sm:text-[40px] md:text-[44px] lg:text-[48px]
           bg-gradient-to-r from-[#0B3F60] to-[#26A9E0] 
           bg-clip-text text-transparent">
           Fresh from the ResearchFabric
         </h2>
 
-        {/* PARAGRAPH */}
         <p className="mx-auto mb-6 text-center max-w-xl text-[16px] text-muted-foreground sm:max-w-2xl md:max-w-3xl md:text-[18px] lg:text-[20px]">
-          Our most recent Thought Shaping Papers and strategic briefings.</p>
+          Our most recent Thought Shaping Papers and strategic briefings.
+        </p>
 
-        {/* CARDS */}
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
 
           {/* FIRST CARD */}
-          <div className="group flex flex-col h-full overflow-hidden rounded-2xl bg-white shadow-md hover:scale-[1.05] hover:bg-[#0A1F44]">
+          <div className="group flex flex-col h-full overflow-hidden rounded-2xl bg-white shadow-md hover:bg-[#0A1F44]">
 
             <div className="p-3 text-left">
               <span className="text-[12px] text-white bg-gradient-to-r from-[#0A0E33] to-[#25A6DD] px-2 py-[2px] rounded-full">
@@ -71,7 +68,7 @@ const ResearchSection = () => {
           <div className="flex flex-col gap-4">
 
             {/* CHIPSET CARD */}
-            <div className="relative overflow-hidden rounded-2xl shadow-md hover:scale-[1.05]">
+            <div className="relative overflow-hidden rounded-2xl shadow-md">
               <img src={research2} className="h-40 w-full object-cover" />
 
               <div className="absolute inset-0 flex flex-col bg-black/60 p-2.5 text-left">
@@ -97,7 +94,7 @@ const ResearchSection = () => {
             </div>
 
             {/* QUANTUM CARD */}
-            <div className="group flex flex-col overflow-hidden rounded-2xl bg-white shadow-md hover:scale-[1.05] hover:bg-[#0A1F44]">
+            <div className="group flex flex-col overflow-hidden rounded-2xl bg-white shadow-md hover:bg-[#0A1F44]">
 
               <img src={research3} className="h-32 w-full object-cover" />
 
@@ -126,7 +123,7 @@ const ResearchSection = () => {
           </div>
 
           {/* THIRD CARD */}
-          <div className="group flex flex-col h-full overflow-hidden rounded-2xl bg-white shadow-md hover:scale-[1.05] hover:bg-[#0A1F44]">
+          <div className="group flex flex-col h-full overflow-hidden rounded-2xl bg-white shadow-md hover:bg-[#0A1F44]">
 
             <div className="p-3 text-left">
               <span className="text-[12px] text-white bg-gradient-to-r from-[#0A0E33] to-[#25A6DD] px-2 py-[2px] rounded-full">

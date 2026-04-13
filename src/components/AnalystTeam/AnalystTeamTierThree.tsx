@@ -91,7 +91,7 @@ const TierThreeCard = ({
 
 const AnalystTeamTierThree = () => {
   return (
-    <section className="relative overflow-hidden bg-[#f8f7f3] px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 py-10 sm:py-12 md:py-14 lg:py-16 xl:py-20 2xl:py-24 text-[#111948]">
+    <section className="relative overflow-hidden bg-[#f8f7f3] px-4 sm:px-6 py-10 sm:py-12 md:py-14 lg:py-16 xl:py-20 2xl:py-24 text-[#111948]">
       <div className="absolute -right-8 -top-10 h-[150px] w-[150px] sm:-right-10 sm:-top-12 sm:h-[180px] sm:w-[180px] md:-right-12 md:-top-16 md:h-[220px] md:w-[220px] rounded-full border border-[#20305f]/25" />
       <div className="absolute -right-4 -top-6 h-[122px] w-[122px] sm:-right-5 sm:-top-8 sm:h-[148px] sm:w-[148px] md:-right-6 md:-top-10 md:h-[180px] md:w-[180px] rounded-full border border-[#20305f]/25" />
       <div className="absolute right-0 top-0 h-[96px] w-[96px] sm:top-[-2px] sm:h-[118px] sm:w-[118px] md:top-[-4px] md:h-[140px] md:w-[140px] rounded-full border border-[#20305f]/25" />
@@ -99,7 +99,7 @@ const AnalystTeamTierThree = () => {
       <div className="absolute -bottom-5 -left-7 h-[122px] w-[122px] sm:-bottom-7 sm:-left-8 sm:h-[148px] sm:w-[148px] md:-bottom-8 md:-left-10 md:h-[180px] md:w-[180px] rounded-full border border-[#20305f]/25" />
       <div className="absolute bottom-0 left-0 h-[96px] w-[96px] sm:h-[118px] sm:w-[118px] md:bottom-[-2px] md:left-[-4px] md:h-[140px] md:w-[140px] rounded-full border border-[#20305f]/25" />
 
-      <div className="relative z-10 mx-auto max-w-[1120px] xl:max-w-[1400px] 2xl:max-w-[1600px]">
+      <div className="relative z-10 mx-auto max-w-7xl">
         <div className="max-w-[760px]">
           <p className="text-[18px] md:text-[20px] font-semibold leading-none text-[#20254d]">
             <span className="inline-flex items-center gap-4">

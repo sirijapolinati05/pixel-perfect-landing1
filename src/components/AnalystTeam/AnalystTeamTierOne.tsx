@@ -34,8 +34,8 @@ const cardClassName =
 
 const AnalystTeamTierOne = () => {
   return (
-    <section className="relative overflow-hidden bg-[#f8f7f3] px-4 sm:px-6 md:px-8 lg:px-14 xl:px-20 2xl:px-28 py-10 sm:py-12 md:py-14 lg:py-16 xl:py-20 2xl:py-24 text-[#141948]">
-      <div className="relative z-10 mx-auto max-w-[1240px] xl:max-w-[1400px] 2xl:max-w-[1600px]">
+    <section className="relative overflow-hidden bg-[#f8f7f3] px-4 sm:px-6 py-10 sm:py-12 md:py-14 lg:py-16 xl:py-20 2xl:py-24 text-[#141948]">
+      <div className="relative z-10 mx-auto max-w-7xl">
         <div className="max-w-[760px]">
             <p className="text-[18px] md:text-[20px] font-bold leading-none tracking-[0.01em] text-[#20254d]">
             <span className="inline-flex items-center gap-4">

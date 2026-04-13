@@ -8,7 +8,7 @@ const heroStats = [
 
 const MicroMarketResearchHero = () => {
   return (
-    <section className="relative overflow-hidden bg-[#15203c] px-4 sm:px-6 md:px-8 lg:px-14 xl:px-20 2xl:px-28 pb-12 sm:pb-16 md:pb-20 lg:pb-24 xl:pb-28 pt-20 sm:pt-24 md:pt-24 lg:pt-28 xl:pt-32 text-white">
+    <section className="relative overflow-hidden bg-[#15203c] px-4 sm:px-6 pb-12 sm:pb-16 md:pb-20 lg:pb-24 xl:pb-28 pt-20 sm:pt-24 md:pt-24 lg:pt-28 xl:pt-32 text-white">
       
       {/* BACKGROUNDS */}
       <div className="absolute inset-0 bg-[linear-gradient(120deg,#1e3158_0%,#132443_28%,#1c58c2_28%,#1c58c2_36%,#1a2747_36%,#15203c_46%,#1d5fd0_46%,#1d5fd0_52%,#17315d_52%,#132443_60%,#0f1d37_100%)] opacity-95" />
@@ -24,7 +24,7 @@ const MicroMarketResearchHero = () => {
       <div className="absolute inset-0 bg-[repeating-linear-gradient(123deg,transparent_0px,transparent_42px,rgba(43,114,255,0.88)_42px,rgba(43,114,255,0.88)_66px,transparent_66px,transparent_132px)] opacity-45" />
       <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(6,10,22,0.3),rgba(6,10,22,0.04),rgba(6,10,22,0.3))]" />
 
-      <div className="relative mx-auto max-w-[1180px]">
+      <div className="relative mx-auto max-w-7xl">
         <div className="max-w-[760px] pt-6 sm:pt-8 md:pt-10 lg:pt-20">
 
           {/* TITLE */}

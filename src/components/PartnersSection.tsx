@@ -41,7 +41,7 @@ const PartnersSection = () => {
       id="analysts"
       className="overflow-hidden bg-background py-10 sm:py-12 md:py-14 lg:py-8 xl:py-10 2xl:py-12 font-serif"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 text-center">
+      <div className="mx-auto max-w-7xl px-4 text-center sm:px-6">
 
         {/* Heading */}
         <div className="mb-2 flex items-center justify-center gap-2 sm:gap-3">

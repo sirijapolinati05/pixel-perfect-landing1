@@ -4,7 +4,10 @@ import translateIcon from "@/assets/LandingPage/translate-into-action.png";
 
 const CXOSection = () => {
   return (
-    <section id="cxo" className="py-10 sm:py-12 md:py-14 bg-navy-dark">
+    <section
+      id="cxo"
+      className="scroll-mt-24 bg-navy-dark py-10 sm:py-12 md:py-14"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
 
         {/* SMALL LINES + LEFT TEXT */}
