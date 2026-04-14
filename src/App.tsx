@@ -25,11 +25,20 @@ import TechnologyResearchOffering from "@/components/TechnologyResearch/Technolo
 import TechnologyResearchPapers from "@/components/TechnologyResearch/TechnologyResearchPapers";
 
 const ScrollToTop = () => {
-  const { pathname } = useLocation();
+  const { pathname, hash } = useLocation();
 
   useEffect(() => {
+    if (hash) {
+      const targetElement = document.querySelector(hash);
+
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
+        return;
+      }
+    }
+
     window.scrollTo({ top: 0, left: 0, behavior: "instant" as ScrollBehavior });
-  }, [pathname]);
+  }, [pathname, hash]);
 
   return null;
 };

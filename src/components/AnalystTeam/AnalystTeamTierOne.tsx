@@ -37,7 +37,7 @@ const AnalystTeamTierOne = () => {
     <section className="relative overflow-hidden bg-[#f8f7f3] px-4 sm:px-6 py-10 sm:py-12 md:py-14 lg:py-16 xl:py-20 2xl:py-24 text-[#141948]">
       <div className="relative z-10 mx-auto max-w-7xl">
         <div className="max-w-[760px]">
-            <p className="text-[18px] md:text-[20px] font-bold leading-none tracking-[0.01em] text-[#20254d]">
+          <p className="text-[18px] md:text-[20px] font-bold leading-none tracking-[0.01em] text-[#20254d]">
             <span className="inline-flex items-center gap-4">
               <span className="h-px w-8 sm:w-10 md:w-[48px] bg-[#20254d]" />
               Core Leadership Team
@@ -50,14 +50,8 @@ const AnalystTeamTierOne = () => {
           </h2>
         </div>
 
-        <div className="mt-8 sm:mt-10 md:mt-14 grid gap-6 sm:gap-8 lg:grid-cols-[150px_minmax(0,1fr)] lg:items-center">
-          <div className="flex items-center lg:min-h-[220px]">
-            <p className="text-[18px] md:text-[20px] font-bold leading-none tracking-[0.01em] text-[#101535] sm:whitespace-nowrap">
-              Research Partners
-            </p>
-          </div>
-
-          <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 sm:gap-4 md:gap-6 lg:gap-3">
+        <div className="mt-8 sm:mt-10 md:mt-14">
+          <div className="max-w-6xl mx-auto ml-4 sm:ml-8 md:ml-12 lg:ml-16 xl:ml-20 grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 sm:gap-4 md:gap-6 lg:gap-6">
             {partnerCards.map((member) => (
               <article key={member.name} className={cardClassName}>
                 <AnalystTeamAvatar name={member.name} image={member.image} />
@@ -66,8 +60,9 @@ const AnalystTeamTierOne = () => {
                   {member.name}
                 </h3>
 
+                {/* ✅ EXTRA DARK SUBTITLE */}
                 <p
-                  className={`mt-1 min-h-[36px] text-[14px] sm:text-[16px] leading-[1.25] text-[#5ab5eb] transition-colors duration-300 group-hover:text-white/85 ${
+                  className={`mt-1 min-h-[36px] text-[14px] sm:text-[16px] leading-[1.25] text-[#1E4E8C] transition-colors duration-300 group-hover:text-white/85 ${
                     member.subtitle === "Forbes Tech Council Member" ||
                     member.subtitle === "Board-Level Strategy Advisor"
                       ? "mx-auto max-w-[148px] text-[13px] sm:text-[14px] leading-[1.2]"
@@ -84,35 +79,19 @@ const AnalystTeamTierOne = () => {
                 <div className="mx-auto mt-auto h-px w-full bg-[#c8ccd5] transition-colors duration-300 group-hover:bg-white/35" />
 
                 <div className="mt-4 flex items-center justify-center gap-5">
-                  <button
-                    type="button"
-                    aria-label={`${member.name} LinkedIn`}
-                    className="flex items-center justify-center p-1 transition-transform duration-300 hover:-translate-y-1"
-                  >
-                    <img
-                      src={linkedInLogo}
-                      alt=""
-                      aria-hidden="true"
-                      className="h-7 w-7 object-contain"
-                    />
+                  <button className="flex items-center justify-center p-1 transition-transform duration-300 hover:-translate-y-1">
+                    <img src={linkedInLogo} className="h-7 w-7 object-contain" />
                   </button>
-                  <button
-                    type="button"
-                    aria-label={`${member.name} email`}
-                    className="flex items-center justify-center p-1 transition-transform duration-300 hover:-translate-y-1"
-                  >
-                    <img
-                      src={gmailLogo}
-                      alt=""
-                      aria-hidden="true"
-                      className="h-7 w-7 object-contain"
-                    />
+
+                  <button className="flex items-center justify-center p-1 transition-transform duration-300 hover:-translate-y-1">
+                    <img src={gmailLogo} className="h-7 w-7 object-contain" />
                   </button>
                 </div>
               </article>
             ))}
           </div>
         </div>
+
       </div>
     </section>
   );

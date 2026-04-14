@@ -55,27 +55,21 @@ const TierTwoCard = ({
     <h3 className="mt-4 text-[18px] sm:text-[20px] leading-[1.15] tracking-[-0.02em] text-[#17204c] transition-colors duration-300 group-hover:text-white">
       {name}
     </h3>
-    <p className="mt-1 min-h-[36px] text-[14px] sm:text-[16px] leading-[1.25] text-[#5ab5eb] transition-colors duration-300 group-hover:text-white/85">
+
+    {/* ✅ DARK COLOR APPLIED */}
+    <p className="mt-1 min-h-[36px] text-[14px] sm:text-[16px] leading-[1.25] text-[#1E4E8C] transition-colors duration-300 group-hover:text-white/85">
       {subtitle}
     </p>
 
     <div className="mx-auto mt-auto h-px w-full bg-[#c8ccd5] transition-colors duration-300 group-hover:bg-white/35" />
 
     <div className="mt-4 flex items-center justify-center gap-5">
-      <button
-        type="button"
-        aria-label={`${name} LinkedIn`}
-        className="flex items-center justify-center p-1 transition-transform duration-300 hover:-translate-y-1"
-      >
-        <img src={linkedInLogo} alt="" className="h-7 w-7 object-contain" />
+      <button className="flex items-center justify-center p-1 transition-transform duration-300 hover:-translate-y-1">
+        <img src={linkedInLogo} className="h-7 w-7 object-contain" />
       </button>
 
-      <button
-        type="button"
-        aria-label={`${name} email`}
-        className="flex items-center justify-center p-1 transition-transform duration-300 hover:-translate-y-1"
-      >
-        <img src={gmailLogo} alt="" className="h-7 w-7 object-contain" />
+      <button className="flex items-center justify-center p-1 transition-transform duration-300 hover:-translate-y-1">
+        <img src={gmailLogo} className="h-7 w-7 object-contain" />
       </button>
     </div>
   </article>
@@ -139,23 +133,14 @@ const AnalystTeamTierTwo = () => {
           {/* RIGHT */}
           <div className="grid grid-cols-1 sm:grid-cols-[40px_minmax(0,1fr)] items-center gap-x-6">
 
-            {/* ✅ FIXED LINE + DOTS */}
             <div className="hidden sm:flex h-full justify-center lg:translate-x-16 xl:translate-x-20">
               <div className="relative flex h-full min-h-[320px] md:min-h-[360px] items-center justify-center">
-                
-                {/* LINE */}
                 <div className="absolute h-full w-px bg-white" />
-
-                {/* TOP DOT */}
                 <div className="absolute top-0 h-3 w-3 -translate-y-1/2 rounded-full border border-[#5e677d] bg-white" />
-
-                {/* BOTTOM DOT */}
                 <div className="absolute bottom-0 h-3 w-3 translate-y-1/2 rounded-full border border-[#5e677d] bg-white" />
-
               </div>
             </div>
 
-            {/* FEATURED */}
             <div className="flex flex-col items-center text-center">
               <div className="mb-6 sm:mb-8">
                 <p className="text-[16px] sm:text-[18px] text-[#101535]">

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Menu } from "lucide-react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 import logo from "../assets/LandingPage/research-fabric.png";
 import lightLogo from "../assets/LandingPage/research-fabric-footer.png";
@@ -15,6 +15,7 @@ const navItems = [
 
 const Navbar = () => {
   const { pathname } = useLocation();
+  const navigate = useNavigate();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeSection, setActiveSection] = useState(navItems[0].href);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -25,6 +26,20 @@ const Navbar = () => {
 
   const toggleMobileMenu = () => {
     setMobileOpen((previousState) => !previousState);
+  };
+
+  const handleLogoClick = () => {
+    setMobileOpen(false);
+    setActiveSection(navItems[0].href);
+
+    if (isHomePage) {
+      const heroSection = document.querySelector("#hero");
+      heroSection?.scrollIntoView({ behavior: "smooth", block: "start" });
+      window.history.replaceState(null, "", "/#hero");
+      return;
+    }
+
+    navigate("/#hero");
   };
 
   useEffect(() => {
@@ -132,21 +147,26 @@ const Navbar = () => {
             <Menu size={20} />
           </button>
 
-          <Link to="/" className={`flex items-center ${logoFrameClass}`}>
+          <button
+            type="button"
+            onClick={handleLogoClick}
+            className={`flex items-center border-0 bg-transparent p-0 ${logoFrameClass}`}
+          >
             <img src={logo} alt="logo" className={mobileDarkLogoClass} />
             <img src={lightLogo} alt="logo" className={mobileLightLogoClass} />
-          </Link>
+          </button>
         </div>
 
         {/* DESKTOP */}
         <div className="hidden lg:block">
-          <Link
-            to="/"
-            className={`ml-2 md:ml-5 flex items-center ${logoFrameClass}`}
+          <button
+            type="button"
+            onClick={handleLogoClick}
+            className={`ml-2 md:ml-5 flex items-center border-0 bg-transparent p-0 ${logoFrameClass}`}
           >
             <img src={logo} alt="logo" className={darkLogoClass} />
             <img src={lightLogo} alt="logo" className={lightLogoClass} />
-          </Link>
+          </button>
         </div>
 
         {/* NAV ITEMS */}

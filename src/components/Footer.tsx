@@ -18,16 +18,16 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-6">
         <div className="grid grid-cols-1 gap-2 items-start sm:gap-4 md:grid-cols-3 md:gap-6">
 
-          {/* Logo */}
-          <div className="flex justify-center self-start -mt-4 sm:-mt-6 md:justify-start md:-mt-10">
+          {/* 🔥 Logo (Moved LEFT) */}
+          <div className="flex justify-start self-start -mt-6 sm:-mt-8 md:-mt-12 -ml-2 md:-ml-4">
             <img 
               src={logo} 
               alt="Research Fabric" 
-              className="h-24 sm:h-28 md:h-32 object-contain"
+              className="h-32 sm:h-36 md:h-44 object-contain"
             />
           </div>
 
-          {/* ✅ Menu (Moved Up ONLY on Mobile) */}
+          {/* Menu */}
           <div className="-mt-6 text-center sm:-mt-4 md:mt-0 md:text-left">
             <h4 className="text-[16px] font-bold text-foreground mb-2">
               Menu

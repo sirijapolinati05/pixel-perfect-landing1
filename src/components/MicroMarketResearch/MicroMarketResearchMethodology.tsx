@@ -95,7 +95,7 @@ const MicroMarketResearchMethodology = () => {
                   } ${card.className || ""}`}
                 >
 
-                  <div className={`absolute inset-0 z-0 rounded-lg bg-gradient-to-br from-[#0b1f3a] via-[#1e3a8a] to-[#22d3ee] transition duration-500 
+                  <div className={`absolute inset-0 z-0 bg-gradient-to-br from-[#0b1f3a] via-[#1e3a8a] to-[#22d3ee] transition duration-500 
                     ${isActive ? "opacity-100" : "opacity-0 group-hover:opacity-100"}
                   `} />
 
@@ -124,8 +124,8 @@ const MicroMarketResearchMethodology = () => {
             })}
           </div>
 
-          {/* IMAGE */}
-          <div className="relative mt-[2px] sm:mt-1 md:mt-1 flex items-start justify-center lg:justify-start lg:pl-12">
+          {/* IMAGE (extra strong right shift desktop) */}
+          <div className="relative mt-[-3px] sm:mt-[-1px] md:mt-[1px] flex items-start justify-center lg:justify-start pl-4 sm:pl-6 md:pl-8 lg:pl-40 xl:pl-52 2xl:pl-64">
             <img
               src={methodologyImage}
               alt="Micro-market methodology"

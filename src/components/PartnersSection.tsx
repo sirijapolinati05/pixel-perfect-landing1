@@ -70,7 +70,6 @@ const PartnersSection = () => {
           {partners.map((partner) => (
             <div key={partner.name} className="relative h-full">
 
-              {/* Card */}
               <div className="group relative flex h-full min-h-[300px] flex-col rounded-xl bg-navy p-4 text-center md:min-h-[320px]
               transition-all duration-300 ease-out
               hover:scale-[0.96] hover:shadow-inner
@@ -97,13 +96,14 @@ const PartnersSection = () => {
                   {partner.name}
                 </h4>
 
-                {/* Role */}
+                {/* Role + Subtitle */}
                 <div className="mt-1 mb-2 flex flex-col">
                   <p className="text-[16px] font-medium text-[#38BDF8]">
                     {partner.role}
                   </p>
 
-                  <p className="mt-1 text-[14px] text-[#38BDF8] opacity-80">
+                  {/* ✅ FIXED: removed opacity */}
+                  <p className="mt-1 text-[14px] text-[#38BDF8]">
                     {partner.subtitle}
                   </p>
 
@@ -112,29 +112,21 @@ const PartnersSection = () => {
 
                 {/* Icons */}
                 <div className="mt-auto flex justify-center gap-5 pt-3">
-                  <a
-                    className="flex items-center justify-center p-1 transition-transform duration-300 hover:-translate-y-1"
-                    aria-label={`${partner.name} LinkedIn`}
-                  >
+                  <div className="flex items-center justify-center p-1 transition-transform duration-300 hover:-translate-y-1">
                     <img
                       src={linkedInLogo}
                       alt=""
-                      aria-hidden="true"
                       className="h-7 w-7 object-contain"
                     />
-                  </a>
+                  </div>
 
-                  <a
-                    className="flex items-center justify-center p-1 transition-transform duration-300 hover:-translate-y-1"
-                    aria-label={`${partner.name} email`}
-                  >
+                  <div className="flex items-center justify-center p-1 transition-transform duration-300 hover:-translate-y-1">
                     <img
                       src={gmailLogo}
                       alt=""
-                      aria-hidden="true"
                       className="h-7 w-7 object-contain"
                     />
-                  </a>
+                  </div>
                 </div>
 
               </div>

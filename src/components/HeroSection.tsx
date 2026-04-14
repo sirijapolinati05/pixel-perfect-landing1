@@ -5,7 +5,7 @@ const HeroSection = () => {
     "flex justify-center rounded-full px-3 py-2 text-[14px] font-semibold text-[#081A34] transition-transform duration-200 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-[#081A34] sm:px-5 sm:py-3 sm:text-[16px]";
 
   return (
-    <section className="relative bg-[#081A34] text-white">
+    <section id="hero" className="relative bg-[#081A34] text-white">
 
       {/* ================= DESKTOP IMAGE (UNCHANGED) ================= */}
       <div className="hidden lg:flex absolute top-0 right-0 flex-col items-end z-10">
@@ -71,19 +71,13 @@ const HeroSection = () => {
 
           {/* BUTTONS */}
           <div className="flex w-full max-w-[360px] gap-3">
-            <a
-              href="#practices"
-              className={`${ctaBaseClass} flex-1 bg-[#3CC8FF]`}
-            >
+            <div className={`${ctaBaseClass} flex-1 bg-[#3CC8FF] cursor-pointer`}>
               Explore Our Practices
-            </a>
+            </div>
 
-            <a
-              href="#cxo"
-              className={`${ctaBaseClass} flex-1 bg-[#43E0B1]`}
-            >
+            <div className={`${ctaBaseClass} flex-1 bg-[#43E0B1] cursor-pointer`}>
               CXO AI Research
-            </a>
+            </div>
           </div>
 
           <p className="text-[16px] leading-relaxed text-white/70">
@@ -96,7 +90,6 @@ const HeroSection = () => {
         <div className="hidden lg:block">
           <div className="mt-20 max-w-[42rem]">
 
-            {/* ✅ UPDATED TO 58px */}
             <h1 className="mb-5 font-serif text-[58px] font-semibold leading-none text-white">
               <span className="block">Thought-Shaping</span>
               <span className="block">Intelligence on</span>
@@ -124,19 +117,13 @@ const HeroSection = () => {
             </h1>
 
             <div className="mt-12 flex gap-4">
-              <a
-                href="#practices"
-                className={`${ctaBaseClass} bg-[#3CC8FF]`}
-              >
+              <div className={`${ctaBaseClass} bg-[#3CC8FF] cursor-pointer`}>
                 Explore Our Practices
-              </a>
+              </div>
 
-              <a
-                href="#cxo"
-                className={`${ctaBaseClass} bg-[#43E0B1]`}
-              >
+              <div className={`${ctaBaseClass} bg-[#43E0B1] cursor-pointer`}>
                 CXO AI Research
-              </a>
+              </div>
             </div>
 
           </div>
