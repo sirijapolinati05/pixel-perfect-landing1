@@ -29,7 +29,7 @@ const ResearchSection = () => {
           Our most recent Thought Shaping Papers and strategic briefings.
         </p>
 
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 lg:auto-rows-fr">
 
           {/* FIRST CARD */}
           <div className="group flex flex-col h-full overflow-hidden rounded-2xl bg-white shadow-md hover:bg-[#0A1F44]">
@@ -65,7 +65,7 @@ const ResearchSection = () => {
           </div>
 
           {/* SECOND COLUMN */}
-          <div className="flex flex-col gap-4">
+          <div className="flex h-full flex-col gap-4">
 
             {/* CHIPSET CARD */}
             <div className="relative overflow-hidden rounded-2xl shadow-md">
@@ -94,11 +94,11 @@ const ResearchSection = () => {
             </div>
 
             {/* QUANTUM CARD */}
-            <div className="group flex flex-col overflow-hidden rounded-2xl bg-white shadow-md hover:bg-[#0A1F44]">
+            <div className="group flex flex-1 flex-col overflow-hidden rounded-2xl bg-white shadow-md hover:bg-[#0A1F44]">
 
               <img src={research3} className="h-32 w-full object-cover" />
 
-              <div className="p-3 text-left flex flex-col">
+              <div className="flex flex-1 flex-col p-3 text-left">
                 <span className="text-[12px] text-white bg-gradient-to-r from-[#0A0E33] to-[#25A6DD] px-2 py-[2px] rounded-full w-fit">
                   Quantum
                 </span>
