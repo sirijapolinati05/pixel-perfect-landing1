@@ -1,10 +1,10 @@
-import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 import techImg from "@/assets/LandingPage/Technology-Research.png";
 import tickImg from "@/assets/LandingPage/technology-research-icon.png";
 import microIcon from "@/assets/LandingPage/micromarket-research-icon.png";
 import patternImg from "@/assets/LandingPage/Typographic.png";
+import { ArrowRightIcon } from "@/components/ui/Icons";
 
 const technologyTags = [
   "Generative AI",
@@ -101,7 +101,7 @@ const PracticesSection = () => {
 
           <Link to="/technology-research" className={buttonClassName}>
             Explore Technology Research
-            <ArrowRight size={14} />
+            <ArrowRightIcon size={14} />
           </Link>
         </div>
 
@@ -128,7 +128,7 @@ const PracticesSection = () => {
 
           <Link to="/micro-market-research" className={buttonClassName}>
             Explore Micro-Market Research
-            <ArrowRight size={14} />
+            <ArrowRightIcon size={14} />
           </Link>
         </div>
       </div>

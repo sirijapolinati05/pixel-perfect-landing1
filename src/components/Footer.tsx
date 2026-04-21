@@ -1,5 +1,5 @@
-import { ArrowRight } from "lucide-react";
 import logo from "@/assets/LandingPage/research-fabric-footer.png";
+import { ArrowRightIcon } from "@/components/ui/Icons";
 
 const menuLinks = [
   "Why RESEARCHFABRIC®",
@@ -74,7 +74,7 @@ const Footer = () => {
                 hover:shadow-[0_6px_16px_rgba(0,0,0,0.25)] 
                 active:scale-95"
               >
-                <ArrowRight size={14} />
+                <ArrowRightIcon size={14} />
               </button>
             </div>
 

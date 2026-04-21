@@ -123,11 +123,12 @@ const AnalystTeamTierThree = () => {
 
           <div className="grid gap-4 sm:gap-6 md:gap-8 sm:grid-cols-2 md:grid-cols-[repeat(2,184px)] md:gap-x-14">
             {researchSpecialists.map((member) => (
-              <TierThreeCard
-                key={member.name}
-                name={member.name}
-                image={member.image}
-              />
+              <div key={member.name}>
+                <TierThreeCard
+                  name={member.name}
+                  image={member.image}
+                />
+              </div>
             ))}
           </div>
 
@@ -139,11 +140,12 @@ const AnalystTeamTierThree = () => {
 
           <div className="grid gap-4 sm:gap-6 md:gap-8 sm:grid-cols-2 md:grid-cols-[repeat(3,184px)] md:gap-x-14">
             {researchAnalysts.map((member, index) => (
-              <TierThreeCard
-                key={`${member.name}-${index}`}
-                name={member.name}
-                image={member.image}
-              />
+              <div key={`${member.name}-${index}`}>
+                <TierThreeCard
+                  name={member.name}
+                  image={member.image}
+                />
+              </div>
             ))}
           </div>
         </div>

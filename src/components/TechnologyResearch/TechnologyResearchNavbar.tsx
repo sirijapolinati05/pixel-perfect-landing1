@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import { Menu } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 
 import logo from "@/assets/LandingPage/research-fabric-footer.png";
+import { MenuIcon } from "@/components/ui/Icons";
 
 const TechnologyResearchNavbar = () => {
   const { pathname } = useLocation();
@@ -39,7 +39,7 @@ const TechnologyResearchNavbar = () => {
             aria-controls="technology-research-mobile-nav"
             className="relative z-20 -mr-0.5 flex h-9 w-9 shrink-0 items-center justify-center text-[#0B1F3A] lg:hidden sm:h-10 sm:w-10 md:h-11 md:w-11"
           >
-            <Menu size={22} />
+            <MenuIcon size={22} />
           </button>
 
           <Link

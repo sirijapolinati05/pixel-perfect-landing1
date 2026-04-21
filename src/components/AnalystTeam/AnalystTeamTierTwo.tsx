@@ -109,7 +109,13 @@ const AnalystTeamTierTwo = () => {
 
             <div className="grid gap-4 sm:gap-6 md:gap-8 sm:grid-cols-2 md:grid-cols-[repeat(3,184px)] md:gap-x-14">
               {leadAnalysts.map((member) => (
-                <TierTwoCard key={member.name} {...member} />
+                <div key={member.name}>
+                  <TierTwoCard
+                    name={member.name}
+                    subtitle={member.subtitle}
+                    image={member.image}
+                  />
+                </div>
               ))}
             </div>
 

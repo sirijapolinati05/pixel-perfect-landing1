@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import { Menu } from "lucide-react";
 import { useLocation, useNavigate } from "react-router-dom";
 
 import logo from "../assets/LandingPage/research-fabric.png";
 import lightLogo from "../assets/LandingPage/research-fabric-footer.png";
+import { MenuIcon } from "@/components/ui/Icons";
 
 const navItems = [
   { label: "Our Practices", href: "#practices" },
@@ -111,7 +111,7 @@ const Navbar = () => {
               mobileOpen || showLightNavbar ? "text-[#0B1F3A]" : "text-white"
             }`}
           >
-            <Menu size={24} />
+            <MenuIcon size={24} />
           </button>
 
           <button
