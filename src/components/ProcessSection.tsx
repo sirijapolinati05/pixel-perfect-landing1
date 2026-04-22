@@ -89,7 +89,10 @@ const ProcessSection = () => {
         {/* CARDS */}
         <div className="mt-4 grid grid-cols-1 gap-4 sm:mt-6 sm:grid-cols-2 sm:gap-6 md:gap-5 lg:grid-cols-4 lg:gap-5 xl:gap-6">
           {steps.map((step, index) => (
-            <div key={step.title} className="relative">
+            <div
+              key={step.title}
+              className={`relative ${index >= 2 ? "[@media_(width:768px)]:-mt-6" : ""}`}
+            >
 
               {/* TYPO IMAGE FIX */}
               {index === 3 && (
@@ -109,26 +112,26 @@ const ProcessSection = () => {
                 <button
                   type="button"
                   onClick={() => setActiveStep(index)}
-                  className={`process-step-card relative z-10 group flex h-full flex-col p-3 text-left transition-all duration-300 sm:p-4 ${
+                  className={`process-step-card process-step-card-tablet relative z-10 group flex h-full flex-col p-3 text-left transition-all duration-300 sm:p-4 [@media_(width:768px)]:p-2.5 ${
                     activeStep === index
                       ? "bg-white shadow-[0_18px_40px_rgba(10,31,68,0.16)]"
                       : "hover:shadow-[0_18px_40px_rgba(10,31,68,0.16)]"
-                } [@media_(width:768px)]:min-h-[430px] [@media_(width:1024px)]:min-h-[400px]`}
+                } [@media_(width:768px)]:min-h-[252px] [@media_(width:1024px)]:min-h-[400px]`}
                 >
                 {/* IMAGE */}
                 <img
                   src={step.image}
                   alt={step.title}
-                  className="process-step-image mb-3 h-32 w-full object-cover sm:mb-4 sm:h-36 md:h-32 lg:h-36 xl:h-40 [@media_(width:768px)]:h-44 [@media_(width:1024px)]:h-40 [@media_(min-width:2560px)]:h-60"
+                  className="process-step-image mb-3 h-32 w-full object-cover sm:mb-4 sm:h-36 md:h-32 lg:h-36 xl:h-40 [@media_(width:768px)]:mb-2 [@media_(width:768px)]:h-24 [@media_(width:1024px)]:h-40 [@media_(min-width:2560px)]:h-60"
                 />
 
                 {/* ✅ TITLE → 22px */}
-                <h4 className="mb-2 font-serif text-[24px] font-bold text-navy leading-[30px]">
+                <h4 className="mb-2 font-serif text-[24px] font-bold text-navy leading-[30px] [@media_(width:768px)]:mb-1 [@media_(width:768px)]:text-[18px] [@media_(width:768px)]:leading-[22px]">
                   {step.title}
                 </h4>
 
                 {/* DESCRIPTION → 16px */}
-                <p className="text-navy/70 font-serif text-[16px] leading-[24px]">
+                <p className="text-navy/70 font-serif text-[16px] leading-[24px] [@media_(width:768px)]:text-[13px] [@media_(width:768px)]:leading-[18px]">
                   {step.description}
                 </p>
 

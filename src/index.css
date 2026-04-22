@@ -349,3 +349,26 @@
     margin-top: -0.5rem !important;
   }
 }
+
+@media (width: 768px) {
+  .process-step-card-tablet {
+    padding: 0.5rem !important;
+    min-height: 350px !important;
+  }
+
+  .process-step-card-tablet img {
+    height: 150px !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  .process-step-card-tablet h4 {
+    margin-bottom: 0.35rem !important;
+    font-size: 1.15rem !important;
+    line-height: 1.35 !important;
+  }
+
+  .process-step-card-tablet p {
+    font-size: 0.9rem !important;
+    line-height: 1.45 !important;
+  }
+}
