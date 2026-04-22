@@ -1,6 +1,9 @@
 const CTASection = () => {
   return (
-    <section className="-mt-6 sm:-mt-8 md:-mt-10 py-10 sm:py-12 md:py-14 bg-gradient-to-r from-navy-dark via-navy to-sky/80">
+    <section
+      id="cta"
+      className="-mt-6 scroll-mt-24 bg-gradient-to-r from-navy-dark via-navy to-sky/80 py-10 sm:-mt-8 sm:py-12 md:-mt-10 md:py-14"
+    >
       <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
 
         <h2 className="text-[28px] sm:text-[36px] md:text-[40px] font-bold text-primary-foreground mb-3 leading-snug md:leading-tight">

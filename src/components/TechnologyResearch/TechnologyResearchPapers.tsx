@@ -33,11 +33,13 @@ const TechnologyResearchPapers = () => {
           />
 
           {/* CARDS */}
-          <div className="relative z-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 sm:gap-5 md:gap-6 lg:gap-4 xl:gap-6">
+          <div className="relative z-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 sm:gap-5 md:gap-6 lg:gap-4 xl:gap-6 justify-items-center">
             {papers.map((paper) => (
               <article
                 key={paper.id}
-                className="relative overflow-hidden bg-[#0c1044] p-4 sm:p-5 md:p-6 lg:p-5 xl:p-6 text-white 
+                className="relative overflow-hidden 
+                w-full max-w-[380px]
+                bg-[#0c1044] p-4 sm:p-5 md:p-6 lg:p-5 xl:p-6 text-white 
                 shadow-[0_16px_35px_rgba(12,16,68,0.15)]
                 transition-all duration-300 ease-in-out
                 hover:scale-[1.05] hover:shadow-xl"

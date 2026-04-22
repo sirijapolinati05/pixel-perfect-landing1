@@ -26,40 +26,40 @@ const TechnologyResearchHero = () => {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_30%,rgba(52,90,255,0.18),transparent_36%),linear-gradient(90deg,rgba(8,15,67,0.97)_0%,rgba(8,15,67,0.89)_42%,rgba(8,15,67,0.34)_70%,rgba(8,15,67,0.1)_100%)]" />
 
         {/* CONTENT */}
-        <div className="relative mx-auto max-w-[1600px] [@media_(min-width:2560px)]:max-w-[2304px]
-        px-4 sm:px-6 lg:px-8 xl:px-10 2xl:px-6
-        py-16 sm:py-20 md:py-24 lg:py-28 xl:py-32 2xl:py-36">
+        <div className="relative mx-auto max-w-[1600px]
+        px-4 sm:px-6 lg:px-8 xl:px-10
+        py-16 sm:py-20 md:py-24 lg:py-28 xl:py-32">
 
-          <div className="max-w-[520px] sm:max-w-[600px] md:max-w-[640px] lg:max-w-[700px] xl:max-w-[900px] 2xl:max-w-[1100px]">
+          <div className="max-w-[700px] xl:max-w-[900px]">
 
             {/* HEADING */}
-            <h1 className="text-[34px] sm:text-[40px] md:text-[46px] lg:text-[50px] xl:text-[52px] 2xl:text-[58px]
+            <h1 className="text-[34px] sm:text-[40px] md:text-[46px] lg:text-[50px] xl:text-[52px]
             leading-[1.1] tracking-[-0.02em] text-white">
               Thought Shaping Research for Quantum, Chipsets & AI
             </h1>
 
             {/* SUBTEXT */}
-            <p className="mt-4 sm:mt-6 text-[16px] sm:text-[18px] md:text-[18px] lg:text-[20px]
-            leading-6 sm:leading-7 md:leading-8 lg:leading-9 text-white/90">
+            <p className="mt-5 text-[16px] sm:text-[18px] lg:text-[20px]
+            leading-7 sm:leading-8 text-white/90">
               ResearchFabric partners with the world's foremost technology analysts to
               produce Thought Shaping Papers that define the strategic direction of Quantum
               Computing, AI Hardware, and Artificial Intelligence.
             </p>
 
-            {/* STATS CARD */}
-            <div className="group relative mt-6 sm:mt-8 w-full overflow-hidden rounded-[20px] sm:rounded-[24px]
-            border border-white/20 bg-white/10 backdrop-blur-xl shadow-[0_25px_60px_rgba(2,6,34,0.34)]">
+            {/* STATS */}
+            <div className="mt-8 w-full overflow-hidden rounded-[24px]
+            border border-white/20 bg-white/10 backdrop-blur-xl">
 
-              <div className="relative flex flex-row divide-x divide-white/15">
+              <div className="flex divide-x divide-white/15">
                 {stats.map((stat) => (
                   <div
                     key={stat.label}
-                    className="flex-1 px-3 sm:px-5 md:px-6 py-4 sm:py-5 text-center"
+                    className="flex-1 px-6 py-5 text-center"
                   >
-                    <p className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-[#68e1d0]">
+                    <p className="text-5xl font-semibold text-[#68e1d0]">
                       {stat.value}
                     </p>
-                    <p className="mt-1 sm:mt-2 text-[14px] sm:text-[17px] md:text-[18px] text-white">
+                    <p className="mt-2 text-[16px] text-white">
                       {stat.label}
                     </p>
                   </div>
@@ -67,30 +67,26 @@ const TechnologyResearchHero = () => {
               </div>
             </div>
 
-            {/* BUTTONS */}
-            <div className="mt-5 flex flex-row gap-2 sm:mt-8 sm:gap-4 md:gap-6">
+            {/* BUTTONS (BLACK TEXT) */}
+            <div className="mt-8 flex gap-5">
 
               <a
                 href="#papers"
-                className="flex-1 inline-flex items-center justify-center rounded-full bg-[#33ace5]
-                px-2 py-1.5 min-[375px]:px-5 min-[375px]:py-2
-                sm:px-8 md:px-10 sm:py-4
-                text-[10px] min-[375px]:text-[13px] sm:text-[17px] md:text-[18px] 2xl:text-[20px]
-                whitespace-nowrap font-medium sm:font-semibold text-white text-center
-                transition-all duration-300 hover:scale-105 hover:-translate-y-1
-                hover:shadow-[0_10px_25px_rgba(51,172,229,0.5)]">
+                className="inline-flex items-center justify-center rounded-full bg-[#33ace5]
+                px-5 py-2.5
+                text-[14px] sm:text-[15px]
+                font-medium text-black
+                transition-all duration-300 hover:scale-105 hover:-translate-y-1">
                 Explore Thought Shaping
               </a>
 
               <a
                 href="#domains"
-                className="flex-1 inline-flex items-center justify-center rounded-full bg-[#64d7bf]
-                px-2 py-1.5 min-[375px]:px-5 min-[375px]:py-2
-                sm:px-8 md:px-10 sm:py-4
-                text-[10px] min-[375px]:text-[13px] sm:text-[17px] md:text-[18px] 2xl:text-[20px]
-                whitespace-nowrap font-medium sm:font-semibold text-white text-center
-                transition-all duration-300 hover:scale-105 hover:-translate-y-1
-                hover:shadow-[0_10px_25px_rgba(100,215,191,0.5)]">
+                className="inline-flex items-center justify-center rounded-full bg-[#64d7bf]
+                px-5 py-2.5
+                text-[14px] sm:text-[15px]
+                font-medium text-black
+                transition-all duration-300 hover:scale-105 hover:-translate-y-1">
                 Our Focus Areas
               </a>
 

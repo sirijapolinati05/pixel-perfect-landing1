@@ -8,10 +8,14 @@ const heroStats = [
 
 const MicroMarketResearchHero = () => {
   return (
-    <section className="relative overflow-hidden bg-[#15203c] px-4 sm:px-6 lg:px-8 xl:px-10 2xl:px-6 pb-12 sm:pb-16 md:pb-20 lg:pb-24 xl:pb-28 pt-20 sm:pt-24 md:pt-24 lg:pt-28 xl:pt-32 text-white">
+    <section
+      id="hero"
+      className="relative overflow-hidden bg-[#15203c] px-4 sm:px-6 lg:px-8 xl:px-10 2xl:px-6 pb-12 sm:pb-16 md:pb-20 lg:pb-24 xl:pb-28 pt-20 sm:pt-24 md:pt-24 lg:pt-28 xl:pt-32 text-white"
+    >
       
       {/* BACKGROUNDS */}
       <div className="absolute inset-0 bg-[linear-gradient(120deg,#1e3158_0%,#132443_28%,#1c58c2_28%,#1c58c2_36%,#1a2747_36%,#15203c_46%,#1d5fd0_46%,#1d5fd0_52%,#17315d_52%,#132443_60%,#0f1d37_100%)] opacity-95" />
+      
       <div className="absolute inset-y-0 right-0 w-full sm:w-[78%] md:w-[64%] lg:w-[56%] xl:w-[52%] opacity-30 sm:opacity-40">
         <img
           src={heroImage}
@@ -21,6 +25,7 @@ const MicroMarketResearchHero = () => {
         />
         <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(21,32,60,0.88)_0%,rgba(21,32,60,0.42)_48%,rgba(21,32,60,0.18)_100%)]" />
       </div>
+
       <div className="absolute inset-0 bg-[repeating-linear-gradient(123deg,transparent_0px,transparent_42px,rgba(43,114,255,0.88)_42px,rgba(43,114,255,0.88)_66px,transparent_66px,transparent_132px)] opacity-45" />
       <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(6,10,22,0.3),rgba(6,10,22,0.04),rgba(6,10,22,0.3))]" />
 
@@ -74,17 +79,19 @@ const MicroMarketResearchHero = () => {
             </div>
           </div>
 
-          {/* ✅ BUTTON FIXED */}
+          {/* BUTTON (TEXT BLACK FIXED) */}
           <button
             type="button"
             className="mt-6 w-fit mx-auto sm:mx-0 rounded-full 
             bg-[linear-gradient(180deg,#31b9ee_0%,#249fd8_100%)] 
             px-5 sm:px-8 md:px-10 
             py-2.5 sm:py-3 
-            text-[16px] sm:text-[17px] md:text-[18px] lg:text-[18px] font-semibold text-white 
+            text-[16px] sm:text-[17px] md:text-[18px] lg:text-[18px] 
+            font-semibold !text-black
             shadow-[0_10px_22px_rgba(18,130,193,0.42)]
             transition-all duration-300 ease-in-out
-            hover:scale-105 hover:-translate-y-1 hover:shadow-[0_15px_35px_rgba(18,130,193,0.6)]"
+            hover:scale-105 hover:-translate-y-1 
+            hover:shadow-[0_15px_35px_rgba(18,130,193,0.6)]"
           >
             Explore Capabilities
           </button>

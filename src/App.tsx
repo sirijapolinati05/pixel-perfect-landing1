@@ -18,6 +18,7 @@ import AnalystTeamTierThree from "@/components/AnalystTeam/AnalystTeamTierThree"
 import MicroMarketResearchExpertise from "@/components/MicroMarketResearch/MicroMarketResearchExpertise";
 import MicroMarketResearchHero from "@/components/MicroMarketResearch/MicroMarketResearchHero";
 import MicroMarketResearchMethodology from "@/components/MicroMarketResearch/MicroMarketResearchMethodology";
+import MicroMarketResearchNavbar from "@/components/MicroMarketResearch/MicroMarketResearchNavbar";
 import TechnologyResearchDomains from "@/components/TechnologyResearch/TechnologyResearchDomains";
 import TechnologyResearchHero from "@/components/TechnologyResearch/TechnologyResearchHero";
 import TechnologyResearchNavbar from "@/components/TechnologyResearch/TechnologyResearchNavbar";
@@ -73,8 +74,8 @@ const AnalystTeamPage = () => (
 );
 
 const MicroMarketResearchPage = () => (
-  <div className="ultra-wide-type min-h-screen bg-[#15203c] lg:bg-[#f8f7f3] lg:pt-[84px]">
-    <TechnologyResearchNavbar />
+  <div className="ultra-wide-type min-h-screen bg-[#15203c] lg:bg-[#f8f7f3]">
+    <MicroMarketResearchNavbar />
     <MicroMarketResearchHero />
     <MicroMarketResearchExpertise />
     <MicroMarketResearchMethodology />
@@ -84,7 +85,7 @@ const MicroMarketResearchPage = () => (
 );
 
 const TechnologyResearchPage = () => (
-  <div className="ultra-wide-type min-h-screen bg-[#080f43] lg:bg-[#f8f7f3] lg:pt-[84px]">
+  <div className="ultra-wide-type min-h-screen bg-[#080f43] lg:bg-[#f8f7f3]">
     <TechnologyResearchNavbar />
     <TechnologyResearchHero />
     <TechnologyResearchDomains />

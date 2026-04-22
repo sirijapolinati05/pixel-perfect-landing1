@@ -73,14 +73,60 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [isHomePage]);
 
-  const getTextClass = (isActive: boolean) => {
-    if (showLightNavbar) {
-      return isActive ? "text-[#0B1F3A] font-semibold" : "text-[#0B1F3A]";
+  useEffect(() => {
+    if (!isHomePage) {
+      return;
     }
 
-    return isActive
-      ? "text-white font-semibold"
-      : "text-white/80 hover:text-white";
+    const updateActiveSection = () => {
+      const scrollPosition = window.scrollY + window.innerHeight * 0.35;
+      let currentSection = navItems[0].href;
+
+      navItems.forEach((item) => {
+        const sectionElement = document.querySelector(item.href);
+
+        if (!sectionElement) {
+          return;
+        }
+
+        const sectionTop =
+          sectionElement.getBoundingClientRect().top + window.scrollY;
+
+        if (scrollPosition >= sectionTop) {
+          currentSection = item.href;
+        }
+      });
+
+      setActiveSection(currentSection);
+    };
+
+    updateActiveSection();
+    window.addEventListener("scroll", updateActiveSection, { passive: true });
+    window.addEventListener("resize", updateActiveSection);
+
+    return () => {
+      window.removeEventListener("scroll", updateActiveSection);
+      window.removeEventListener("resize", updateActiveSection);
+    };
+  }, [isHomePage]);
+
+  const getTextClass = (isActive: boolean) => {
+    const activeLineClass =
+      "after:absolute after:bottom-[1px] after:left-0 after:h-[2px] after:w-full after:origin-left after:rounded-full after:bg-[#63d3c5] after:transition-transform after:duration-300";
+
+    if (showLightNavbar) {
+      return `${activeLineClass} ${
+        isActive
+          ? "text-[#0B1F3A] font-semibold after:scale-x-100"
+          : "text-[#0B1F3A] after:scale-x-0"
+      }`;
+    }
+
+    return `${activeLineClass} ${
+      isActive
+        ? "text-white font-semibold after:scale-x-100"
+        : "text-white/80 hover:text-white after:scale-x-0"
+    }`;
   };
 
   const darkLogoClass =
@@ -129,7 +175,7 @@ const Navbar = () => {
                 key={item.label}
                 href={isHomePage ? item.href : `/${item.href}`}
                 onClick={() => setActiveSection(item.href)}
-                className={`relative pb-2 text-[16px] md:text-[18px] ${getTextClass(isActive)}`}
+                className={`relative pb-1 text-[16px] md:text-[18px] ${getTextClass(isActive)}`}
               >
                 {item.label}
               </a>
