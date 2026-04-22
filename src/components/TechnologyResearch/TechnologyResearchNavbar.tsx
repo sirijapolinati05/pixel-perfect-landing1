@@ -26,7 +26,7 @@ const TechnologyResearchNavbar = () => {
       <div
         className="
         mx-auto flex items-center justify-between
-        max-w-[1600px]
+        max-w-[1600px] [@media_(min-width:2560px)]:max-w-[2304px]
         px-4 sm:px-6 md:px-6 lg:px-8 xl:px-10 2xl:px-6
         py-1"
       >

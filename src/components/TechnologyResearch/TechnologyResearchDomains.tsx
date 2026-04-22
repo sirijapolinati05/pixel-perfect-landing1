@@ -46,7 +46,7 @@ const TechnologyResearchDomains = () => {
         opacity-20 scale-x-[-1] rotate-90 -rotate-[30deg]"
       />
 
-      <div className="relative mx-auto max-w-[1600px]">
+      <div className="relative mx-auto max-w-[1600px] [@media_(min-width:2560px)]:max-w-[2304px]">
 
         <div className="mb-2 flex items-center gap-2 sm:gap-3">
           <span className="h-[1px] w-4 sm:w-6 md:w-8 lg:w-6 bg-current opacity-40"></span>

@@ -7,7 +7,7 @@ import research4 from "../assets/LandingPage/Agentic-Enterprise1.png";
 const ResearchSection = () => {
   return (
     <section id="latest-research" className="scroll-mt-24 bg-white py-8">
-      <div className="mx-auto max-w-[1600px] px-4 sm:px-6 lg:px-8 xl:px-10 2xl:px-6">
+      <div className="mx-auto max-w-[1600px] px-4 sm:px-6 lg:px-8 xl:px-10 2xl:px-6 [@media_(min-width:2560px)]:max-w-[2304px]">
 
         <div className="mb-2 flex items-center justify-center gap-2 sm:gap-3 lg:mb-3">
           <span className="w-4 sm:w-6 h-[1px] bg-current opacity-40"></span>
@@ -33,7 +33,6 @@ const ResearchSection = () => {
 
           {/* FIRST CARD */}
           <div className="group flex flex-col h-full overflow-hidden rounded-2xl bg-white shadow-md hover:bg-[#0A1F44]">
-
             <div className="p-3 text-left">
               <span className="text-[12px] text-white bg-gradient-to-r from-[#0A0E33] to-[#25A6DD] px-2 py-[2px] rounded-full">
                 AI / IA
@@ -67,24 +66,36 @@ const ResearchSection = () => {
           {/* SECOND COLUMN */}
           <div className="flex h-full flex-col gap-4">
 
-            {/* CHIPSET CARD */}
-            <div className="relative overflow-hidden rounded-2xl shadow-md">
-              <img src={research2} className="h-40 w-full object-cover" />
+            {/* ✅ FINAL CHIPSET CARD */}
+            <div className="
+              relative overflow-hidden rounded-2xl shadow-md
+              h-[220px]
 
-              <div className="absolute inset-0 flex flex-col bg-black/60 p-2.5 text-left">
+              /* 🔥 FINAL 1920 TUNING */
+              [@media_(min-width:1440px)_and_(max-width:2200px)]:h-[180px]
+
+              /* 2560 */
+              [@media_(min-width:2560px)]:h-[300px]
+            ">
+              <img 
+                src={research2} 
+                className="absolute inset-0 w-full h-full object-cover" 
+              />
+
+              <div className="absolute inset-0 flex flex-col bg-black/60 p-3 text-left">
                 <span className="text-[12px] text-white bg-gradient-to-r from-[#0A0E33] to-[#25A6DD] px-2 py-[2px] rounded-full w-fit">
                   Chipset
                 </span>
 
-                <h4 className="mt-1 text-[20px] text-white font-semibold leading-[22px]">
+                <h4 className="mt-1 text-[20px] text-white font-semibold leading-[24px]">
                   Beyond Moore: The Custom Silicon Arms Race in AI Infrastructure
                 </h4>
 
-                <p className="mt-1 text-[15px] leading-[20px] text-white/70">
+                <p className="mt-1 text-[15px] leading-[22px] text-white/80">
                   How hyperscalers' in-house chip programs are reshaping the semiconductor landscape.
                 </p>
 
-                <div className="mt-2 flex items-center gap-1 text-white">
+                <div className="mt-auto flex items-center gap-1 text-white">
                   <img src={linkedinIcon} className="h-3 w-3" />
                   <span className="text-[12px] leading-none">
                     Releasing soon on <span className="font-semibold">LinkedIn</span>
@@ -96,7 +107,14 @@ const ResearchSection = () => {
             {/* QUANTUM CARD */}
             <div className="group flex flex-1 flex-col overflow-hidden rounded-2xl bg-white shadow-md hover:bg-[#0A1F44]">
 
-              <img src={research3} className="h-32 w-full object-cover" />
+              <img 
+                src={research3} 
+                className="
+                  h-[130px] sm:h-[150px]
+                  [@media_(min-width:2560px)]:h-[180px]
+                  w-full object-cover object-center
+                " 
+              />
 
               <div className="flex flex-1 flex-col p-3 text-left">
                 <span className="text-[12px] text-white bg-gradient-to-r from-[#0A0E33] to-[#25A6DD] px-2 py-[2px] rounded-full w-fit">
@@ -124,7 +142,6 @@ const ResearchSection = () => {
 
           {/* THIRD CARD */}
           <div className="group flex flex-col h-full overflow-hidden rounded-2xl bg-white shadow-md hover:bg-[#0A1F44]">
-
             <div className="p-3 text-left">
               <span className="text-[12px] text-white bg-gradient-to-r from-[#0A0E33] to-[#25A6DD] px-2 py-[2px] rounded-full">
                 AI / IA

@@ -98,7 +98,7 @@ const Navbar = () => {
         mobileHeaderActive ? "bg-white shadow-sm" : "bg-transparent"
       }`}
     >
-      <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 2xl:px-6 py-1 flex items-center justify-between">
+      <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 2xl:px-6 py-1 flex items-center justify-between [@media_(min-width:2560px)]:max-w-[2304px]">
 
         <div className="flex items-center gap-0">
           <button

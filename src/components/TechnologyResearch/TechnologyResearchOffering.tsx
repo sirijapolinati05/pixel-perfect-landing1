@@ -35,7 +35,7 @@ const TechnologyResearchOffering = () => {
       <div
         className="
         mx-auto
-        max-w-[1600px]
+        max-w-[1600px] [@media_(min-width:2560px)]:max-w-[2304px]
         flex flex-col gap-8 lg:gap-7 xl:gap-8"
       >
         {/* TOP CONTENT */}

@@ -40,7 +40,7 @@ const ProcessSection = () => {
       id="process"
       className="overflow-hidden bg-process-blue py-10 sm:py-12 md:py-14 lg:py-8 xl:py-10 2xl:py-12"
     >
-      <div className="mx-auto max-w-[1600px] px-4 text-center sm:px-6 lg:px-8 xl:px-10 2xl:px-6">
+      <div className="mx-auto max-w-[1600px] px-4 text-center sm:px-6 lg:px-8 xl:px-10 2xl:px-6 [@media_(min-width:2560px)]:max-w-[2304px]">
 
         {/* TOP LABEL */}
         <div className="mb-2 flex items-center justify-center gap-2 sm:gap-3 lg:mb-3">
@@ -111,7 +111,7 @@ const ProcessSection = () => {
                 onClick={() => setActiveStep(index)}
                 onMouseEnter={() => setActiveStep(index)}
                 onMouseLeave={() => setActiveStep(null)}
-                className={`relative z-10 group p-3 text-left transition-all duration-300 sm:p-4 ${
+                className={`process-step-card relative z-10 group p-3 text-left transition-all duration-300 sm:p-4 ${
                   activeStep === index
                     ? "bg-white shadow-[0_18px_40px_rgba(10,31,68,0.16)]"
                     : "hover:bg-white hover:shadow-[0_18px_40px_rgba(10,31,68,0.16)]"
@@ -121,7 +121,7 @@ const ProcessSection = () => {
                 <img
                   src={step.image}
                   alt={step.title}
-                  className="mb-3 h-32 w-full object-cover sm:mb-4 sm:h-36 md:h-32 lg:h-36 xl:h-40"
+                  className="process-step-image mb-3 h-32 w-full object-cover sm:mb-4 sm:h-36 md:h-32 lg:h-36 xl:h-40 [@media_(width:768px)]:h-44 [@media_(min-width:2560px)]:h-60"
                 />
 
                 {/* ✅ TITLE → 22px */}

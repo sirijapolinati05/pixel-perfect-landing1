@@ -55,7 +55,7 @@ const MicroMarketResearchMethodology = () => {
         />
       </div>
 
-      <div className="relative mx-auto max-w-[1600px]">
+      <div className="relative mx-auto max-w-[1600px] [@media_(min-width:2560px)]:max-w-[2304px]">
 
         <div className="relative z-10 flex items-center gap-2 sm:gap-3">
           <span className="h-px w-4 bg-current opacity-40 sm:w-6 md:w-8" />

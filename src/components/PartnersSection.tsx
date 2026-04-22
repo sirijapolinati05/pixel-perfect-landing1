@@ -41,16 +41,14 @@ const PartnersSection = () => {
       id="analysts"
       className="overflow-hidden bg-background py-10 sm:py-12 md:py-14 lg:py-8 xl:py-10 2xl:py-12 font-serif"
     >
-      <div className="mx-auto max-w-[1600px] px-4 text-center sm:px-6 lg:px-8 xl:px-10 2xl:px-6">
+      <div className="mx-auto max-w-[1600px] px-4 text-center sm:px-6 lg:px-8 xl:px-10 2xl:px-6 [@media_(min-width:2560px)]:max-w-[2304px]">
 
         {/* Heading */}
         <div className="mb-2 flex items-center justify-center gap-2 sm:gap-3">
           <span className="w-4 sm:w-6 h-[1px] bg-current opacity-40"></span>
-
           <p className="text-black text-[18px] md:text-[20px] font-bold whitespace-nowrap">
             Research Partners
           </p>
-
           <span className="w-4 sm:w-6 h-[1px] bg-current opacity-40"></span>
         </div>
 
@@ -70,14 +68,23 @@ const PartnersSection = () => {
           {partners.map((partner) => (
             <div key={partner.name} className="relative h-full">
 
-              <div className="group relative flex h-full min-h-[300px] flex-col rounded-xl bg-navy p-4 text-center md:min-h-[320px]
-              transition-all duration-300 ease-out
-              hover:scale-[0.96] hover:shadow-inner
-              active:scale-[0.94]">
+              <div className="
+                group relative flex h-full flex-col rounded-xl bg-navy p-4 text-center
+                min-h-[300px] md:min-h-[320px]
+                [@media_(min-width:2560px)]:min-h-[640px]
+                transition-all duration-300 ease-out
+                hover:scale-[0.96] hover:shadow-inner
+                active:scale-[0.94]
+              ">
 
-                {/* Profile Image */}
+                {/* CIRCLE */}
                 <div
-                  className="mx-auto mb-4 h-24 w-24 rounded-full overflow-hidden"
+                  className="
+                    mx-auto mb-4 rounded-full overflow-hidden
+                    h-24 w-24
+                    xl:h-40 xl:w-40
+                    2xl:h-56 2xl:w-56
+                  "
                   style={{
                     backgroundImage: `url(${circleBg})`,
                     backgroundSize: "cover",
@@ -87,22 +94,19 @@ const PartnersSection = () => {
                   <img
                     src={partner.image}
                     alt={partner.name}
-                    className="h-full w-full object-cover rounded-full transition-transform duration-300 group-hover:scale-105"
+                    className="h-full w-full object-cover rounded-full"
                   />
                 </div>
 
-                {/* Name */}
                 <h4 className="text-[20px] font-bold text-white">
                   {partner.name}
                 </h4>
 
-                {/* Role + Subtitle */}
                 <div className="mt-1 mb-2 flex flex-col">
                   <p className="text-[16px] font-medium text-[#38BDF8]">
                     {partner.role}
                   </p>
 
-                  {/* ✅ FIXED: removed opacity */}
                   <p className="mt-1 text-[14px] text-[#38BDF8]">
                     {partner.subtitle}
                   </p>
@@ -110,23 +114,19 @@ const PartnersSection = () => {
                   <div className="mx-auto mt-3 h-[2px] w-20 bg-gray-400 opacity-70" />
                 </div>
 
-                {/* Icons */}
-                <div className="mt-auto flex justify-center gap-5 pt-3">
-                  <div className="flex items-center justify-center p-1 transition-transform duration-300 hover:-translate-y-1">
-                    <img
-                      src={linkedInLogo}
-                      alt=""
-                      className="h-7 w-7 object-contain"
-                    />
-                  </div>
+                {/* badges */}
+                <div className="partners-badge-row mt-auto flex justify-center gap-12 pt-6">
+                  <img 
+                    src={linkedInLogo} 
+                    alt="LinkedIn"
+                    className="partners-badge-icon h-7 w-7 object-contain" 
+                  />
 
-                  <div className="flex items-center justify-center p-1 transition-transform duration-300 hover:-translate-y-1">
-                    <img
-                      src={gmailLogo}
-                      alt=""
-                      className="h-7 w-7 object-contain"
-                    />
-                  </div>
+                  <img 
+                    src={gmailLogo} 
+                    alt="Gmail"
+                    className="partners-badge-icon h-7 w-7 object-contain" 
+                  />
                 </div>
 
               </div>

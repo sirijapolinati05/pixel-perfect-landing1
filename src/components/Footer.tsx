@@ -15,7 +15,7 @@ const Footer = () => {
     <footer className="bg-background border-t border-border">
       
       {/* 🔥 MAIN FOOTER */}
-      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 2xl:px-6 py-6">
+      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 2xl:px-6 py-6 [@media_(min-width:2560px)]:max-w-[2304px]">
         <div className="grid grid-cols-1 gap-2 items-start sm:gap-4 md:grid-cols-3 md:gap-6">
 
           {/* 🔥 Logo (Moved DOWN) */}
@@ -88,7 +88,7 @@ const Footer = () => {
 
       {/* 🔥 BOTTOM BAR */}
       <div className="border-t border-border">
-        <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 2xl:px-6 py-1.5
+        <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 2xl:px-6 py-1.5 [@media_(min-width:2560px)]:max-w-[2304px]
         flex flex-col gap-1 md:flex-row justify-between items-center text-center md:text-left">
           
           <p className="text-muted-foreground text-[14px]">

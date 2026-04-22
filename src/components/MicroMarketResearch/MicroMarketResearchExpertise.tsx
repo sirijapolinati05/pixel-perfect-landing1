@@ -50,7 +50,7 @@ const MicroMarketResearchExpertise = () => {
       <div className="absolute bottom-[-26px] right-[-26px] h-[100px] w-[100px] sm:bottom-[-34px] sm:right-[-34px] sm:h-[132px] sm:w-[132px] md:bottom-[-44px] md:right-[-44px] md:h-[168px] md:w-[168px] rounded-full border border-white/20" />
       <div className="absolute bottom-[-16px] right-[-16px] h-[80px] w-[80px] sm:bottom-[-22px] sm:right-[-22px] sm:h-[106px] sm:w-[106px] md:bottom-[-28px] md:right-[-28px] md:h-[136px] md:w-[136px] rounded-full border border-white/20" />
 
-      <div className="relative z-10 mx-auto max-w-[1600px]">
+      <div className="relative z-10 mx-auto max-w-[1600px] [@media_(min-width:2560px)]:max-w-[2304px]">
         <div className="mx-auto max-w-[900px] text-center">
           <p className="text-[18px] md:text-[20px] font-bold tracking-normal text-[#18afe5]">
             <span className="inline-flex items-center gap-3">

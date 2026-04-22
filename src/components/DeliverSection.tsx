@@ -45,7 +45,7 @@ const DeliverSection = () => {
         />
       </div>
 
-      <div className="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 2xl:px-6">
+      <div className="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 2xl:px-6 [@media_(min-width:2560px)]:max-w-[2304px]">
         
         <h3 className="mb-5 sm:mb-6 inline-block border-b border-white/40 pb-2 
         text-[28px] sm:text-[34px] md:text-[40px] font-serif text-white">

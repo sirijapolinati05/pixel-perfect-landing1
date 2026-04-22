@@ -44,7 +44,7 @@ const ScrollToTop = () => {
 };
 
 const HomePage = () => (
-  <div className="min-h-screen">
+  <div className="ultra-wide-type min-h-screen">
     <Navbar />
     <HeroSection />
     <PracticesSection />
@@ -59,7 +59,7 @@ const HomePage = () => (
 );
 
 const AnalystTeamPage = () => (
-  <div className="min-h-screen bg-[#f8f7f3]">
+  <div className="ultra-wide-type min-h-screen bg-[#f8f7f3]">
     <Navbar />
     <div className="pt-[78px] lg:pt-[84px]">
       <AnalystTeamHero />
@@ -73,7 +73,7 @@ const AnalystTeamPage = () => (
 );
 
 const MicroMarketResearchPage = () => (
-  <div className="min-h-screen bg-[#15203c] lg:bg-[#f8f7f3] lg:pt-[84px]">
+  <div className="ultra-wide-type min-h-screen bg-[#15203c] lg:bg-[#f8f7f3] lg:pt-[84px]">
     <TechnologyResearchNavbar />
     <MicroMarketResearchHero />
     <MicroMarketResearchExpertise />
@@ -84,7 +84,7 @@ const MicroMarketResearchPage = () => (
 );
 
 const TechnologyResearchPage = () => (
-  <div className="min-h-screen bg-[#080f43] lg:bg-[#f8f7f3] lg:pt-[84px]">
+  <div className="ultra-wide-type min-h-screen bg-[#080f43] lg:bg-[#f8f7f3] lg:pt-[84px]">
     <TechnologyResearchNavbar />
     <TechnologyResearchHero />
     <TechnologyResearchDomains />
@@ -96,7 +96,7 @@ const TechnologyResearchPage = () => (
 );
 
 const NotFoundPage = () => (
-  <div className="flex min-h-screen items-center justify-center bg-muted">
+  <div className="ultra-wide-type flex min-h-screen items-center justify-center bg-muted">
     <div className="text-center">
       <h1 className="mb-4 text-[36px] md:text-[44px] font-bold">404</h1>
       <p className="mb-4 text-[16px] md:text-[18px] text-muted-foreground">Oops! Page not found</p>
