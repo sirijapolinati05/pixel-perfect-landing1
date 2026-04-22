@@ -23,27 +23,28 @@ const featuredAnalyst = {
 
 const cardClassName =
   "group flex w-full max-w-full sm:max-w-[184px] " +
+  "[@media_(width:1024px)]:max-w-[220px] " +
   "[@media_(min-width:1440px)_and_(max-width:2200px)]:max-w-[240px] " +
   "min-h-[300px] " +
   "[@media_(min-width:1440px)_and_(max-width:2200px)]:min-h-[320px] " +
-
-  // ✅ 2560 FIX
   "[@media_(min-width:2560px)]:max-w-[460px] " +
   "[@media_(min-width:2560px)]:min-h-[520px] " +
-
   "flex-col rounded-xl border border-[#dfe4ea] bg-white px-4 pb-4 pt-4 text-center shadow-[0_4px_10px_rgba(8,18,59,0.15)] transition-all duration-300 hover:-translate-y-2 hover:border-[#0d4f96] hover:bg-[#0d4f96] hover:shadow-[0_20px_34px_rgba(8,18,59,0.24)]";
 
 const TierTwoCard = ({ name, subtitle, image }) => (
   <article className={cardClassName}>
+    
+    {/* IMAGE */}
     <div
-      className="mx-auto mb-4 rounded-full overflow-hidden flex items-center justify-center
-      h-24 w-24
+      className="
+      mx-auto mb-4 rounded-full overflow-hidden flex items-center justify-center
+      h-28 w-28   /* ✅ increased for 320px */
+      min-[425px]:h-28 min-[425px]:w-28
       [@media_(min-width:1440px)_and_(max-width:2200px)]:h-36
       [@media_(min-width:1440px)_and_(max-width:2200px)]:w-36
-
-      // ✅ 2560 FIX (match Tier1)
       [@media_(min-width:2560px)]:h-64
-      [@media_(min-width:2560px)]:w-64"
+      [@media_(min-width:2560px)]:w-64
+      "
       style={{
         backgroundImage: `url(${circleBg})`,
         backgroundSize: "cover",
@@ -53,22 +54,42 @@ const TierTwoCard = ({ name, subtitle, image }) => (
       <img src={image} alt={name} className="h-full w-full object-cover rounded-full" />
     </div>
 
-    <h3 className="analyst-tier-one-name mt-4 text-[18px] sm:text-[20px]
-      text-[#17204c] group-hover:text-white whitespace-nowrap">
+    {/* NAME */}
+    <h3 className="
+      mt-4 whitespace-nowrap
+      text-[18px]   /* ✅ increased */
+      min-[425px]:text-[20px]
+      sm:text-[18px]
+      lg:text-[19px]
+      text-[#17204c]
+      group-hover:text-white
+    ">
       {name}
     </h3>
 
-    <p className="mt-1 text-[14px] sm:text-[16px] text-[#1E4E8C] group-hover:text-white/85 whitespace-nowrap">
+    {/* SUBTITLE */}
+    <p className="
+      mt-1
+      text-[15px]   /* ✅ increased */
+      min-[425px]:text-[17px]
+      sm:text-[16px]
+      text-[#1E4E8C]
+      group-hover:text-white/85
+      whitespace-nowrap
+    ">
       {subtitle}
     </p>
 
     <div className="mx-auto mt-auto h-px w-full bg-[#c8ccd5] group-hover:bg-white/35" />
 
+    {/* ICONS */}
     <div className="mt-4 flex items-center justify-center gap-6
       [@media_(min-width:2560px)]:gap-12">
 
       <img src={linkedInLogo}
-        className="h-7 w-7
+        className="
+        h-8 w-8   /* ✅ increased */
+        min-[425px]:h-9 min-[425px]:w-9
         [@media_(min-width:1440px)_and_(max-width:2200px)]:h-10
         [@media_(min-width:1440px)_and_(max-width:2200px)]:w-10
         [@media_(min-width:2560px)]:h-20
@@ -76,13 +97,16 @@ const TierTwoCard = ({ name, subtitle, image }) => (
       />
 
       <img src={gmailLogo}
-        className="h-7 w-7
+        className="
+        h-8 w-8   /* ✅ increased */
+        min-[425px]:h-9 min-[425px]:w-9
         [@media_(min-width:1440px)_and_(max-width:2200px)]:h-10
         [@media_(min-width:1440px)_and_(max-width:2200px)]:w-10
         [@media_(min-width:2560px)]:h-20
         [@media_(min-width:2560px)]:w-20"
       />
     </div>
+
   </article>
 );
 
@@ -94,7 +118,6 @@ const AnalystTeamTierTwo = () => {
         [@media_(min-width:1440px)_and_(max-width:2200px)]:max-w-[1800px]
         [@media_(min-width:2560px)]:max-w-[2304px]">
 
-        {/* Header */}
         <div className="max-w-[660px]">
           <p className="text-[18px] md:text-[20px] font-semibold text-[#111948]">
             <span className="inline-flex items-center gap-4">
@@ -109,18 +132,16 @@ const AnalystTeamTierTwo = () => {
           </h2>
         </div>
 
-        {/* MAIN GRID */}
-        <div className="mt-8 sm:mt-10 md:mt-14 grid gap-y-8 lg:grid-cols-[minmax(0,1fr)_340px] lg:items-start lg:gap-x-16 xl:grid-cols-[minmax(0,1fr)_360px] xl:gap-x-20">
+        <div className="mt-8 sm:mt-10 md:mt-14 grid gap-y-8 lg:grid-cols-1 lg:gap-y-10">
 
-          {/* LEFT */}
           <div className="grid gap-y-6 sm:gap-y-8 lg:grid-cols-[150px_minmax(0,1fr)] lg:gap-x-8 [@media_(min-width:2560px)]:gap-y-16 [@media_(min-width:2560px)]:grid-cols-[280px_minmax(0,1fr)] [@media_(min-width:2560px)]:gap-x-24">
 
             <div className="flex items-center">
               <p className="text-[18px] md:text-[20px] text-[#101535]">Lead Analysts</p>
             </div>
 
-            {/* ✅ GRID FIX 2560 */}
             <div className="grid gap-4 sm:gap-6 md:gap-8 sm:grid-cols-2 md:grid-cols-[repeat(3,184px)]
+              [@media_(width:1024px)]:grid-cols-[repeat(3,220px)]
               [@media_(min-width:1440px)_and_(max-width:2200px)]:grid-cols-[repeat(3,240px)]
               [@media_(min-width:2560px)]:grid-cols-[repeat(3,460px)]
               [@media_(min-width:2560px)]:gap-[100px]">
@@ -134,8 +155,8 @@ const AnalystTeamTierTwo = () => {
               <p className="text-[18px] md:text-[20px] text-[#101535]">Business Analyst</p>
             </div>
 
-            {/* ✅ CARD WIDTH FIX */}
             <div className="grid max-w-full sm:max-w-[184px]
+              [@media_(width:1024px)]:max-w-[220px]
               [@media_(min-width:1440px)_and_(max-width:2200px)]:max-w-[240px]
               [@media_(min-width:2560px)]:max-w-[460px]">
 
@@ -145,25 +166,17 @@ const AnalystTeamTierTwo = () => {
                 image={sauravImg}
               />
             </div>
-          </div>
 
-          {/* RIGHT (unchanged) */}
-          <div className="
-            grid grid-cols-[40px_minmax(0,1fr)] items-center gap-x-6
-            [@media_(min-width:2560px)]:hidden
-          ">
-            <div className="flex h-full justify-center">
-              <div className="relative flex h-full min-h-[320px] items-center justify-center">
-                <div className="absolute h-full w-px bg-white" />
-                <div className="absolute top-0 h-3 w-3 -translate-y-1/2 rounded-full border border-[#5e677d] bg-white" />
-                <div className="absolute bottom-0 h-3 w-3 translate-y-1/2 rounded-full border border-[#5e677d] bg-white" />
-              </div>
-            </div>
-
-            <div className="flex flex-col items-center text-center">
-              <p className="mb-6 text-[16px] sm:text-[18px] text-[#101535]">
+            <div className="mt-8 flex items-center">
+              <p className="text-[16px] sm:text-[18px] text-[#101535]">
                 {featuredAnalyst.subtitle}
               </p>
+            </div>
+
+            <div className="grid max-w-full sm:max-w-[184px]
+              [@media_(width:1024px)]:max-w-[220px]
+              [@media_(min-width:1440px)_and_(max-width:2200px)]:max-w-[240px]
+              [@media_(min-width:2560px)]:max-w-[460px]">
 
               <TierTwoCard
                 name={featuredAnalyst.cardName}
@@ -173,23 +186,6 @@ const AnalystTeamTierTwo = () => {
             </div>
           </div>
 
-        </div>
-
-        {/* 2560 ONLY */}
-        <div className="hidden [@media_(min-width:2560px)]:grid mt-16 [@media_(min-width:2560px)]:grid-cols-[280px_minmax(0,1fr)] [@media_(min-width:2560px)]:gap-x-24">
-          <div className="flex items-center">
-            <p className="text-[20px] text-[#101535]">
-              Custom research & Editor
-            </p>
-          </div>
-
-          <div className="grid max-w-full [@media_(min-width:2560px)]:max-w-[460px]">
-            <TierTwoCard
-              name={featuredAnalyst.cardName}
-              subtitle={featuredAnalyst.cardSubtitle}
-              image={featuredAnalyst.image}
-            />
-          </div>
         </div>
 
       </div>

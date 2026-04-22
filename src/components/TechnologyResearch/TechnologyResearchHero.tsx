@@ -30,10 +30,10 @@ const TechnologyResearchHero = () => {
         px-4 sm:px-6 lg:px-8 xl:px-10 2xl:px-6
         py-16 sm:py-20 md:py-24 lg:py-28 xl:py-32 2xl:py-36">
 
-          <div className="max-w-[520px] sm:max-w-[600px] md:max-w-[640px] lg:max-w-[700px]">
+          <div className="max-w-[520px] sm:max-w-[600px] md:max-w-[640px] lg:max-w-[700px] xl:max-w-[900px] 2xl:max-w-[1100px]">
 
             {/* HEADING */}
-            <h1 className="text-[34px] sm:text-[40px] md:text-[46px] lg:text-[50px] xl:text-[50px]
+            <h1 className="text-[34px] sm:text-[40px] md:text-[46px] lg:text-[50px] xl:text-[52px] 2xl:text-[58px]
             leading-[1.1] tracking-[-0.02em] text-white">
               Thought Shaping Research for Quantum, Chipsets & AI
             </h1>
@@ -67,48 +67,30 @@ const TechnologyResearchHero = () => {
               </div>
             </div>
 
-            {/* ✅ BUTTONS (REDUCED WIDTH) */}
-            <div className="mt-5 flex flex-row gap-3 sm:mt-8 sm:gap-4 md:gap-6">
+            {/* BUTTONS */}
+            <div className="mt-5 flex flex-row gap-2 sm:mt-8 sm:gap-4 md:gap-6">
 
-              {/* BUTTON 1 */}
               <a
                 href="#papers"
-                className="
-                inline-flex items-center justify-center
-                rounded-full bg-[#33ace5]
-
-                px-5 sm:px-8 md:px-10
-                py-2 sm:py-4
-
-                text-[13px] sm:text-[17px] md:text-[18px]
-                font-medium sm:font-semibold
-
-                text-white text-center
-                transition-all duration-300
-                hover:scale-105 hover:-translate-y-1
-                hover:shadow-[0_10px_25px_rgba(51,172,229,0.5)]"
-              >
+                className="flex-1 inline-flex items-center justify-center rounded-full bg-[#33ace5]
+                px-2 py-1.5 min-[375px]:px-5 min-[375px]:py-2
+                sm:px-8 md:px-10 sm:py-4
+                text-[10px] min-[375px]:text-[13px] sm:text-[17px] md:text-[18px] 2xl:text-[20px]
+                whitespace-nowrap font-medium sm:font-semibold text-white text-center
+                transition-all duration-300 hover:scale-105 hover:-translate-y-1
+                hover:shadow-[0_10px_25px_rgba(51,172,229,0.5)]">
                 Explore Thought Shaping
               </a>
 
-              {/* BUTTON 2 */}
               <a
                 href="#domains"
-                className="
-                inline-flex items-center justify-center
-                rounded-full bg-[#64d7bf]
-
-                px-5 sm:px-8 md:px-10
-                py-2 sm:py-4
-
-                text-[13px] sm:text-[17px] md:text-[18px]
-                font-medium sm:font-semibold
-
-                text-white text-center
-                transition-all duration-300
-                hover:scale-105 hover:-translate-y-1
-                hover:shadow-[0_10px_25px_rgba(100,215,191,0.5)]"
-              >
+                className="flex-1 inline-flex items-center justify-center rounded-full bg-[#64d7bf]
+                px-2 py-1.5 min-[375px]:px-5 min-[375px]:py-2
+                sm:px-8 md:px-10 sm:py-4
+                text-[10px] min-[375px]:text-[13px] sm:text-[17px] md:text-[18px] 2xl:text-[20px]
+                whitespace-nowrap font-medium sm:font-semibold text-white text-center
+                transition-all duration-300 hover:scale-105 hover:-translate-y-1
+                hover:shadow-[0_10px_25px_rgba(100,215,191,0.5)]">
                 Our Focus Areas
               </a>
 

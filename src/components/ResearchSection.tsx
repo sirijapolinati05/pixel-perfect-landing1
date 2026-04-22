@@ -66,15 +66,14 @@ const ResearchSection = () => {
           {/* SECOND COLUMN */}
           <div className="flex h-full flex-col gap-4">
 
-            {/* ✅ FINAL CHIPSET CARD */}
+            {/* CHIPSET CARD */}
             <div className="
               relative overflow-hidden rounded-2xl shadow-md
               h-[220px]
 
-              /* 🔥 FINAL 1920 TUNING */
               [@media_(min-width:1440px)_and_(max-width:2200px)]:h-[180px]
 
-              /* 2560 */
+              /* ✅ 2560 */
               [@media_(min-width:2560px)]:h-[300px]
             ">
               <img 
@@ -104,14 +103,21 @@ const ResearchSection = () => {
               </div>
             </div>
 
-            {/* QUANTUM CARD */}
-            <div className="group flex flex-1 flex-col overflow-hidden rounded-2xl bg-white shadow-md hover:bg-[#0A1F44]">
+            {/* ✅ QUANTUM CARD (2560 FIX ONLY) */}
+            <div className="group flex flex-1 flex-col overflow-hidden rounded-2xl bg-white shadow-md hover:bg-[#0A1F44]
+
+              /* 🔥 ONLY 2560 */
+              [@media_(min-width:2560px)]:h-[300px]
+            ">
 
               <img 
                 src={research3} 
                 className="
                   h-[130px] sm:h-[150px]
-                  [@media_(min-width:2560px)]:h-[180px]
+
+                  /* 🔥 ONLY 2560 FULL HEIGHT */
+                  [@media_(min-width:2560px)]:h-full
+
                   w-full object-cover object-center
                 " 
               />

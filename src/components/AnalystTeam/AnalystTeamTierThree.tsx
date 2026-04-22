@@ -20,6 +20,7 @@ const researchAnalysts = [
 
 const cardClassName =
   "group flex w-full max-w-full sm:max-w-[184px] " +
+  "[@media_(width:1024px)]:max-w-[220px] " +
   "[@media_(min-width:1440px)_and_(max-width:2200px)]:max-w-[240px] " +
   "[@media_(min-width:2560px)]:max-w-[480px] " +
   "min-h-[300px] " +
@@ -30,10 +31,12 @@ const cardClassName =
 const TierThreeCard = ({ name, image }) => (
   <article className={cardClassName}>
     
+    {/* IMAGE */}
     <div
       className="
         mx-auto mb-6 rounded-full overflow-hidden flex items-center justify-center
-        h-24 w-24
+        h-28 w-28   /* ✅ increased for 320px */
+        min-[425px]:h-28 min-[425px]:w-28
         [@media_(min-width:1440px)_and_(max-width:2200px)]:h-36
         [@media_(min-width:1440px)_and_(max-width:2200px)]:w-36
         [@media_(min-width:2560px)]:h-60
@@ -52,23 +55,30 @@ const TierThreeCard = ({ name, image }) => (
       />
     </div>
 
-    <h3 className="analyst-tier-one-name
-      mt-4 text-[18px] sm:text-[20px] 
-      text-[#17204c] group-hover:text-white whitespace-nowrap
-    ">
+    {/* NAME */}
+    <h3
+      className="
+        mt-4 
+        text-[18px]
+        min-[425px]:text-[20px]
+        sm:text-[20px]
+        text-[#17204c] group-hover:text-white whitespace-nowrap
+      "
+    >
       {name}
     </h3>
 
     <div className="mx-auto mt-auto h-px w-full bg-[#c8ccd5] group-hover:bg-white/35" />
 
-    <div className="
-      mt-6 flex items-center justify-center gap-6
-      [@media_(min-width:2560px)]:gap-12
-    ">
-      <img 
+    {/* ICONS */}
+    <div className="mt-6 flex items-center justify-center gap-6
+      [@media_(min-width:2560px)]:gap-12">
+
+      <img
         src={linkedInLogo}
         className="
-          h-7 w-7
+          h-8 w-8   /* ✅ increased */
+          min-[425px]:h-9 min-[425px]:w-9
           [@media_(min-width:1440px)_and_(max-width:2200px)]:h-10
           [@media_(min-width:1440px)_and_(max-width:2200px)]:w-10
           [@media_(min-width:2560px)]:h-20
@@ -76,10 +86,11 @@ const TierThreeCard = ({ name, image }) => (
         "
       />
 
-      <img 
+      <img
         src={gmailLogo}
         className="
-          h-7 w-7
+          h-8 w-8   /* ✅ increased */
+          min-[425px]:h-9 min-[425px]:w-9
           [@media_(min-width:1440px)_and_(max-width:2200px)]:h-10
           [@media_(min-width:1440px)_and_(max-width:2200px)]:w-10
           [@media_(min-width:2560px)]:h-20
@@ -87,18 +98,17 @@ const TierThreeCard = ({ name, image }) => (
         "
       />
     </div>
-
   </article>
 );
 
 const AnalystTeamTierThree = () => {
   return (
     <section className="relative overflow-hidden bg-[#f8f7f3] px-4 sm:px-6 lg:px-8 xl:px-10 2xl:px-6 py-10 sm:py-12 md:py-14 lg:py-16 xl:py-20 2xl:py-24 text-[#111948]">
-
-      <div className="relative z-10 mx-auto max-w-[1600px] 
+      <div
+        className="relative z-10 mx-auto max-w-[1600px] 
         [@media_(min-width:1440px)_and_(max-width:2200px)]:max-w-[1800px]
-        [@media_(min-width:2560px)]:max-w-[2304px]">
-
+        [@media_(min-width:2560px)]:max-w-[2304px]"
+      >
         <div className="max-w-[760px]">
           <p className="text-[18px] md:text-[20px] font-semibold text-[#20254d]">
             <span className="inline-flex items-center gap-4">
@@ -114,45 +124,39 @@ const AnalystTeamTierThree = () => {
           </h2>
         </div>
 
-        <div className="mt-12 md:mt-16 grid gap-y-16 lg:grid-cols-[280px_minmax(0,1fr)] lg:gap-x-24 [@media_(min-width:1440px)_and_(max-width:2200px)]:grid-cols-[240px_minmax(0,1fr)] [@media_(min-width:1440px)_and_(max-width:2200px)]:gap-x-16">
+        <div className="mt-8 sm:mt-10 md:mt-14 grid gap-y-8 lg:grid-cols-[150px_minmax(0,1fr)] lg:items-center lg:gap-x-8 xl:grid-cols-[150px_minmax(0,1fr)] xl:gap-x-8 [@media_(min-width:2560px)]:gap-y-16 [@media_(min-width:2560px)]:grid-cols-[280px_minmax(0,1fr)] [@media_(min-width:2560px)]:gap-x-24">
 
-          <div className="flex items-center">
-            <p className="text-[18px] md:text-[20px] text-[#101535]
-              [@media_(min-width:2560px)]:text-[26px]">
+          <div className="flex items-center lg:self-center">
+            <p className="text-[18px] md:text-[20px] text-[#101535]">
               Research Specialists
             </p>
           </div>
 
-          <div className="
-            grid 
-            gap-12
-            [@media_(min-width:2560px)]:gap-[120px]
-
+          <div className="grid gap-12
             md:grid-cols-[repeat(2,184px)]
+            [@media_(width:1024px)]:grid-cols-[repeat(2,220px)]
             [@media_(min-width:1440px)_and_(max-width:2200px)]:grid-cols-[repeat(2,240px)]
             [@media_(min-width:2560px)]:grid-cols-[repeat(2,480px)]
-          ">
+            ">
+
             {researchSpecialists.map((member) => (
               <TierThreeCard key={member.name} {...member} />
             ))}
           </div>
 
-          <div className="flex items-center">
-            <p className="text-[18px] md:text-[20px] text-[#101535]
-              [@media_(min-width:2560px)]:text-[26px]">
+          <div className="flex items-center lg:self-center">
+            <p className="text-[18px] md:text-[20px] text-[#101535]">
               Research Analysts
             </p>
           </div>
 
-          <div className="
-            grid 
-            gap-12
-            [@media_(min-width:2560px)]:gap-[120px]
-
+          <div className="grid gap-12
             md:grid-cols-[repeat(3,184px)]
+            [@media_(width:1024px)]:grid-cols-[repeat(3,220px)]
             [@media_(min-width:1440px)_and_(max-width:2200px)]:grid-cols-[repeat(3,240px)]
             [@media_(min-width:2560px)]:grid-cols-[repeat(3,480px)]
-          ">
+            ">
+
             {researchAnalysts.map((member, index) => (
               <TierThreeCard key={`${member.name}-${index}`} {...member} />
             ))}
