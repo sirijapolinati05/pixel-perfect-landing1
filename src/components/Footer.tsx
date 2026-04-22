@@ -2,46 +2,41 @@ import logo from "@/assets/LandingPage/research-fabric-footer.png";
 import { ArrowRightIcon } from "@/components/ui/Icons";
 
 const menuLinks = [
-  "Why RESEARCHFABRIC®",
+  "Why RESEARCHFABRICÂ®",
   "Services",
   "Knowledge Area",
   "Featured Insights",
   "Success Stories",
-  "Opportunities"
+  "Opportunities",
 ];
+
+const footerLogoShellClass =
+  "relative h-9 w-[112px] overflow-visible sm:h-10 sm:w-[118px] lg:h-10 lg:w-[122px]";
+const footerLogoImageClass =
+  "absolute inset-0 h-full w-full scale-[1.35] origin-left object-contain";
 
 const Footer = () => {
   return (
-    <footer className="bg-background border-t border-border">
-      
-      {/* 🔥 MAIN FOOTER */}
-      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 2xl:px-6 py-6 [@media_(min-width:2560px)]:max-w-[2304px]">
-        <div className="grid grid-cols-1 gap-2 items-start sm:gap-4 md:grid-cols-3 md:gap-6">
-
-          {/* 🔥 Logo (Moved DOWN) */}
-          <div className="flex justify-start self-start -mt-6 sm:-mt-8 md:-mt-12">
-            <div className="relative h-16 w-[180px] overflow-visible -ml-1 sm:h-[72px] sm:w-[220px] sm:ml-0 lg:h-[88px] lg:w-[250px] lg:-ml-2">
-              <img
-                src={logo}
-                alt="Research Fabric"
-                className="absolute top-4 h-full w-full origin-left scale-[2.05] object-contain object-left -translate-x-2"
-              />
+    <footer className="border-t border-border bg-background">
+      <div className="mx-auto max-w-[1600px] px-4 py-6 [@media_(min-width:2560px)]:max-w-[2304px] sm:px-6 lg:px-8 xl:px-10 2xl:px-6">
+        <div className="grid grid-cols-1 items-start gap-2 sm:gap-4 md:grid-cols-3 md:gap-6">
+          <div className="flex justify-start self-start mt-1 sm:mt-2 md:mt-4">
+            <div className={`-ml-1 ${footerLogoShellClass}`}>
+              <img src={logo} alt="Research Fabric" className={footerLogoImageClass} />
             </div>
           </div>
 
-          {/* Menu */}
           <div className="-mt-6 text-center sm:-mt-4 md:mt-0 md:text-left">
-            <h4 className="text-[16px] font-bold text-foreground mb-2">
+            <h4 className="mb-2 text-[16px] font-bold text-foreground">
               Menu
             </h4>
 
             <ul className="space-y-1">
               {menuLinks.map((link) => (
                 <li key={link}>
-                  <a 
-                    href="#" 
-                    className="text-muted-foreground text-[14px] transition-all duration-300 
-                    hover:text-foreground hover:translate-x-1 inline-block"
+                  <a
+                    href="#"
+                    className="inline-block text-[14px] text-muted-foreground transition-all duration-300 hover:translate-x-1 hover:text-foreground"
                   >
                     {link}
                   </a>
@@ -50,58 +45,43 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Subscribe */}
           <div className="self-start pt-1 text-center sm:pt-0 md:text-left">
-            <h4 className="text-[16px] font-bold text-foreground mb-2">
+            <h4 className="mb-2 text-[16px] font-bold text-foreground">
               Subscribe
             </h4>
 
-            <div className="flex group max-w-md mx-auto md:mx-0">
+            <div className="group mx-auto flex max-w-md md:mx-0">
               <input
                 type="email"
                 placeholder="Email Address"
-                className="flex-1 bg-muted rounded-l px-3 py-1.5 text-[16px] text-foreground 
-                placeholder:text-muted-foreground outline-none 
-                transition-all duration-300
-                focus:ring-2 focus:ring-primary focus:shadow-lg"
+                className="flex-1 rounded-l bg-muted px-3 py-1.5 text-[16px] text-foreground outline-none transition-all duration-300 placeholder:text-muted-foreground focus:ring-2 focus:ring-primary focus:shadow-lg"
               />
 
-              <button 
-                className="bg-navy text-primary-foreground px-3 py-1.5 rounded-r
-                transition-all duration-300 ease-in-out
-                hover:scale-105 hover:-translate-y-0.5
-                hover:bg-navy-light
-                hover:shadow-[0_6px_16px_rgba(0,0,0,0.25)] 
-                active:scale-95"
+              <button
+                className="rounded-r bg-navy px-3 py-1.5 text-primary-foreground transition-all duration-300 ease-in-out hover:-translate-y-0.5 hover:scale-105 hover:bg-navy-light hover:shadow-[0_6px_16px_rgba(0,0,0,0.25)] active:scale-95"
               >
                 <ArrowRightIcon size={14} />
               </button>
             </div>
 
-            <p className="text-muted-foreground text-[14px] mt-1">
+            <p className="mt-1 text-[14px] text-muted-foreground">
               *Send Message
             </p>
           </div>
-
         </div>
       </div>
 
-      {/* 🔥 BOTTOM BAR */}
       <div className="border-t border-border">
-        <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 2xl:px-6 py-1.5 [@media_(min-width:2560px)]:max-w-[2304px]
-        flex flex-col gap-1 md:flex-row justify-between items-center text-center md:text-left">
-          
-          <p className="text-muted-foreground text-[14px]">
-            © 2022 DIGITALFABRIC®. All Rights Reserved
+        <div className="mx-auto flex flex-col items-center justify-between gap-1 px-4 py-1.5 text-center [@media_(min-width:2560px)]:max-w-[2304px] sm:px-6 lg:px-8 xl:px-10 2xl:px-6 md:flex-row md:text-left max-w-[1600px]">
+          <p className="text-[14px] text-muted-foreground">
+            Â© 2022 DIGITALFABRICÂ®. All Rights Reserved
           </p>
 
-          <p className="text-muted-foreground text-[14px]">
+          <p className="text-[14px] text-muted-foreground">
             Hyderabad, Telangana, India
           </p>
-
         </div>
       </div>
-
     </footer>
   );
 };

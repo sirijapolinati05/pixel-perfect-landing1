@@ -4,6 +4,10 @@ import { Link, useLocation } from "react-router-dom";
 import logo from "@/assets/LandingPage/research-fabric-footer.png";
 import { MenuIcon } from "@/components/ui/Icons";
 
+const techLogoShellClass =
+  "relative z-10 block -ml-1 h-9 w-[112px] overflow-hidden sm:ml-0 sm:h-10 sm:w-[118px] lg:-ml-1 lg:h-10 lg:w-[122px]";
+const techLogoImageClass = "h-full w-full scale-[1.35] origin-left object-contain";
+
 const TechnologyResearchNavbar = () => {
   const { pathname } = useLocation();
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -23,13 +27,7 @@ const TechnologyResearchNavbar = () => {
 
   return (
     <header className="fixed left-0 right-0 top-0 z-50 border-b border-slate-200 bg-white text-[#0B1F3A] shadow-sm">
-      <div
-        className="
-        mx-auto flex items-center justify-between
-        max-w-[1600px] [@media_(min-width:2560px)]:max-w-[2304px]
-        px-4 sm:px-6 md:px-6 lg:px-8 xl:px-10 2xl:px-6
-        py-1"
-      >
+      <div className="mx-auto flex max-w-[1600px] items-center justify-between px-4 py-1 [@media_(min-width:2560px)]:max-w-[2304px] sm:px-6 md:px-6 lg:px-8 xl:px-10 2xl:px-6">
         <div className="flex items-center gap-0">
           <button
             type="button"
@@ -44,28 +42,17 @@ const TechnologyResearchNavbar = () => {
 
           <Link
             to="/"
-            className="
-            relative z-10 block overflow-hidden -ml-1 sm:ml-0 lg:-ml-2
-            h-14 w-[180px]
-            sm:h-16 sm:w-[220px]
-            lg:h-20 lg:w-[250px]
-            xl:h-20 xl:w-[250px]
-            2xl:h-20 2xl:w-[250px]"
+            className={techLogoShellClass}
           >
             <img
               src={logo}
               alt="Research Fabric"
-              className="h-full w-full origin-left scale-[2.05] object-contain object-left -translate-x-2"
+              className={techLogoImageClass}
             />
           </Link>
         </div>
 
-        <nav
-          className="
-          hidden lg:flex items-center
-          gap-5 lg:gap-6 xl:gap-8 2xl:gap-10
-          text-[16px] md:text-[17px] lg:text-[18px] xl:text-[18px] 2xl:text-[20px] font-medium"
-        >
+        <nav className="hidden items-center gap-5 text-[16px] font-medium md:text-[17px] lg:flex lg:gap-6 lg:text-[18px] xl:gap-8 xl:text-[18px] 2xl:gap-10 2xl:text-[20px]">
           <Link
             to="/technology-research"
             className={`${navLinkClassName} ${
@@ -100,11 +87,7 @@ const TechnologyResearchNavbar = () => {
         </nav>
 
         <div className="flex items-center">
-          <span
-            className="
-            text-[14px] sm:text-[16px] md:text-[16px] lg:text-[16px] xl:text-[16px] 2xl:text-[18px]
-            text-[#0B1F3A] cursor-pointer hover:text-[#0B1F3A] transition-colors"
-          >
+          <span className="cursor-pointer text-[14px] text-[#0B1F3A] transition-colors hover:text-[#0B1F3A] sm:text-[16px] md:text-[16px] lg:text-[16px] xl:text-[16px] 2xl:text-[18px]">
             Subscribe
           </span>
         </div>

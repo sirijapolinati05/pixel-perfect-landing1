@@ -121,7 +121,7 @@ const PracticesSection = () => {
             <h3 className="mb-3 text-[20px] md:text-[22px] font-serif font-semibold text-[#0A1F44]">
               Micro-Market Research
             </h3>
-            <p className="mb-4 text-[17px] text-[#5A6B85]">
+            <p className="mb-4 min-h-[56px] text-[17px] text-[#5A6B85]">
               Granular analysis of high-growth market segments.
             </p>
 

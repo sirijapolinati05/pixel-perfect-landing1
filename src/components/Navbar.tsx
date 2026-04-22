@@ -19,6 +19,11 @@ const pageItems = [
   { label: "Analyst Team", href: "/analyst-team" },
 ];
 
+const brandLogoShellClass =
+  "relative h-9 w-[112px] sm:h-10 sm:w-[118px] lg:h-10 lg:w-[122px]";
+const brandLogoImageClass =
+  "absolute inset-0 h-full w-full scale-[1.35] origin-left object-contain transition-all duration-500";
+
 const Navbar = () => {
   const { pathname } = useLocation();
   const navigate = useNavigate();
@@ -70,9 +75,7 @@ const Navbar = () => {
 
   const getTextClass = (isActive: boolean) => {
     if (showLightNavbar) {
-      return isActive
-        ? "text-[#0B1F3A] font-semibold"
-        : "text-[#0B1F3A]";
+      return isActive ? "text-[#0B1F3A] font-semibold" : "text-[#0B1F3A]";
     }
 
     return isActive
@@ -80,26 +83,19 @@ const Navbar = () => {
       : "text-white/80 hover:text-white";
   };
 
-  const logoFrameClass =
-    "relative h-16 w-[180px] sm:h-[72px] sm:w-[220px] lg:h-[88px] lg:w-[250px]";
-
-  // ✅ MOVED EVEN MORE RIGHT (left-8)
   const darkLogoClass =
-    "absolute left-2 -top-1 h-[110%] w-auto object-contain transition-all duration-500 sm:left-2 sm:top-0 sm:h-[110%] md:left-2 md:-top-1 md:h-[110%] lg:left-8 lg:top-1 lg:h-[118%] " +
-    (showLightLogo ? "opacity-0" : "opacity-100");
+    `${brandLogoImageClass} ${showLightLogo ? "opacity-0" : "opacity-100"}`;
 
   const lightLogoClass =
-    "absolute -left-6 top-2 h-full w-full origin-left scale-[2.02] object-contain object-left transition-all duration-500 sm:-left-6 sm:top-2 md:-left-6 md:top-2 lg:-left-2 lg:top-4 lg:scale-[2.05] lg:-translate-x-2 " +
-    (showLightLogo ? "opacity-100" : "opacity-0");
+    `${brandLogoImageClass} ${showLightLogo ? "opacity-100" : "opacity-0"}`;
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 w-full z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 ${
         mobileHeaderActive ? "bg-white shadow-sm" : "bg-transparent"
       }`}
     >
-      <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 2xl:px-6 py-1 flex items-center justify-between [@media_(min-width:2560px)]:max-w-[2304px]">
-
+      <div className="mx-auto flex w-full max-w-[1600px] items-center justify-between px-4 py-4 [@media_(min-width:2560px)]:max-w-[2304px] sm:px-6 sm:py-5 lg:px-8 xl:px-10 2xl:px-6">
         <div className="flex items-center gap-0">
           <button
             type="button"
@@ -107,24 +103,24 @@ const Navbar = () => {
             aria-label={mobileOpen ? "Close navigation" : "Open navigation"}
             aria-expanded={mobileOpen}
             aria-controls="landing-mobile-nav"
-            className={`relative z-20 -mr-0.5 flex h-10 w-10 shrink-0 items-center justify-center lg:hidden ${
+            className={`relative z-20 -mr-0.5 flex h-11 w-11 shrink-0 items-center justify-center lg:hidden ${
               mobileOpen || showLightNavbar ? "text-[#0B1F3A]" : "text-white"
             }`}
           >
-            <MenuIcon size={24} />
+            <MenuIcon size={25} />
           </button>
 
           <button
             type="button"
             onClick={handleLogoClick}
-            className={`relative z-10 -ml-3 sm:-ml-3 md:-ml-3 lg:-ml-2 flex items-center border-0 bg-transparent p-0 ${logoFrameClass}`}
+            className={`relative z-10 -ml-1 flex items-center border-0 bg-transparent p-0 ${brandLogoShellClass}`}
           >
             <img src={logo} alt="logo" className={darkLogoClass} />
             <img src={lightLogo} alt="logo" className={lightLogoClass} />
           </button>
         </div>
 
-        <div className="hidden lg:flex items-center gap-4 xl:gap-6">
+        <div className="hidden items-center gap-4 lg:ml-28 lg:flex lg:translate-y-[6px] xl:ml-32 xl:gap-6">
           {navItems.map((item) => {
             const isActive = activeSection === item.href;
 
