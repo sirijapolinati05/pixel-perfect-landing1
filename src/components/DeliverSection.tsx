@@ -45,7 +45,8 @@ const DeliverSection = () => {
         />
       </div>
 
-      <div className="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 2xl:px-6 [@media_(min-width:2560px)]:max-w-[2304px]">
+      {/* ✅ Slight width increase only */}
+      <div className="page-shell relative z-10">
         
         <h3 className="mb-5 sm:mb-6 inline-block border-b border-white/40 pb-2 
         text-[28px] sm:text-[34px] md:text-[40px] font-serif text-white">
@@ -65,19 +66,16 @@ const DeliverSection = () => {
               transition-all duration-300 ease-in-out"
             >
               
-              {/* ICON */}
               <img
                 src={item.icon}
                 alt={item.title}
                 className="mb-3 sm:mb-4 h-7 w-7 sm:h-8 sm:w-8 object-contain"
               />
 
-              {/* Title - 32px */}
               <h4 className="mb-2 text-[24px] sm:text-[26px] md:text-[28px] leading-tight font-bold text-[#0A1F44] font-serif">
                 {item.title}
               </h4>
 
-              {/* ✅ Description - 13px */}
               <p className="font-serif text-[16px] leading-6 text-[#5A6B85]">
                 {item.description}
               </p>

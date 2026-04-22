@@ -163,6 +163,25 @@
   }
 }
 
+@layer components {
+  .page-shell {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 1360px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  @media (min-width: 640px) {
+    .page-shell {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+
+}
+
 @media (min-width: 2560px) {
   .max-w-7xl {
     max-width: 96rem;
@@ -287,6 +306,21 @@
 }
 
 @media (width: 1920px) {
+  .deliver-1920-shell {
+    padding-left: 40px !important;
+    padding-right: 40px !important;
+  }
+
+  .partners-circle {
+    width: 5.5rem !important;
+    height: 5.5rem !important;
+  }
+
+  .partners-badge-icon {
+    width: 2rem !important;
+    height: 2rem !important;
+  }
+
   .research-meta-row {
     gap: 1.25rem !important;
   }

@@ -26,9 +26,7 @@ const TechnologyResearchHero = () => {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_30%,rgba(52,90,255,0.18),transparent_36%),linear-gradient(90deg,rgba(8,15,67,0.97)_0%,rgba(8,15,67,0.89)_42%,rgba(8,15,67,0.34)_70%,rgba(8,15,67,0.1)_100%)]" />
 
         {/* CONTENT */}
-        <div className="relative mx-auto max-w-[1600px]
-        px-4 sm:px-6 lg:px-8 xl:px-10
-        py-16 sm:py-20 md:py-24 lg:py-28 xl:py-32">
+      <div className="page-shell relative mx-auto py-16 sm:py-20 md:py-24 lg:py-28 xl:py-32">
 
           <div className="max-w-[700px] xl:max-w-[900px]">
 

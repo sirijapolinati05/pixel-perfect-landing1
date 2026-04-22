@@ -13,9 +13,9 @@ const TechnologyResearchPapers = () => {
   return (
     <section
       id="papers"
-      className="relative overflow-hidden bg-[#f8f7f3] px-4 sm:px-6 lg:px-8 xl:px-10 2xl:px-6 py-10 sm:py-12 md:py-14 lg:py-8 xl:py-10 2xl:py-12 text-[#121742]"
+      className="relative overflow-hidden bg-[#f8f7f3] py-10 text-[#121742] sm:py-12 md:py-14 lg:py-8 xl:py-10 2xl:py-12"
     >
-      <div className="relative mx-auto max-w-[1600px] [@media_(min-width:2560px)]:max-w-[2304px]">
+      <div className="page-shell relative mx-auto">
         
         {/* HEADING */}
         <h2 className="text-[32px] sm:text-[40px] md:text-[44px] lg:text-[48px] xl:text-[50px] 2xl:text-[50px] leading-none text-[#31a8e4]">

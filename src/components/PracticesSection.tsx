@@ -63,7 +63,7 @@ const PracticesSection = () => {
       id="practices"
       className="relative overflow-hidden scroll-mt-24 bg-[#F7F9FC] py-10 sm:py-12 md:py-14 lg:py-8 xl:py-10 2xl:py-12"
     >
-      <div className="mx-auto mb-5 max-w-[1600px] px-4 text-center sm:mb-6 sm:px-6 sm:text-left lg:px-8 xl:px-10 2xl:px-6 [@media_(min-width:2560px)]:max-w-[2304px]">
+      <div className="page-shell mx-auto mb-5 text-center sm:mb-6 sm:text-left">
 
         <h2 className="relative max-w-[1120px] text-center sm:text-left text-[32px] sm:text-[40px] md:text-[46px] font-serif font-semibold leading-[1.2] text-[#0A0E33]">
           Two Practices on the <br className="sm:hidden" />
@@ -86,7 +86,7 @@ const PracticesSection = () => {
         </p>
       </div>
 
-      <div className="mx-auto grid max-w-[1600px] auto-rows-fr grid-cols-1 items-stretch gap-4 px-4 sm:grid-cols-2 sm:px-6 md:grid-cols-2 md:gap-6 lg:grid-cols-3 lg:gap-8 lg:px-8 xl:px-10 2xl:px-6 [@media_(min-width:2560px)]:max-w-[2304px]">
+      <div className="page-shell mx-auto grid auto-rows-fr grid-cols-1 items-stretch gap-4 sm:grid-cols-2 md:grid-cols-2 md:gap-6 lg:grid-cols-3 lg:gap-8">
         
         <div className={`${cardBaseClass} overflow-hidden`}>
           <img src={techImg} className="h-full min-h-[260px] w-full object-cover" />

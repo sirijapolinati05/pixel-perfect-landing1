@@ -7,7 +7,7 @@ import research4 from "../assets/LandingPage/Agentic-Enterprise1.png";
 const ResearchSection = () => {
   return (
     <section id="latest-research" className="scroll-mt-24 bg-white py-8">
-      <div className="mx-auto max-w-[1600px] px-4 sm:px-6 lg:px-8 xl:px-10 2xl:px-6 [@media_(min-width:2560px)]:max-w-[2304px]">
+      <div className="page-shell mx-auto">
         <div className="mb-2 flex items-center justify-center gap-2 sm:gap-3 lg:mb-3">
           <span className="h-[1px] w-4 bg-current opacity-40 sm:w-6"></span>
           <p className="whitespace-nowrap font-serif text-[18px] font-bold tracking-normal text-navy md:text-[20px]">

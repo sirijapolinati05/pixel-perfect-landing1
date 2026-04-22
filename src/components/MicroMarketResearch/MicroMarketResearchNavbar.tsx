@@ -103,7 +103,7 @@ const MicroMarketResearchNavbar = () => {
         mobileHeaderActive ? "bg-white shadow-sm" : "bg-transparent"
       }`}
     >
-      <div className="mx-auto flex w-full max-w-[1600px] items-center justify-between px-4 py-4 [@media_(min-width:2560px)]:max-w-[2304px] sm:px-6 sm:py-5 lg:px-8 xl:px-10 2xl:px-6">
+      <div className="page-shell flex items-center justify-between py-4 sm:py-5">
         <div className="flex items-center gap-0">
           <button
             type="button"

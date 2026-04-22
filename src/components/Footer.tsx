@@ -18,7 +18,7 @@ const footerLogoImageClass =
 const Footer = () => {
   return (
     <footer className="border-t border-border bg-background">
-      <div className="mx-auto max-w-[1600px] px-4 py-6 [@media_(min-width:2560px)]:max-w-[2304px] sm:px-6 lg:px-8 xl:px-10 2xl:px-6">
+      <div className="page-shell mx-auto py-6">
         <div className="grid grid-cols-1 items-start gap-2 sm:gap-4 md:grid-cols-3 md:gap-6">
           <div className="flex justify-start self-start mt-1 sm:mt-2 md:mt-4">
             <div className={`-ml-1 ${footerLogoShellClass}`}>
@@ -72,7 +72,7 @@ const Footer = () => {
       </div>
 
       <div className="border-t border-border">
-        <div className="mx-auto flex flex-col items-center justify-between gap-1 px-4 py-1.5 text-center [@media_(min-width:2560px)]:max-w-[2304px] sm:px-6 lg:px-8 xl:px-10 2xl:px-6 md:flex-row md:text-left max-w-[1600px]">
+        <div className="page-shell mx-auto flex flex-col items-center justify-between gap-1 py-1.5 text-center md:flex-row md:text-left">
           <p className="text-[14px] text-muted-foreground">
             Â© 2022 DIGITALFABRICÂ®. All Rights Reserved
           </p>

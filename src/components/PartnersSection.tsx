@@ -41,7 +41,7 @@ const PartnersSection = () => {
       id="analysts"
       className="overflow-hidden bg-background py-10 sm:py-12 md:py-14 lg:py-8 xl:py-10 2xl:py-12 font-serif"
     >
-      <div className="mx-auto max-w-[1600px] px-4 text-center sm:px-6 lg:px-8 xl:px-10 2xl:px-6 [@media_(min-width:2560px)]:max-w-[2304px]">
+      <div className="page-shell mx-auto text-center">
 
         {/* Heading */}
         <div className="mb-2 flex items-center justify-center gap-2 sm:gap-3">
@@ -71,19 +71,19 @@ const PartnersSection = () => {
               <div className="
                 group relative flex h-full flex-col rounded-xl bg-navy p-4 text-center
                 min-h-[300px] md:min-h-[320px]
-                [@media_(min-width:2560px)]:min-h-[640px]
                 transition-all duration-300 ease-out
                 hover:scale-[0.96] hover:shadow-inner
                 active:scale-[0.94]
               ">
 
-                {/* CIRCLE */}
+                {/* 🔽 CIRCLE SIZE DECREASED */}
                 <div
                   className="
                     mx-auto mb-4 rounded-full overflow-hidden
-                    h-24 w-24
-                    xl:h-40 xl:w-40
-                    2xl:h-56 2xl:w-56
+                    h-20 w-20
+                    sm:h-22 sm:w-22
+                    xl:h-32 xl:w-32
+                    2xl:h-40 2xl:w-40
                   "
                   style={{
                     backgroundImage: `url(${circleBg})`,
@@ -114,18 +114,18 @@ const PartnersSection = () => {
                   <div className="mx-auto mt-3 h-[2px] w-20 bg-gray-400 opacity-70" />
                 </div>
 
-                {/* badges */}
-                <div className="partners-badge-row mt-auto flex justify-center gap-12 pt-6">
+                {/* 🔼 ICON SIZE INCREASED */}
+                <div className="mt-auto flex justify-center gap-10 pt-6">
                   <img 
                     src={linkedInLogo} 
                     alt="LinkedIn"
-                    className="partners-badge-icon h-7 w-7 object-contain" 
+                    className="h-8 w-8 xl:h-9 xl:w-9 2xl:h-10 2xl:w-10 object-contain" 
                   />
 
                   <img 
                     src={gmailLogo} 
                     alt="Gmail"
-                    className="partners-badge-icon h-7 w-7 object-contain" 
+                    className="h-8 w-8 xl:h-9 xl:w-9 2xl:h-10 2xl:w-10 object-contain" 
                   />
                 </div>
 

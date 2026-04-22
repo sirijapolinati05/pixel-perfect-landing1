@@ -41,7 +41,7 @@ const HeroSection = () => {
       </div>
 
       {/* ================= MAIN ================= */}
-      <div className="relative z-20 mx-auto max-w-[1600px] px-4 pt-0 pb-10 sm:px-6 md:px-8 lg:min-h-screen lg:flex lg:flex-col lg:justify-between lg:px-8 lg:pt-32 xl:px-10 2xl:px-6 [@media_(min-width:2560px)]:max-w-[2304px] [@media_(min-width:1024px)_and_(max-width:1280px)]:max-w-[1280px] [@media_(min-width:1024px)_and_(max-width:1280px)]:px-3 [@media_(min-width:1024px)_and_(max-width:1280px)]:pt-24">
+      <div className="page-shell relative z-20 pt-0 pb-10 lg:min-h-screen lg:flex lg:flex-col lg:justify-between lg:pt-32 [@media_(min-width:1024px)_and_(max-width:1280px)]:px-3 [@media_(min-width:1024px)_and_(max-width:1280px)]:pt-24">
 
         {/* ================= MOBILE ================= */}
         <div className="flex flex-col gap-6 lg:hidden">

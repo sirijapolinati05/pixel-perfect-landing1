@@ -24,7 +24,7 @@ const AnalystTeamHero = () => {
       <div className="absolute bottom-0 right-0 h-[122px] w-[144px] sm:h-[145px] sm:w-[170px] md:h-[170px] md:w-[200px] rounded-tl-[70px] sm:rounded-tl-[82px] md:rounded-tl-[96px] border-l border-t border-[#2A49A5]/60 opacity-60" />
 
       {/* Content */}
-      <div className="relative z-10 mx-auto flex max-w-[1100px] -translate-y-5 items-start justify-center px-4 pt-[98px] text-center sm:-translate-y-6 sm:px-6 sm:pt-[112px] md:-translate-y-8 md:px-8 md:pt-[146px] lg:px-6">
+      <div className="page-shell relative z-10 flex max-w-[1100px] -translate-y-5 items-start justify-center pt-[98px] text-center sm:-translate-y-6 sm:pt-[112px] md:-translate-y-8 md:pt-[146px]">
         <div className="max-w-4xl">
           
           {/* Heading - Single Line */}

@@ -10,7 +10,7 @@ const MicroMarketResearchHero = () => {
   return (
     <section
       id="hero"
-      className="relative overflow-hidden bg-[#15203c] px-4 sm:px-6 lg:px-8 xl:px-10 2xl:px-6 pb-12 sm:pb-16 md:pb-20 lg:pb-24 xl:pb-28 pt-20 sm:pt-24 md:pt-24 lg:pt-28 xl:pt-32 text-white"
+      className="relative overflow-hidden bg-[#15203c] pb-12 pt-20 text-white sm:pb-16 sm:pt-24 md:pb-20 md:pt-24 lg:pb-24 lg:pt-28 xl:pb-28 xl:pt-32"
     >
       
       {/* BACKGROUNDS */}
@@ -29,7 +29,7 @@ const MicroMarketResearchHero = () => {
       <div className="absolute inset-0 bg-[repeating-linear-gradient(123deg,transparent_0px,transparent_42px,rgba(43,114,255,0.88)_42px,rgba(43,114,255,0.88)_66px,transparent_66px,transparent_132px)] opacity-45" />
       <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(6,10,22,0.3),rgba(6,10,22,0.04),rgba(6,10,22,0.3))]" />
 
-      <div className="relative mx-auto max-w-[1600px] [@media_(min-width:2560px)]:max-w-[2304px]">
+      <div className="page-shell relative mx-auto">
         <div className="max-w-[760px] pt-6 sm:pt-8 md:pt-10 lg:pt-20">
 
           {/* TITLE */}

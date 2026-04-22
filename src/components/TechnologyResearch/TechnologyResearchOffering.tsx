@@ -26,8 +26,8 @@ const features = [
 
 const TechnologyResearchOffering = () => {
   return (
-    <section className="bg-[#0a0f3c] text-white px-6 py-14">
-      <div className="max-w-[1400px] mx-auto">
+    <section className="bg-[#0a0f3c] py-14 text-white">
+      <div className="page-shell mx-auto">
 
         {/* HEADER */}
         <div className="mb-10">

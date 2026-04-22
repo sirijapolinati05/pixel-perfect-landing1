@@ -112,11 +112,9 @@ const TierTwoCard = ({ name, subtitle, image }) => (
 
 const AnalystTeamTierTwo = () => {
   return (
-    <section className="relative overflow-hidden bg-[#33a9da] px-4 sm:px-6 lg:px-8 xl:px-10 2xl:px-6 py-10 sm:py-12 md:py-14 lg:py-16 xl:py-20 2xl:py-24 text-[#111948]">
+    <section className="relative overflow-hidden bg-[#33a9da] py-10 sm:py-12 md:py-14 lg:py-16 xl:py-20 2xl:py-24 text-[#111948]">
 
-      <div className="relative z-10 mx-auto max-w-[1600px] 
-        [@media_(min-width:1440px)_and_(max-width:2200px)]:max-w-[1800px]
-        [@media_(min-width:2560px)]:max-w-[2304px]">
+      <div className="page-shell relative z-10">
 
         <div className="max-w-[660px]">
           <p className="text-[18px] md:text-[20px] font-semibold text-[#111948]">
