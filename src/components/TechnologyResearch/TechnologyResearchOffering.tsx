@@ -26,7 +26,73 @@ const features = [
 
 const TechnologyResearchOffering = () => {
   return (
-    <section className="bg-[#0a0f3c] py-14 text-white">
+    <section className="tr-offering-section bg-[#0a0f3c] py-14 text-white">
+
+      <style>{`
+
+        /* ✅ ONLY 375px RANGE */
+        @media (min-width: 321px) and (max-width: 375px) {
+
+          .tr-offering-cards {
+            justify-content: center;
+            gap: 0.75rem;
+          }
+
+          .tr-offering-card {
+            width: 220px;        /* 🔥 smaller cards */
+            padding: 1rem;       /* 🔥 less padding */
+          }
+
+          .tr-offering-card h3 {
+            font-size: 16px;     /* 🔥 slightly smaller title */
+          }
+
+          .tr-offering-card p {
+            font-size: 13px;     /* 🔥 smaller text */
+          }
+
+          .tr-offering-card img {
+            height: 32px;        /* 🔥 smaller icon */
+            width: 32px;
+          }
+        }
+
+        /* ✅ 768px */
+        @media (width: 768px) {
+          .tr-offering-cards {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 1rem;
+            width: 100%;
+          }
+
+          .tr-offering-card {
+            width: 100%;
+          }
+        }
+
+        /* ✅ 1024px */
+        @media (width: 1024px) {
+          .tr-offering-main {
+            flex-direction: column;
+            align-items: stretch;
+            gap: 2rem;
+          }
+
+          .tr-offering-cards {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 1rem;
+            width: 100%;
+          }
+
+          .tr-offering-card {
+            width: 100%;
+          }
+        }
+
+      `}</style>
+
       <div className="page-shell mx-auto">
 
         {/* HEADER */}
@@ -40,19 +106,20 @@ const TechnologyResearchOffering = () => {
           </h2>
 
           <p className="mt-4 max-w-[620px] text-[16px] text-white/80 leading-7">
-            Our Thought Shaping Papers are co-authored with renowned industry analysts and domain experts. These aren't ordinary whitepapers — they are strategic instruments designed to frame industry narratives, guide enterprise decisions, and accelerate technology adoption.
+            Our Thought Shaping Papers are co-authored with renowned industry analysts and domain experts.
           </p>
         </div>
 
         {/* MAIN */}
-        <div className="flex flex-col lg:flex-row items-center gap-12">
+        <div className="tr-offering-main flex flex-col lg:flex-row items-center gap-12">
 
-          {/* LEFT CARDS */}
-          <div className="flex gap-6 flex-wrap lg:flex-nowrap">
+          {/* CARDS */}
+          <div className="tr-offering-cards flex gap-6 flex-wrap justify-center lg:flex-nowrap">
             {features.map((feature) => (
               <div
                 key={feature.title}
                 className="
+                tr-offering-card
                 bg-[#f1f5f9]
                 text-[#0d1440]
                 rounded-xl
@@ -66,6 +133,7 @@ const TechnologyResearchOffering = () => {
                 <img
                   src={feature.icon}
                   className="h-10 w-10 mx-auto mb-4"
+                  alt=""
                 />
 
                 <h3 className="text-[18px] font-semibold whitespace-pre-line">
@@ -79,16 +147,12 @@ const TechnologyResearchOffering = () => {
             ))}
           </div>
 
-          {/* RIGHT IMAGE (ADJUSTED DOWN) */}
-          <div className="-mt-12 lg:-mt-20">
+          {/* IMAGE */}
+          <div className="tr-offering-image flex justify-center w-full">
             <img
               src={researchImage}
               alt=""
-              className="
-              w-[420px] 
-              sm:w-[480px] 
-              lg:w-[520px] 
-              object-contain"
+              className="w-[420px] sm:w-[480px] lg:w-[520px] object-contain"
             />
           </div>
 
