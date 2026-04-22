@@ -106,22 +106,20 @@ const ProcessSection = () => {
                 />
               )}
 
-              <button
-                type="button"
-                onClick={() => setActiveStep(index)}
-                onMouseEnter={() => setActiveStep(index)}
-                onMouseLeave={() => setActiveStep(null)}
-                className={`process-step-card relative z-10 group p-3 text-left transition-all duration-300 sm:p-4 ${
-                  activeStep === index
-                    ? "bg-white shadow-[0_18px_40px_rgba(10,31,68,0.16)]"
-                    : "hover:bg-white hover:shadow-[0_18px_40px_rgba(10,31,68,0.16)]"
-                }`}
-              >
+                <button
+                  type="button"
+                  onClick={() => setActiveStep(index)}
+                  className={`process-step-card relative z-10 group flex h-full flex-col p-3 text-left transition-all duration-300 sm:p-4 ${
+                    activeStep === index
+                      ? "bg-white shadow-[0_18px_40px_rgba(10,31,68,0.16)]"
+                      : "hover:shadow-[0_18px_40px_rgba(10,31,68,0.16)]"
+                } [@media_(width:768px)]:min-h-[430px] [@media_(width:1024px)]:min-h-[400px]`}
+                >
                 {/* IMAGE */}
                 <img
                   src={step.image}
                   alt={step.title}
-                  className="process-step-image mb-3 h-32 w-full object-cover sm:mb-4 sm:h-36 md:h-32 lg:h-36 xl:h-40 [@media_(width:768px)]:h-44 [@media_(min-width:2560px)]:h-60"
+                  className="process-step-image mb-3 h-32 w-full object-cover sm:mb-4 sm:h-36 md:h-32 lg:h-36 xl:h-40 [@media_(width:768px)]:h-44 [@media_(width:1024px)]:h-40 [@media_(min-width:2560px)]:h-60"
                 />
 
                 {/* ✅ TITLE → 22px */}

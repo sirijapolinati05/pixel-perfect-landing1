@@ -46,14 +46,14 @@ const ResearchSection = () => {
                 A comprehensive framework for understanding how autonomous AI agents will reshape enterprise operations.
               </p>
 
-              <div className="mt-1 flex items-center justify-between">
-                <p className="text-[10px] font-bold text-gray-600 group-hover:text-white/80">
+              <div className="mt-1 flex items-center justify-between [@media_(width:1024px)]:mt-2 [@media_(width:1024px)]:flex-col [@media_(width:1024px)]:items-start [@media_(width:1024px)]:gap-1">
+                <p className="text-[10px] font-bold text-gray-600 group-hover:text-white/80 [@media_(width:1024px)]:text-[12px]">
                   FEB 2026 · Thought Shaping Paper
                 </p>
 
-                <div className="flex items-center gap-1 text-gray-600 group-hover:text-white/80">
+                <div className="flex items-center gap-1 text-gray-600 group-hover:text-white/80 [@media_(width:1024px)]:gap-1">
                   <img src={linkedinIcon} className="h-3 w-3" />
-                  <span className="text-[12px] leading-none">
+                  <span className="text-[12px] leading-none [@media_(width:1024px)]:text-[12px]">
                     Releasing soon on <span className="font-semibold">LinkedIn</span>
                   </span>
                 </div>
@@ -69,12 +69,14 @@ const ResearchSection = () => {
             {/* CHIPSET CARD */}
             <div className="
               relative overflow-hidden rounded-2xl shadow-md
-              h-[220px]
+              h-[200px]
+              [@media_(width:768px)]:h-[170px]
+              [@media_(width:1024px)]:h-[172px]
 
-              [@media_(min-width:1440px)_and_(max-width:2200px)]:h-[180px]
+              [@media_(min-width:1440px)_and_(max-width:2200px)]:h-[165px]
 
               /* ✅ 2560 */
-              [@media_(min-width:2560px)]:h-[300px]
+              [@media_(min-width:2560px)]:h-[280px]
             ">
               <img 
                 src={research2} 
@@ -161,14 +163,14 @@ const ResearchSection = () => {
                 A comprehensive framework for understanding how autonomous AI agents will reshape enterprise operations.
               </p>
 
-              <div className="mt-1 flex items-center justify-between">
-                <p className="text-[10px] font-bold text-gray-600 group-hover:text-white/80">
+              <div className="mt-1 flex items-center justify-between [@media_(width:1024px)]:mt-2 [@media_(width:1024px)]:flex-col [@media_(width:1024px)]:items-start [@media_(width:1024px)]:gap-1">
+                <p className="text-[10px] font-bold text-gray-600 group-hover:text-white/80 [@media_(width:1024px)]:text-[12px]">
                   FEB 2026 · Thought Shaping Paper
                 </p>
 
-                <div className="flex items-center gap-1 text-gray-600 group-hover:text-white/80">
+                <div className="flex items-center gap-1 text-gray-600 group-hover:text-white/80 [@media_(width:1024px)]:gap-1">
                   <img src={linkedinIcon} className="h-3 w-3" />
-                  <span className="text-[12px] leading-none">
+                  <span className="text-[12px] leading-none [@media_(width:1024px)]:text-[12px]">
                     Releasing soon on <span className="font-semibold">LinkedIn</span>
                   </span>
                 </div>
