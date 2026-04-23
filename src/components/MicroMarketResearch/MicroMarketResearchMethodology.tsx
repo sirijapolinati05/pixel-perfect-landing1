@@ -132,7 +132,7 @@ const MicroMarketResearchMethodology = () => {
             })}
           </div>
 
-          {/* ✅ IMAGE (2px right shift FIXED) */}
+          {/* IMAGE */}
           <div className="
             relative mt-[-3px] flex items-start justify-end
             sm:mt-[-1px] md:mt-[1px]
@@ -144,7 +144,7 @@ const MicroMarketResearchMethodology = () => {
               className="
                 h-[195px] 
                 sm:h-[245px] 
-                md:h-[285px] 
+                md:h-[330px] 
                 lg:h-[305px]
                 w-auto max-w-full object-contain
                 transition-transform duration-500 hover:scale-105

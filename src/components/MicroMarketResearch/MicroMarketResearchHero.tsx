@@ -88,10 +88,8 @@ const MicroMarketResearchHero = () => {
             py-2 sm:py-2.5 
             text-[14px] sm:text-[14px] md:text-[15px] lg:text-[15px] 
             font-semibold !text-black
-            shadow-[0_10px_22px_rgba(18,130,193,0.42)]
             transition-all duration-300 ease-in-out
-            hover:scale-105 hover:-translate-y-1 
-            hover:shadow-none"
+            hover:scale-105 hover:-translate-y-1"
           >
             Explore Capabilities
           </button>

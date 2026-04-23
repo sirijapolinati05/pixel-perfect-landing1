@@ -30,7 +30,6 @@ const ResearchSection = () => {
           {/* FIRST CARD */}
           <div className="group flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-md hover:bg-[#0A1F44]">
 
-            {/* IMAGE TOP */}
             <img
               src={research1}
               className="w-full h-[240px] object-cover"
@@ -51,7 +50,7 @@ const ResearchSection = () => {
               </p>
 
               <div className="mt-1 flex items-center justify-between">
-                <p className="text-[10px] font-bold text-gray-600 group-hover:text-white/80">
+                <p className="text-[10px] font-bold text-gray-600 group-hover:text-white/80 min-[1440px]:text-[12px]">
                   FEB 2026 · Thought Shaping Paper
                 </p>
 
@@ -69,12 +68,11 @@ const ResearchSection = () => {
           <div className="flex flex-col gap-4">
 
             {/* CHIPSET CARD */}
-            <div className="group relative overflow-hidden rounded-2xl shadow-md h-[200px]">
+            <div className="group relative overflow-hidden rounded-2xl shadow-md h-[200px] max-[320px]:h-[260px]">
               <img src={research2} className="absolute inset-0 h-full w-full object-cover" />
 
               <div className="absolute inset-0 flex flex-col bg-black/60 p-4 text-left">
 
-                {/* ✅ ORIGINAL BADGE RESTORED */}
                 <span className="w-fit rounded-full bg-gradient-to-r from-[#0A0E33] to-[#25A6DD] px-2 py-[2px] text-[12px] text-white">
                   Chipset
                 </span>
@@ -150,7 +148,7 @@ const ResearchSection = () => {
               </p>
 
               <div className="mt-1 flex items-center justify-between">
-                <p className="text-[10px] font-bold text-gray-600 group-hover:text-white/80">
+                <p className="text-[10px] font-bold text-gray-600 group-hover:text-white/80 min-[1440px]:text-[12px]">
                   FEB 2026 · Thought Shaping Paper
                 </p>
 
