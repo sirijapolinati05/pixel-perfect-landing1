@@ -29,7 +29,7 @@ const cardClassName =
   "[@media_(min-width:1440px)_and_(max-width:2200px)]:min-h-[320px] " +
   "[@media_(min-width:2560px)]:max-w-[460px] " +
   "[@media_(min-width:2560px)]:min-h-[520px] " +
-  "flex-col rounded-xl border border-[#dfe4ea] bg-white px-4 pb-4 pt-4 text-center shadow-[0_4px_10px_rgba(8,18,59,0.15)] transition-all duration-300 hover:-translate-y-2 hover:border-[#0d4f96] hover:bg-[#0d4f96] hover:shadow-[0_20px_34px_rgba(8,18,59,0.24)]";
+  "flex-col rounded-xl border border-[#dfe4ea] bg-white px-4 pb-4 pt-4 text-center shadow-[0_4px_10px_rgba(8,18,59,0.15)] transition-all duration-300 hover:-translate-y-2 hover:border-navy hover:bg-navy hover:shadow-[0_20px_34px_rgba(8,18,59,0.24)]";
 
 const TierTwoCard = ({ name, subtitle, image }) => (
   <article className={cardClassName}>

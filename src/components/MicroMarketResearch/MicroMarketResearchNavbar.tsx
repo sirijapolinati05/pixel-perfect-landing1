@@ -11,9 +11,8 @@ const logoImageClass =
   "absolute inset-0 h-full w-full scale-[1.35] origin-left object-contain transition-all duration-500";
 
 const navItems = [
-  { label: "Micro-Market Research", href: "#hero" },
-  { label: "Expertise", href: "#expertise" },
-  { label: "Methodology", href: "#methodology" },
+  { label: "Technology Research", href: "/technology-research" },
+  { label: "Micro-Market Research", href: "/micro-market-research" },
   { label: "Download Approach Note", href: "#cta" },
 ];
 
@@ -21,32 +20,11 @@ const MicroMarketResearchNavbar = () => {
   const { pathname } = useLocation();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [activeSection, setActiveSection] = useState("#hero");
+  const [isCtaVisible, setIsCtaVisible] = useState(false);
 
   const mobileHeaderActive = mobileOpen || isScrolled;
   const showLightNavbar = isScrolled;
   const showLightLogo = mobileHeaderActive;
-
-  const scrollToSection = (hash: string) => {
-    const target = document.querySelector(hash);
-
-    if (!target) {
-      return;
-    }
-
-    const headerOffset = 92;
-    const targetTop =
-      target.getBoundingClientRect().top + window.scrollY - headerOffset;
-
-    window.scrollTo({
-      top: Math.max(targetTop, 0),
-      behavior: "smooth",
-    });
-
-    window.history.replaceState(null, "", hash);
-    setActiveSection(hash);
-    setMobileOpen(false);
-  };
 
   useEffect(() => {
     setMobileOpen(false);
@@ -64,36 +42,24 @@ const MicroMarketResearchNavbar = () => {
   }, []);
 
   useEffect(() => {
-    const sections = navItems
-      .filter((item) => item.href.startsWith("#"))
-      .map((item) => document.querySelector(item.href))
-      .filter((element): element is Element => Boolean(element));
+    const ctaSection = document.getElementById("cta");
 
-    if (sections.length === 0) {
+    if (!ctaSection) {
+      setIsCtaVisible(false);
       return;
     }
 
     const observer = new IntersectionObserver(
-      (entries) => {
-        const visibleEntries = entries
-          .filter((entry) => entry.isIntersecting)
-          .sort(
-            (a, b) =>
-              b.intersectionRatio - a.intersectionRatio ||
-              a.boundingClientRect.top - b.boundingClientRect.top
-          );
-
-        if (visibleEntries[0]) {
-          setActiveSection(`#${visibleEntries[0].target.id}`);
-        }
+      ([entry]) => {
+        setIsCtaVisible(entry.isIntersecting);
       },
       {
-        threshold: [0.2, 0.35, 0.5, 0.65],
-        rootMargin: "-20% 0px -55% 0px",
+        threshold: 0.25,
+        rootMargin: "-30% 0px -50% 0px",
       }
     );
 
-    sections.forEach((section) => observer.observe(section));
+    observer.observe(ctaSection);
 
     return () => observer.disconnect();
   }, [pathname]);
@@ -149,23 +115,23 @@ const MicroMarketResearchNavbar = () => {
         </div>
 
         <div className="hidden items-center gap-4 lg:ml-28 lg:flex lg:translate-y-[6px] xl:ml-32 xl:gap-6">
-          {navItems.map((item) => {
-            const isActive = activeSection === item.href;
+          <Link
+            to="/technology-research"
+            className={getLinkClassName(pathname === "/technology-research")}
+          >
+            Technology Research
+          </Link>
 
-            return (
-              <a
-                key={item.label}
-                href={item.href}
-                onClick={(event) => {
-                  event.preventDefault();
-                  scrollToSection(item.href);
-                }}
-                className={`relative pb-1 text-[16px] md:text-[18px] ${getLinkClassName(isActive)}`}
-              >
-                {item.label}
-              </a>
-            );
-          })}
+          <Link
+            to="/micro-market-research"
+            className={getLinkClassName(pathname === "/micro-market-research")}
+          >
+            Micro-Market Research
+          </Link>
+
+          <a href="#cta" className={getLinkClassName(isCtaVisible)}>
+            Download Approach Note
+          </a>
         </div>
 
         <div className="flex items-center gap-3 sm:gap-4">
@@ -187,21 +153,40 @@ const MicroMarketResearchNavbar = () => {
           className="border-t border-slate-200 bg-white px-4 py-4 shadow-md lg:hidden"
         >
           <nav className="flex flex-col gap-2 text-[16px] font-semibold text-[#0B1F3A]">
-            {navItems.map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
-                onClick={(event) => {
-                  event.preventDefault();
-                  scrollToSection(item.href);
-                }}
-                className={`rounded-md px-3 py-3 transition-all duration-200 hover:bg-slate-100 hover:pl-4 ${
-                  activeSection === item.href ? "bg-slate-100 font-semibold" : ""
-                }`}
-              >
-                {item.label}
-              </a>
-            ))}
+            {navItems.map((item) => {
+              const isActive =
+                item.href === "/technology-research"
+                  ? pathname === "/technology-research"
+                  : item.href === "/micro-market-research"
+                    ? pathname === "/micro-market-research"
+                    : isCtaVisible;
+
+              if (item.href.startsWith("#")) {
+                return (
+                  <a
+                    key={item.href}
+                    href={item.href}
+                    onClick={() => setMobileOpen(false)}
+                    className="rounded-md px-3 py-3 transition-all duration-200 hover:bg-slate-100 hover:pl-4"
+                  >
+                    {item.label}
+                  </a>
+                );
+              }
+
+              return (
+                <Link
+                  key={item.href}
+                  to={item.href}
+                  onClick={() => setMobileOpen(false)}
+                  className={`rounded-md px-3 py-3 transition-all duration-200 hover:bg-slate-100 hover:pl-4 ${
+                    isActive ? "bg-slate-100 font-semibold" : ""
+                  }`}
+                >
+                  {item.label}
+                </Link>
+              );
+            })}
           </nav>
         </div>
       )}

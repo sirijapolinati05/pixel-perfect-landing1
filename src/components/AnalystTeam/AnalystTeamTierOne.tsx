@@ -39,8 +39,8 @@ const cardClassName =
   "[@media_(min-width:2560px)]:min-h-[520px] " +
   "flex-col rounded-xl border border-[#dfe4ea] bg-white px-4 pb-4 pt-4 text-center " +
   "shadow-[0_4px_10px_rgba(8,18,59,0.15)] transition-all duration-300 ease-out " +
-  "hover:-translate-y-2 hover:border-[#0d4f96] hover:bg-[#0d4f96] hover:shadow-[0_20px_34px_rgba(8,18,59,0.24)] " +
-  "active:-translate-y-2 active:border-[#0d4f96] active:bg-[#0d4f96] active:shadow-[0_20px_34px_rgba(8,18,59,0.24)]";
+  "hover:-translate-y-2 hover:border-navy hover:bg-navy hover:shadow-[0_20px_34px_rgba(8,18,59,0.24)] " +
+  "active:-translate-y-2 active:border-navy active:bg-navy active:shadow-[0_20px_34px_rgba(8,18,59,0.24)]";
 
 const AnalystTeamTierOne = () => {
   return (
