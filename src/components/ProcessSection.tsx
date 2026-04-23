@@ -121,7 +121,7 @@ const ProcessSection = () => {
                 <img
                   src={step.image}
                   alt={step.title}
-                  className="mb-3 h-32 w-full object-cover sm:mb-4 sm:h-36 md:h-32 lg:h-36 xl:h-40"
+                  className="mb-3 h-32 w-full object-cover sm:mb-4 sm:h-36 md:h-32 lg:h-36 xl:h-40 [@media_(width:540px)]:h-52 [@media_(width:912px)]:h-44"
                 />
 
                 {/* ✅ TITLE → 22px */}

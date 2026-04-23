@@ -83,7 +83,7 @@ const Footer = () => {
       </div>
 
       <div className="border-t border-border">
-        <div className="page-shell mx-auto flex flex-col items-center justify-between gap-1 py-1.5 text-center md:flex-row md:text-left">
+        <div className="page-shell mx-auto flex flex-col items-center justify-between gap-1 py-0.5 text-center md:py-1.5 md:flex-row md:text-left">
           <p className="text-[14px] text-muted-foreground">
             (c) 2022 DIGITALFABRIC. All Rights Reserved
           </p>
