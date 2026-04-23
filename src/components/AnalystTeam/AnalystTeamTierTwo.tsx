@@ -23,6 +23,7 @@ const featuredAnalyst = {
 
 const cardClassName =
   "group flex w-full max-w-full sm:max-w-[184px] " +
+  "[@media_(width:912px)]:max-w-[260px] " +
   "[@media_(width:1024px)]:max-w-[220px] " +
   "[@media_(min-width:1440px)_and_(max-width:2200px)]:max-w-[240px] " +
   "min-h-[300px] " +
@@ -139,6 +140,8 @@ const AnalystTeamTierTwo = () => {
             </div>
 
             <div className="grid gap-4 sm:gap-6 md:gap-8 sm:grid-cols-2 md:grid-cols-[repeat(3,184px)]
+              [@media_(width:912px)]:grid-cols-[repeat(3,260px)]
+              [@media_(width:912px)]:gap-3
               [@media_(width:1024px)]:grid-cols-[repeat(3,220px)]
               [@media_(min-width:1440px)_and_(max-width:2200px)]:grid-cols-[repeat(3,240px)]
               [@media_(min-width:2560px)]:grid-cols-[repeat(3,460px)]
@@ -154,6 +157,7 @@ const AnalystTeamTierTwo = () => {
             </div>
 
             <div className="grid max-w-full sm:max-w-[184px]
+              [@media_(width:912px)]:max-w-[260px]
               [@media_(width:1024px)]:max-w-[220px]
               [@media_(min-width:1440px)_and_(max-width:2200px)]:max-w-[240px]
               [@media_(min-width:2560px)]:max-w-[460px]">
@@ -172,6 +176,7 @@ const AnalystTeamTierTwo = () => {
             </div>
 
             <div className="grid max-w-full sm:max-w-[184px]
+              [@media_(width:912px)]:max-w-[260px]
               [@media_(width:1024px)]:max-w-[220px]
               [@media_(min-width:1440px)_and_(max-width:2200px)]:max-w-[240px]
               [@media_(min-width:2560px)]:max-w-[460px]">

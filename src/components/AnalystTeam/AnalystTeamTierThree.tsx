@@ -20,6 +20,7 @@ const researchAnalysts = [
 
 const cardClassName =
   "group flex w-full max-w-full sm:max-w-[184px] " +
+  "[@media_(width:912px)]:max-w-[260px] " +
   "[@media_(width:1024px)]:max-w-[220px] " +
   "[@media_(min-width:1440px)_and_(max-width:2200px)]:max-w-[240px] " +
   "[@media_(min-width:2560px)]:max-w-[480px] " +
@@ -130,6 +131,8 @@ const AnalystTeamTierThree = () => {
 
           <div className="grid gap-12
             md:grid-cols-[repeat(2,184px)]
+            [@media_(width:912px)]:grid-cols-[repeat(2,260px)]
+            [@media_(width:912px)]:gap-8
             [@media_(width:1024px)]:grid-cols-[repeat(2,220px)]
             [@media_(min-width:1440px)_and_(max-width:2200px)]:grid-cols-[repeat(2,240px)]
             [@media_(min-width:2560px)]:grid-cols-[repeat(2,480px)]
@@ -148,6 +151,8 @@ const AnalystTeamTierThree = () => {
 
           <div className="grid gap-12
             md:grid-cols-[repeat(3,184px)]
+            [@media_(width:912px)]:grid-cols-[repeat(3,260px)]
+            [@media_(width:912px)]:gap-8
             [@media_(width:1024px)]:grid-cols-[repeat(3,220px)]
             [@media_(min-width:1440px)_and_(max-width:2200px)]:grid-cols-[repeat(3,240px)]
             [@media_(min-width:2560px)]:grid-cols-[repeat(3,480px)]

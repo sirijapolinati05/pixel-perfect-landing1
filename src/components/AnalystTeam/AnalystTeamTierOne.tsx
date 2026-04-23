@@ -32,6 +32,7 @@ const partnerCards = [
 const cardClassName =
   "group flex w-full max-w-full sm:max-w-[184px] lg:max-w-[220px] " +
   "[@media_(width:768px)]:max-w-[220px] " +
+  "[@media_(width:912px)]:max-w-[280px] " +
   "[@media_(min-width:1440px)_and_(max-width:2200px)]:max-w-[240px] " +
   "[@media_(min-width:2560px)]:max-w-[460px] " +
   "min-h-[300px] " +
@@ -70,6 +71,8 @@ const AnalystTeamTierOne = () => {
               sm:grid-cols-2 sm:gap-12
               md:grid-cols-3 md:gap-16 md:px-4
               [@media_(width:768px)]:grid-cols-2
+              [@media_(width:912px)]:grid-cols-2
+              [@media_(width:912px)]:gap-10
               lg:w-fit lg:grid-cols-[repeat(4,220px)] lg:gap-8 lg:px-0
               [@media_(min-width:1440px)_and_(max-width:2200px)]:grid-cols-[repeat(4,240px)]
               [@media_(min-width:2560px)]:grid-cols-[repeat(4,460px)]

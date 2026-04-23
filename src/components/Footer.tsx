@@ -22,10 +22,10 @@ const Footer = () => {
         <div className="grid grid-cols-1 items-start gap-2 sm:gap-4 md:grid-cols-3 md:gap-6 max-[425px]:gap-6">
           
           {/* Logo */}
-          <div className="flex items-center justify-start max-[425px]:pl-10">
+          <div className="flex items-center justify-start">
             <button
               type="button"
-              className={`relative z-10 flex items-center border-0 bg-transparent p-0 ${footerLogoShellClass} max-[425px]:translate-x-8`}
+              className={`relative z-10 flex items-center border-0 bg-transparent p-0 ${footerLogoShellClass} max-[375px]:left-8`}
             >
               <img
                 src={logo}

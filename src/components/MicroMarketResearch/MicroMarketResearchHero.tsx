@@ -1,4 +1,4 @@
-import heroImage from "@/assets/MicroMarketResearch/micro-market-research-hero.jpeg";
+import heroImage from "@/assets/MicroMarketResearch/micro-market-research-hero1.jpeg";
 
 const heroStats = [
   ["10+", "Niche Markets", "Tracked"],
