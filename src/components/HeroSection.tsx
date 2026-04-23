@@ -103,7 +103,7 @@ const HeroSection = () => {
         <div className="hidden lg:block">
           <div className="mt-20 max-w-[42rem] [@media_(min-width:2560px)]:max-w-[1100px]">
 
-            <h1 className="mb-5 font-serif font-semibold text-white text-[58px] leading-none [@media_(min-width:2560px)]:text-[5.75rem] [@media_(min-width:2560px)]:leading-[1.02]">
+            <h1 className="mb-5 font-serif font-semibold text-white text-[58px] leading-none [@media_(width:1024px)]:text-[52px] [@media_(width:1024px)]:leading-[1.02] [@media_(min-width:2560px)]:text-[5.75rem] [@media_(min-width:2560px)]:leading-[1.02]">
 
               <span className="block text-white [@media_(min-width:2560px)]:whitespace-nowrap">Thought-Shaping</span>
               <span className="block text-white [@media_(min-width:2560px)]:whitespace-nowrap">Intelligence on</span>

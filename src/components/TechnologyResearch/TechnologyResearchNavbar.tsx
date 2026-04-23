@@ -13,7 +13,6 @@ const techLogoImageClass =
 const navItems = [
   { label: "Technology Research", href: "/technology-research" },
   { label: "Micro-Market Research", href: "/micro-market-research" },
-  { label: "Home", href: "/" },
   { label: "Download Approach Note", href: "#cta" },
 ];
 
@@ -130,10 +129,6 @@ const TechnologyResearchNavbar = () => {
             className={getNavLinkClassName(isMicroMarketResearch)}
           >
             Micro-Market Research
-          </Link>
-
-          <Link to="/" className={getNavLinkClassName(pathname === "/")}>
-            Home
           </Link>
 
           <a href="#cta" className={getNavLinkClassName(isCtaVisible)}>

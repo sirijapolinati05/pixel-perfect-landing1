@@ -2,7 +2,7 @@ import logo from "@/assets/LandingPage/research-fabric-footer.png";
 import { ArrowRightIcon } from "@/components/ui/Icons";
 
 const menuLinks = [
-  "Why RESEARCHFABRICÂ®",
+  "Why RESEARCHFABRIC",
   "Services",
   "Knowledge Area",
   "Featured Insights",
@@ -19,14 +19,24 @@ const Footer = () => {
   return (
     <footer className="border-t border-border bg-background">
       <div className="page-shell mx-auto py-6">
-        <div className="grid grid-cols-1 items-start gap-2 sm:gap-4 md:grid-cols-3 md:gap-6">
-          <div className="flex justify-start self-start mt-1 sm:mt-2 md:mt-4">
-            <div className={`-ml-1 ${footerLogoShellClass}`}>
-              <img src={logo} alt="Research Fabric" className={footerLogoImageClass} />
-            </div>
+        <div className="grid grid-cols-1 items-start gap-2 sm:gap-4 md:grid-cols-3 md:gap-6 max-[425px]:gap-6">
+          
+          {/* Logo */}
+          <div className="flex items-center justify-start max-[425px]:pl-10">
+            <button
+              type="button"
+              className={`relative z-10 flex items-center border-0 bg-transparent p-0 ${footerLogoShellClass} max-[425px]:translate-x-8`}
+            >
+              <img
+                src={logo}
+                alt="Research Fabric"
+                className={footerLogoImageClass}
+              />
+            </button>
           </div>
 
-          <div className="-mt-6 text-center sm:-mt-4 md:mt-0 md:text-left">
+          {/* Menu */}
+          <div className="text-center md:mt-0 md:text-left mt-4 sm:mt-2 max-[425px]:mt-6">
             <h4 className="mb-2 text-[16px] font-bold text-foreground">
               Menu
             </h4>
@@ -45,7 +55,8 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className="self-start pt-1 text-center sm:pt-0 md:text-left">
+          {/* Subscribe */}
+          <div className="self-start pt-1 text-center sm:pt-0 md:text-left max-[425px]:pt-0">
             <h4 className="mb-2 text-[16px] font-bold text-foreground">
               Subscribe
             </h4>
@@ -74,7 +85,7 @@ const Footer = () => {
       <div className="border-t border-border">
         <div className="page-shell mx-auto flex flex-col items-center justify-between gap-1 py-1.5 text-center md:flex-row md:text-left">
           <p className="text-[14px] text-muted-foreground">
-            Â© 2022 DIGITALFABRICÂ®. All Rights Reserved
+            (c) 2022 DIGITALFABRIC. All Rights Reserved
           </p>
 
           <p className="text-[14px] text-muted-foreground">
