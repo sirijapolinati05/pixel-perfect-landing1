@@ -85,7 +85,7 @@ const MicroMarketResearchMethodology = () => {
         <div className="relative z-10 mt-5 grid items-start gap-6 sm:gap-8 lg:mt-4 lg:grid-cols-[1.05fr_1.2fr]">
 
           {/* Cards */}
-          <div className="grid items-start gap-5 sm:gap-6 md:grid-cols-2">
+          <div className="order-2 grid items-start gap-5 sm:gap-6 md:grid-cols-2 lg:order-none lg:col-start-1">
             {methodCards.map((card) => {
               const isActive = activeCardStep === card.step;
 
@@ -134,7 +134,7 @@ const MicroMarketResearchMethodology = () => {
 
           {/* IMAGE */}
           <div className="
-            relative mt-[-3px] flex items-start justify-center lg:justify-end
+            order-1 relative mt-[-3px] flex items-start justify-center lg:order-none lg:col-start-2 lg:justify-end
             sm:mt-[-1px] md:mt-[1px]
             pr-0 lg:pr-[2px]
           ">

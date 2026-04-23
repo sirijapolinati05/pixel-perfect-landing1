@@ -111,7 +111,7 @@ const TechnologyResearchOffering = () => {
         </div>
 
         {/* MAIN */}
-        <div className="tr-offering-main flex flex-col lg:flex-row items-center gap-12">
+        <div className="tr-offering-main flex flex-col-reverse lg:flex-row items-center gap-12">
 
           {/* CARDS */}
           <div className="tr-offering-cards flex gap-6 flex-wrap justify-center lg:flex-nowrap">

@@ -94,7 +94,7 @@ const TechnologyResearchPapers = () => {
             font-semibold text-[#111741]
             
             shadow-[0_8px_18px_rgba(17,23,65,0.1)]
-            transition-transform hover:-translate-y-0.5"
+            transition-all duration-300 hover:bg-[#0A1F44] hover:text-white hover:scale-95"
           >
             Load More
           </button>
