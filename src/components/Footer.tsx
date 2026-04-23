@@ -25,7 +25,7 @@ const Footer = () => {
           <div className="flex items-center justify-start">
             <button
               type="button"
-              className={`relative z-10 flex items-center border-0 bg-transparent p-0 ${footerLogoShellClass} max-[375px]:left-8`}
+              className={`relative z-10 flex items-center border-0 bg-transparent p-0 ${footerLogoShellClass} max-lg:translate-x-4`}
             >
               <img
                 src={logo}
