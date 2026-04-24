@@ -18,14 +18,14 @@ const footerLogoImageClass =
 const Footer = () => {
   return (
     <footer className="border-t border-border bg-background">
-      <div className="page-shell mx-auto py-6">
-        <div className="grid grid-cols-1 items-start gap-2 sm:gap-4 md:grid-cols-3 md:gap-6 max-[425px]:gap-6">
+      <div className="page-shell mx-auto py-6 sm:py-7">
+        <div className="grid grid-cols-1 items-start gap-8 sm:gap-6 md:grid-cols-3 md:gap-6">
           
           {/* Logo */}
-          <div className="flex items-center justify-start">
+          <div className="flex items-center justify-center md:justify-start">
             <button
               type="button"
-              className={`relative z-10 flex items-center border-0 bg-transparent p-0 ${footerLogoShellClass} max-lg:translate-x-4`}
+              className={`relative z-10 flex items-center border-0 bg-transparent p-0 ${footerLogoShellClass}`}
             >
               <img
                 src={logo}
@@ -36,7 +36,7 @@ const Footer = () => {
           </div>
 
           {/* Menu */}
-          <div className="text-center md:mt-0 md:text-left mt-4 sm:mt-2 max-[425px]:mt-6">
+          <div className="text-center md:mt-0 md:text-left">
             <h4 className="mb-2 text-[16px] font-bold text-foreground">
               Menu
             </h4>
@@ -56,20 +56,20 @@ const Footer = () => {
           </div>
 
           {/* Subscribe */}
-          <div className="self-start pt-1 text-center sm:pt-0 md:text-left max-[425px]:pt-0">
+          <div className="self-start text-center md:text-left">
             <h4 className="mb-2 text-[16px] font-bold text-foreground">
               Subscribe
             </h4>
 
-            <div className="group mx-auto flex max-w-md md:mx-0">
+            <div className="group mx-auto flex w-full max-w-md md:mx-0">
               <input
                 type="email"
                 placeholder="Email Address"
-                className="flex-1 rounded-l bg-muted px-3 py-1.5 text-[16px] text-foreground outline-none transition-all duration-300 placeholder:text-muted-foreground focus:ring-2 focus:ring-primary focus:shadow-lg"
+                className="min-w-0 flex-1 rounded-l bg-muted px-3 py-2 text-[16px] text-foreground outline-none transition-all duration-300 placeholder:text-muted-foreground focus:ring-2 focus:ring-primary focus:shadow-lg"
               />
 
               <button
-                className="rounded-r bg-navy px-3 py-1.5 text-primary-foreground transition-all duration-300 ease-in-out hover:-translate-y-0.5 hover:scale-105 hover:bg-navy-light hover:shadow-[0_6px_16px_rgba(0,0,0,0.25)] active:scale-95"
+                className="rounded-r bg-navy px-3 py-2 text-primary-foreground transition-all duration-300 ease-in-out hover:-translate-y-0.5 hover:scale-105 hover:bg-navy-light hover:shadow-[0_6px_16px_rgba(0,0,0,0.25)] active:scale-95"
               >
                 <ArrowRightIcon size={14} />
               </button>
@@ -82,8 +82,8 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="border-t border-border">
-        <div className="page-shell mx-auto flex flex-col items-center justify-between gap-1 py-0.5 text-center md:py-1.5 md:flex-row md:text-left">
+      <div className="border-t border-border bg-background">
+        <div className="page-shell mx-auto flex flex-col items-center justify-between gap-1 py-3 pb-[calc(0.75rem+env(safe-area-inset-bottom))] text-center md:flex-row md:py-1.5 md:text-left">
           <p className="text-[14px] text-muted-foreground">
             (c) 2022 DIGITALFABRIC. All Rights Reserved
           </p>

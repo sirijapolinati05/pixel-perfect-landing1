@@ -111,7 +111,7 @@ const ProcessSection = () => {
                 onClick={() => setActiveStep(index)}
                 onMouseEnter={() => setActiveStep(index)}
                 onMouseLeave={() => setActiveStep(null)}
-                className={`relative z-10 group p-3 text-left transition-all duration-300 sm:p-4 ${
+                className={`process-step-card relative z-10 group p-3 text-left transition-all duration-300 sm:p-4 ${
                   activeStep === index
                     ? "bg-white shadow-[0_18px_40px_rgba(10,31,68,0.16)]"
                     : "hover:bg-white hover:shadow-[0_18px_40px_rgba(10,31,68,0.16)]"
@@ -121,7 +121,7 @@ const ProcessSection = () => {
                 <img
                   src={step.image}
                   alt={step.title}
-                  className="mb-3 h-32 w-full object-cover sm:mb-4 sm:h-36 md:h-32 lg:h-36 xl:h-40 [@media_(width:540px)]:h-52 [@media_(width:912px)]:h-44"
+                  className="process-step-image mb-3 h-32 w-full object-cover sm:mb-4 sm:h-36 md:h-32 lg:h-36 xl:h-40 [@media_(width:540px)]:h-52 [@media_(width:912px)]:h-44"
                 />
 
                 {/* ✅ TITLE → 22px */}

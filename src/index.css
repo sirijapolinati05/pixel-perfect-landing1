@@ -360,8 +360,26 @@
 
 @media (min-width: 371px) and (max-width: 380px) {
   .process-step-image {
-    height: 18rem !important;
+    height: 19rem !important;
     object-fit: contain !important;
+  }
+}
+
+@media (width: 375px) {
+  .process-step-card {
+    padding-top: 0.15rem !important;
+    padding-bottom: 0.15rem !important;
+  }
+
+  .process-step-image {
+    height: 19.75rem !important;
+    margin-top: -0.25rem !important;
+    margin-bottom: 0.5rem !important;
+    object-fit: cover !important;
+  }
+
+  .process-step-card h4 {
+    margin-top: -0.15rem !important;
   }
 }
 
