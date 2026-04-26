@@ -32,27 +32,26 @@ const TechnologyResearchOffering = () => {
 
         /* ✅ ONLY 375px RANGE */
         @media (min-width: 321px) and (max-width: 375px) {
-
           .tr-offering-cards {
             justify-content: center;
             gap: 0.75rem;
           }
 
           .tr-offering-card {
-            width: 220px;        /* 🔥 smaller cards */
-            padding: 1rem;       /* 🔥 less padding */
+            width: 220px;
+            padding: 1rem;
           }
 
           .tr-offering-card h3 {
-            font-size: 16px;     /* 🔥 slightly smaller title */
+            font-size: 16px;
           }
 
           .tr-offering-card p {
-            font-size: 13px;     /* 🔥 smaller text */
+            font-size: 13px;
           }
 
           .tr-offering-card img {
-            height: 32px;        /* 🔥 smaller icon */
+            height: 32px;
             width: 32px;
           }
         }
@@ -88,6 +87,59 @@ const TechnologyResearchOffering = () => {
 
           .tr-offering-card {
             width: 100%;
+          }
+        }
+
+        /* ✅🔥 2560px+ ULTRA-WIDE (FINAL ENHANCED VERSION) */
+        @media (min-width: 2560px) {
+
+          .tr-offering-section {
+            padding-top: 8rem;
+            padding-bottom: 8rem;
+          }
+
+          .tr-offering-main {
+            gap: 4rem;
+          }
+
+          .tr-offering-cards {
+            gap: 3rem;
+          }
+
+          .tr-offering-card {
+            width: clamp(360px, 20vw, 480px);  /* 🔥 fluid scaling */
+            padding: 2.5rem;
+            border-radius: 20px;
+          }
+
+          .tr-offering-card img {
+            width: 72px;
+            height: 72px;
+            margin-bottom: 1.5rem;
+          }
+
+          .tr-offering-card h3 {
+            font-size: 26px;
+            line-height: 1.3;
+          }
+
+          .tr-offering-card p {
+            font-size: 18px;
+            line-height: 1.8;
+            margin-top: 1rem;
+          }
+
+          .tr-offering-image img {
+            width: clamp(650px, 30vw, 900px);
+          }
+
+          /* Header scaling */
+          .tr-offering-section h2 {
+            font-size: 56px;
+          }
+
+          .tr-offering-section p {
+            font-size: 18px;
           }
         }
 
@@ -128,7 +180,7 @@ const TechnologyResearchOffering = () => {
                 shadow-[0_8px_20px_rgba(0,0,0,0.2)]
                 text-center
                 transition-all duration-300
-                hover:scale-[1.03]"
+                hover:scale-[1.05]"
               >
                 <img
                   src={feature.icon}
