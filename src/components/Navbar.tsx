@@ -26,6 +26,13 @@ const analystTeamNavItems = [
   { label: "Download Approach Note", href: "#cta" },
 ];
 
+const getMobileItemClassName = (isActive: boolean) =>
+  `relative overflow-hidden rounded-xl border px-4 py-3 pl-5 text-left transition-all duration-200 ${
+    isActive
+      ? "border-[#63d3c5]/50 bg-[#63d3c5]/12 text-[#0B1F3A] shadow-[inset_3px_0_0_0_#63d3c5]"
+      : "border-transparent text-[#0B1F3A] hover:border-slate-200 hover:bg-slate-100"
+  }`;
+
 const Navbar = () => {
   const { pathname } = useLocation();
   const navigate = useNavigate();
@@ -41,8 +48,8 @@ const Navbar = () => {
   const showLightNavbar = isScrolled;
   const mobileHeaderActive = mobileOpen || showLightNavbar;
   const showLightLogo = mobileHeaderActive;
-
-  const menuIconColor = showLightNavbar ? "#0B1F3A" : "#FFFFFF";
+  const hasMobileNavbarStrip = isScrolled || mobileOpen;
+  const mobileMenuIconColor = hasMobileNavbarStrip ? "#0B1F3A" : "#FFFFFF";
   const darkLogoClass =
     `${logoImageClass} ${showLightLogo ? "opacity-0" : "opacity-100"}`;
   const lightLogoClass =
@@ -162,12 +169,23 @@ const Navbar = () => {
     >
       <div className="page-shell relative flex items-center justify-between py-4">
 
-        <div className="flex items-center gap-2">
-          <button onClick={toggleMobileMenu} className="lg:hidden">
-            <MenuIcon size={25} color={menuIconColor} />
+        <div className="flex items-center gap-0">
+          <button
+            type="button"
+            onClick={toggleMobileMenu}
+            aria-label={mobileOpen ? "Close navigation" : "Open navigation"}
+            aria-expanded={mobileOpen}
+            aria-controls="primary-mobile-nav"
+            className="relative z-20 -mr-1 flex h-11 w-11 items-center justify-center lg:hidden"
+          >
+            <MenuIcon size={25} color={mobileMenuIconColor} />
           </button>
 
-          <button onClick={handleLogoClick} className={`relative ${logoShellClass}`}>
+          <button
+            type="button"
+            onClick={handleLogoClick}
+            className={`relative -ml-1 ${logoShellClass}`}
+          >
             <img src={logo} alt="Research Fabric" className={darkLogoClass} />
             <img src={lightLogo} alt="Research Fabric" className={lightLogoClass} />
           </button>
@@ -193,10 +211,41 @@ const Navbar = () => {
           })}
         </div>
 
-        <span className={`${mobileHeaderActive ? "text-black" : "text-white"}`}>
+        <span
+          className={`text-[14px] transition-colors sm:text-[16px] ${
+            mobileHeaderActive ? "text-black" : "hidden text-white sm:inline"
+          }`}
+        >
           Subscribe
         </span>
       </div>
+
+      {mobileOpen && (
+        <div
+          id="primary-mobile-nav"
+          className="border-t border-slate-200 bg-white px-4 py-4 shadow-md lg:hidden"
+        >
+          <div className="flex flex-col gap-2 text-[16px] font-semibold text-[#0B1F3A]">
+            {currentNavItems.map((item) => {
+              const isActive = activeSection === item.href;
+
+              return (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    scrollToSection(item.href);
+                  }}
+                  className={getMobileItemClassName(isActive)}
+                >
+                  {item.label}
+                </a>
+              );
+            })}
+          </div>
+        </div>
+      )}
     </nav>
   );
 };

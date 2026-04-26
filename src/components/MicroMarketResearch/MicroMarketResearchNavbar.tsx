@@ -16,6 +16,13 @@ const navItems = [
   { label: "Download Approach Note", href: "#cta" },
 ];
 
+const getMobileItemClassName = (isActive: boolean) =>
+  `relative overflow-hidden rounded-xl border px-4 py-3 pl-5 text-left transition-all duration-200 ${
+    isActive
+      ? "border-[#63d3c5]/50 bg-[#63d3c5]/12 text-[#0B1F3A] shadow-[inset_3px_0_0_0_#63d3c5]"
+      : "border-transparent text-[#0B1F3A] hover:border-slate-200 hover:bg-slate-100"
+  }`;
+
 const MicroMarketResearchNavbar = () => {
   const { pathname } = useLocation();
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -106,14 +113,14 @@ const MicroMarketResearchNavbar = () => {
           <button
             type="button"
             onClick={() => setMobileOpen((prev) => !prev)}
-            className={`relative z-20 -mr-0.5 flex h-11 w-11 items-center justify-center lg:hidden ${
+            className={`relative z-20 -mr-1 flex h-11 w-11 items-center justify-center lg:hidden ${
               mobileOpen || showLightNavbar ? "text-[#0B1F3A]" : "text-white"
             }`}
           >
             <MenuIcon size={25} />
           </button>
 
-          <Link to="/" className={`relative z-10 -ml-1 flex items-center ${logoShellClass}`}>
+          <Link to="/" className={`relative z-10 -ml-2 flex items-center ${logoShellClass}`}>
             <img src={darkLogo} className={darkLogoClass} />
             <img src={lightLogo} className={lightLogoClass} />
           </Link>
@@ -159,13 +166,20 @@ const MicroMarketResearchNavbar = () => {
         <div className="border-t border-slate-200 bg-white px-4 py-4 shadow-md lg:hidden">
           <nav className="flex flex-col gap-2 text-[16px] font-semibold text-[#0B1F3A]">
             {navItems.map((item) => {
+              const isActive =
+                item.href === "/technology-research"
+                  ? pathname === "/technology-research"
+                  : item.href === "/micro-market-research"
+                    ? pathname === "/micro-market-research"
+                    : isCtaVisible;
+
               if (item.href.startsWith("#")) {
                 return (
                   <a
                     key={item.href}
                     href={item.href}
                     onClick={() => setMobileOpen(false)}
-                    className="rounded-md px-3 py-3 hover:bg-slate-100"
+                    className={getMobileItemClassName(isActive)}
                   >
                     {item.label}
                   </a>
@@ -177,7 +191,7 @@ const MicroMarketResearchNavbar = () => {
                   key={item.href}
                   to={item.href}
                   onClick={() => setMobileOpen(false)}
-                  className="rounded-md px-3 py-3 hover:bg-slate-100"
+                  className={getMobileItemClassName(isActive)}
                 >
                   {item.label}
                 </Link>

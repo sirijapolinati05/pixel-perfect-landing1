@@ -16,6 +16,13 @@ const navItems = [
   { label: "Download Approach Note", href: "#cta" },
 ];
 
+const getMobileItemClassName = (isActive: boolean) =>
+  `relative overflow-hidden rounded-xl border px-4 py-3 pl-5 text-left transition-all duration-200 ${
+    isActive
+      ? "border-[#63d3c5]/50 bg-[#63d3c5]/12 text-[#0B1F3A] shadow-[inset_3px_0_0_0_#63d3c5]"
+      : "border-transparent text-[#0B1F3A] hover:border-slate-200 hover:bg-slate-100"
+  }`;
+
 const TechnologyResearchNavbar = () => {
   const { pathname } = useLocation();
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -103,14 +110,14 @@ const TechnologyResearchNavbar = () => {
             aria-label={mobileOpen ? "Close navigation" : "Open navigation"}
             aria-expanded={mobileOpen}
             aria-controls="technology-research-mobile-nav"
-            className={`relative z-20 -mr-0.5 flex h-11 w-11 shrink-0 items-center justify-center lg:hidden ${
-              showLightNavbar ? "text-[#0B1F3A]" : "text-white"
+            className={`relative z-20 -mr-1 flex h-11 w-11 shrink-0 items-center justify-center lg:hidden ${
+              mobileHeaderActive ? "text-[#0B1F3A]" : "text-white"
             }`}
           >
             <MenuIcon size={25} />
           </button>
 
-          <Link to="/" className={`relative z-10 -ml-1 flex items-center p-0 ${techLogoShellClass}`}>
+          <Link to="/" className={`relative z-10 -ml-2 flex items-center p-0 ${techLogoShellClass}`}>
             <img src={darkLogo} alt="Research Fabric" className={darkLogoClass} />
             <img src={lightLogo} alt="Research Fabric" className={lightLogoClass} />
           </Link>
@@ -167,7 +174,7 @@ const TechnologyResearchNavbar = () => {
                     key={item.href}
                     href={item.href}
                     onClick={() => setMobileOpen(false)}
-                    className="rounded-md px-3 py-3 transition-all duration-200 hover:bg-slate-100 hover:pl-4"
+                    className={getMobileItemClassName(isActive)}
                   >
                     {item.label}
                   </a>
@@ -179,9 +186,7 @@ const TechnologyResearchNavbar = () => {
                   key={item.href}
                   to={item.href}
                   onClick={() => setMobileOpen(false)}
-                  className={`rounded-md px-3 py-3 transition-all duration-200 hover:bg-slate-100 hover:pl-4 ${
-                    isActive ? "bg-slate-100 font-semibold" : ""
-                  }`}
+                  className={getMobileItemClassName(isActive)}
                 >
                   {item.label}
                 </Link>

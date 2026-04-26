@@ -1,12 +1,14 @@
 type IconProps = {
   size?: number;
   className?: string;
+  color?: string;
 };
 
-export const MenuIcon = ({ size = 24, className }: IconProps) => (
+export const MenuIcon = ({ size = 24, className, color }: IconProps) => (
   <svg
     aria-hidden="true"
     className={className}
+    color={color}
     fill="none"
     height={size}
     viewBox="0 0 24 24"
