@@ -113,7 +113,7 @@ const HeroSection = () => {
 
         {/* ================= GRID ================= */}
         {/* ✅ SLIGHTLY MOVED DOWN */}
-        <div className="mt-4 sm:mt-6 md:mt-8 lg:mt-28 xl:mt-36 2xl:mt-[420px]">
+        <div className="mt-4 sm:mt-6 md:mt-8 lg:mt-44 xl:mt-60 2xl:mt-[600px]">
 
           <div className="grid grid-cols-2 text-center lg:grid-cols-4 auto-rows-fr">
             {[
