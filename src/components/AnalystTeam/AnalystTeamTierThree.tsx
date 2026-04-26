@@ -18,152 +18,100 @@ const researchAnalysts = [
   { name: "Shatakshi Singh", image: shatakshiImg },
 ];
 
-const cardClassName =
-  "group flex w-full max-w-full sm:max-w-[184px] " +
-  "[@media_(width:912px)]:max-w-[260px] " +
-  "[@media_(width:1024px)]:max-w-[220px] " +
-  "[@media_(min-width:1440px)_and_(max-width:2200px)]:max-w-[240px] " +
-  "[@media_(min-width:2560px)]:max-w-[480px] " +
-  "min-h-[300px] " +
-  "[@media_(min-width:1440px)_and_(max-width:2200px)]:min-h-[320px] " +
-  "[@media_(min-width:2560px)]:min-h-[600px] " +
-  "flex-col rounded-xl border border-[#dfe4ea] bg-white px-4 pb-4 pt-4 text-center shadow-[0_4px_10px_rgba(8,18,59,0.15)] transition-all duration-300 ease-out hover:-translate-y-2 hover:border-navy hover:bg-navy hover:shadow-[0_20px_34px_rgba(8,18,59,0.24)]";
-
 const TierThreeCard = ({ name, image }) => (
-  <article className={cardClassName}>
-    
-    {/* IMAGE */}
+  <article className="
+    group flex flex-col w-full
+    max-w-[240px] 2xl:max-w-[520px]
+    min-h-[320px] 2xl:min-h-[600px]
+    rounded-xl border border-[#dfe4ea] bg-white
+    px-4 pt-4 pb-4 text-center
+    shadow-[0_4px_10px_rgba(8,18,59,0.15)]
+    transition-all duration-300
+    hover:-translate-y-2 hover:border-navy hover:bg-navy hover:shadow-[0_20px_34px_rgba(8,18,59,0.24)]
+  ">
     <div
       className="
-        mx-auto mb-6 rounded-full overflow-hidden flex items-center justify-center
-        analyst-team-circle h-28 w-28   /* ✅ increased for 320px */
-        min-[425px]:h-28 min-[425px]:w-28
-        [@media_(min-width:1440px)_and_(max-width:2200px)]:h-36
-        [@media_(min-width:1440px)_and_(max-width:2200px)]:w-36
-        [@media_(min-width:2560px)]:h-60
-        [@media_(min-width:2560px)]:w-60
-      "
+      mx-auto mb-6 rounded-full overflow-hidden flex items-center justify-center
+      h-28 w-28 md:h-32 md:w-32 xl:h-36 xl:w-36
+      2xl:h-72 2xl:w-72
+    "
       style={{
         backgroundImage: `url(${circleBg})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
     >
-      <img
-        src={image}
-        alt={name}
-        className="h-full w-full object-cover rounded-full"
-      />
+      <img src={image} alt={name} className="h-full w-full object-cover rounded-full" />
     </div>
 
-    {/* NAME */}
-    <h3
-      className="
-        analyst-tier-three-name mt-4 
-        text-[18px]
-        min-[425px]:text-[20px]
-        sm:text-[20px]
-        text-[#17204c] group-hover:text-white whitespace-nowrap
-      "
-    >
+    <h3 className="mt-2 text-[18px] 2xl:text-[16px] text-[#17204c] group-hover:text-white">
       {name}
     </h3>
 
     <div className="mx-auto mt-auto h-px w-full bg-[#c8ccd5] group-hover:bg-white/35" />
 
-    {/* ICONS */}
-    <div className="mt-6 flex items-center justify-center gap-6
-      [@media_(min-width:2560px)]:gap-12">
-
-      <img
-        src={linkedInLogo}
-        className="
-          h-8 w-8   /* ✅ increased */
-          min-[425px]:h-9 min-[425px]:w-9
-          [@media_(min-width:1440px)_and_(max-width:2200px)]:h-10
-          [@media_(min-width:1440px)_and_(max-width:2200px)]:w-10
-          [@media_(min-width:2560px)]:h-20
-          [@media_(min-width:2560px)]:w-20
-        "
-      />
-
-      <img
-        src={gmailLogo}
-        className="
-          h-8 w-8   /* ✅ increased */
-          min-[425px]:h-9 min-[425px]:w-9
-          [@media_(min-width:1440px)_and_(max-width:2200px)]:h-10
-          [@media_(min-width:1440px)_and_(max-width:2200px)]:w-10
-          [@media_(min-width:2560px)]:h-20
-          [@media_(min-width:2560px)]:w-20
-        "
-      />
+    <div className="mt-5 flex items-center justify-center gap-6">
+      <img src={linkedInLogo} className="h-8 w-8 2xl:h-20 2xl:w-20" />
+      <img src={gmailLogo} className="h-8 w-8 2xl:h-20 2xl:w-20" />
     </div>
   </article>
 );
 
 const AnalystTeamTierThree = () => {
   return (
-    <section id="research-team" className="relative overflow-hidden bg-[#f8f7f3] py-10 sm:py-12 md:py-14 lg:py-16 xl:py-20 2xl:py-24 text-[#111948]">
-      <div className="page-shell relative z-10">
-        <div className="max-w-[760px]">
-          <p className="text-[18px] md:text-[20px] font-semibold text-[#20254d]">
-            <span className="inline-flex items-center gap-4">
-              <span className="h-px w-8 sm:w-10 md:w-[48px] bg-[#20254d]" />
+    <section className="bg-[#f8f7f3] py-12 text-[#111948]">
+      <div className="page-shell px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16">
+
+        {/* 🔥 SUPPORT LEADS LABEL (TOP) */}
+        <div className="mb-4">
+          <p className="text-[16px] sm:text-[18px] md:text-[20px] font-semibold text-[#111948]">
+            <span className="inline-flex items-center gap-3 sm:gap-4">
+              <span className="h-px w-6 sm:w-8 md:w-[44px] bg-[#111948]" />
               Support Leads
-              <span className="h-px w-8 sm:w-10 md:w-[48px] bg-[#20254d]" />
+              <span className="h-px w-6 sm:w-8 md:w-[44px] bg-[#111948]" />
             </span>
           </p>
-
-          <h2 className="mt-4 sm:mt-5 text-[32px] sm:text-[40px] md:text-[48px] lg:text-[50px] text-[#17204c]
-            [@media_(min-width:2560px)]:text-[60px]">
-            Research Specialists &amp; Analysts
-          </h2>
         </div>
 
-        <div className="mt-8 sm:mt-10 md:mt-14 grid gap-y-8 lg:grid-cols-[150px_minmax(0,1fr)] lg:items-center lg:gap-x-8 xl:grid-cols-[150px_minmax(0,1fr)] xl:gap-x-8 [@media_(min-width:2560px)]:gap-y-16 [@media_(min-width:2560px)]:grid-cols-[280px_minmax(0,1fr)] [@media_(min-width:2560px)]:gap-x-24">
+        {/* 🔥 MAIN HEADING */}
+        <h2 className="
+          text-[28px]
+          sm:text-[34px]
+          md:text-[44px]
+          lg:text-[50px]
+          leading-tight
+          mb-10
+        ">
+          Research Specialists & Analysts
+        </h2>
 
-          <div className="flex items-center lg:self-center">
-            <p className="text-[18px] md:text-[20px] text-[#101535]">
-              Research Specialists
-            </p>
+        {/* SPECIALISTS */}
+        <div className="grid gap-10 lg:grid-cols-[160px_1fr]">
+          <div className="flex items-center">
+            <p className="text-lg">Research Specialists</p>
           </div>
 
-          <div className="grid gap-12
-            md:grid-cols-[repeat(2,184px)]
-            [@media_(width:912px)]:grid-cols-[repeat(2,260px)]
-            [@media_(width:912px)]:gap-8
-            [@media_(width:1024px)]:grid-cols-[repeat(2,220px)]
-            [@media_(min-width:1440px)_and_(max-width:2200px)]:grid-cols-[repeat(2,240px)]
-            [@media_(min-width:2560px)]:grid-cols-[repeat(2,480px)]
-            ">
-
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 justify-items-center lg:justify-items-start">
             {researchSpecialists.map((member) => (
               <TierThreeCard key={member.name} {...member} />
             ))}
+            <div className="hidden md:block" />
+          </div>
+        </div>
+
+        {/* ANALYSTS */}
+        <div className="mt-12 grid gap-10 lg:grid-cols-[160px_1fr]">
+          <div className="flex items-center">
+            <p className="text-lg">Research Analysts</p>
           </div>
 
-          <div className="flex items-center lg:self-center">
-            <p className="text-[18px] md:text-[20px] text-[#101535]">
-              Research Analysts
-            </p>
-          </div>
-
-          <div className="grid gap-12
-            md:grid-cols-[repeat(3,184px)]
-            [@media_(width:912px)]:grid-cols-[repeat(3,260px)]
-            [@media_(width:912px)]:gap-8
-            [@media_(width:1024px)]:grid-cols-[repeat(3,220px)]
-            [@media_(min-width:1440px)_and_(max-width:2200px)]:grid-cols-[repeat(3,240px)]
-            [@media_(min-width:2560px)]:grid-cols-[repeat(3,480px)]
-            ">
-
-            {researchAnalysts.map((member, index) => (
-              <TierThreeCard key={`${member.name}-${index}`} {...member} />
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 justify-items-center lg:justify-items-start">
+            {researchAnalysts.map((member) => (
+              <TierThreeCard key={member.name} {...member} />
             ))}
           </div>
-
         </div>
+
       </div>
     </section>
   );

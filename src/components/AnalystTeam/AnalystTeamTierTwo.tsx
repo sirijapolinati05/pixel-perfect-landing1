@@ -21,31 +21,27 @@ const featuredAnalyst = {
   image: johnBurnellImg,
 };
 
-const cardClassName =
-  "group flex w-full max-w-full sm:max-w-[184px] " +
-  "[@media_(width:912px)]:max-w-[260px] " +
-  "[@media_(width:1024px)]:max-w-[220px] " +
-  "[@media_(min-width:1440px)_and_(max-width:2200px)]:max-w-[240px] " +
-  "min-h-[300px] " +
-  "[@media_(min-width:1440px)_and_(max-width:2200px)]:min-h-[320px] " +
-  "[@media_(min-width:2560px)]:max-w-[460px] " +
-  "[@media_(min-width:2560px)]:min-h-[600px] " +
-  "flex-col rounded-xl border border-[#dfe4ea] bg-white px-4 pb-4 pt-4 text-center shadow-[0_4px_10px_rgba(8,18,59,0.15)] transition-all duration-300 hover:-translate-y-2 hover:border-navy hover:bg-navy hover:shadow-[0_20px_34px_rgba(8,18,59,0.24)]";
-
 const TierTwoCard = ({ name, subtitle, image }) => (
-  <article className={cardClassName}>
-    
-    {/* IMAGE */}
+  <article className="
+    group flex flex-col
+    w-full max-w-[240px] sm:max-w-[220px] md:max-w-[240px] lg:max-w-[220px] xl:max-w-[240px]
+    2xl:max-w-[520px]
+
+    min-h-[300px] sm:min-h-[300px] md:min-h-[320px] lg:min-h-[320px] xl:min-h-[340px]
+    2xl:min-h-[600px]
+
+    rounded-xl border border-[#dfe4ea] bg-white
+    px-4 pt-4 pb-4 text-center
+    shadow-[0_4px_10px_rgba(8,18,59,0.15)]
+    transition-all duration-300
+    hover:-translate-y-2 hover:border-navy hover:bg-navy hover:shadow-[0_20px_34px_rgba(8,18,59,0.24)]
+  ">
     <div
       className="
-      mx-auto mb-4 rounded-full overflow-hidden flex items-center justify-center
-      analyst-team-circle h-28 w-28   /* ✅ increased for 320px */
-      min-[425px]:h-28 min-[425px]:w-28
-      [@media_(min-width:1440px)_and_(max-width:2200px)]:h-36
-      [@media_(min-width:1440px)_and_(max-width:2200px)]:w-36
-      [@media_(min-width:2560px)]:h-64
-      [@media_(min-width:2560px)]:w-64
-      "
+      mx-auto mb-6 rounded-full overflow-hidden flex items-center justify-center
+      h-24 w-24 sm:h-28 sm:w-28 md:h-32 md:w-32 lg:h-28 lg:w-28 xl:h-32 xl:w-32
+      2xl:h-72 2xl:w-72
+    "
       style={{
         backgroundImage: `url(${circleBg})`,
         backgroundSize: "cover",
@@ -55,132 +51,119 @@ const TierTwoCard = ({ name, subtitle, image }) => (
       <img src={image} alt={name} className="h-full w-full object-cover rounded-full" />
     </div>
 
-    {/* NAME */}
     <h3 className="
-      analyst-tier-two-name mt-4 whitespace-nowrap
-      text-[18px]   /* ✅ increased */
-      min-[425px]:text-[20px]
-      sm:text-[18px]
-      lg:text-[19px]
+      mt-2 whitespace-nowrap
+      text-[16px] sm:text-[18px] md:text-[18px] lg:text-[18px] xl:text-[19px]
+      2xl:!text-[13px]
       text-[#17204c]
       group-hover:text-white
     ">
       {name}
     </h3>
 
-    {/* SUBTITLE */}
     <p className="
-      mt-1
-      text-[15px]   /* ✅ increased */
-      min-[425px]:text-[17px]
-      sm:text-[16px]
+      mt-2 whitespace-nowrap
+      text-[14px] sm:text-[15px] md:text-[15px] lg:text-[15px] xl:text-[16px]
       text-[#1E4E8C]
       group-hover:text-white/85
-      whitespace-nowrap
     ">
       {subtitle}
     </p>
 
     <div className="mx-auto mt-auto h-px w-full bg-[#c8ccd5] group-hover:bg-white/35" />
 
-    {/* ICONS */}
-    <div className="mt-4 flex items-center justify-center gap-6
-      [@media_(min-width:2560px)]:gap-12">
-
-      <img src={linkedInLogo}
-        className="
-        h-8 w-8   /* ✅ increased */
-        min-[425px]:h-9 min-[425px]:w-9
-        [@media_(min-width:1440px)_and_(max-width:2200px)]:h-10
-        [@media_(min-width:1440px)_and_(max-width:2200px)]:w-10
-        [@media_(min-width:2560px)]:h-20
-        [@media_(min-width:2560px)]:w-20"
-      />
-
-      <img src={gmailLogo}
-        className="
-        h-8 w-8   /* ✅ increased */
-        min-[425px]:h-9 min-[425px]:w-9
-        [@media_(min-width:1440px)_and_(max-width:2200px)]:h-10
-        [@media_(min-width:1440px)_and_(max-width:2200px)]:w-10
-        [@media_(min-width:2560px)]:h-20
-        [@media_(min-width:2560px)]:w-20"
-      />
+    <div className="mt-6 flex items-center justify-center gap-6">
+      <img src={linkedInLogo} className="h-7 w-7 sm:h-8 sm:w-8 md:h-9 md:w-9 xl:h-10 xl:w-10 2xl:h-20 2xl:w-20" />
+      <img src={gmailLogo} className="h-7 w-7 sm:h-8 sm:w-8 md:h-9 md:w-9 xl:h-10 xl:w-10 2xl:h-20 2xl:w-20" />
     </div>
-
   </article>
 );
 
 const AnalystTeamTierTwo = () => {
   return (
-    <section id="analysts" className="relative overflow-hidden bg-[#33a9da] py-10 sm:py-12 md:py-14 lg:py-16 xl:py-20 2xl:py-24 text-[#111948]">
+    <section className="bg-[#33a9da] py-10 sm:py-12 md:py-14 lg:py-16 xl:py-20 2xl:py-24 text-[#111948]">
+      <div className="page-shell px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16">
 
-      <div className="page-shell relative z-10">
-
+        {/* 🔥 HEADER */}
         <div className="max-w-[660px]">
-          <p className="text-[18px] md:text-[20px] font-semibold text-[#111948]">
-            <span className="inline-flex items-center gap-4">
-              <span className="h-px w-8 sm:w-10 md:w-[44px] bg-[#111948]" />
+          
+          {/* ✅ UPDATED LABEL WITH LINES */}
+          <p className="text-[16px] sm:text-[18px] md:text-[20px] font-semibold text-[#111948]">
+            <span className="inline-flex items-center gap-3 sm:gap-4">
+              <span className="h-px w-6 sm:w-8 md:w-[44px] bg-[#111948]" />
               Enabling Leaders
-              <span className="h-px w-8 sm:w-10 md:w-[44px] bg-[#111948]" />
+              <span className="h-px w-6 sm:w-8 md:w-[44px] bg-[#111948]" />
             </span>
           </p>
 
-          <h2 className="mt-4 sm:mt-5 text-[32px] sm:text-[40px] md:text-[48px] lg:text-[50px]">
-            Lead &amp; Business Analysts
+          {/* ✅ MATCHED HEADING */}
+          <h2 className="
+            mt-4
+            text-[28px]
+            sm:text-[34px]
+            md:text-[44px]
+            lg:text-[50px]
+            leading-tight
+          ">
+            Lead & Business Analysts
           </h2>
         </div>
 
-        <div className="mt-8 sm:mt-10 md:mt-14 grid gap-y-8 lg:grid-cols-1 lg:gap-y-10">
+        <div className="mt-10 grid gap-y-10">
 
-          <div className="grid gap-y-6 sm:gap-y-8 lg:grid-cols-[150px_minmax(0,1fr)] lg:gap-x-8 [@media_(min-width:2560px)]:gap-y-16 [@media_(min-width:2560px)]:grid-cols-[280px_minmax(0,1fr)] [@media_(min-width:2560px)]:gap-x-24">
-
+          {/* LEAD ANALYSTS */}
+          <div className="grid gap-6 sm:gap-8 lg:grid-cols-[160px_1fr] lg:gap-8">
             <div className="flex items-center">
-              <p className="text-[18px] md:text-[20px] text-[#101535]">Lead Analysts</p>
+              <p className="text-[16px] sm:text-[18px] md:text-[20px]">
+                Lead Analysts
+              </p>
             </div>
 
-            <div className="grid gap-4 sm:gap-6 md:gap-8 sm:grid-cols-2 md:grid-cols-[repeat(3,184px)]
-              [@media_(width:912px)]:grid-cols-[repeat(3,260px)]
-              [@media_(width:912px)]:gap-3
-              [@media_(width:1024px)]:grid-cols-[repeat(3,220px)]
-              [@media_(min-width:1440px)_and_(max-width:2200px)]:grid-cols-[repeat(3,240px)]
-              [@media_(min-width:2560px)]:grid-cols-[repeat(3,460px)]
-              [@media_(min-width:2560px)]:gap-[100px]">
-
+            <div className="
+              grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3
+              gap-6 md:gap-8
+              justify-items-center lg:justify-items-start
+            ">
               {leadAnalysts.map((member) => (
                 <TierTwoCard key={member.name} {...member} />
               ))}
             </div>
+          </div>
 
+          {/* BUSINESS ANALYST */}
+          <div className="grid gap-6 sm:gap-8 lg:grid-cols-[160px_1fr] lg:gap-8">
             <div className="flex items-center">
-              <p className="text-[18px] md:text-[20px] text-[#101535]">Business Analyst</p>
+              <p className="text-[16px] sm:text-[18px] md:text-[20px]">
+                Business Analyst
+              </p>
             </div>
 
-            <div className="grid max-w-full sm:max-w-[184px]
-              [@media_(width:912px)]:max-w-[260px]
-              [@media_(width:1024px)]:max-w-[220px]
-              [@media_(min-width:1440px)_and_(max-width:2200px)]:max-w-[240px]
-              [@media_(min-width:2560px)]:max-w-[460px]">
-
+            <div className="
+              grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3
+              gap-6 md:gap-8
+              justify-items-center lg:justify-items-start
+            ">
               <TierTwoCard
                 name="Saurav Patra"
                 subtitle="Micro-Markets"
                 image={sauravImg}
               />
             </div>
+          </div>
 
-            <div className="mt-8 flex items-center">
-              <p className="text-[16px] sm:text-[18px] text-[#101535]">
+          {/* FEATURED */}
+          <div className="grid gap-6 sm:gap-8 lg:grid-cols-[160px_1fr] lg:gap-8">
+            <div className="flex items-center">
+              <p className="text-[16px] sm:text-[18px]">
                 {featuredAnalyst.subtitle}
               </p>
             </div>
 
-            <div className="grid max-w-full sm:max-w-[184px]
-              [@media_(width:912px)]:max-w-[260px]
-              [@media_(width:1024px)]:max-w-[220px]
-              [@media_(min-width:1440px)_and_(max-width:2200px)]:max-w-[240px]
-              [@media_(min-width:2560px)]:max-w-[460px]">
-
+            <div className="
+              grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3
+              gap-6 md:gap-8
+              justify-items-center lg:justify-items-start
+            ">
               <TierTwoCard
                 name={featuredAnalyst.cardName}
                 subtitle={featuredAnalyst.cardSubtitle}
@@ -190,7 +173,6 @@ const AnalystTeamTierTwo = () => {
           </div>
 
         </div>
-
       </div>
     </section>
   );

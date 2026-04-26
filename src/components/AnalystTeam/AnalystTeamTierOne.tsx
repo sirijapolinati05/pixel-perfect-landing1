@@ -29,73 +29,86 @@ const partnerCards = [
   },
 ];
 
-const cardClassName =
-  "group flex w-full max-w-full sm:max-w-[184px] lg:max-w-[220px] " +
-  "[@media_(width:768px)]:max-w-[220px] " +
-  "[@media_(width:912px)]:max-w-[280px] " +
-  "[@media_(min-width:1440px)_and_(max-width:2200px)]:max-w-[240px] " +
-  "[@media_(min-width:2560px)]:max-w-[460px] " +
-  "min-h-[300px] " +
-  "[@media_(min-width:1440px)_and_(max-width:2200px)]:min-h-[320px] " +
-  "[@media_(min-width:2560px)]:min-h-[600px] " +
-  "flex-col rounded-xl border border-[#dfe4ea] bg-white px-4 pb-4 pt-4 text-center " +
-  "shadow-[0_4px_10px_rgba(8,18,59,0.15)] transition-all duration-300 ease-out " +
-  "hover:-translate-y-2 hover:border-navy hover:bg-navy hover:shadow-[0_20px_34px_rgba(8,18,59,0.24)] " +
-  "active:-translate-y-2 active:border-navy active:bg-navy active:shadow-[0_20px_34px_rgba(8,18,59,0.24)]";
-
 const AnalystTeamTierOne = () => {
   return (
-    <section id="leadership" className="relative overflow-hidden bg-[#f8f7f3] py-10 sm:py-12 md:py-14 lg:py-16 xl:py-20 2xl:py-24 text-[#141948]">
-      
-      <div className="page-shell relative z-10">
+    <section className="bg-[#f8f7f3] py-16 xl:py-20 text-[#141948]">
+      <div className="px-6">
+
         {/* HEADER */}
         <div className="max-w-[760px]">
-          <p className="text-[18px] md:text-[20px] font-bold leading-none tracking-[0.01em] text-[#20254d]">
-            <span className="inline-flex items-center gap-4">
-              <span className="h-px w-8 sm:w-10 md:w-[48px] bg-[#20254d]" />
-              Core Leadership Team
-              <span className="h-px w-8 sm:w-10 md:w-[48px] bg-[#20254d]" />
-            </span>
+          <p className="text-[18px] md:text-[20px] font-bold text-[#20254d] flex items-center gap-4">
+            <span className="h-px w-10 bg-[#20254d]" />
+            Core Leadership Team
+            <span className="h-px w-10 bg-[#20254d]" />
           </p>
 
-          <h2 className="mt-4 sm:mt-5 text-[32px] sm:text-[40px] md:text-[48px] lg:text-[50px] leading-[1.02] tracking-[-0.03em] md:whitespace-nowrap">
-            Research Partners &amp; Principal Analysts
+          {/* 🔥 FIXED HEADING */}
+          <h2
+            className="
+            mt-4
+            text-[28px]
+            sm:text-[34px]
+            md:text-[44px]
+            lg:text-[50px]
+
+            leading-tight
+
+            /* 🔥 SINGLE LINE FROM TABLET */
+            md:whitespace-nowrap
+          "
+          >
+            Research Partners & Principal Analysts
           </h2>
         </div>
 
-        {/* CARDS */}
-        <div className="mt-8 sm:mt-10 md:mt-14">
+        {/* GRID */}
+        <div className="mt-14">
           <div
-          className="
-              mx-auto grid justify-items-center gap-10
-              sm:grid-cols-2 sm:gap-12
-              md:grid-cols-3 md:gap-16 md:px-4
-              [@media_(width:768px)]:grid-cols-2
-              [@media_(width:912px)]:grid-cols-2
-              [@media_(width:912px)]:gap-10
-              lg:w-fit lg:grid-cols-[repeat(4,220px)] lg:gap-8 lg:px-0
-              [@media_(min-width:1440px)_and_(max-width:2200px)]:grid-cols-[repeat(4,240px)]
-              [@media_(min-width:2560px)]:grid-cols-[repeat(4,460px)]
-              [@media_(min-width:2560px)]:gap-[100px]
-              [@media_(width:1024px)]:justify-center
-              [@media_(width:1024px)]:gap-6
-            "
+            className="
+            mx-auto
+            max-w-[1100px]
+            md:max-w-[1300px]
+            xl:max-w-[1500px]
+            2xl:max-w-[2400px]
+
+            grid
+            grid-cols-1
+            sm:grid-cols-2
+            lg:grid-cols-4
+
+            gap-10
+            md:gap-14
+            xl:gap-20
+            2xl:gap-40
+          "
           >
             {partnerCards.map((member) => (
-              <article key={member.name} className={cardClassName}>
-                
+              <article
+                key={member.name}
+                className="
+                flex flex-col items-center text-center
+                bg-white border rounded-xl shadow-md
+
+                px-6 py-6
+
+                min-h-[300px]
+                md:min-h-[320px]
+                xl:min-h-[360px]
+                2xl:min-h-[750px]
+
+                2xl:px-12 2xl:py-12
+              "
+              >
                 {/* IMAGE */}
                 <div
                   className="
-                    analyst-team-circle
-                    mx-auto mb-6 rounded-full overflow-hidden
-                    h-28 w-28
-                    min-[425px]:h-28 min-[425px]:w-28
-                    [@media_(min-width:1440px)_and_(max-width:2200px)]:h-36
-                    [@media_(min-width:1440px)_and_(max-width:2200px)]:w-36
-                    [@media_(min-width:2560px)]:h-64
-                    [@media_(min-width:2560px)]:w-64
-                  "
+                  rounded-full overflow-hidden mb-6
+
+                  w-24 h-24
+                  md:w-28 md:h-28
+                  xl:w-32 xl:h-32
+                  2xl:w-72 2xl:h-72
+                "
                   style={{
                     backgroundImage: `url(${circleBg})`,
                     backgroundSize: "cover",
@@ -105,22 +118,23 @@ const AnalystTeamTierOne = () => {
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="h-full w-full rounded-full object-cover"
+                    className="w-full h-full object-cover"
                   />
                 </div>
 
                 {/* NAME */}
                 <h3
                   className="
-                    analyst-tier-one-name mt-4 whitespace-nowrap
-                    text-[18px]
-                    min-[425px]:text-[20px]
-                    sm:text-[18px]
-                    lg:text-[19px]
-                    [@media_(width:1024px)]:text-[16px]
-                    text-[#17204c]
-                    group-hover:text-white
-                  "
+                  text-[16px]
+                  md:text-[18px]
+                  xl:text-[19px]
+                  2xl:!text-[13px]
+
+                  font-medium
+                  text-[#17204c]
+                  leading-snug
+                  break-words
+                "
                 >
                   {member.name}
                 </h3>
@@ -128,47 +142,31 @@ const AnalystTeamTierOne = () => {
                 {/* SUBTITLE */}
                 <p
                   className="
-                    mt-1
-                    text-[15px]
-                    min-[425px]:text-[17px]
-                    sm:text-[16px]
-                    lg:text-[16px]
-                    text-[#1E4E8C]
-                    group-hover:text-white/85
-                  "
+                  mt-4
+                  text-[14px]
+                  md:text-[15px]
+                  xl:text-[15px]
+                  2xl:text-[15px]
+
+                  text-[#1E4E8C]
+                  leading-snug
+                "
                 >
                   {member.subtitle}
                 </p>
 
                 {/* DIVIDER */}
-                <div className="mx-auto mt-auto h-px w-full bg-[#c8ccd5] group-hover:bg-white/35" />
+                <div className="mt-auto w-full h-px bg-[#c8ccd5]" />
 
                 {/* ICONS */}
-                <div className="mt-6 flex items-center justify-center gap-6">
+                <div className="mt-8 flex gap-8">
                   <img
                     src={linkedInLogo}
-                    alt="LinkedIn"
-                    className="
-                      h-8 w-8
-                      min-[425px]:h-9 min-[425px]:w-9
-                      [@media_(min-width:1440px)_and_(max-width:2200px)]:h-10
-                      [@media_(min-width:1440px)_and_(max-width:2200px)]:w-10
-                      [@media_(min-width:2560px)]:h-20
-                      [@media_(min-width:2560px)]:w-20
-                    "
+                    className="h-8 w-8 xl:h-9 xl:w-9 2xl:h-20 2xl:w-20"
                   />
-
                   <img
                     src={gmailLogo}
-                    alt="Gmail"
-                    className="
-                      h-8 w-8
-                      min-[425px]:h-9 min-[425px]:w-9
-                      [@media_(min-width:1440px)_and_(max-width:2200px)]:h-10
-                      [@media_(min-width:1440px)_and_(max-width:2200px)]:w-10
-                      [@media_(min-width:2560px)]:h-20
-                      [@media_(min-width:2560px)]:w-20
-                    "
+                    className="h-8 w-8 xl:h-9 xl:w-9 2xl:h-20 2xl:w-20"
                   />
                 </div>
 

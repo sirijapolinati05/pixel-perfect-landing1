@@ -37,74 +37,71 @@ const MicroMarketResearchExpertise = () => {
   return (
     <section
       id="expertise"
-      className="relative overflow-hidden bg-[#101341] py-10 text-white sm:py-12 md:py-14 lg:py-8 xl:py-10 2xl:py-12"
+      className="
+      relative overflow-hidden bg-[#101341]
+      py-10 sm:py-12 md:py-14 lg:py-10 xl:py-12 2xl:py-14
+      text-white"
     >
-      {/* BACKGROUND */}
+      {/* BACKGROUND (unchanged) */}
       <div className="absolute left-[-56px] top-[-48px] h-[220px] w-[220px] sm:left-[-68px] sm:top-[-58px] sm:h-[270px] sm:w-[270px] md:left-[-80px] md:top-[-70px] md:h-[320px] md:w-[320px] rounded-full border border-white/20" />
       <div className="absolute left-[-44px] top-[-38px] h-[198px] w-[198px] sm:left-[-56px] sm:top-[-48px] sm:h-[244px] sm:w-[244px] md:left-[-64px] md:top-[-56px] md:h-[290px] md:w-[290px] rounded-full border border-white/20" />
       <div className="absolute left-[-32px] top-[-28px] h-[176px] w-[176px] sm:left-[-42px] sm:top-[-36px] sm:h-[218px] sm:w-[218px] md:left-[-48px] md:top-[-42px] md:h-[260px] md:w-[260px] rounded-full border border-white/20" />
       <div className="absolute left-[-22px] top-[-18px] h-[154px] w-[154px] sm:left-[-28px] sm:top-[-24px] sm:h-[190px] sm:w-[190px] md:left-[-32px] md:top-[-28px] md:h-[230px] md:w-[230px] rounded-full border border-white/20" />
       <div className="absolute left-[-10px] top-[-10px] h-[132px] w-[132px] sm:left-[-14px] sm:top-[-12px] sm:h-[164px] sm:w-[164px] md:left-[-16px] md:top-[-14px] md:h-[200px] md:w-[200px] rounded-full border border-white/20" />
       <div className="absolute left-0 top-0 h-[110px] w-[110px] sm:h-[140px] sm:w-[140px] md:h-[170px] md:w-[170px] rounded-full border border-white/20" />
+
       <div className="absolute bottom-[-36px] right-[-36px] h-[120px] w-[120px] sm:bottom-[-48px] sm:right-[-48px] sm:h-[156px] sm:w-[156px] md:bottom-[-60px] md:right-[-60px] md:h-[200px] md:w-[200px] rounded-full border border-white/20" />
       <div className="absolute bottom-[-26px] right-[-26px] h-[100px] w-[100px] sm:bottom-[-34px] sm:right-[-34px] sm:h-[132px] sm:w-[132px] md:bottom-[-44px] md:right-[-44px] md:h-[168px] md:w-[168px] rounded-full border border-white/20" />
       <div className="absolute bottom-[-16px] right-[-16px] h-[80px] w-[80px] sm:bottom-[-22px] sm:right-[-22px] sm:h-[106px] sm:w-[106px] md:bottom-[-28px] md:right-[-28px] md:h-[136px] md:w-[136px] rounded-full border border-white/20" />
 
-      <div className="page-shell relative z-10">
+      {/* ✅ FIXED PADDING */}
+      <div className="page-shell relative z-10 px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16">
+
         <div className="mx-auto max-w-[900px] text-center">
-          <p className="text-[18px] md:text-[20px] font-bold tracking-normal text-[#18afe5]">
-            <span className="inline-flex items-center gap-3">
-              <span className="h-px w-6 sm:w-7 md:w-8 bg-[#18afe5]" />
+          <p className="text-[16px] sm:text-[18px] md:text-[20px] font-bold text-[#18afe5]">
+            <span className="inline-flex items-center gap-2 sm:gap-3">
+              <span className="h-px w-5 sm:w-6 md:w-8 bg-[#18afe5]" />
               Our Expertise
-              <span className="h-px w-6 sm:w-7 md:w-8 bg-[#18afe5]" />
+              <span className="h-px w-5 sm:w-6 md:w-8 bg-[#18afe5]" />
             </span>
           </p>
 
-          <h2 className="mt-4 text-[32px] sm:text-[40px] md:text-[48px] lg:text-[50px] font-bold leading-none tracking-[-0.02em]">
+          <h2 className="mt-4 text-[28px] sm:text-[34px] md:text-[40px] lg:text-[44px] xl:text-[48px] 2xl:text-[52px] font-bold leading-tight tracking-[-0.02em]">
             Micro-Market Competencies
           </h2>
 
-          <p className="mx-auto mt-3 max-w-[820px] text-[16px] sm:text-[18px] md:text-[18px] lg:text-[20px] leading-6 sm:leading-7 text-white/90">
+          <p className="mx-auto mt-3 max-w-[820px] text-[14px] sm:text-[16px] md:text-[17px] lg:text-[18px] xl:text-[20px] leading-6 sm:leading-7 text-white/90">
             Our proprietary framework allows us to dissect complex value chains
             and isolate the specific variables driving growth in emerging
             technology sectors.
           </p>
         </div>
 
-        {/* CARDS */}
-        <div className="mt-7 grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6 md:grid-cols-3 md:gap-8 lg:mt-6">
-          {expertiseItems.map((item) => {
-            return (
-              <article
-                key={item.title}
-                className="w-full max-w-[380px] justify-self-center p-3 rounded-xl cursor-pointer
-                transition-all duration-300 ease-in-out
-                hover:scale-105 hover:-translate-y-1 hover:bg-white/10 hover:shadow-xl sm:p-4 md:p-3"
-              >
-                {/* ICON */}
-                <div className="flex h-10 w-10 sm:h-[44px] sm:w-[44px] items-center justify-center">
-                  <img
-                    src={starImg}
-                    alt=""
-                    aria-hidden="true"
-                    className="h-6 w-6 sm:h-[26px] sm:w-[26px] object-contain 
-                    transition-all duration-300
-                    hover:scale-110 hover:rotate-12"
-                  />
-                </div>
+        {/* CARDS (unchanged) */}
+        <div className="mt-7 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 sm:gap-6 md:gap-7 lg:gap-6 xl:gap-7 2xl:gap-8">
+          {expertiseItems.map((item) => (
+            <article
+              key={item.title}
+              className="w-full max-w-[360px] sm:max-w-[380px] md:max-w-full justify-self-center p-3 sm:p-4 md:p-4 rounded-xl cursor-pointer transition-all duration-300 ease-in-out hover:scale-105 hover:-translate-y-1 hover:bg-white/10 hover:shadow-xl"
+            >
+              <div className="flex h-10 w-10 sm:h-[44px] sm:w-[44px] items-center justify-center">
+                <img
+                  src={starImg}
+                  alt=""
+                  aria-hidden="true"
+                  className="h-6 w-6 sm:h-[26px] sm:w-[26px] object-contain transition-all duration-300 hover:scale-110 hover:rotate-12"
+                />
+              </div>
 
-                {/* TITLE */}
-                <h3 className="mt-3 text-[20px] sm:text-[22px] md:text-[22px] lg:text-[24px] leading-tight tracking-[-0.01em]">
-                  {item.title}
-                </h3>
+              <h3 className="mt-3 text-[18px] sm:text-[20px] md:text-[22px] lg:text-[24px] leading-tight tracking-[-0.01em]">
+                {item.title}
+              </h3>
 
-                {/* DESCRIPTION */}
-                <p className="mt-2 text-[16px] sm:text-[16px] md:text-[18px] leading-6 text-white/90">
-                  {item.description}
-                </p>
-              </article>
-            );
-          })}
+              <p className="mt-2 text-[14px] sm:text-[15px] md:text-[16px] lg:text-[17px] leading-6 text-white/90">
+                {item.description}
+              </p>
+            </article>
+          ))}
         </div>
       </div>
     </section>

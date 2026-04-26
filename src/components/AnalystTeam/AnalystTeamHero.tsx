@@ -2,8 +2,27 @@ import heroImage from "@/assets/hero-3d.jpg";
 
 const AnalystTeamHero = () => {
   return (
-    <section id="home" className="relative overflow-hidden pb-10 text-white md:pb-12 lg:pb-12">
-      <div className="absolute inset-x-0 top-0 h-[360px] overflow-hidden sm:h-[390px] md:h-[460px]">
+    <section
+      id="home"
+      className="
+      relative overflow-hidden text-white
+
+      pb-8 sm:pb-10 md:pb-12 lg:pb-14
+      "
+    >
+      {/* BACKGROUND */}
+      <div
+        className="
+        absolute inset-x-0 top-0 overflow-hidden
+
+        h-[320px]
+        sm:h-[380px]
+        md:h-[460px]
+        lg:h-[520px]
+        xl:h-[560px]
+        2xl:h-[640px]
+        "
+      >
         <img
           src={heroImage}
           alt=""
@@ -15,25 +34,126 @@ const AnalystTeamHero = () => {
         <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(0,8,25,0.86)_0%,rgba(4,14,40,0.64)_50%,rgba(1,8,24,0.88)_100%)]" />
 
         {/* Right glow */}
-        <div className="absolute inset-y-0 right-0 w-[34%] sm:w-[30%] md:w-[26%] bg-[radial-gradient(circle_at_bottom_right,rgba(38,124,255,0.28),transparent_58%)]" />
+        <div
+          className="
+          absolute inset-y-0 right-0
+
+          w-[40%]
+          sm:w-[34%]
+          md:w-[30%]
+          lg:w-[26%]
+          xl:w-[24%]
+          2xl:w-[20%]
+
+          bg-[radial-gradient(circle_at_bottom_right,rgba(38,124,255,0.28),transparent_60%)]
+        "
+        />
       </div>
 
-      {/* Curves */}
-      <div className="absolute bottom-0 right-0 h-[170px] w-[200px] sm:h-[190px] sm:w-[230px] md:h-[230px] md:w-[280px] rounded-tl-[96px] sm:rounded-tl-[116px] md:rounded-tl-[140px] border-l border-t border-[#2A49A5]/60 opacity-80" />
-      <div className="absolute bottom-0 right-0 h-[145px] w-[170px] sm:h-[168px] sm:w-[200px] md:h-[200px] md:w-[240px] rounded-tl-[82px] sm:rounded-tl-[100px] md:rounded-tl-[120px] border-l border-t border-[#2A49A5]/60 opacity-70" />
-      <div className="absolute bottom-0 right-0 h-[122px] w-[144px] sm:h-[145px] sm:w-[170px] md:h-[170px] md:w-[200px] rounded-tl-[70px] sm:rounded-tl-[82px] md:rounded-tl-[96px] border-l border-t border-[#2A49A5]/60 opacity-60" />
+      {/* CURVES */}
+      <div className="
+        absolute bottom-0 right-0
+        h-[140px] w-[160px]
+        sm:h-[180px] sm:w-[210px]
+        md:h-[220px] md:w-[260px]
+        lg:h-[260px] lg:w-[300px]
+        xl:h-[300px] xl:w-[340px]
+        2xl:h-[360px] 2xl:w-[420px]
 
-      {/* Content */}
-      <div className="page-shell relative z-10 flex max-w-[1100px] -translate-y-5 items-start justify-center pt-[98px] text-center sm:-translate-y-6 sm:pt-[112px] md:-translate-y-8 md:pt-[146px]">
-        <div className="max-w-4xl">
-          
-          {/* Heading - Single Line */}
-          <h1 className="text-[32px] sm:text-[38px] md:text-[46px] lg:text-[50px] font-semibold leading-[1.1] text-white md:whitespace-nowrap">
+        rounded-tl-[80px] sm:rounded-tl-[110px] md:rounded-tl-[140px] xl:rounded-tl-[180px]
+
+        border-l border-t border-[#2A49A5]/60 opacity-80
+      " />
+
+      <div className="
+        absolute bottom-0 right-0
+        h-[120px] w-[140px]
+        sm:h-[150px] sm:w-[180px]
+        md:h-[190px] md:w-[220px]
+        lg:h-[220px] lg:w-[260px]
+        xl:h-[250px] xl:w-[300px]
+        2xl:h-[300px] 2xl:w-[360px]
+
+        rounded-tl-[70px] sm:rounded-tl-[100px] md:rounded-tl-[120px] xl:rounded-tl-[150px]
+
+        border-l border-t border-[#2A49A5]/60 opacity-70
+      " />
+
+      <div className="
+        absolute bottom-0 right-0
+        h-[100px] w-[120px]
+        sm:h-[130px] sm:w-[150px]
+        md:h-[160px] md:w-[190px]
+        lg:h-[190px] lg:w-[220px]
+        xl:h-[210px] xl:w-[260px]
+        2xl:h-[260px] 2xl:w-[300px]
+
+        rounded-tl-[60px] sm:rounded-tl-[80px] md:rounded-tl-[100px] xl:rounded-tl-[130px]
+
+        border-l border-t border-[#2A49A5]/60 opacity-60
+      " />
+
+      {/* CONTENT */}
+      <div
+        className="
+        page-shell relative z-10 flex justify-center text-center
+
+        pt-[90px]
+        sm:pt-[110px]
+        md:pt-[140px]
+        lg:pt-[160px]
+        xl:pt-[180px]
+        2xl:pt-[220px]
+
+        -translate-y-4
+        sm:-translate-y-6
+        md:-translate-y-8
+        lg:-translate-y-10
+      "
+      >
+        <div className="max-w-4xl px-4">
+
+          {/* HEADING */}
+          <h1
+            className="
+            font-semibold leading-[1.1]
+
+            text-[26px]
+            sm:text-[34px]
+            md:text-[42px]
+            lg:text-[48px]
+            xl:text-[52px]
+            2xl:text-[60px]
+
+            /* prevent overflow issues */
+            break-words
+          "
+          >
             The Minds Behind the Research
           </h1>
 
-          {/* Description - Smaller */}
-          <p className="mx-auto mt-4 sm:mt-5 md:mt-6 max-w-3xl text-[16px] sm:text-[18px] md:text-[20px] lg:text-[20px] leading-[1.5] text-white/85">
+          {/* DESCRIPTION */}
+          <p
+            className="
+            mx-auto
+
+            mt-3 sm:mt-4 md:mt-5 lg:mt-6
+
+            max-w-[90%]
+            sm:max-w-[85%]
+            md:max-w-3xl
+
+            text-[14px]
+            sm:text-[16px]
+            md:text-[18px]
+            lg:text-[19px]
+            xl:text-[20px]
+            2xl:text-[22px]
+
+            leading-[1.5]
+            text-white/85
+          "
+          >
             A carefully assembled team of practitioners, strategists, and
             researchers delivering thought-shaping intelligence across
             Perpetuating Technologies and Micro-Markets.

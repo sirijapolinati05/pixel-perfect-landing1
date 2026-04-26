@@ -13,122 +13,97 @@ const TechnologyResearchPapers = () => {
   return (
     <section
       id="papers"
-      className="relative overflow-hidden bg-[#f8f7f3] py-10 text-[#121742] sm:py-12 md:py-14 lg:py-8 xl:py-10 2xl:py-12"
+      className="relative overflow-hidden bg-[#f8f7f3] py-10 sm:py-12 md:py-14 lg:py-10 xl:py-12 2xl:py-14 text-[#121742]"
     >
-
-      {/* ✅ ONLY 2560px MODIFICATIONS */}
-      <style>{`
-
-        @media (min-width: 2560px) {
-
-          /* 🔥 Bigger cards */
-          .tr-paper-card {
-            max-width: 480px;
-            padding: 2.5rem;
-          }
-
-          /* 🔥 Bigger title */
-          .tr-paper-card h3 {
-            font-size: 28px;
-            line-height: 1.2;
-          }
-
-          /* 🔥 Bigger description */
-          .tr-paper-card p {
-            font-size: 19px;
-            line-height: 1.8;
-          }
-
-          /* 🔥 Author section */
-          .tr-paper-card .author-img {
-            width: 56px;
-            height: 56px;
-          }
-
-          .tr-paper-card .author-name {
-            font-size: 18px;
-          }
-
-          .tr-paper-card .author-role {
-            font-size: 16px;
-          }
-
-          /* 🔥 Badge */
-          .tr-paper-card .linkedin-badge {
-            font-size: 15px;
-            padding: 0.5rem 1rem;
-          }
-
-          .tr-paper-card .linkedin-badge img {
-            width: 18px;
-            height: 18px;
-          }
-
-          /* 🔥 Grid spacing */
-          .tr-papers-grid {
-            gap: 3rem;
-          }
-
-        }
-
-      `}</style>
-
       <div className="page-shell relative mx-auto">
-        
+
         {/* HEADING */}
-        <h2 className="text-[32px] sm:text-[40px] md:text-[44px] lg:text-[48px] xl:text-[50px] 2xl:text-[50px] leading-none text-[#31a8e4]">
+        <h2 className="text-[28px] sm:text-[34px] md:text-[40px] lg:text-[44px] xl:text-[48px] 2xl:text-[52px] leading-none text-[#31a8e4]">
           Thought Shaping Papers
         </h2>
 
-        <div className="relative mt-4 lg:mt-5">
+        <div className="relative mt-4 sm:mt-5">
           
           {/* TYPOGRAPHIC IMAGE */}
           <img
             src={whiteTypographyImg}
             alt=""
             aria-hidden="true"
-            className="pointer-events-none absolute right-[-22%] sm:right-[-14%] md:right-[-10%] lg:right-[-8%] top-[-18%] sm:top-[-28%] md:top-[-40%] lg:top-[-50%] z-0 w-[180px] sm:w-[260px] md:w-[340px] lg:w-[420px] opacity-20 scale-x-[-1] rotate-90"
+            className="
+            pointer-events-none absolute 
+            right-[-25%] sm:right-[-18%] md:right-[-12%] lg:right-[-10%] xl:right-[-8%]
+            top-[-20%] sm:top-[-30%] md:top-[-40%] lg:top-[-45%]
+            z-0 
+            w-[180px] sm:w-[260px] md:w-[320px] lg:w-[380px] xl:w-[420px] 2xl:w-[480px]
+            opacity-20 scale-x-[-1] rotate-90"
           />
 
           {/* CARDS */}
-          <div className="tr-papers-grid relative z-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 sm:gap-5 md:gap-6 lg:gap-4 xl:gap-6 justify-items-center">
+          <div className="
+            relative z-10 grid grid-cols-1 
+            sm:grid-cols-2 
+            lg:grid-cols-3
+            gap-4 sm:gap-5 md:gap-6 lg:gap-5 xl:gap-6 2xl:gap-8
+            justify-items-center"
+          >
             {papers.map((paper) => (
               <article
                 key={paper.id}
-                className="tr-paper-card relative overflow-hidden 
-                w-full max-w-[380px]
-                bg-[#0c1044] p-4 sm:p-5 md:p-6 lg:p-5 xl:p-6 text-white 
+                className="
+                relative overflow-hidden 
+                w-full max-w-[340px] sm:max-w-[360px] md:max-w-[380px] lg:max-w-[360px] xl:max-w-[380px] 2xl:max-w-[420px]
+                bg-[#0c1044] 
+                p-4 sm:p-5 md:p-6 lg:p-5 xl:p-6 2xl:p-7
+                text-white 
                 shadow-[0_16px_35px_rgba(12,16,68,0.15)]
                 transition-all duration-300 ease-in-out
                 hover:scale-[1.05] hover:shadow-xl"
               >
-                <h3 className="relative max-w-[420px] text-[22px] sm:text-[24px] md:text-[24px] lg:text-[24px] xl:text-[26px] leading-[1.1]">
+                <h3 className="
+                  max-w-[420px] 
+                  text-[20px] sm:text-[22px] md:text-[24px] lg:text-[24px] xl:text-[26px] 2xl:text-[28px]
+                  leading-[1.1]"
+                >
                   {paper.title}
                 </h3>
 
-                <p className="relative mt-3 max-w-[420px] text-[16px] sm:text-[17px] md:text-[18px] lg:text-[18px] xl:text-[18px] leading-6 sm:leading-7 text-white/85">
+                <p className="
+                  mt-3 max-w-[420px] 
+                  text-[14px] sm:text-[16px] md:text-[17px] lg:text-[17px] xl:text-[18px] 2xl:text-[19px]
+                  leading-6 sm:leading-7 text-white/85"
+                >
                   {paper.description}
                 </p>
 
-                <div className="relative mt-4 border-t border-white/25 pt-3">
+                <div className="mt-4 border-t border-white/25 pt-3">
                   <div className="flex items-center gap-2">
                     <img
                       src={authorImage}
                       alt="Ashwin Gaidhani"
-                      className="author-img h-9 w-9 sm:h-10 sm:w-10 rounded-full object-cover"
+                      className="h-8 w-8 sm:h-9 sm:w-9 md:h-10 md:w-10 2xl:h-12 2xl:w-12 rounded-full object-cover"
                     />
                     <div>
-                      <p className="author-name text-[16px] sm:text-[16px] xl:text-[18px] font-semibold leading-none">
+                      <p className="text-[14px] sm:text-[15px] md:text-[16px] 2xl:text-[18px] font-semibold leading-none">
                         Ashwin Gaidhani
                       </p>
-                      <p className="author-role mt-0.5 text-[14px] sm:text-[14px] xl:text-[16px] text-white/75">
+                      <p className="mt-0.5 text-[12px] sm:text-[13px] md:text-[14px] 2xl:text-[16px] text-white/75">
                         Research Partner, ResearchFabric
                       </p>
                     </div>
                   </div>
 
-                  <div className="linkedin-badge mt-2 inline-flex items-center gap-1.5 rounded-md bg-[#d9eef8] px-2.5 py-1 text-[14px] sm:text-[14px] font-semibold text-[#0d1440]">
-                    <img src={linkedinBadge} alt="" className="h-3.5 w-3.5 sm:h-4 sm:w-4 object-contain" />
+                  <div className="
+                    mt-2 inline-flex items-center gap-1.5 
+                    rounded-md bg-[#d9eef8] 
+                    px-2.5 py-1 sm:px-3 sm:py-1.5
+                    text-[12px] sm:text-[13px] md:text-[14px] 2xl:text-[15px]
+                    font-semibold text-[#0d1440]"
+                  >
+                    <img
+                      src={linkedinBadge}
+                      alt=""
+                      className="h-3.5 w-3.5 sm:h-4 sm:w-4 2xl:h-5 2xl:w-5 object-contain"
+                    />
                     Releasing soon on LinkedIn
                   </div>
                 </div>
@@ -138,17 +113,17 @@ const TechnologyResearchPapers = () => {
         </div>
 
         {/* BUTTON */}
-        <div className="mt-4 flex justify-center sm:mt-5">
+        <div className="mt-4 sm:mt-5 flex justify-center">
           <button
             type="button"
             className="
             inline-flex items-center justify-center
             rounded-lg border border-[#18204e] bg-white
             
-            px-4 sm:px-8 md:px-10
+            px-4 sm:px-6 md:px-8 lg:px-10
             py-2 sm:py-3
             
-            text-[14px] sm:text-[17px] md:text-[18px]
+            text-[14px] sm:text-[15px] md:text-[16px] lg:text-[17px] xl:text-[18px]
             font-semibold text-[#111741]
             
             shadow-[0_8px_18px_rgba(17,23,65,0.1)]
