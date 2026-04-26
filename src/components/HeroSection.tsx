@@ -10,11 +10,7 @@ const HeroSection = () => {
       {/* ================= DESKTOP IMAGE ================= */}
       <div className="hidden lg:flex absolute top-0 right-0 flex-col items-end z-10 w-[55%] overflow-visible">
         <div className="w-full">
-          <img
-            src={heroImg}
-            alt="Abstract 3D"
-            className="w-full h-auto object-cover"
-          />
+          <img src={heroImg} alt="Abstract 3D" className="w-full h-auto object-cover" />
 
           <div className="mt-3 pb-6">
             <p className="text-[18px] leading-relaxed text-white/70 whitespace-normal break-words">
@@ -29,39 +25,24 @@ const HeroSection = () => {
 
         {/* ================= MOBILE ================= */}
         <div className="flex flex-col gap-6 lg:hidden w-full">
-
           <div className="relative w-screen -ml-[50vw] left-1/2 -mt-2">
-            <img
-              src={heroImg}
-              alt="Abstract"
-              className="w-full h-[360px] sm:h-[420px] object-cover"
-            />
-            <div className="absolute inset-0 bg-black/40" />
+            <img src={heroImg} className="w-full h-[360px] object-cover" />
           </div>
-
-          <div className="flex gap-3">
-            <div className={`${ctaBaseClass} flex-1 bg-[#3CC8FF]`}>
-              Explore Our Practices
-            </div>
-            <div className={`${ctaBaseClass} flex-1 bg-[#43E0B1]`}>
-              CXO AI Research
-            </div>
-          </div>
-
-          {/* ✅ FIXED MOBILE TEXT */}
-          <p className="text-[16px] text-white/70 leading-relaxed w-full max-w-full whitespace-normal break-words">
-            RESEARCHFABRIC™ delivers practitioner-led Smart research on Perpetuating Technologies and maps the Micro-Markets where these technologies create commercial value. We identify high-growth segments, forecast competitive dynamics, and deliver decision-grade intelligence for enterprise strategy and investment.
-          </p>
-
         </div>
 
         {/* ================= DESKTOP TEXT ================= */}
-        <div className="hidden lg:block mt-20 max-w-[42rem]">
+        {/* ✅ EXTREME DOWN SHIFT */}
+        <div className="hidden lg:block mt-20 2xl:mt-[500px] max-w-[42rem]">
 
           <h1 className="text-[58px] font-serif leading-none">
 
-            <span className="block">Thought-Shaping</span>
-            <span className="block">Intelligence on</span>
+            <span className="block 2xl:whitespace-nowrap">
+              Thought-Shaping
+            </span>
+
+            <span className="block 2xl:whitespace-nowrap">
+              Intelligence on
+            </span>
 
             <span className="block whitespace-nowrap">
               <span className="text-white">P</span>
@@ -75,7 +56,7 @@ const HeroSection = () => {
               Technologies
             </span>
 
-            <span className="block">
+            <span className="block 2xl:whitespace-nowrap">
               <span className="text-white">Micro-</span>
               <span className="bg-gradient-to-r from-white to-[#00A9F4] bg-clip-text text-transparent">
                 Markets
@@ -98,7 +79,7 @@ const HeroSection = () => {
         {/* ================= GRID ================= */}
         <div className="mt-4 pt-2 sm:mt-12 md:mt-8 lg:mt-40 xl:mt-48">
 
-          <div className="grid grid-cols-2 text-center lg:grid-cols-4">
+          <div className="grid grid-cols-2 text-center lg:grid-cols-4 auto-rows-fr">
             {[
               { title: "Technology", sub: "Deep Tech Capabilities" },
               { title: "Markets", sub: "B2B, B2C & B2G" },
@@ -107,7 +88,7 @@ const HeroSection = () => {
             ].map((item, index) => (
               <div
                 key={item.title}
-                className={`px-3 pt-8 pb-3
+                className={`flex flex-col justify-center items-center px-3 pt-8 pb-3
                 ${index % 2 === 0 ? "border-r border-white" : ""}
                 ${index < 2 ? "border-b border-white lg:border-b-0" : ""}
                 ${index < 3 ? "lg:border-r lg:border-white" : ""}
@@ -117,19 +98,19 @@ const HeroSection = () => {
                   {item.title}
                 </h3>
 
-                <p className="text-[16px] text-white/60">
+                <p className="text-[16px] text-white/60 whitespace-nowrap">
                   {item.sub}
                 </p>
               </div>
             ))}
           </div>
 
-          <div className="border-t border-white text-center pt-8">
+          <div className="border-t border-white text-center pt-8 flex flex-col justify-center items-center">
             <h3 className="text-[32px] text-[#5AE0BB] font-serif">
               Practices
             </h3>
 
-            <p className="text-[16px] text-white/60">
+            <p className="text-[16px] text-white/60 whitespace-nowrap">
               Research Engineering
             </p>
           </div>
