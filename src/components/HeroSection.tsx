@@ -3,6 +3,7 @@ import heroImg from "@/assets/LandingPage/home-hero.png";
 const HeroSection = () => {
   const ctaBaseClass =
     "flex justify-center items-center whitespace-nowrap rounded-full px-4 py-2.5 text-[15px] font-semibold text-[#081A34] transition-transform duration-200 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-[#081A34] sm:px-6 sm:py-3 sm:text-[17px] md:px-7 md:py-3.5 md:text-[17px]";
+  const statDividerClass = "border-white border-opacity-100";
 
   return (
     <section id="hero" className="relative bg-[#081A34] text-white">
@@ -124,9 +125,9 @@ const HeroSection = () => {
               <div
                 key={item.title}
                 className={`flex flex-col justify-center items-center px-3 pt-8 pb-3
-                ${index % 2 === 0 ? "border-r border-white" : ""}
-                ${index < 2 ? "border-b border-white lg:border-b-0" : ""}
-                ${index < 3 ? "lg:border-r lg:border-white" : ""}
+                ${index % 2 === 0 ? `border-r ${statDividerClass}` : ""}
+                ${index < 2 ? `border-b ${statDividerClass} lg:border-b-0` : ""}
+                ${index < 3 ? `lg:border-r ${statDividerClass}` : ""}
                 `}
               >
                 <h3 className="text-[22px] sm:text-[26px] lg:text-[32px] text-[#5AE0BB] font-serif">
@@ -140,7 +141,7 @@ const HeroSection = () => {
             ))}
           </div>
 
-          <div className="border-t border-white text-center pt-8 flex flex-col justify-center items-center">
+          <div className={`border-t ${statDividerClass} text-center pt-8 flex flex-col justify-center items-center`}>
             <h3 className="text-[22px] sm:text-[26px] lg:text-[32px] text-[#5AE0BB] font-serif">
               Practices
             </h3>
