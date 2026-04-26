@@ -15,6 +15,64 @@ const TechnologyResearchPapers = () => {
       id="papers"
       className="relative overflow-hidden bg-[#f8f7f3] py-10 text-[#121742] sm:py-12 md:py-14 lg:py-8 xl:py-10 2xl:py-12"
     >
+
+      {/* ✅ ONLY 2560px MODIFICATIONS */}
+      <style>{`
+
+        @media (min-width: 2560px) {
+
+          /* 🔥 Bigger cards */
+          .tr-paper-card {
+            max-width: 480px;
+            padding: 2.5rem;
+          }
+
+          /* 🔥 Bigger title */
+          .tr-paper-card h3 {
+            font-size: 28px;
+            line-height: 1.2;
+          }
+
+          /* 🔥 Bigger description */
+          .tr-paper-card p {
+            font-size: 19px;
+            line-height: 1.8;
+          }
+
+          /* 🔥 Author section */
+          .tr-paper-card .author-img {
+            width: 56px;
+            height: 56px;
+          }
+
+          .tr-paper-card .author-name {
+            font-size: 18px;
+          }
+
+          .tr-paper-card .author-role {
+            font-size: 16px;
+          }
+
+          /* 🔥 Badge */
+          .tr-paper-card .linkedin-badge {
+            font-size: 15px;
+            padding: 0.5rem 1rem;
+          }
+
+          .tr-paper-card .linkedin-badge img {
+            width: 18px;
+            height: 18px;
+          }
+
+          /* 🔥 Grid spacing */
+          .tr-papers-grid {
+            gap: 3rem;
+          }
+
+        }
+
+      `}</style>
+
       <div className="page-shell relative mx-auto">
         
         {/* HEADING */}
@@ -33,11 +91,11 @@ const TechnologyResearchPapers = () => {
           />
 
           {/* CARDS */}
-          <div className="relative z-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 sm:gap-5 md:gap-6 lg:gap-4 xl:gap-6 justify-items-center">
+          <div className="tr-papers-grid relative z-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 sm:gap-5 md:gap-6 lg:gap-4 xl:gap-6 justify-items-center">
             {papers.map((paper) => (
               <article
                 key={paper.id}
-                className="relative overflow-hidden 
+                className="tr-paper-card relative overflow-hidden 
                 w-full max-w-[380px]
                 bg-[#0c1044] p-4 sm:p-5 md:p-6 lg:p-5 xl:p-6 text-white 
                 shadow-[0_16px_35px_rgba(12,16,68,0.15)]
@@ -57,19 +115,19 @@ const TechnologyResearchPapers = () => {
                     <img
                       src={authorImage}
                       alt="Ashwin Gaidhani"
-                      className="h-9 w-9 sm:h-10 sm:w-10 rounded-full object-cover"
+                      className="author-img h-9 w-9 sm:h-10 sm:w-10 rounded-full object-cover"
                     />
                     <div>
-                      <p className="text-[16px] sm:text-[16px] xl:text-[18px] font-semibold leading-none">
+                      <p className="author-name text-[16px] sm:text-[16px] xl:text-[18px] font-semibold leading-none">
                         Ashwin Gaidhani
                       </p>
-                      <p className="mt-0.5 text-[14px] sm:text-[14px] xl:text-[16px] text-white/75">
+                      <p className="author-role mt-0.5 text-[14px] sm:text-[14px] xl:text-[16px] text-white/75">
                         Research Partner, ResearchFabric
                       </p>
                     </div>
                   </div>
 
-                  <div className="mt-2 inline-flex items-center gap-1.5 rounded-md bg-[#d9eef8] px-2.5 py-1 text-[14px] sm:text-[14px] font-semibold text-[#0d1440]">
+                  <div className="linkedin-badge mt-2 inline-flex items-center gap-1.5 rounded-md bg-[#d9eef8] px-2.5 py-1 text-[14px] sm:text-[14px] font-semibold text-[#0d1440]">
                     <img src={linkedinBadge} alt="" className="h-3.5 w-3.5 sm:h-4 sm:w-4 object-contain" />
                     Releasing soon on LinkedIn
                   </div>
@@ -99,6 +157,7 @@ const TechnologyResearchPapers = () => {
             Load More
           </button>
         </div>
+
       </div>
     </section>
   );
