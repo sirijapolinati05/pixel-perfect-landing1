@@ -139,7 +139,7 @@ const TechnologyResearchNavbar = () => {
         <div className="flex items-center">
           <span
             className={`cursor-pointer text-[14px] transition-colors sm:text-[16px] md:text-[16px] lg:text-[16px] xl:text-[16px] 2xl:text-[18px] ${
-              showLightNavbar ? "text-[#0B1F3A]" : "text-white"
+              mobileHeaderActive ? "text-[#0B1F3A]" : "text-white"
             }`}
           >
             Subscribe

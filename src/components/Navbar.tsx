@@ -6,6 +6,10 @@ import lightLogo from "../assets/LandingPage/research-fabric-footer.png";
 import { MenuIcon } from "@/components/ui/Icons";
 
 const NAVBAR_HEIGHT = 92;
+const logoShellClass =
+  "relative h-9 w-[112px] sm:h-10 sm:w-[118px] lg:h-10 lg:w-[122px]";
+const logoImageClass =
+  "absolute inset-0 h-full w-full scale-[1.35] origin-left object-contain transition-all duration-500";
 
 const navItems = [
   { label: "Our Practices", href: "#practices" },
@@ -36,8 +40,13 @@ const Navbar = () => {
 
   const showLightNavbar = isScrolled;
   const mobileHeaderActive = mobileOpen || showLightNavbar;
+  const showLightLogo = mobileHeaderActive;
 
   const menuIconColor = showLightNavbar ? "#0B1F3A" : "#FFFFFF";
+  const darkLogoClass =
+    `${logoImageClass} ${showLightLogo ? "opacity-0" : "opacity-100"}`;
+  const lightLogoClass =
+    `${logoImageClass} ${showLightLogo ? "opacity-100" : "opacity-0"}`;
 
   // ✅ SCROLL FUNCTION
   const scrollToSection = (hash: string) => {
@@ -139,21 +148,32 @@ const Navbar = () => {
     `;
   };
 
+  const desktopNavClassName = isHomePage
+    ? "hidden gap-6 lg:absolute lg:left-[37.5%] lg:top-1/2 lg:flex lg:-translate-y-1/2 xl:gap-7"
+    : "hidden gap-6 lg:flex";
+
   return (
-    <nav className={`fixed top-0 w-full z-50 ${mobileHeaderActive ? "bg-white" : "bg-transparent"}`}>
-      <div className="page-shell flex justify-between items-center py-4">
+    <nav
+      className={`fixed top-0 z-50 w-full transition-all duration-500 ${
+        mobileHeaderActive
+          ? "border-b border-slate-200 bg-white/85 shadow-[0_4px_20px_rgba(0,0,0,0.04)] backdrop-blur-md"
+          : "border-b border-transparent bg-transparent shadow-none backdrop-blur-0"
+      }`}
+    >
+      <div className="page-shell relative flex items-center justify-between py-4">
 
         <div className="flex items-center gap-2">
           <button onClick={toggleMobileMenu} className="lg:hidden">
             <MenuIcon size={25} color={menuIconColor} />
           </button>
 
-          <button onClick={handleLogoClick}>
-            <img src={logo} className="h-10" />
+          <button onClick={handleLogoClick} className={`relative ${logoShellClass}`}>
+            <img src={logo} alt="Research Fabric" className={darkLogoClass} />
+            <img src={lightLogo} alt="Research Fabric" className={lightLogoClass} />
           </button>
         </div>
 
-        <div className="hidden lg:flex gap-6">
+        <div className={desktopNavClassName}>
           {currentNavItems.map((item) => {
             const isActive = activeSection === item.href;
 
