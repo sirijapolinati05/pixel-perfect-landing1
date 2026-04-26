@@ -236,7 +236,13 @@
   }
 
   .ultra-wide-type .analyst-tier-one-name {
-    font-size: 2.3rem !important;
+    font-size: 2.4rem !important;
+    line-height: 1.15 !important;
+  }
+
+  .ultra-wide-type .analyst-tier-two-name,
+  .ultra-wide-type .analyst-tier-three-name {
+    font-size: 2.4rem !important;
     line-height: 1.15 !important;
   }
 
@@ -247,6 +253,169 @@
 
   .ultra-wide-type .hero-heading-line {
     white-space: nowrap !important;
+  }
+
+  .ultra-wide-type .technology-research-hero .technology-research-hero-title {
+    font-size: 3.125rem !important;
+    line-height: 0.95 !important;
+    max-width: 42.5rem !important;
+  }
+
+  .ultra-wide-type .technology-research-hero .technology-research-hero-copy {
+    font-size: 1.25rem !important;
+    line-height: 2rem !important;
+    max-width: 53.75rem !important;
+  }
+
+  .ultra-wide-type .technology-research-hero .technology-research-hero-stat-value {
+    font-size: 3rem !important;
+    line-height: 1 !important;
+  }
+
+  .ultra-wide-type .technology-research-hero .technology-research-hero-stat-label {
+    font-size: 1.25rem !important;
+    line-height: 1.75rem !important;
+  }
+
+  .ultra-wide-type .technology-research-hero .technology-research-hero-cta {
+    font-size: 1.0625rem !important;
+    line-height: 1.5rem !important;
+    padding: 0.875rem 1.75rem !important;
+  }
+
+  .ultra-wide-type .micro-market-hero .micro-market-hero-title {
+    font-size: 3.125rem !important;
+    line-height: 0.95 !important;
+    max-width: 42.5rem !important;
+  }
+
+  .ultra-wide-type .micro-market-hero .micro-market-hero-copy {
+    font-size: 1.25rem !important;
+    line-height: 2rem !important;
+    max-width: 53.75rem !important;
+  }
+
+  .ultra-wide-type .micro-market-hero .micro-market-hero-stat-value {
+    font-size: 3rem !important;
+    line-height: 1 !important;
+  }
+
+  .ultra-wide-type .micro-market-hero .micro-market-hero-stat-label {
+    font-size: 1.25rem !important;
+    line-height: 1.75rem !important;
+  }
+
+  .ultra-wide-type .micro-market-hero .micro-market-hero-cta {
+    font-size: 1.0625rem !important;
+    line-height: 1.5rem !important;
+    padding: 0.875rem 1.75rem !important;
+  }
+
+  .ultra-wide-type.technology-research-page #domains h2 {
+    font-size: 2.75rem !important;
+    line-height: 1.05 !important;
+  }
+
+  .ultra-wide-type.technology-research-page #domains > .page-shell > p,
+  .ultra-wide-type.technology-research-page #domains .page-shell > div > p,
+  .ultra-wide-type.technology-research-page #domains .page-shell > p {
+    font-size: 1.25rem !important;
+    line-height: 1.75rem !important;
+  }
+
+  .ultra-wide-type.technology-research-page #domains article h3 {
+    font-size: 1.5rem !important;
+    line-height: 1.25 !important;
+  }
+
+  .ultra-wide-type.technology-research-page #domains article p {
+    font-size: 1.125rem !important;
+    line-height: 1.75rem !important;
+  }
+
+  .ultra-wide-type.technology-research-page #domains article a {
+    font-size: 1rem !important;
+    line-height: 1.5rem !important;
+  }
+
+  .ultra-wide-type.technology-research-page .tr-offering-section > .page-shell > div:first-child p {
+    font-size: 1.125rem !important;
+    line-height: 1.5rem !important;
+  }
+
+  .ultra-wide-type.technology-research-page .tr-offering-section > .page-shell > div:first-child h2 {
+    font-size: 2.625rem !important;
+    line-height: 1.1 !important;
+  }
+
+  .ultra-wide-type.technology-research-page .tr-offering-card h3 {
+    font-size: 1.125rem !important;
+    line-height: 1.4 !important;
+  }
+
+  .ultra-wide-type.technology-research-page .tr-offering-card p {
+    font-size: 0.875rem !important;
+    line-height: 1.5rem !important;
+  }
+
+  .ultra-wide-type.technology-research-page #papers h2 {
+    font-size: 3.125rem !important;
+    line-height: 1 !important;
+  }
+
+  .ultra-wide-type.technology-research-page #papers article h3 {
+    font-size: 1.625rem !important;
+    line-height: 1.1 !important;
+  }
+
+  .ultra-wide-type.technology-research-page #papers article p {
+    font-size: 1.125rem !important;
+    line-height: 1.75rem !important;
+  }
+
+  .ultra-wide-type.technology-research-page #papers button {
+    font-size: 1.125rem !important;
+    line-height: 1.5rem !important;
+  }
+
+  .ultra-wide-type.micro-market-page #expertise h2 {
+    font-size: 3.125rem !important;
+    line-height: 1 !important;
+  }
+
+  .ultra-wide-type.micro-market-page #expertise .page-shell > div > p:last-of-type {
+    font-size: 1.25rem !important;
+    line-height: 1.75rem !important;
+  }
+
+  .ultra-wide-type.micro-market-page #expertise article h3 {
+    font-size: 1.5rem !important;
+    line-height: 1.25 !important;
+  }
+
+  .ultra-wide-type.micro-market-page #expertise article p {
+    font-size: 1.125rem !important;
+    line-height: 1.5rem !important;
+  }
+
+  .ultra-wide-type.micro-market-page #methodology h2 {
+    font-size: 2.875rem !important;
+    line-height: 1.05 !important;
+  }
+
+  .ultra-wide-type.micro-market-page #methodology .page-shell > p {
+    font-size: 1.125rem !important;
+    line-height: 1.5rem !important;
+  }
+
+  .ultra-wide-type.micro-market-page #methodology article h3 {
+    font-size: 1.375rem !important;
+    line-height: 1.15 !important;
+  }
+
+  .ultra-wide-type.micro-market-page #methodology article p {
+    font-size: 1rem !important;
+    line-height: 1.5rem !important;
   }
 }
 

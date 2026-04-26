@@ -37,7 +37,7 @@ const cardClassName =
   "[@media_(min-width:2560px)]:max-w-[460px] " +
   "min-h-[300px] " +
   "[@media_(min-width:1440px)_and_(max-width:2200px)]:min-h-[320px] " +
-  "[@media_(min-width:2560px)]:min-h-[520px] " +
+  "[@media_(min-width:2560px)]:min-h-[600px] " +
   "flex-col rounded-xl border border-[#dfe4ea] bg-white px-4 pb-4 pt-4 text-center " +
   "shadow-[0_4px_10px_rgba(8,18,59,0.15)] transition-all duration-300 ease-out " +
   "hover:-translate-y-2 hover:border-navy hover:bg-navy hover:shadow-[0_20px_34px_rgba(8,18,59,0.24)] " +
@@ -112,7 +112,7 @@ const AnalystTeamTierOne = () => {
                 {/* NAME */}
                 <h3
                   className="
-                    mt-4 whitespace-nowrap
+                    analyst-tier-one-name mt-4 whitespace-nowrap
                     text-[18px]
                     min-[425px]:text-[20px]
                     sm:text-[18px]

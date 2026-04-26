@@ -22,15 +22,15 @@ const CXOSection = () => {
         <div className="grid grid-cols-1 items-start gap-8 md:gap-12 lg:grid-cols-2">
           
           {/* LEFT */}
-          <div>
+          <div className="[@media_(width:1920px)]:max-w-[900px]">
+            
             <h2 className="text-[32px] sm:text-[38px] md:text-[44px] font-bold text-primary-foreground mb-4 leading-snug md:leading-tight">
               AI Leadership is Now a C-Suite Imperative
             </h2>
 
-            <p className="text-primary-foreground/70 font-serif text-[16px] md:text-[18px] leading-relaxed mb-5 sm:mb-6 max-w-sm sm:max-w-md">
-              The AI landscape is noisy, volatile, and impossible for busy leaders to track.
-              CEOs and CXOs are expected to drive growth, innovation, and new revenue with AI
-              yet few have the bandwidth or in-house capability to stay ahead. We bridge that gap.
+            {/* ✅ CLEAN NORMAL TEXT (no hacks needed now) */}
+            <p className="text-primary-foreground/70 font-serif text-[16px] md:text-[18px] leading-relaxed mb-5 sm:mb-6">
+              The AI landscape is noisy, volatile, and impossible for busy leaders to track. CEOs and CXOs are expected to drive growth, innovation, and new revenue with AI yet few have the bandwidth or in-house capability to stay ahead. We bridge that gap.
             </p>
 
             <a

@@ -4,10 +4,10 @@ const HeroSection = () => {
   const ctaBaseClass =
     "flex justify-center items-center whitespace-nowrap rounded-full px-4 py-2.5 text-[15px] font-semibold text-[#081A34] transition-transform duration-200 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-[#081A34] sm:px-6 sm:py-3 sm:text-[17px] md:px-7 md:py-3.5 md:text-[17px] [@media_(max-width:340px)]:text-[12px] " +
 
-    "[@media_(min-width:2560px)]:!px-28 " +
-    "[@media_(min-width:2560px)]:!py-9 " +
-    "[@media_(min-width:2560px)]:!text-[28px] " +
-    "[@media_(min-width:2560px)]:!gap-5 " +
+    "[@media_(min-width:2560px)]:!px-7 " +
+    "[@media_(min-width:2560px)]:!py-3.5 " +
+    "[@media_(min-width:2560px)]:!text-[17px] " +
+    "[@media_(min-width:2560px)]:!gap-2 " +
     "[@media_(min-width:2560px)]:scale-100";
 
   return (
@@ -20,9 +20,7 @@ const HeroSection = () => {
           lg:w-[815px] 
           [@media_(min-width:1400px)_and_(max-width:1500px)]:w-[775px]
           [@media_(min-width:1800px)_and_(max-width:2100px)]:!w-[690px]
-
-          [@media_(min-width:2560px)]:w-[53vw]
-
+          [@media_(min-width:2560px)]:!w-[1400px]
           [@media_(min-width:1024px)_and_(max-width:1280px)]:w-[580px]
         "
         >
@@ -33,7 +31,7 @@ const HeroSection = () => {
           />
 
           <div className="mt-3">
-            <p className="text-[18px] leading-relaxed text-white/70">
+            <p className="text-[18px] leading-relaxed text-white/70 whitespace-normal break-words w-full">
               RESEARCHFABRIC™ delivers practitioner-led Smart research on Perpetuating Technologies and maps the Micro-Markets where these technologies create commercial value. We identify high-growth segments, forecast competitive dynamics, and deliver decision-grade intelligence for enterprise strategy and investment.
             </p>
           </div>
@@ -93,28 +91,34 @@ const HeroSection = () => {
             </div>
           </div>
 
-          <p className="text-[16px] leading-relaxed text-white/70">
-            RESEARCHFABRIC™ delivers practitioner-led Smart research on Perpetuating Technologies and maps the Micro-Markets where these technologies create commercial value.
+          {/* ✅ FIXED MOBILE TEXT */}
+          <p className="text-[16px] leading-relaxed text-white/70 whitespace-normal break-words w-full">
+            RESEARCHFABRIC™ delivers practitioner-led Smart research on Perpetuating Technologies and maps the Micro-Markets where these technologies create commercial value. We identify high-growth segments, forecast competitive dynamics, and deliver decision-grade intelligence for enterprise strategy and investment.
           </p>
 
         </div>
 
         {/* ================= DESKTOP ================= */}
         <div className="hidden lg:block">
-          <div className="mt-20 max-w-[42rem] [@media_(min-width:2560px)]:max-w-[1100px]">
+          <div className="mt-20 max-w-[42rem]">
 
-            <h1 className="mb-5 font-serif font-semibold text-white text-[58px] leading-none [@media_(width:1024px)]:text-[52px] [@media_(width:1024px)]:leading-[1.02] [@media_(min-width:2560px)]:text-[5.75rem] [@media_(min-width:2560px)]:leading-[1.02]">
+            <h1 className="mb-5 font-serif font-semibold text-white text-[58px] leading-none">
 
-              <span className="block text-white [@media_(min-width:2560px)]:whitespace-nowrap">Thought-Shaping</span>
-              <span className="block text-white [@media_(min-width:2560px)]:whitespace-nowrap">Intelligence on</span>
+              <span className="block text-white [@media_(min-width:2560px)]:whitespace-nowrap">
+                Thought-Shaping
+              </span>
 
-              <span className="block [@media_(min-width:2560px)]:whitespace-nowrap">
+              <span className="block text-white [@media_(min-width:2560px)]:whitespace-nowrap">
+                Intelligence on
+              </span>
+
+              <span className="block">
                 <span className="text-white">P</span>
                 <span className="bg-gradient-to-r from-white to-[#00A9F4] bg-clip-text text-transparent">erpe</span>
                 <span className="text-[#00A9F4]">tuating</span>
               </span>
 
-              <span className="block [@media_(min-width:2560px)]:whitespace-nowrap">
+              <span className="block">
                 <span className="text-white">Te</span>
                 <span className="bg-gradient-to-r from-white to-[#00A9F4] bg-clip-text text-transparent">chn</span>
                 <span className="text-[#00A9F4]">ologies</span>
@@ -128,7 +132,7 @@ const HeroSection = () => {
             </h1>
 
             {/* BUTTONS */}
-            <div className="mt-12 flex gap-4 [@media_(min-width:2560px)]:gap-8">
+            <div className="mt-12 flex gap-4">
               <div className={`${ctaBaseClass} bg-[#3CC8FF] cursor-pointer`}>
                 Explore Our Practices
               </div>
@@ -142,7 +146,10 @@ const HeroSection = () => {
         </div>
 
         {/* ================= GRID ================= */}
-        <div className="mt-4 pt-2 sm:mt-16 md:mt-8 lg:mt-64 xl:mt-72 [@media_(min-width:2560px)]:mt-[-360px] [@media_(min-width:1024px)_and_(max-width:1280px)]:lg:mt-40">
+        <div className="mt-4 pt-2 sm:mt-16 md:mt-8 lg:mt-64 xl:mt-72 
+        [@media_(min-width:2560px)]:mt-[650px] 
+        [@media_(min-width:1024px)_and_(max-width:1280px)]:lg:mt-40">
+
           <div className="grid grid-cols-2 text-center lg:grid-cols-4">
             {[
               { title: "Technology", sub: "Deep Tech Capabilities" },
@@ -153,9 +160,9 @@ const HeroSection = () => {
               <div
                 key={item.title}
                 className={`group cursor-pointer px-3 pt-4 pb-3 sm:px-4 sm:pt-6 lg:pt-8 sm:pb-4 ${
-                  index % 2 === 0 ? "border-r border-white/20" : ""
-                } ${index < 2 ? "border-b border-white/20 lg:border-b-0" : ""} ${
-                  index < 3 ? "lg:border-r lg:border-white/20" : "lg:border-r-0"
+                  index % 2 === 0 ? "border-r border-white" : ""
+                } ${index < 2 ? "border-b border-white lg:border-b-0" : ""} ${
+                  index < 3 ? "lg:border-r lg:border-white" : "lg:border-r-0"
                 }`}
               >
                 <h3 className="font-serif text-[28px] sm:text-[32px] md:text-[36px] font-semibold text-[#5AE0BB]">
@@ -169,7 +176,7 @@ const HeroSection = () => {
             ))}
           </div>
 
-          <div className="mt-[-1px] border-t border-white/20 text-center pt-6 sm:pt-8 lg:pt-6">
+          <div className="mt-[-1px] border-t border-white text-center pt-6 sm:pt-8 lg:pt-6">
             <h3 className="font-serif text-[28px] sm:text-[32px] md:text-[36px] font-semibold text-[#5AE0BB]">
               Practices
             </h3>

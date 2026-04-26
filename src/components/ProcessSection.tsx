@@ -117,20 +117,18 @@ const ProcessSection = () => {
                     : "hover:bg-white hover:shadow-[0_18px_40px_rgba(10,31,68,0.16)]"
                 }`}
               >
-                {/* IMAGE */}
+                {/* ✅ IMAGE HEIGHT INCREASED */}
                 <img
                   src={step.image}
                   alt={step.title}
-                  className="process-step-image mb-3 h-32 w-full object-cover sm:mb-4 sm:h-36 md:h-32 lg:h-36 xl:h-40 [@media_(width:540px)]:h-52 [@media_(width:912px)]:h-44"
+                  className="process-step-image mb-3 h-40 w-full object-cover sm:mb-4 sm:h-44 md:h-40 lg:h-44 xl:h-52 [@media_(width:540px)]:h-60 [@media_(width:912px)]:h-48"
                 />
 
-                {/* ✅ TITLE → 22px */}
-                <h4 className="mb-2 font-serif text-[24px] font-bold text-navy leading-[30px]">
+                <h4 className="mb-2 font-serif text-[24px] font-bold leading-[30px] text-navy">
                   {step.title}
                 </h4>
 
-                {/* DESCRIPTION → 16px */}
-                <p className="text-navy/70 font-serif text-[16px] leading-[24px]">
+                <p className="font-serif text-[16px] leading-[24px] text-navy/70">
                   {step.description}
                 </p>
 

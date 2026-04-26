@@ -8,7 +8,7 @@ const stats = [
 
 const TechnologyResearchHero = () => {
   return (
-    <section className="relative overflow-hidden pb-12 pt-20 text-white sm:pb-16 sm:pt-24 md:pb-20 md:pt-24 lg:pb-24 lg:pt-28 xl:pb-28 xl:pt-32">
+    <section className="technology-research-hero relative overflow-hidden pb-12 pt-20 text-white sm:pb-16 sm:pt-24 md:pb-20 md:pt-24 lg:pb-24 lg:pt-28 xl:pb-28 xl:pt-32">
       <div className="absolute inset-0">
         <img
           src={heroImage}
@@ -23,11 +23,11 @@ const TechnologyResearchHero = () => {
 
       <div className="page-shell relative z-10 mx-auto">
         <div className="max-w-[760px] pt-6 sm:pt-8 md:pt-10 lg:pt-20">
-          <h1 className="max-w-[680px] text-[36px] font-semibold leading-[0.95] tracking-[-0.03em] sm:text-[40px] md:text-[48px] lg:text-[50px]">
+          <h1 className="technology-research-hero-title max-w-[680px] text-[36px] font-semibold leading-[0.95] tracking-[-0.03em] sm:text-[40px] md:text-[48px] lg:text-[50px]">
             Thought Shaping Research for Quantum, Chipsets & AI
           </h1>
 
-          <p className="mt-4 max-w-[860px] text-[16px] leading-6 text-white/95 sm:mt-5 sm:text-[18px] sm:leading-7 md:text-[20px] md:leading-8">
+          <p className="technology-research-hero-copy mt-4 max-w-[860px] text-[16px] leading-6 text-white/95 sm:mt-5 sm:text-[18px] sm:leading-7 md:text-[20px] md:leading-8">
             ResearchFabric partners with the world&apos;s foremost technology analysts to
             produce Thought Shaping Papers that define the strategic direction of
             Quantum Computing, AI Hardware, and Artificial Intelligence.
@@ -42,12 +42,12 @@ const TechnologyResearchHero = () => {
               {stats.map((stat) => (
                 <div
                   key={stat.label}
-                  className="flex-1 px-3 py-4 text-center sm:px-6 sm:py-5 md:px-7"
+                  className="technology-research-hero-stat flex-1 px-3 py-4 text-center sm:px-6 sm:py-5 md:px-7"
                 >
-                  <p className="text-2xl font-semibold leading-none text-[#68e1d0] transition duration-300 group-hover:text-white sm:text-4xl md:text-5xl">
+                  <p className="technology-research-hero-stat-value text-2xl font-semibold leading-none text-[#68e1d0] transition duration-300 group-hover:text-white sm:text-4xl md:text-5xl">
                     {stat.value}
                   </p>
-                  <p className="mt-2 text-[16px] leading-5 text-white sm:text-[18px] sm:leading-7 md:text-[20px]">
+                  <p className="technology-research-hero-stat-label mt-2 text-[16px] leading-5 text-white sm:text-[18px] sm:leading-7 md:text-[20px]">
                     {stat.label}
                   </p>
                 </div>
@@ -57,7 +57,7 @@ const TechnologyResearchHero = () => {
 
           <button
             type="button"
-            className="mx-auto mt-6 inline-flex items-center justify-center whitespace-nowrap rounded-full bg-[linear-gradient(180deg,#31b9ee_0%,#249fd8_100%)] px-4 py-2.5 text-[15px] font-semibold !text-black transition-transform duration-200 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-[#081A34] sm:mx-0 sm:px-6 sm:py-3 sm:text-[17px] md:px-7 md:py-3.5 md:text-[17px] [@media_(max-width:340px)]:text-[12px]"
+            className="technology-research-hero-cta mx-auto mt-6 inline-flex items-center justify-center whitespace-nowrap rounded-full bg-[linear-gradient(180deg,#31b9ee_0%,#249fd8_100%)] px-4 py-2.5 text-[15px] font-semibold !text-black transition-transform duration-200 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-[#081A34] sm:mx-0 sm:px-6 sm:py-3 sm:text-[17px] md:px-7 md:py-3.5 md:text-[17px] [@media_(max-width:340px)]:text-[12px]"
           >
             Explore Thought Shaping
           </button>

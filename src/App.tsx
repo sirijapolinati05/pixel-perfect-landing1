@@ -74,7 +74,7 @@ const AnalystTeamPage = () => (
 );
 
 const MicroMarketResearchPage = () => (
-  <div className="ultra-wide-type min-h-[100dvh] bg-[#15203c] lg:bg-[#f8f7f3]">
+  <div className="ultra-wide-type micro-market-page min-h-[100dvh] bg-[#15203c] lg:bg-[#f8f7f3]">
     <MicroMarketResearchNavbar />
     <MicroMarketResearchHero />
     <MicroMarketResearchExpertise />
@@ -85,7 +85,7 @@ const MicroMarketResearchPage = () => (
 );
 
 const TechnologyResearchPage = () => (
-  <div className="ultra-wide-type min-h-[100dvh] bg-[#080f43] lg:bg-[#f8f7f3]">
+  <div className="ultra-wide-type technology-research-page min-h-[100dvh] bg-[#080f43] lg:bg-[#f8f7f3]">
     <TechnologyResearchNavbar />
     <TechnologyResearchHero />
     <TechnologyResearchDomains />
