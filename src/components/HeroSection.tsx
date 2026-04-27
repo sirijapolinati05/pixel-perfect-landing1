@@ -9,7 +9,52 @@ const HeroSection = () => {
   return (
     <section id="hero" className="relative bg-[#081A34] text-white overflow-hidden">
 
-      {/* 🔹 HERO IMAGE + TEXT */}
+      {/* 🔥 MOBILE FULL-WIDTH HERO */}
+      <div className="lg:hidden relative w-full">
+
+        {/* IMAGE */}
+        <img
+          src={heroImg}
+          className="w-full h-[420px] object-cover"
+        />
+
+        {/* OVERLAY */}
+        <div className="absolute inset-0 flex flex-col justify-end p-5 bg-gradient-to-t from-[#081A34] via-[#081A34]/70 to-transparent">
+
+          <h1 className="font-serif leading-tight text-[28px] sm:text-[34px]">
+
+            <span className="block">Thought-Shaping</span>
+            <span className="block">Intelligence on</span>
+
+            <span className="block text-[#00A9F4]">
+              Perpetuating Technologies
+            </span>
+
+            <span className="block">
+              <span className="text-white">Micro-</span>
+              <span className="text-[#00A9F4]">Markets</span>
+            </span>
+
+          </h1>
+
+          {/* ✅ MOBILE BUTTONS (SIDE-BY-SIDE COMPACT) */}
+          <div className="mt-5 flex gap-2 flex-wrap">
+
+            <div className={`${ctaBaseClass} bg-[#3CC8FF] text-[13px] px-3 py-2`}>
+              Explore Our Practices
+            </div>
+
+            <div className={`${ctaBaseClass} bg-[#43E0B1] text-[13px] px-3 py-2`}>
+              CXO AI Research
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      {/* 🔹 HERO IMAGE + TEXT (DESKTOP) */}
       <div className="hidden lg:flex absolute top-0 right-0 w-[55%] flex-col z-0">
 
         <img
@@ -29,15 +74,12 @@ const HeroSection = () => {
       {/* 🔹 CONTENT */}
       <div className="page-shell relative z-10 pt-0 pb-20 lg:pt-32">
 
-        {/* 🔸 LEFT TEXT */}
-        <div className="max-w-[42rem] 2xl:max-w-[56rem] 2xl:mt-24">
+        {/* 🔸 LEFT TEXT (DESKTOP ONLY) */}
+        <div className="hidden lg:block max-w-[42rem] 2xl:max-w-[56rem] 2xl:mt-24">
 
           <h1 className="font-serif leading-none text-[40px] sm:text-[48px] md:text-[56px] lg:text-[58px] 2xl:text-[64px]">
 
-            <span className="block 2xl:whitespace-nowrap">
-              Thought-Shaping
-            </span>
-
+            <span className="block 2xl:whitespace-nowrap">Thought-Shaping</span>
             <span className="block">Intelligence on</span>
 
             <span className="block">
@@ -70,22 +112,8 @@ const HeroSection = () => {
 
         </div>
 
-        {/* 🔸 MOBILE + TABLET */}
-        <div className="lg:hidden mt-10 flex flex-col gap-6">
-
-          <img
-            src={heroImg}
-            className="w-full h-[360px] sm:h-[420px] md:h-[520px] object-cover"
-          />
-
-          <p className="text-[14px] sm:text-[15px] md:text-[16px] text-white/70 leading-relaxed break-words">
-            RESEARCHFABRIC™ delivers practitioner-led Smart research on Perpetuating Technologies and maps the Micro-Markets where these technologies create commercial value. We identify high-growth segments, forecast competitive dynamics, and deliver decision-grade intelligence for enterprise strategy and investment.
-          </p>
-
-        </div>
-
-        {/* 🔸 GRID + PRACTICES (MORE DOWN) */}
-        <div className="mt-20 lg:mt-[420px] 2xl:mt-[650px]">
+        {/* 🔸 GRID + PRACTICES */}
+        <div className="mt-20 lg:mt-[420px] 2xl:mt-[580px]">
 
           <div className="w-full">
 
