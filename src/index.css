@@ -4,6 +4,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@media (min-width: 1900px) {
+  .hero-grid-3xl {
+    margin-top: 30rem;
+    border: 5px solid #FFFFFF;
+  }
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
