@@ -62,7 +62,8 @@ const AnalystTeamHero = () => {
       {/* CONTENT */}
       <div
         className="
-        page-shell relative z-10 flex justify-center text-center
+        w-full px-6 sm:px-10 lg:px-20 xl:px-28 2xl:px-36 
+        relative z-10 mx-auto flex justify-center text-center
 
         /* 🔥 MOVED UP */
         pt-[74px]
@@ -78,20 +79,13 @@ const AnalystTeamHero = () => {
         lg:-translate-y-11
       "
       >
-        <div className="max-w-4xl px-4">
+        <div className="max-w-[1000px] px-4">
 
           {/* HEADING */}
           <h1
             className="
-            font-semibold leading-[1.1]
-
-            text-[26px]
-            sm:text-[34px]
-            md:text-[42px]
-            lg:text-[48px]
-            xl:text-[52px]
-            2xl:text-[60px]
-
+            font-semibold leading-[1.1] tracking-[-0.03em]
+            text-[clamp(1.875rem,5vw,3.75rem)]
             break-words
           "
           >
@@ -102,22 +96,11 @@ const AnalystTeamHero = () => {
           <p
             className="
             mx-auto
-
-            mt-3 sm:mt-4 md:mt-5 lg:mt-6
-
-            max-w-[90%]
-            sm:max-w-[85%]
-            md:max-w-3xl
-
-            text-[14px]
-            sm:text-[16px]
-            md:text-[18px]
-            lg:text-[19px]
-            xl:text-[20px]
-            2xl:text-[22px]
-
-            leading-[1.5]
-            text-white/85
+            mt-4 sm:mt-5 md:mt-6
+            max-w-[860px]
+            text-[clamp(1rem,1.2vw,1.375rem)]
+            leading-relaxed
+            text-white/90
           "
           >
             A carefully assembled team of practitioners, strategists, and

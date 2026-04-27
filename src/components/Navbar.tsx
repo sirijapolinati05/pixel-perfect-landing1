@@ -140,12 +140,15 @@ const Navbar = () => {
   }, [currentNavItems, isHomePage, isAnalystTeamPage]);
 
   const getTextClass = (isActive: boolean) => `
-    relative pb-1
-    after:absolute after:bottom-[1px] after:left-0
-    after:h-[2px] after:w-full
+    relative pb-2
+    text-[clamp(0.9375rem,1vw,1.125rem)]
+    transition-all duration-300
+    whitespace-nowrap
+    after:absolute after:bottom-0 after:left-0
+    after:h-[3px] after:w-full after:rounded-full
     after:bg-[#63d3c5]
     after:transition-transform after:duration-300
-    ${isActive ? "after:scale-x-100" : "after:scale-x-0"}
+    ${isActive ? "after:scale-x-100 font-bold" : "after:scale-x-0 hover:after:scale-x-50"}
     ${showLightNavbar ? "text-[#0B1F3A]" : "text-white"}
   `;
 
@@ -164,7 +167,7 @@ const Navbar = () => {
           <div className="hidden lg:flex w-full items-center">
             
             {/* 🔸 LEFT (45%) → Logo & First Item */}
-            <div className="w-[45%] flex items-center justify-between pr-12 xl:pr-16">
+            <div className="w-[45%] flex items-center justify-between pr-8 xl:pr-12 2xl:pr-16">
               <button
                 onClick={handleLogoClick}
                 className={`relative ${logoShellClass}`}
@@ -190,7 +193,7 @@ const Navbar = () => {
 
             {/* 🔸 RIGHT (55%) → Remaining Items & Subscribe */}
             <div className="w-[55%] flex items-center justify-between">
-              <div className="flex gap-6 xl:gap-8 2xl:gap-10">
+              <div className="flex gap-8 xl:gap-12 2xl:gap-16">
                 {currentNavItems.slice(1).map((item) => {
                   const isActive = activeSection === item.href;
                   return (

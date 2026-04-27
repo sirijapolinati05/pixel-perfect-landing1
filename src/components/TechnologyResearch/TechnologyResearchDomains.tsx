@@ -50,12 +50,12 @@ const TechnologyResearchDomains = () => {
         opacity-20 scale-x-[-1] rotate-90 -rotate-[30deg]"
       />
 
-      <div className="page-shell relative mx-auto">
+      <div className="w-full px-6 sm:px-10 lg:px-20 xl:px-28 2xl:px-36 relative mx-auto">
 
         <div className="mb-2 flex items-center gap-2 sm:gap-3">
           <span className="h-[1px] w-4 bg-current opacity-40"></span>
 
-          <p className="text-[16px] sm:text-[18px] md:text-[20px] font-bold text-[#202453] whitespace-nowrap">
+          <p className="text-[clamp(1rem,1.2vw,1.375rem)] font-bold text-[#202453] whitespace-nowrap">
             Research Domains
           </p>
 
@@ -64,7 +64,7 @@ const TechnologyResearchDomains = () => {
 
         <h2 className="
         mt-2
-        text-[28px] sm:text-[34px] md:text-[40px] lg:text-[40px] xl:text-[44px] 2xl:text-[48px]
+        text-[clamp(1.75rem,4vw,3rem)]
         font-bold leading-[1.05] tracking-[-0.03em]">
           Three Pillars Shaping the Future of Technology
         </h2>
@@ -72,8 +72,8 @@ const TechnologyResearchDomains = () => {
         <p className="
         mt-3
         max-w-[900px]
-        text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px]
-        leading-6 sm:leading-7 md:leading-7 lg:leading-8
+        text-[clamp(0.875rem,1.1vw,1.25rem)]
+        leading-relaxed
         text-[#202453]/88">
           Our research is concentrated across three transformative domains where deep
           analysis and expert perspective create outsized strategic value.
@@ -108,11 +108,11 @@ const TechnologyResearchDomains = () => {
                   />
                 </div>
 
-                <h3 className="mt-3 text-[20px] sm:text-[22px] md:text-[24px] leading-tight text-[#111111] break-words">
+                <h3 className="mt-3 text-[clamp(1.25rem,1.5vw,1.5rem)] font-semibold leading-tight text-[#111111] break-words">
                   {domain.title}
                 </h3>
 
-                <p className="mt-2 text-[14px] sm:text-[16px] md:text-[18px] leading-6 sm:leading-7 md:leading-7 text-[#202453]/88 break-words flex-grow">
+                <p className="mt-2 text-[clamp(0.875rem,1vw,1rem)] leading-relaxed text-[#202453]/88 break-words flex-grow">
                   {domain.description}
                 </p>
 

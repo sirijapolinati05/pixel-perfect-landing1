@@ -59,24 +59,24 @@ const MicroMarketResearchMethodology = () => {
         />
       </div>
 
-      <div className="page-shell relative mx-auto">
+      <div className="w-full px-6 sm:px-10 lg:px-20 xl:px-28 2xl:px-36 relative mx-auto">
 
         {/* Header */}
         <div className="relative z-10 flex items-center gap-2 sm:gap-3">
           <span className="h-px w-4 bg-current opacity-40 sm:w-6 md:w-8" />
-          <p className="text-[18px] font-bold text-[#1d214f] md:text-[20px]">
+          <p className="text-[clamp(1rem,1.2vw,1.375rem)] font-bold text-[#1d214f] md:text-[20px]">
             Methodology
           </p>
           <span className="h-px w-4 bg-current opacity-40 sm:w-6 md:w-8" />
         </div>
 
         {/* Title */}
-        <h2 className="relative z-10 mt-3 text-[32px] sm:text-[40px] md:text-[46px] font-bold leading-[1.05]">
+        <h2 className="relative z-10 mt-3 text-[clamp(1.75rem,4vw,3.25rem)] font-bold leading-[1.05]">
           The "Signal-to-Noise" Approach
         </h2>
 
         {/* Description */}
-        <p className="relative z-10 mt-3 max-w-[720px] text-[16px] sm:text-[18px] md:text-[18px] leading-6 text-[#1d214f]/80">
+        <p className="relative z-10 mt-3 max-w-[720px] text-[clamp(0.9375rem,1.1vw,1.125rem)] leading-relaxed text-[#1d214f]/80">
           In micro-markets, data is scarce and often unreliable. Our methodology is
           designed to synthesize fragmented data points into a coherent strategic picture.
         </p>

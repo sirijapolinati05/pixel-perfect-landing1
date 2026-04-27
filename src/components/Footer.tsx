@@ -22,7 +22,7 @@ const Footer = () => {
       <footer className="border-t border-border bg-background">
 
         {/* TOP */}
-        <div className="page-shell mx-auto py-8 sm:py-10">
+        <div className="w-full px-6 sm:px-10 lg:px-20 xl:px-28 2xl:px-36 mx-auto py-8 sm:py-12 md:py-16">
 
           {/* ✅ TOP CONTENT WRAPPER */}
           <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-8 sm:gap-10 text-center md:text-left">
@@ -43,7 +43,7 @@ const Footer = () => {
 
             {/* MENU */}
             <div>
-              <h4 className="mb-3 text-[16px] font-bold text-foreground">
+              <h4 className="mb-4 text-[clamp(1rem,1.2vw,1.25rem)] font-bold text-foreground">
                 Menu
               </h4>
 
@@ -52,7 +52,7 @@ const Footer = () => {
                   <li key={link}>
                     <a
                       href="#"
-                      className="inline-block text-[14px] text-muted-foreground transition-all duration-300 hover:translate-x-1 hover:text-foreground"
+                      className="inline-block text-[clamp(0.875rem,1vw,1rem)] text-muted-foreground transition-all duration-300 hover:translate-x-1 hover:text-foreground whitespace-nowrap"
                     >
                       {link}
                     </a>
@@ -63,27 +63,27 @@ const Footer = () => {
 
             {/* SUBSCRIBE */}
             <div className="w-full max-w-md mx-auto md:mx-0">
-              <h4 className="mb-3 text-[16px] font-bold text-foreground">
+              <h4 className="mb-4 text-[clamp(1rem,1.2vw,1.25rem)] font-bold text-foreground">
                 Subscribe
               </h4>
 
-              <div className="group flex w-full overflow-hidden rounded">
+              <div className="group flex w-full overflow-hidden rounded border border-border">
 
                 <input
                   type="email"
                   placeholder="Email Address"
-                  className="w-full flex-1 bg-muted px-3 py-2 text-[14px] sm:text-[15px] text-foreground outline-none transition-all duration-300 placeholder:text-muted-foreground focus:ring-2 focus:ring-primary"
+                  className="w-full flex-1 bg-muted px-4 py-3 text-[clamp(0.875rem,1vw,1rem)] text-foreground outline-none transition-all duration-300 placeholder:text-muted-foreground focus:ring-2 focus:ring-primary"
                 />
 
                 <button
-                  className="flex items-center justify-center bg-navy px-3 sm:px-4 text-primary-foreground transition-all duration-300 hover:bg-navy-light hover:shadow-md active:scale-95"
+                  className="flex items-center justify-center bg-navy px-5 text-primary-foreground transition-all duration-300 hover:bg-navy-light hover:shadow-md active:scale-95"
                 >
-                  <ArrowRightIcon size={14} />
+                  <ArrowRightIcon size={18} />
                 </button>
 
               </div>
 
-              <p className="mt-2 text-[13px] sm:text-[14px] text-muted-foreground">
+              <p className="mt-3 text-[clamp(0.75rem,0.9vw,0.875rem)] text-muted-foreground">
                 *Send Message
               </p>
             </div>
@@ -95,15 +95,15 @@ const Footer = () => {
         <div className="border-t border-border bg-background">
 
           {/* ✅ BOTTOM WRAPPER */}
-          <div className="page-shell mx-auto">
+          <div className="w-full px-6 sm:px-10 lg:px-20 xl:px-28 2xl:px-36 mx-auto">
 
-            <div className="flex flex-col sm:flex-row items-center justify-between gap-2 py-4 text-center sm:text-left">
+            <div className="flex flex-col sm:flex-row items-center justify-between gap-4 py-6 text-center sm:text-left">
 
-              <p className="text-[13px] sm:text-[14px] text-muted-foreground">
+              <p className="text-[clamp(0.75rem,0.9vw,0.875rem)] text-muted-foreground">
                 (c) 2022 DIGITALFABRIC. All Rights Reserved
               </p>
 
-              <p className="text-[13px] sm:text-[14px] text-muted-foreground">
+              <p className="text-[clamp(0.75rem,0.9vw,0.875rem)] text-muted-foreground">
                 Hyderabad, Telangana, India
               </p>
 

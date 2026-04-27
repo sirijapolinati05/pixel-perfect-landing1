@@ -55,10 +55,10 @@ const MicroMarketResearchExpertise = () => {
       <div className="absolute bottom-[-16px] right-[-16px] h-[80px] w-[80px] sm:bottom-[-22px] sm:right-[-22px] sm:h-[106px] sm:w-[106px] md:bottom-[-28px] md:right-[-28px] md:h-[136px] md:w-[136px] rounded-full border border-white/20" />
 
       {/* ✅ FIXED PADDING */}
-      <div className="page-shell relative z-10 px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16">
+      <div className="w-full px-6 sm:px-10 lg:px-20 xl:px-28 2xl:px-36 relative z-10 mx-auto">
 
         <div className="mx-auto max-w-[900px] text-center">
-          <p className="text-[16px] sm:text-[18px] md:text-[20px] font-bold text-[#18afe5]">
+          <p className="text-[clamp(1rem,1.2vw,1.375rem)] font-bold text-[#18afe5]">
             <span className="inline-flex items-center gap-2 sm:gap-3">
               <span className="h-px w-5 sm:w-6 md:w-8 bg-[#18afe5]" />
               Our Expertise
@@ -66,11 +66,11 @@ const MicroMarketResearchExpertise = () => {
             </span>
           </p>
 
-          <h2 className="mt-4 text-[28px] sm:text-[34px] md:text-[40px] lg:text-[44px] xl:text-[48px] 2xl:text-[52px] font-bold leading-tight tracking-[-0.02em]">
+          <h2 className="mt-4 text-[clamp(1.75rem,4vw,3.25rem)] font-bold leading-tight tracking-[-0.02em]">
             Micro-Market Competencies
           </h2>
 
-          <p className="mx-auto mt-3 max-w-[820px] text-[14px] sm:text-[16px] md:text-[17px] lg:text-[18px] xl:text-[20px] leading-6 sm:leading-7 text-white/90">
+          <p className="mx-auto mt-3 max-w-[820px] text-[clamp(0.875rem,1.1vw,1.25rem)] leading-relaxed text-white/90">
             Our proprietary framework allows us to dissect complex value chains
             and isolate the specific variables driving growth in emerging
             technology sectors.

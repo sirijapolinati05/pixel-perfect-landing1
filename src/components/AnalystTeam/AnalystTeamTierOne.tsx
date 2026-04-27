@@ -31,19 +31,19 @@ const partnerCards = [
 
 const AnalystTeamTierOne = () => {
   return (
-    <section className="bg-[#f8f7f3] py-16 lg:py-20 xl:py-24 text-[#141948]">
+    <section id="leadership" className="bg-[#f8f7f3] py-16 lg:py-20 xl:py-24 text-[#141948]">
 
-      <div className="max-w-[1400px] xl:max-w-[1600px] 2xl:max-w-[1800px] min-[2500px]:max-w-[2300px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full px-6 sm:px-10 lg:px-20 xl:px-28 2xl:px-36 mx-auto">
 
         {/* HEADER */}
-        <div className="max-w-[1000px]">
-          <p className="flex items-center gap-2 text-[16px] sm:text-[18px] md:text-[20px] font-bold text-[#20254d]">
+        <div className="max-w-[1200px]">
+          <p className="flex items-center gap-2 text-[clamp(1rem,1.2vw,1.375rem)] font-bold text-[#20254d]">
             <span className="h-px w-6 bg-[#20254d]" />
             Core Leadership Team
             <span className="h-px w-6 bg-[#20254d]" />
           </p>
 
-          <h2 className="mt-4 text-[28px] sm:text-[36px] md:text-[44px] lg:text-[50px] xl:text-[56px] leading-tight lg:whitespace-nowrap">
+          <h2 className="mt-4 text-[clamp(1.75rem,4vw,3.25rem)] font-bold leading-tight tracking-[-0.02em]">
             Research Partners & Principal Analysts
           </h2>
         </div>

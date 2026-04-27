@@ -76,16 +76,16 @@ const TechnologyResearchNavbar = () => {
 
   const getNavLinkClassName = (isActive: boolean) => {
     const activeLineClass =
-      "after:absolute after:bottom-[1px] after:left-0 after:h-[2px] after:w-full after:origin-left after:rounded-full after:bg-[#63d3c5] after:transition-transform after:duration-300";
+      "after:absolute after:bottom-0 after:left-0 after:h-[3px] after:w-full after:origin-left after:rounded-full after:bg-[#63d3c5] after:transition-transform after:duration-300";
 
-    return `relative pb-1 text-[16px] md:text-[18px] transition-colors ${activeLineClass} ${
+    return `relative pb-2 text-[clamp(0.9375rem,1.1vw,1.125rem)] transition-all duration-300 ${activeLineClass} ${
       showLightNavbar
         ? isActive
-          ? "text-[#0B1F3A] font-semibold after:scale-x-100"
-          : "text-[#0B1F3A]/90 hover:text-[#0B1F3A] after:scale-x-0"
+          ? "text-[#0B1F3A] font-bold after:scale-x-100"
+          : "text-[#0B1F3A]/90 hover:text-[#0B1F3A] after:scale-x-0 hover:after:scale-x-50"
         : isActive
-          ? "text-white font-semibold after:scale-x-100"
-          : "text-white/80 hover:text-white after:scale-x-0"
+          ? "text-white font-bold after:scale-x-100"
+          : "text-white/80 hover:text-white after:scale-x-0 hover:after:scale-x-50"
     }`;
   };
 
@@ -102,50 +102,74 @@ const TechnologyResearchNavbar = () => {
           : "border-b border-transparent bg-transparent"
       }`}
     >
-      <div className="page-shell flex items-center justify-between py-4 sm:py-5">
-        <div className="flex items-center gap-0">
-          <button
-            type="button"
-            onClick={() => setMobileOpen((prev) => !prev)}
-            aria-label={mobileOpen ? "Close navigation" : "Open navigation"}
-            aria-expanded={mobileOpen}
-            aria-controls="technology-research-mobile-nav"
-            className={`relative z-20 -mr-1 flex h-11 w-11 shrink-0 items-center justify-center lg:hidden ${
-              mobileHeaderActive ? "text-[#0B1F3A]" : "text-white"
-            }`}
-          >
-            <MenuIcon size={25} />
-          </button>
+      <div className="w-full px-6 sm:px-10 lg:px-20 xl:px-28 2xl:px-36 relative flex items-center py-4 sm:py-5">
 
-          <Link to="/" className={`relative z-10 -ml-2 flex items-center p-0 ${techLogoShellClass}`}>
-            <img src={darkLogo} alt="Research Fabric" className={darkLogoClass} />
-            <img src={lightLogo} alt="Research Fabric" className={lightLogoClass} />
-          </Link>
+        {/* 🔥 DESKTOP LAYOUT (45/55 SPLIT) */}
+        <div className="hidden lg:flex w-full items-center">
+          
+          {/* 🔸 LEFT (45%) → Logo & First Item */}
+          <div className="w-[45%] flex items-center justify-between pr-8 xl:pr-12 2xl:pr-16">
+            <Link to="/" className={`relative z-10 -ml-2 flex items-center p-0 ${techLogoShellClass}`}>
+              <img src={darkLogo} alt="Research Fabric" className={darkLogoClass} />
+              <img src={lightLogo} alt="Research Fabric" className={lightLogoClass} />
+            </Link>
+
+            <Link
+              to="/technology-research"
+              className={getNavLinkClassName(isTechnologyResearch)}
+            >
+              Technology Research
+            </Link>
+          </div>
+
+          {/* 🔸 RIGHT (55%) → Remaining Items & Subscribe */}
+          <div className="w-[55%] flex items-center justify-between">
+            <div className="flex gap-8 xl:gap-12 2xl:gap-16">
+              <Link
+                to="/micro-market-research"
+                className={getNavLinkClassName(isMicroMarketResearch)}
+              >
+                Micro-Market Research
+              </Link>
+
+              <a href="#cta" className={getNavLinkClassName(isCtaVisible)}>
+                Download Approach Note
+              </a>
+            </div>
+
+            <div className="flex items-center">
+              <span
+                className={`cursor-pointer font-semibold text-[clamp(0.875rem,1vw,1.125rem)] transition-colors ${
+                  mobileHeaderActive ? "text-[#0B1F3A]" : "text-white"
+                }`}
+              >
+                Subscribe
+              </span>
+            </div>
+          </div>
         </div>
 
-        <nav className="hidden items-center gap-4 lg:ml-28 lg:flex lg:translate-y-[6px] xl:ml-32 xl:gap-6">
-          <Link
-            to="/technology-research"
-            className={getNavLinkClassName(isTechnologyResearch)}
-          >
-            Technology Research
-          </Link>
+        {/* 🔹 MOBILE LAYOUT */}
+        <div className="lg:hidden flex w-full items-center justify-between">
+          <div className="flex items-center">
+            <button
+              type="button"
+              onClick={() => setMobileOpen((prev) => !prev)}
+              className={`relative z-20 -mr-1 flex h-11 w-11 shrink-0 items-center justify-center ${
+                mobileHeaderActive ? "text-[#0B1F3A]" : "text-white"
+              }`}
+            >
+              <MenuIcon size={25} />
+            </button>
 
-          <Link
-            to="/micro-market-research"
-            className={getNavLinkClassName(isMicroMarketResearch)}
-          >
-            Micro-Market Research
-          </Link>
+            <Link to="/" className={`relative z-10 -ml-2 flex items-center p-0 ${techLogoShellClass}`}>
+              <img src={darkLogo} alt="Research Fabric" className={darkLogoClass} />
+              <img src={lightLogo} alt="Research Fabric" className={lightLogoClass} />
+            </Link>
+          </div>
 
-          <a href="#cta" className={getNavLinkClassName(isCtaVisible)}>
-            Download Approach Note
-          </a>
-        </nav>
-
-        <div className="flex items-center">
           <span
-            className={`cursor-pointer text-[14px] transition-colors sm:text-[16px] md:text-[16px] lg:text-[16px] xl:text-[16px] 2xl:text-[18px] ${
+            className={`cursor-pointer font-semibold text-[14px] sm:text-[16px] transition-colors ${
               mobileHeaderActive ? "text-[#0B1F3A]" : "text-white"
             }`}
           >

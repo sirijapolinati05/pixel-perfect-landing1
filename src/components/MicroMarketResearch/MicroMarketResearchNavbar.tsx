@@ -74,16 +74,16 @@ const MicroMarketResearchNavbar = () => {
 
   const getLinkClassName = (isActive: boolean) => {
     const activeLineClass =
-      "after:absolute after:bottom-[1px] after:left-0 after:h-[2px] after:w-full after:origin-left after:rounded-full after:bg-[#63d3c5] after:transition-transform after:duration-300";
+      "after:absolute after:bottom-0 after:left-0 after:h-[3px] after:w-full after:origin-left after:rounded-full after:bg-[#63d3c5] after:transition-transform after:duration-300";
 
-    return `relative pb-1 text-[16px] md:text-[18px] transition-colors ${activeLineClass} ${
+    return `relative pb-2 text-[clamp(0.9375rem,1.1vw,1.125rem)] transition-all duration-300 ${activeLineClass} ${
       showLightNavbar
         ? isActive
-          ? "text-[#0B1F3A] font-semibold after:scale-x-100"
-          : "text-[#0B1F3A] after:scale-x-0"
+          ? "text-[#0B1F3A] font-bold after:scale-x-100"
+          : "text-[#0B1F3A] after:scale-x-0 hover:after:scale-x-50"
         : isActive
-          ? "text-white font-semibold after:scale-x-100"
-          : "text-white/80 hover:text-white after:scale-x-0"
+          ? "text-white font-bold after:scale-x-100"
+          : "text-white/80 hover:text-white after:scale-x-0 hover:after:scale-x-50"
     }`;
   };
 
@@ -106,54 +106,75 @@ const MicroMarketResearchNavbar = () => {
       }
     `}
     >
-      <div className="page-shell flex items-center justify-between py-4 sm:py-5">
+      <div className="w-full px-6 sm:px-10 lg:px-20 xl:px-28 2xl:px-36 relative flex items-center py-4 sm:py-5">
 
-        {/* LEFT */}
-        <div className="flex items-center gap-0">
-          <button
-            type="button"
-            onClick={() => setMobileOpen((prev) => !prev)}
-            className={`relative z-20 -mr-1 flex h-11 w-11 items-center justify-center lg:hidden ${
-              mobileOpen || showLightNavbar ? "text-[#0B1F3A]" : "text-white"
-            }`}
-          >
-            <MenuIcon size={25} />
-          </button>
+        {/* 🔥 DESKTOP LAYOUT (45/55 SPLIT) */}
+        <div className="hidden lg:flex w-full items-center">
+          
+          {/* 🔸 LEFT (45%) → Logo & First Item */}
+          <div className="w-[45%] flex items-center justify-between pr-8 xl:pr-12 2xl:pr-16">
+            <Link to="/" className={`relative z-10 -ml-2 flex items-center ${logoShellClass}`}>
+              <img src={darkLogo} className={darkLogoClass} />
+              <img src={lightLogo} className={lightLogoClass} />
+            </Link>
 
-          <Link to="/" className={`relative z-10 -ml-2 flex items-center ${logoShellClass}`}>
-            <img src={darkLogo} className={darkLogoClass} />
-            <img src={lightLogo} className={lightLogoClass} />
-          </Link>
+            <Link
+              to="/technology-research"
+              className={getLinkClassName(pathname === "/technology-research")}
+            >
+              Technology Research
+            </Link>
+          </div>
+
+          {/* 🔸 RIGHT (55%) → Remaining Items & Subscribe */}
+          <div className="w-[55%] flex items-center justify-between">
+            <div className="flex gap-8 xl:gap-12 2xl:gap-16">
+              <Link
+                to="/micro-market-research"
+                className={getLinkClassName(pathname === "/micro-market-research")}
+              >
+                Micro-Market Research
+              </Link>
+
+              <a href="#cta" className={getLinkClassName(isCtaVisible)}>
+                Download Approach Note
+              </a>
+            </div>
+
+            <div className="flex items-center">
+              <span
+                className={`cursor-pointer font-semibold text-[clamp(0.875rem,1vw,1.125rem)] transition-colors ${
+                  mobileHeaderActive ? "text-[#0B1F3A]" : "text-white"
+                }`}
+              >
+                Subscribe
+              </span>
+            </div>
+          </div>
         </div>
 
-        {/* CENTER */}
-        <div className="hidden items-center gap-4 lg:ml-28 lg:flex xl:ml-32 xl:gap-6">
-          <Link
-            to="/technology-research"
-            className={getLinkClassName(pathname === "/technology-research")}
-          >
-            Technology Research
-          </Link>
+        {/* 🔹 MOBILE LAYOUT */}
+        <div className="lg:hidden flex w-full items-center justify-between">
+          <div className="flex items-center">
+            <button
+              type="button"
+              onClick={() => setMobileOpen((prev) => !prev)}
+              className={`relative z-20 -mr-1 flex h-11 w-11 shrink-0 items-center justify-center ${
+                mobileHeaderActive ? "text-[#0B1F3A]" : "text-white"
+              }`}
+            >
+              <MenuIcon size={25} />
+            </button>
 
-          <Link
-            to="/micro-market-research"
-            className={getLinkClassName(pathname === "/micro-market-research")}
-          >
-            Micro-Market Research
-          </Link>
+            <Link to="/" className={`relative z-10 -ml-2 flex items-center ${logoShellClass}`}>
+              <img src={darkLogo} className={darkLogoClass} />
+              <img src={lightLogo} className={lightLogoClass} />
+            </Link>
+          </div>
 
-          <a href="#cta" className={getLinkClassName(isCtaVisible)}>
-            Download Approach Note
-          </a>
-        </div>
-
-        {/* RIGHT */}
-        <div className="flex items-center gap-3 sm:gap-4">
           <span
-            className={`text-[14px] sm:text-[16px] ${
-              mobileHeaderActive
-                ? "inline text-[#0B1F3A]"
-                : "hidden sm:inline text-white"
+            className={`cursor-pointer font-semibold text-[14px] sm:text-[16px] transition-colors ${
+              mobileHeaderActive ? "text-[#0B1F3A]" : "text-white"
             }`}
           >
             Subscribe
