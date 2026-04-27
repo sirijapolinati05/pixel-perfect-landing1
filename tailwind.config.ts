@@ -2,37 +2,65 @@ import type { Config } from "tailwindcss";
 
 export default {
   darkMode: ["class"],
+
   content: [
     "./pages/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
     "./app/**/*.{ts,tsx}",
     "./src/**/*.{ts,tsx}",
   ],
-  prefix: "",
 
   theme: {
     container: {
       center: true,
-      padding: "2rem",
+      padding: "1.5rem",
       screens: {
-        "2xl": "1400px",
-        "3xl": "1600px",   // ✅ added
-        "4xl": "2000px",   // ✅ added (for ultra-wide control)
+        sm: "100%",
+        md: "100%",
+        lg: "1024px",
+        xl: "1280px",
+        "2xl": "1440px",
+
+        /* ✅ CUSTOM LARGE SCREENS */
+        "3xl": "1680px",
+        "4xl": "1920px",
+        "5xl": "2240px",
+        "6xl": "2560px",
       },
     },
 
     extend: {
-      // ✅ NEW BREAKPOINTS (MAIN FIX)
+      /* ✅ CUSTOM BREAKPOINTS */
       screens: {
-        "3xl": "1920px",
-        "4xl": "2560px",
+        "3xl": "1680px",
+        "4xl": "1920px",
+        "5xl": "2240px",
+        "6xl": "2560px",
       },
 
+      /* ✅ TYPOGRAPHY (OPTIONAL FLUID SYSTEM) */
+      fontSize: {
+        fluidTitle: "clamp(28px, 3vw, 56px)",
+        fluidSubtitle: "clamp(20px, 2vw, 32px)",
+        fluidText: "clamp(14px, 1vw, 18px)",
+        fluidSmall: "clamp(12px, 0.9vw, 14px)",
+      },
+
+      /* ✅ SPACING SCALE */
+      spacing: {
+        "18": "4.5rem",
+        "22": "5.5rem",
+        "26": "6.5rem",
+        "30": "7.5rem",
+      },
+
+      /* ✅ FONTS */
       fontFamily: {
         serif: ["'Abhaya Libre'", "serif"],
         sans: ["'Abhaya Libre'", "serif"],
       },
 
+      /* ✅ COLORS (UNCHANGED) */
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -102,12 +130,14 @@ export default {
         },
       },
 
+      /* ✅ BORDER RADIUS */
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
 
+      /* ✅ ANIMATIONS */
       keyframes: {
         "accordion-down": {
           from: { height: "0" },

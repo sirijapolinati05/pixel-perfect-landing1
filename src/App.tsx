@@ -44,8 +44,14 @@ const ScrollToTop = () => {
   return null;
 };
 
+const PageWrapper = ({ children }: { children: React.ReactNode }) => (
+  <div className="min-h-[100dvh] w-full overflow-x-hidden">
+    {children}
+  </div>
+);
+
 const HomePage = () => (
-  <div className="ultra-wide-type min-h-[100dvh]">
+  <PageWrapper>
     <Navbar />
     <HeroSection />
     <PracticesSection />
@@ -56,13 +62,13 @@ const HomePage = () => (
     <ResearchSection />
     <CTASection />
     <Footer />
-  </div>
+  </PageWrapper>
 );
 
 const AnalystTeamPage = () => (
-  <div className="ultra-wide-type min-h-[100dvh] bg-[#f8f7f3]">
+  <PageWrapper>
     <Navbar />
-    <div className="pt-[78px] lg:pt-[84px]">
+    <div className="pt-[78px] lg:pt-[84px] bg-[#f8f7f3]">
       <AnalystTeamHero />
       <AnalystTeamTierOne />
       <AnalystTeamTierTwo />
@@ -70,42 +76,50 @@ const AnalystTeamPage = () => (
       <CTASection />
       <Footer />
     </div>
-  </div>
+  </PageWrapper>
 );
 
 const MicroMarketResearchPage = () => (
-  <div className="ultra-wide-type micro-market-page min-h-[100dvh] bg-[#15203c] lg:bg-[#f8f7f3]">
+  <PageWrapper>
     <MicroMarketResearchNavbar />
-    <MicroMarketResearchHero />
-    <MicroMarketResearchExpertise />
-    <MicroMarketResearchMethodology />
-    <CTASection />
-    <Footer />
-  </div>
+    <div className="bg-[#15203c] lg:bg-[#f8f7f3]">
+      <MicroMarketResearchHero />
+      <MicroMarketResearchExpertise />
+      <MicroMarketResearchMethodology />
+      <CTASection />
+      <Footer />
+    </div>
+  </PageWrapper>
 );
 
 const TechnologyResearchPage = () => (
-  <div className="ultra-wide-type technology-research-page min-h-[100dvh] bg-[#080f43] lg:bg-[#f8f7f3]">
+  <PageWrapper>
     <TechnologyResearchNavbar />
-    <TechnologyResearchHero />
-    <TechnologyResearchDomains />
-    <TechnologyResearchOffering />
-    <TechnologyResearchPapers />
-    <CTASection />
-    <Footer />
-  </div>
+    <div className="bg-[#080f43] lg:bg-[#f8f7f3]">
+      <TechnologyResearchHero />
+      <TechnologyResearchDomains />
+      <TechnologyResearchOffering />
+      <TechnologyResearchPapers />
+      <CTASection />
+      <Footer />
+    </div>
+  </PageWrapper>
 );
 
 const NotFoundPage = () => (
-  <div className="ultra-wide-type flex min-h-[100dvh] items-center justify-center bg-muted">
-    <div className="text-center">
-      <h1 className="mb-4 text-[36px] md:text-[44px] font-bold">404</h1>
-      <p className="mb-4 text-[16px] md:text-[18px] text-muted-foreground">Oops! Page not found</p>
-      <a href="/" className="text-primary underline hover:text-primary/90">
-        Return to Home
-      </a>
+  <PageWrapper>
+    <div className="flex items-center justify-center min-h-[100dvh] bg-muted">
+      <div className="text-center">
+        <h1 className="mb-4 text-[36px] md:text-[44px] font-bold">404</h1>
+        <p className="mb-4 text-[16px] md:text-[18px] text-muted-foreground">
+          Oops! Page not found
+        </p>
+        <a href="/" className="text-primary underline hover:text-primary/90">
+          Return to Home
+        </a>
+      </div>
     </div>
-  </div>
+  </PageWrapper>
 );
 
 const App = () => {

@@ -39,94 +39,78 @@ const cardBaseClass =
 
 const PracticesSection = () => {
   return (
-    <div>
-      <section className="bg-[#F7F9FC] py-12">
+    <section className="bg-[#F7F9FC] py-12">
+      <div className="page-shell mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
-        <div className="page-shell mx-auto flex flex-wrap gap-6">
-
-          <div className="flex flex-wrap w-full gap-6">
-
-            {/* IMAGE CARD */}
-            <div className={`${cardBaseClass} w-full sm:w-[48%] lg:w-[31%] overflow-hidden`}>
-              <img src={techImg} className="h-full w-full object-cover" />
-            </div>
-
-            {/* TECHNOLOGY CARD */}
-            <div className={`${cardBaseClass} w-full sm:w-[48%] lg:w-[31%] p-5`}>
-
-              <div>
-                <img src={tickImg} className="mb-4 h-8 w-8" />
-
-                <div className="mb-4">
-                  <h3 className="text-xl font-semibold text-[#0A1F44]">
-                    Technology Research
-                  </h3>
-                  <p className="mt-2 text-sm text-[#5A6B85]">
-                    Macro-level research on Generative AI, Quantum Computing.
-                  </p>
-                </div>
-
-                {/* ✅ BIGGER BADGES */}
-                <div className="mb-4">
-                  <div className="flex flex-wrap gap-3">
-                    {technologyTags.map((tag) => (
-                      <span key={tag} className={tagClassName}>
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-
-              <div className="pt-4">
-                <Link to="/technology-research" className={buttonClassName}>
-                  Explore Technology Research
-                  <ArrowRightIcon size={14} />
-                </Link>
-              </div>
-
-            </div>
-
-            {/* MICRO MARKET CARD */}
-            <div className={`${cardBaseClass} w-full sm:w-[48%] lg:w-[31%] p-5`}>
-
-              <div>
-                <img src={microIcon} className="mb-4 h-8 w-8" />
-
-                <div className="mb-4">
-                  <h3 className="text-xl font-semibold text-[#0A1F44]">
-                    Micro-Market Research
-                  </h3>
-                  <p className="mt-2 text-sm text-[#5A6B85]">
-                    Granular analysis of high-growth market segments.
-                  </p>
-                </div>
-
-                {/* ✅ BIGGER BADGES */}
-                <div className="mb-4">
-                  <div className="flex flex-wrap gap-3">
-                    {microMarketTags.map((tag) => (
-                      <span key={tag} className={tagClassName}>
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-
-              <div className="pt-4">
-                <Link to="/micro-market-research" className={buttonClassName}>
-                  Explore Micro-Market Research
-                  <ArrowRightIcon size={14} />
-                </Link>
-              </div>
-
-            </div>
-
+          {/* IMAGE CARD */}
+          <div className={`${cardBaseClass} overflow-hidden min-h-[400px]`}>
+            <img src={techImg} className="h-full w-full object-cover" />
           </div>
+
+          {/* TECHNOLOGY CARD */}
+          <div className={`${cardBaseClass} p-5`}>
+            <div>
+              <img src={tickImg} className="mb-4 h-8 w-8" />
+              <div className="mb-4">
+                <h3 className="text-xl font-semibold text-[#0A1F44]">
+                  Technology Research
+                </h3>
+                <p className="mt-2 text-sm text-[#5A6B85]">
+                  Macro-level research on Generative AI, Quantum Computing.
+                </p>
+              </div>
+              <div className="mb-4">
+                <div className="flex flex-wrap gap-3">
+                  {technologyTags.map((tag) => (
+                    <span key={tag} className={tagClassName}>
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+            <div className="pt-4">
+              <Link to="/technology-research" className={buttonClassName}>
+                Explore Technology Research
+                <ArrowRightIcon size={14} />
+              </Link>
+            </div>
+          </div>
+
+          {/* MICRO MARKET CARD */}
+          <div className={`${cardBaseClass} p-5`}>
+            <div>
+              <img src={microIcon} className="mb-4 h-8 w-8" />
+              <div className="mb-4">
+                <h3 className="text-xl font-semibold text-[#0A1F44]">
+                  Micro-Market Research
+                </h3>
+                <p className="mt-2 text-sm text-[#5A6B85]">
+                  Granular analysis of high-growth market segments.
+                </p>
+              </div>
+              <div className="mb-4">
+                <div className="flex flex-wrap gap-3">
+                  {microMarketTags.map((tag) => (
+                    <span key={tag} className={tagClassName}>
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+            <div className="pt-4">
+              <Link to="/micro-market-research" className={buttonClassName}>
+                Explore Micro-Market Research
+                <ArrowRightIcon size={14} />
+              </Link>
+            </div>
+          </div>
+
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
   );
 };
 

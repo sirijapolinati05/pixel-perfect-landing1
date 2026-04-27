@@ -62,14 +62,13 @@ const DeliverSection = () => {
               What We Deliver
             </h3>
 
-            {/* ✅ FLEX CARDS (RESPONSIVE) */}
-            <div className="flex flex-wrap gap-4 sm:gap-5 md:gap-6 lg:gap-6 xl:gap-8">
+            {/* ✅ GRID CARDS (RESPONSIVE) */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
 
               {deliverables.map((item) => (
                 <div
                   key={item.title}
                   className="
-                  w-full sm:w-[48%] lg:w-[23%]
                   relative rounded-xl bg-white
                   p-4 sm:p-5
                   border border-[#E6ECF5]

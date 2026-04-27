@@ -68,7 +68,9 @@ const Navbar = () => {
 
     window.scrollTo({ top: targetTop, behavior: "smooth" });
 
+    // ✅ instant active update
     setActiveSection(hash);
+
     setMobileOpen(false);
   };
 
@@ -86,6 +88,7 @@ const Navbar = () => {
     navigate("/");
   };
 
+  /* ✅ NAVBAR SCROLL STYLE */
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
@@ -102,12 +105,12 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [isHomePage, isAnalystTeamPage]);
 
+  /* 🔥 FIXED ACTIVE SECTION LOGIC */
   useEffect(() => {
     if (!isHomePage && !isAnalystTeamPage) return;
 
     const updateActiveSection = () => {
-      const scrollY = window.scrollY;
-      const scrollPosition = scrollY + window.innerHeight * 0.35;
+      const scrollY = window.scrollY + NAVBAR_HEIGHT + 20;
 
       let current = "";
 
@@ -118,7 +121,10 @@ const Navbar = () => {
         const sectionTop =
           section.getBoundingClientRect().top + window.scrollY;
 
-        if (scrollPosition >= sectionTop) {
+        const sectionHeight = section.offsetHeight;
+        const sectionBottom = sectionTop + sectionHeight;
+
+        if (scrollY >= sectionTop && scrollY < sectionBottom) {
           current = item.href;
         }
       });
@@ -128,6 +134,7 @@ const Navbar = () => {
 
     updateActiveSection();
     window.addEventListener("scroll", updateActiveSection);
+
     return () =>
       window.removeEventListener("scroll", updateActiveSection);
   }, [currentNavItems, isHomePage, isAnalystTeamPage]);
@@ -151,12 +158,10 @@ const Navbar = () => {
             : "border-b border-transparent bg-transparent"
         }`}
       >
-
         <div className="page-shell relative flex items-center justify-between py-4">
 
           {/* LEFT */}
           <div className="flex items-center gap-0">
-
             <button
               onClick={toggleMobileMenu}
               className="lg:hidden flex h-11 w-11 items-center justify-center"
@@ -171,10 +176,9 @@ const Navbar = () => {
               <img src={logo} className={darkLogoClass} />
               <img src={lightLogo} className={lightLogoClass} />
             </button>
-
           </div>
 
-          {/* ✅ DESKTOP NAV (SHIFTED RIGHT) */}
+          {/* DESKTOP NAV */}
           <div className="hidden lg:flex gap-6 ml-10 xl:ml-16">
             {currentNavItems.map((item) => {
               const isActive = activeSection === item.href;
@@ -203,14 +207,12 @@ const Navbar = () => {
           >
             Subscribe
           </span>
-
         </div>
 
         {/* MOBILE MENU */}
         {mobileOpen && (
           <div className="border-t border-slate-200 bg-white px-4 py-4 shadow-md lg:hidden">
             <div className="flex flex-col gap-2 text-[16px] font-semibold text-[#0B1F3A]">
-
               {currentNavItems.map((item) => {
                 const isActive = activeSection === item.href;
 
@@ -228,11 +230,9 @@ const Navbar = () => {
                   </a>
                 );
               })}
-
             </div>
           </div>
         )}
-
       </nav>
     </div>
   );
