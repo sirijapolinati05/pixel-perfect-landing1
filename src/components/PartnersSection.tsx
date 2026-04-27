@@ -43,7 +43,7 @@ const PartnersSection = () => {
         id="analysts"
         className="overflow-hidden bg-background py-10 sm:py-12 md:py-14 lg:py-12 xl:py-14 2xl:py-16 font-serif"
       >
-        <div className="page-shell mx-auto text-center">
+        <div className="w-full px-6 sm:px-10 lg:px-20 xl:px-28 2xl:px-36 text-center">
 
           {/* ✅ HEADING WRAPPER */}
           <div>
@@ -118,17 +118,17 @@ const PartnersSection = () => {
                       </div>
 
                       {/* NAME */}
-                      <h4 className="text-white font-bold text-[18px] sm:text-[20px] md:text-[22px]">
+                      <h4 className="text-white font-bold text-[clamp(1.25rem,1.5vw,1.5rem)]">
                         {partner.name}
                       </h4>
 
                       {/* META */}
                       <div className="mt-1 mb-2 flex flex-col">
-                        <p className="text-[14px] sm:text-[15px] md:text-[16px] text-[#38BDF8] font-medium">
+                        <p className="text-[clamp(0.875rem,1vw,1rem)] text-[#38BDF8] font-medium">
                           {partner.role}
                         </p>
 
-                        <p className="mt-1 text-[13px] sm:text-[14px] md:text-[15px] text-[#38BDF8]">
+                        <p className="mt-1 text-[clamp(0.8rem,0.9vw,0.9rem)] text-[#38BDF8]">
                           {partner.subtitle}
                         </p>
 
@@ -154,8 +154,8 @@ const PartnersSection = () => {
             <Link
               to="/analyst-team"
               className="
-              inline-flex px-4 sm:px-5 py-2.5
-              text-[14px] sm:text-[16px]
+              inline-flex px-[clamp(1rem,2vw,2rem)] py-[clamp(0.6rem,1.2vw,0.75rem)]
+              text-[clamp(0.875rem,1.1vw,1.125rem)]
               border border-[#203A72] bg-white text-[#0A1F44]
               rounded transition-all duration-300
               hover:bg-[#0A1F44] hover:text-white hover:scale-95

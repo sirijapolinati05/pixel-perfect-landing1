@@ -25,7 +25,7 @@ const HeroSection = () => {
           pt-44 xl:pt-48 2xl:pt-56
         ">
 
-          <h1 className="font-serif leading-none text-[40px] sm:text-[48px] md:text-[56px] lg:text-[58px] 2xl:text-[64px]">
+          <h1 className="font-serif leading-tight text-[clamp(2.5rem,5vw,4.5rem)] lg:text-[clamp(3rem,4.5vw,5.5rem)]">
             <span className="block">Thought-Shaping</span>
             <span className="block">Intelligence on</span>
 
@@ -63,7 +63,7 @@ const HeroSection = () => {
           <img src={heroImg} alt="Hero" className="w-full h-auto object-cover" />
 
           <div className="w-full py-6 bg-[#081A34]">
-            <p className="w-full text-[16px] lg:text-[18px] text-white/70 leading-relaxed break-words">
+            <p className="w-full text-[clamp(1.125rem,1.5vw,1.75rem)] text-white/70 leading-relaxed break-words">
               {descriptionText}
             </p>
           </div>
@@ -86,7 +86,7 @@ const HeroSection = () => {
           <div className="absolute inset-0 flex flex-col justify-center px-6">
             <div className="mt-12 sm:mt-16 md:mt-20">
 
-              <h1 className="font-serif leading-tight text-[32px] sm:text-[38px] md:text-[44px]">
+              <h1 className="font-serif leading-tight text-[clamp(2rem,8vw,3rem)]">
                 <span className="block">Thought-Shaping</span>
                 <span className="block">Intelligence on</span>
 
@@ -122,7 +122,7 @@ const HeroSection = () => {
         </div>
 
         <div className="mt-6 px-5">
-          <p className="text-[14px] sm:text-[15px] md:text-[16px] text-white/70 leading-relaxed">
+          <p className="text-[clamp(1rem,3vw,1.375rem)] text-white/70 leading-relaxed">
             {descriptionText}
           </p>
         </div>
@@ -144,10 +144,10 @@ const HeroSection = () => {
               ${index < 2 ? `border-b ${statDividerClass} lg:border-b-0` : ""}
               ${index < 3 ? `lg:border-r ${statDividerClass}` : ""}`}
             >
-              <h3 className="text-[22px] sm:text-[26px] lg:text-[32px] text-[#5AE0BB] font-serif">
+              <h3 className="text-[clamp(1.25rem,2.5vw,2rem)] text-[#5AE0BB] font-serif">
                 {item.title}
               </h3>
-              <p className="text-[13px] sm:text-[15px] lg:text-[16px] text-white/60 mt-2">
+              <p className="text-[clamp(0.8rem,1vw,1.1rem)] text-white/60 mt-2">
                 {item.sub}
               </p>
             </div>
@@ -155,10 +155,10 @@ const HeroSection = () => {
         </div>
 
         <div className={`border-t ${statDividerClass} text-center py-8 flex flex-col items-center`}>
-          <h3 className="text-[22px] sm:text-[26px] lg:text-[32px] text-[#5AE0BB] font-serif">
+          <h3 className="text-[clamp(1.25rem,2.5vw,2rem)] text-[#5AE0BB] font-serif">
             Practices
           </h3>
-          <p className="text-[13px] sm:text-[15px] lg:text-[16px] text-white/60 mt-2">
+          <p className="text-[clamp(0.8rem,1vw,1.1rem)] text-white/60 mt-2">
             Research Engineering
           </p>
         </div>

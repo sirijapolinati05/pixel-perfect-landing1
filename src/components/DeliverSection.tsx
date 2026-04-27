@@ -47,7 +47,7 @@ const DeliverSection = () => {
           />
         </div>
 
-        <div className="page-shell relative z-10">
+        <div className="w-full px-6 sm:px-10 lg:px-20 xl:px-28 2xl:px-36 relative z-10">
 
           {/* ✅ HEADING + CARDS IN ONE DIV */}
           <div>
@@ -56,7 +56,7 @@ const DeliverSection = () => {
             <h3
               className="
               mb-6 inline-block border-b border-white/40 pb-2
-              text-[26px] sm:text-[30px] md:text-[34px] lg:text-[36px] xl:text-[40px]
+              text-[clamp(1.625rem,3.5vw,2.5rem)]
               font-serif text-white
             ">
               What We Deliver
@@ -89,7 +89,7 @@ const DeliverSection = () => {
                   <h4
                     className="
                     mb-2 font-bold text-[#0A1F44] font-serif
-                    text-[20px] sm:text-[22px] md:text-[24px] lg:text-[22px] xl:text-[26px]
+                    text-[clamp(1.375rem,2vw,1.75rem)]
                   ">
                     {item.title}
                   </h4>
@@ -97,7 +97,7 @@ const DeliverSection = () => {
                   <p
                     className="
                     font-serif text-[#5A6B85]
-                    text-[14px] sm:text-[15px] md:text-[16px] lg:text-[14px] xl:text-[16px]
+                    text-[clamp(0.9rem,1.1vw,1.125rem)]
                     leading-relaxed
                   ">
                     {item.description}

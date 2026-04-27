@@ -158,55 +158,95 @@ const Navbar = () => {
             : "border-b border-transparent bg-transparent"
         }`}
       >
-        <div className="page-shell relative flex items-center justify-between py-4">
+        <div className="w-full relative flex items-center py-4 px-6 sm:px-10 lg:px-20 xl:px-28 2xl:px-36">
 
-          {/* LEFT */}
-          <div className="flex items-center gap-0">
-            <button
-              onClick={toggleMobileMenu}
-              className="lg:hidden flex h-11 w-11 items-center justify-center"
-            >
-              <MenuIcon size={25} color={mobileMenuIconColor} />
-            </button>
+          {/* 🔥 DESKTOP LAYOUT (45/55 SPLIT) */}
+          <div className="hidden lg:flex w-full items-center">
+            
+            {/* 🔸 LEFT (45%) → Logo & First Item */}
+            <div className="w-[45%] flex items-center justify-between pr-12 xl:pr-16">
+              <button
+                onClick={handleLogoClick}
+                className={`relative ${logoShellClass}`}
+              >
+                <img src={logo} className={darkLogoClass} />
+                <img src={lightLogo} className={lightLogoClass} />
+              </button>
 
-            <button
-              onClick={handleLogoClick}
-              className={`relative ${logoShellClass}`}
-            >
-              <img src={logo} className={darkLogoClass} />
-              <img src={lightLogo} className={lightLogoClass} />
-            </button>
-          </div>
-
-          {/* DESKTOP NAV */}
-          <div className="hidden lg:flex gap-6 ml-10 xl:ml-16">
-            {currentNavItems.map((item) => {
-              const isActive = activeSection === item.href;
-
-              return (
+              {currentNavItems.length > 0 && (
                 <a
-                  key={item.label}
-                  href={item.href}
+                  key={currentNavItems[0].label}
+                  href={currentNavItems[0].href}
                   onClick={(e) => {
                     e.preventDefault();
-                    scrollToSection(item.href);
+                    scrollToSection(currentNavItems[0].href);
                   }}
-                  className={getTextClass(isActive)}
+                  className={getTextClass(activeSection === currentNavItems[0].href)}
                 >
-                  {item.label}
+                  {currentNavItems[0].label}
                 </a>
-              );
-            })}
+              )}
+            </div>
+
+            {/* 🔸 RIGHT (55%) → Remaining Items & Subscribe */}
+            <div className="w-[55%] flex items-center justify-between">
+              <div className="flex gap-6 xl:gap-8 2xl:gap-10">
+                {currentNavItems.slice(1).map((item) => {
+                  const isActive = activeSection === item.href;
+                  return (
+                    <a
+                      key={item.label}
+                      href={item.href}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        scrollToSection(item.href);
+                      }}
+                      className={getTextClass(isActive)}
+                    >
+                      {item.label}
+                    </a>
+                  );
+                })}
+              </div>
+
+              <span
+                className={`text-[14px] sm:text-[16px] font-semibold ${
+                  mobileHeaderActive ? "text-black" : "text-white"
+                }`}
+              >
+                Subscribe
+              </span>
+            </div>
           </div>
 
-          {/* RIGHT */}
-          <span
-            className={`text-[14px] sm:text-[16px] ${
-              mobileHeaderActive ? "text-black" : "hidden sm:inline text-white"
-            }`}
-          >
-            Subscribe
-          </span>
+          {/* 🔹 MOBILE LAYOUT */}
+          <div className="lg:hidden flex w-full items-center justify-between">
+            <div className="flex items-center">
+              <button
+                onClick={toggleMobileMenu}
+                className="flex h-11 w-11 items-center justify-center mr-2"
+              >
+                <MenuIcon size={25} color={mobileMenuIconColor} />
+              </button>
+
+              <button
+                onClick={handleLogoClick}
+                className={`relative ${logoShellClass}`}
+              >
+                <img src={logo} className={darkLogoClass} />
+                <img src={lightLogo} className={lightLogoClass} />
+              </button>
+            </div>
+
+            <span
+              className={`text-[14px] sm:text-[16px] font-semibold ${
+                mobileHeaderActive ? "text-black" : "text-white"
+              }`}
+            >
+              Subscribe
+            </span>
+          </div>
+
         </div>
 
         {/* MOBILE MENU */}

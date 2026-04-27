@@ -42,7 +42,7 @@ const ProcessSection = () => {
         id="process"
         className="overflow-hidden bg-process-blue py-10 sm:py-12 md:py-14 lg:py-12 xl:py-14 2xl:py-16"
       >
-        <div className="process-shell mx-auto max-w-7xl px-4 text-center sm:px-6">
+        <div className="w-full px-6 sm:px-10 lg:px-20 xl:px-28 2xl:px-36 text-center">
 
           {/* ✅ HEADING BLOCK */}
           <div>
