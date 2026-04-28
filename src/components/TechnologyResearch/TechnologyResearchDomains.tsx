@@ -22,7 +22,7 @@ const domains = [
     image: processThree,
     title: "AI & Intelligence Augmentation",
     description:
-      "From foundation models to agentic AI and intelligence augmentation, our research navigates enterprise adoption, safety frameworks, and the convergence of human and machine intelligence.",
+      "From foundation models to agentic AI and intelligence augmentation(IA)-research that navigates enterprise adoption, safety frameworks, and the convergence of human and machine intelligence.",
   },
 ];
 

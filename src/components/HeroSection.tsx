@@ -10,7 +10,15 @@ const HeroSection = () => {
 
   const statDividerClass = "border-white border-opacity-100";
 
-  const descriptionText = `RESEARCHFABRIC™ delivers practitioner-led Smart research on Perpetuating Technologies and maps the Micro-Markets where these technologies create commercial value. We identify high-growth segments, forecast competitive dynamics, and deliver decision-grade intelligence for enterprise strategy and investment.`;
+  const descriptionText = (
+    <>
+      RESEARCHFABRIC™ delivers practitioner-led Smart research on{" "}
+      <strong>Perpetuating Technologies</strong> and maps the{" "}
+      <strong>Micro-Markets</strong> where these technologies create commercial
+      value. We identify high-growth segments, forecast competitive dynamics,
+      and deliver decision-grade intelligence for enterprise strategy and investment.
+    </>
+  );
 
   return (
     <section id="hero" className="relative bg-[#081A34] text-white overflow-hidden">

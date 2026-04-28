@@ -36,7 +36,7 @@ const ProcessSection = () => {
   const [activeStep, setActiveStep] = useState<number | null>(null);
 
   return (
-    <div> {/* ✅ FULL WRAPPER */}
+    <div>
 
       <section
         id="process"
@@ -44,7 +44,6 @@ const ProcessSection = () => {
       >
         <div className="w-full px-6 sm:px-10 lg:px-20 xl:px-28 2xl:px-36 text-center">
 
-          {/* ✅ HEADING BLOCK */}
           <div>
 
             <div className="mb-2 flex items-center justify-center gap-2 sm:gap-3">
@@ -61,13 +60,12 @@ const ProcessSection = () => {
               From Inquiry to Industry Narrative
             </h2>
 
-            <p className="mx-auto mb-6 max-w-xl font-serif text-navy font-medium text-[clamp(1.125rem,1.1vw,1.25rem)] sm:mb-8 sm:max-w-2xl md:max-w-3xl">
+            <p className="mx-auto mb-6 max-w-xl font-serif text-navy font-medium text-[clamp(1.125rem,1.1vw,1.25rem)] sm:mb-8 sm:max-w-2xl md:max-w-3xl whitespace-nowrap">
               Every Thought Shaping Paper follows a rigorous four-phase methodology that ensures depth, accuracy, and strategic relevance.
             </p>
 
           </div>
 
-          {/* ✅ PROGRESS WRAPPER */}
           <div className="relative">
 
             <div className="hidden lg:block absolute top-[12px] left-0 right-0 h-[2px] bg-navy/30 z-0" />
@@ -92,7 +90,6 @@ const ProcessSection = () => {
 
           </div>
 
-          {/* ✅ CARDS WRAPPER */}
           <div className="flex justify-center">
 
             <div className="w-full">
@@ -102,7 +99,6 @@ const ProcessSection = () => {
                 {steps.map((step, index) => (
                   <div key={step.title} className="relative">
 
-                    {/* TYPO BG */}
                     {index === 3 && (
                       <img
                         src={typographicImg}

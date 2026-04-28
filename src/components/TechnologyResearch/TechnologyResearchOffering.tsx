@@ -39,7 +39,7 @@ const TechnologyResearchOffering = () => {
           </h2>
 
           <p className="mt-4 max-w-[620px] text-[clamp(1.125rem,1.1vw,1.25rem)] text-white/90 leading-relaxed font-medium">
-            Our Thought Shaping Papers are co-authored with renowned industry analysts and domain experts.
+            Our Thought Shaping Papers are co-authored with renowned industry  analysts and domain experts. These aren't ordinary whitepapers — they  are strategic instruments designed to frame industry narratives, guide  enterprise decisions, and accelerate technology adoption.
           </p>
         </div>
 
@@ -55,7 +55,8 @@ const TechnologyResearchOffering = () => {
               bg-[#f1f5f9]
               text-[#0d1440]
               rounded-xl
-              p-[clamp(1.25rem,2vw,2rem)]
+              p-[clamp(1rem,1.5vw,1.5rem)]
+              min-h-[260px]
               shadow-[0_8px_30px_rgba(0,0,0,0.3)]
               text-center
               transition-all duration-300

@@ -28,7 +28,7 @@ const TechnologyResearchHero = () => {
           </h1>
 
           <p className="technology-research-hero-copy mt-4 text-[clamp(1rem,1.2vw,1.25rem)] leading-relaxed text-white/95 sm:mt-5">
-            ResearchFabric partners with the world&apos;s foremost technology analysts to
+            ResearchFabric™ partners with the world&apos;s foremost technology analysts to
             produce Thought Shaping Papers that define the strategic direction of
             Quantum Computing, AI Hardware, and Artificial Intelligence.
           </p>

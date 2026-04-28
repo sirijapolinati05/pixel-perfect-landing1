@@ -104,14 +104,12 @@ const TechnologyResearchNavbar = () => {
     >
       <div className="w-full px-6 sm:px-10 lg:px-20 xl:px-28 2xl:px-36 relative flex items-center py-4 sm:py-5">
 
-        {/* 🔥 DESKTOP LAYOUT (45/55 SPLIT) */}
+        {/* 🔥 DESKTOP LAYOUT (UNCHANGED) */}
         <div className="hidden lg:flex w-full items-center">
-          
-          {/* 🔸 LEFT (45%) → Logo & First Item */}
           <div className="w-[45%] flex items-center justify-between pr-8 xl:pr-12 2xl:pr-16">
             <Link to="/" className={`relative z-10 -ml-2 flex items-center p-0 ${techLogoShellClass}`}>
-              <img src={darkLogo} alt="Research Fabric" className={darkLogoClass} />
-              <img src={lightLogo} alt="Research Fabric" className={lightLogoClass} />
+              <img src={darkLogo} className={darkLogoClass} />
+              <img src={lightLogo} className={lightLogoClass} />
             </Link>
 
             <Link
@@ -122,7 +120,6 @@ const TechnologyResearchNavbar = () => {
             </Link>
           </div>
 
-          {/* 🔸 RIGHT (55%) → Remaining Items & Subscribe */}
           <div className="w-[55%] flex items-center justify-between">
             <div className="flex gap-8 xl:gap-12 2xl:gap-16">
               <Link
@@ -149,13 +146,13 @@ const TechnologyResearchNavbar = () => {
           </div>
         </div>
 
-        {/* 🔹 MOBILE LAYOUT */}
+        {/* 🔥 MOBILE (ONLY 1 CHANGE HERE) */}
         <div className="lg:hidden flex w-full items-center justify-between">
           <div className="flex items-center">
             <button
               type="button"
               onClick={() => setMobileOpen((prev) => !prev)}
-              className={`relative z-20 -mr-1 flex h-11 w-11 shrink-0 items-center justify-center ${
+              className={`relative z-20 -ml-1 flex h-11 w-11 shrink-0 items-center justify-center ${
                 mobileHeaderActive ? "text-[#0B1F3A]" : "text-white"
               }`}
             >
@@ -163,8 +160,8 @@ const TechnologyResearchNavbar = () => {
             </button>
 
             <Link to="/" className={`relative z-10 -ml-2 flex items-center p-0 ${techLogoShellClass}`}>
-              <img src={darkLogo} alt="Research Fabric" className={darkLogoClass} />
-              <img src={lightLogo} alt="Research Fabric" className={lightLogoClass} />
+              <img src={darkLogo} className={darkLogoClass} />
+              <img src={lightLogo} className={lightLogoClass} />
             </Link>
           </div>
 

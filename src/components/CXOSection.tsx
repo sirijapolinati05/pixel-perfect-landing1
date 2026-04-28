@@ -31,9 +31,7 @@ const CXOSection = () => {
                 </h2>
 
                 <p className="text-primary-foreground/70 font-serif text-[clamp(1.125rem,1.1vw,1.25rem)] leading-relaxed mb-5 sm:mb-6">
-                  The AI landscape is noisy, volatile, and impossible for busy leaders to track.
-                  CEOs and CXOs are expected to drive growth, innovation, and new revenue with AI
-                  yet few have the bandwidth or in-house capability to stay ahead. We bridge that gap.
+                  The AI landscape is noisy, volatile, and impossible for busy leaders to  track. CEOs and CXOs are expected to drive growth, innovation, and new  revenue with AI — yet few have the bandwidth or in-house capability to  stay ahead. We bridge that gap.
                 </p>
 
                 <a

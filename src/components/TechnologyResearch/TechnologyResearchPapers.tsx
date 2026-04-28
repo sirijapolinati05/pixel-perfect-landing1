@@ -1,6 +1,7 @@
 import authorImage from "@/assets/LandingPage/Ashwin-Gaidhani.png";
 import linkedinBadge from "@/assets/LandingPage/LinkedIn.png";
 import whiteTypographyImg from "@/assets/LandingPage/White-Typography.png";
+import circleBg from "@/assets/ResearchTeam/ResearchTeam-Background.jpeg";
 
 const papers = Array.from({ length: 3 }, (_, index) => ({
   id: index + 1,
@@ -17,14 +18,12 @@ const TechnologyResearchPapers = () => {
     >
       <div className="w-full px-6 sm:px-10 lg:px-20 xl:px-28 2xl:px-36 relative mx-auto">
 
-        {/* HEADING */}
         <h2 className="text-[clamp(1.75rem,4vw,3.5rem)] leading-none text-[#31a8e4] font-bold">
           Thought Shaping Papers
         </h2>
 
         <div className="relative mt-4 sm:mt-5">
           
-          {/* TYPOGRAPHIC IMAGE */}
           <img
             src={whiteTypographyImg}
             alt=""
@@ -38,7 +37,6 @@ const TechnologyResearchPapers = () => {
             opacity-20 scale-x-[-1] rotate-90"
           />
 
-          {/* CARDS */}
           <div className="
             relative z-10 grid grid-cols-1 
             sm:grid-cols-2 
@@ -77,11 +75,23 @@ const TechnologyResearchPapers = () => {
 
                 <div className="mt-4 border-t border-white/25 pt-4">
                   <div className="flex items-center gap-3">
-                    <img
-                      src={authorImage}
-                      alt="Ashwin Gaidhani"
-                      className="h-12 w-12 rounded-full object-cover"
-                    />
+                    
+                    {/* ✅ NO BORDER / CLEAN BACKGROUND */}
+                    <div
+                      className="h-12 w-12 rounded-full overflow-hidden"
+                      style={{
+                        backgroundImage: `url(${circleBg})`,
+                        backgroundSize: "cover",
+                        backgroundPosition: "center",
+                      }}
+                    >
+                      <img
+                        src={authorImage}
+                        alt="Ashwin Gaidhani"
+                        className="h-full w-full object-cover rounded-full"
+                      />
+                    </div>
+
                     <div>
                       <p className="text-[clamp(1.125rem,1vw,1.125rem)] font-bold leading-none">
                         Ashwin Gaidhani
@@ -113,7 +123,6 @@ const TechnologyResearchPapers = () => {
           </div>
         </div>
 
-        {/* BUTTON */}
         <div className="mt-6 sm:mt-8 flex justify-center">
           <button
             type="button"

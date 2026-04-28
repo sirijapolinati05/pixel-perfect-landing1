@@ -30,9 +30,11 @@ const TierTwoCard = ({ name, subtitle, image }) => (
 
       /* ✅ FLUID WIDTH */
       max-w-[clamp(240px,18vw,360px)]
+      max-sm:max-w-[340px]
 
       /* ✅ FLUID HEIGHT */
       min-h-[clamp(300px,22vw,480px)]
+      max-sm:min-h-[380px]
 
       rounded-xl border border-[#dfe4ea] bg-white
       px-4 pt-6 pb-4 text-center
@@ -65,6 +67,7 @@ const TierTwoCard = ({ name, subtitle, image }) => (
       mt-2 whitespace-nowrap
 
       text-[18px]
+      max-sm:text-[24px]
       lg:text-[20px]
       xl:text-[22px]
       2xl:text-[24px]

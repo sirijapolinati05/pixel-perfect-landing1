@@ -68,9 +68,7 @@ const Navbar = () => {
 
     window.scrollTo({ top: targetTop, behavior: "smooth" });
 
-    // ✅ instant active update
     setActiveSection(hash);
-
     setMobileOpen(false);
   };
 
@@ -88,7 +86,6 @@ const Navbar = () => {
     navigate("/");
   };
 
-  /* ✅ NAVBAR SCROLL STYLE */
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
@@ -105,7 +102,6 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [isHomePage, isAnalystTeamPage]);
 
-  /* 🔥 FIXED ACTIVE SECTION LOGIC */
   useEffect(() => {
     if (!isHomePage && !isAnalystTeamPage) return;
 
@@ -161,24 +157,19 @@ const Navbar = () => {
             : "border-b border-transparent bg-transparent"
         }`}
       >
-        <div className="w-full relative flex items-center py-4 px-6 sm:px-10 lg:px-20 xl:px-28 2xl:px-36">
+        {/* 🔥 MOBILE PADDING FIX */}
+        <div className="w-full relative flex items-center py-4 px-3 sm:px-10 lg:px-20 xl:px-28 2xl:px-36">
 
-          {/* 🔥 DESKTOP LAYOUT (45/55 SPLIT) */}
+          {/* DESKTOP (UNCHANGED) */}
           <div className="hidden lg:flex w-full items-center">
-            
-            {/* 🔸 LEFT (45%) → Logo & First Item */}
             <div className="w-[45%] flex items-center justify-between pr-8 xl:pr-12 2xl:pr-16">
-              <button
-                onClick={handleLogoClick}
-                className={`relative ${logoShellClass}`}
-              >
+              <button onClick={handleLogoClick} className={`relative ${logoShellClass}`}>
                 <img src={logo} className={darkLogoClass} />
                 <img src={lightLogo} className={lightLogoClass} />
               </button>
 
               {currentNavItems.length > 0 && (
                 <a
-                  key={currentNavItems[0].label}
                   href={currentNavItems[0].href}
                   onClick={(e) => {
                     e.preventDefault();
@@ -191,7 +182,6 @@ const Navbar = () => {
               )}
             </div>
 
-            {/* 🔸 RIGHT (55%) → Remaining Items & Subscribe */}
             <div className="w-[55%] flex items-center justify-between">
               <div className="flex gap-8 xl:gap-12 2xl:gap-16">
                 {currentNavItems.slice(1).map((item) => {
@@ -212,47 +202,44 @@ const Navbar = () => {
                 })}
               </div>
 
-              <span
-                className={`text-[14px] sm:text-[16px] font-semibold ${
-                  mobileHeaderActive ? "text-black" : "text-white"
-                }`}
-              >
+              <span className={`text-[14px] sm:text-[16px] font-semibold ${
+                mobileHeaderActive ? "text-black" : "text-white"
+              }`}>
                 Subscribe
               </span>
             </div>
           </div>
 
-          {/* 🔹 MOBILE LAYOUT */}
+          {/* 🔥 MOBILE FIX */}
           <div className="lg:hidden flex w-full items-center justify-between">
             <div className="flex items-center">
+
               <button
                 onClick={toggleMobileMenu}
-                className="flex h-11 w-11 items-center justify-center mr-2"
+                className="flex h-11 w-11 items-center justify-center -ml-2"
               >
                 <MenuIcon size={25} color={mobileMenuIconColor} />
               </button>
 
               <button
                 onClick={handleLogoClick}
-                className={`relative ${logoShellClass}`}
+                className={`relative ${logoShellClass} -ml-3`}
               >
                 <img src={logo} className={darkLogoClass} />
                 <img src={lightLogo} className={lightLogoClass} />
               </button>
+
             </div>
 
-            <span
-              className={`text-[14px] sm:text-[16px] font-semibold ${
-                mobileHeaderActive ? "text-black" : "text-white"
-              }`}
-            >
+            <span className={`text-[14px] sm:text-[16px] font-semibold ${
+              mobileHeaderActive ? "text-black" : "text-white"
+            }`}>
               Subscribe
             </span>
           </div>
 
         </div>
 
-        {/* MOBILE MENU */}
         {mobileOpen && (
           <div className="border-t border-slate-200 bg-white px-4 py-4 shadow-md lg:hidden">
             <div className="flex flex-col gap-2 text-[16px] font-semibold text-[#0B1F3A]">

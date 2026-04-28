@@ -69,6 +69,10 @@ const AnalystTeamTierOne = () => {
                   shadow-md transition-all duration-300
                   hover:-translate-y-2 hover:bg-[#0b1d3a]
 
+                  w-full mx-auto
+                  max-sm:max-w-[340px]
+                  max-sm:min-h-[380px]
+
                   min-[2500px]:flex-1
                   min-[2500px]:h-[420px]
                 "
@@ -99,9 +103,10 @@ const AnalystTeamTierOne = () => {
                     {/* NAME 🔥 INCREASED EVERYWHERE */}
                     <h3
                       className="
-                        font-semibold leading-snug group-hover:text-white
+                        font-normal leading-snug group-hover:text-white
 
                         text-[20px]
+                        max-sm:text-[26px]
                         lg:text-[22px]
                         xl:text-[24px]
                         2xl:text-[26px]

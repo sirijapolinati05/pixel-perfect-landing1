@@ -24,7 +24,10 @@ const TierThreeCard = ({ name, image }) => (
       group flex flex-col w-full mx-auto
 
       max-w-[clamp(220px,18vw,320px)]
+      max-sm:max-w-[340px]
+
       min-h-[clamp(280px,22vw,420px)]
+      max-sm:min-h-[380px]
 
       rounded-xl border border-[#dfe4ea] bg-white
       px-4 pt-5 pb-4 text-center
@@ -63,10 +66,11 @@ const TierThreeCard = ({ name, image }) => (
         mt-2 whitespace-nowrap
 
         text-[clamp(1.125rem,1.2vw,1.375rem)]
+        max-sm:text-[24px]
         min-[2500px]:text-[26px]
 
         text-[#17204c]
-        font-bold
+        font-normal
         transition-colors duration-300
 
         group-hover:text-white

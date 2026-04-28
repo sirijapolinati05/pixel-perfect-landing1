@@ -164,7 +164,7 @@ const ResearchSection = () => {
                     </h3>
 
                     <p className="mt-1 text-gray-500 group-hover:text-white/80 text-[clamp(0.875rem,1.1vw,1.125rem)]">
-                      A comprehensive framework for understanding how autonomous AI agents will reshape enterprise operations.
+                      A comprehensive framework for understanding how autonomous AI agents  will reshape enterprise operations, workforce dynamics, and competitive  strategy by 2028.
                     </p>
 
                     <div className="mt-2 flex items-center justify-between">

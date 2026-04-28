@@ -37,7 +37,7 @@ const partners = [
 
 const PartnersSection = () => {
   return (
-    <div> {/* ✅ FULL WRAPPER */}
+    <div>
 
       <section
         id="analysts"
@@ -45,7 +45,6 @@ const PartnersSection = () => {
       >
         <div className="w-full px-6 sm:px-10 lg:px-20 xl:px-28 2xl:px-36 text-center">
 
-          {/* ✅ HEADING WRAPPER */}
           <div>
 
             <div className="mb-2 flex items-center justify-center gap-2 sm:gap-3">
@@ -71,13 +70,13 @@ const PartnersSection = () => {
               mx-auto mb-5 max-w-xl font-medium
               text-[clamp(1.125rem,1.1vw,1.375rem)]
               text-[#5A6B85] sm:mb-7 sm:max-w-2xl md:max-w-3xl
+              whitespace-nowrap
             ">
               Our research is shaped by partners who have spent decades at the forefront of technology research and advisory.
             </p>
 
           </div>
 
-          {/* ✅ CARDS WRAPPER (FLEX + GRID) */}
           <div className="flex justify-center">
             <div className="w-full">
 
@@ -93,7 +92,6 @@ const PartnersSection = () => {
                       hover:scale-[0.96] hover:shadow-inner
                     ">
 
-                      {/* IMAGE */}
                       <div
                         className="
                           mx-auto mb-4 rounded-full overflow-hidden
@@ -117,12 +115,10 @@ const PartnersSection = () => {
                         />
                       </div>
 
-                      {/* NAME */}
                       <h4 className="text-white font-bold text-[clamp(1.25rem,1.5vw,1.5rem)]">
                         {partner.name}
                       </h4>
 
-                      {/* META */}
                       <div className="mt-1 mb-2 flex flex-col">
                         <p className="text-[clamp(1.125rem,1vw,1.125rem)] text-[#38BDF8] font-bold">
                           {partner.role}
@@ -135,7 +131,6 @@ const PartnersSection = () => {
                         <div className="mx-auto mt-3 h-[2px] w-20 bg-gray-400 opacity-70" />
                       </div>
 
-                      {/* ICONS */}
                       <div className="mt-auto flex justify-center gap-8 pt-6">
                         <img src={linkedInLogo} className="h-7 w-7" />
                         <img src={gmailLogo} className="h-7 w-7" />
@@ -149,7 +144,6 @@ const PartnersSection = () => {
             </div>
           </div>
 
-          {/* BUTTON */}
           <div className="mt-6 flex justify-center">
             <Link
               to="/analyst-team"
