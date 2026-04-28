@@ -141,7 +141,7 @@ const Navbar = () => {
 
   const getTextClass = (isActive: boolean) => `
     relative pb-2
-    text-[clamp(0.9375rem,1vw,1.125rem)]
+    text-[clamp(1.125rem,1.1vw,1.25rem)]
     transition-all duration-300
     whitespace-nowrap
     after:absolute after:bottom-0 after:left-0

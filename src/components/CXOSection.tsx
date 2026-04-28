@@ -30,7 +30,7 @@ const CXOSection = () => {
                   AI Leadership is Now a C-Suite Imperative
                 </h2>
 
-                <p className="text-primary-foreground/70 font-serif text-[clamp(0.9375rem,1.1vw,1.125rem)] leading-relaxed mb-5 sm:mb-6">
+                <p className="text-primary-foreground/70 font-serif text-[clamp(1.125rem,1.1vw,1.25rem)] leading-relaxed mb-5 sm:mb-6">
                   The AI landscape is noisy, volatile, and impossible for busy leaders to track.
                   CEOs and CXOs are expected to drive growth, innovation, and new revenue with AI
                   yet few have the bandwidth or in-house capability to stay ahead. We bridge that gap.
@@ -38,7 +38,7 @@ const CXOSection = () => {
 
                 <a
                   href="#"
-                  className="inline-block w-fit bg-teal text-navy font-serif font-semibold px-[clamp(1rem,2vw,2rem)] py-[clamp(0.625rem,1.2vw,1rem)] text-[clamp(1rem,1.2vw,1.375rem)] rounded hover:bg-teal-light transition-all hover:scale-[1.05] whitespace-nowrap"
+                  className="inline-block w-fit bg-teal text-navy font-serif font-semibold px-[clamp(1rem,2vw,2rem)] py-[clamp(0.625rem,1.2vw,1rem)] text-[clamp(1.125rem,1.2vw,1.375rem)] rounded hover:bg-teal-light transition-all hover:scale-[1.05] whitespace-nowrap"
                 >
                   Download approach note
                 </a>
@@ -57,7 +57,7 @@ const CXOSection = () => {
                   <h3 className="mb-2 font-bold text-[#0A1F44] text-[clamp(1.375rem,2vw,1.5rem)]">
                     Cut Through Noise
                   </h3>
-                  <p className="text-[#5A6B85] text-[clamp(0.8125rem,1vw,0.875rem)]">
+                  <p className="text-[#5A6B85] text-[clamp(1.125rem,1.1vw,1.25rem)]">
                     Quantitative assessment of industry landscapes, competitive frameworks
                     & macro-economic metrics.
                   </p>
@@ -69,7 +69,7 @@ const CXOSection = () => {
                   <h3 className="mb-2 font-bold text-[#0A1F44] text-[clamp(1.375rem,2vw,1.5rem)]">
                     Translate Into Action
                   </h3>
-                  <p className="text-[#5A6B85] text-[clamp(0.8125rem,1vw,0.875rem)]">
+                  <p className="text-[#5A6B85] text-[clamp(1.125rem,1.1vw,1.25rem)]">
                     We turn complex AI trends into clear business implications your
                     leadership team can act on immediately.
                   </p>

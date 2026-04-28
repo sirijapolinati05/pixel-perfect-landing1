@@ -72,7 +72,7 @@ const TechnologyResearchDomains = () => {
         <p className="
         mt-3
         max-w-[900px]
-        text-[clamp(0.875rem,1.1vw,1.25rem)]
+        text-[clamp(1.125rem,1.1vw,1.25rem)]
         leading-relaxed
         text-[#202453]/88">
           Our research is concentrated across three transformative domains where deep
@@ -108,17 +108,17 @@ const TechnologyResearchDomains = () => {
                   />
                 </div>
 
-                <h3 className="mt-3 text-[clamp(1.25rem,1.5vw,1.5rem)] font-semibold leading-tight text-[#111111] break-words">
+                <h3 className="mt-3 text-[clamp(1.25rem,1.5vw,1.5rem)] font-bold leading-tight text-[#111111] break-words">
                   {domain.title}
                 </h3>
 
-                <p className="mt-2 text-[clamp(0.875rem,1vw,1rem)] leading-relaxed text-[#202453]/88 break-words flex-grow">
+                <p className="mt-2 text-[clamp(1.125rem,1vw,1.125rem)] leading-relaxed text-[#202453]/90 break-words flex-grow font-medium">
                   {domain.description}
                 </p>
 
                 <a
                   href="#papers"
-                  className="mt-4 inline-flex items-center gap-2 text-[13px] sm:text-[14px] md:text-[16px] font-semibold uppercase text-[#111111]"
+                  className="mt-4 inline-flex items-center gap-2 text-[clamp(1.125rem,1vw,1.125rem)] font-bold uppercase text-[#111111]"
                 >
                   Explore Research →
                 </a>

@@ -51,15 +51,15 @@ const ResearchSection = () => {
 
                   <div className="p-4 text-left">
 
-                    <span className="rounded-full bg-gradient-to-r from-[#0A0E33] to-[#25A6DD] px-[clamp(0.5rem,1vw,1rem)] py-[clamp(0.125rem,0.4vw,0.25rem)] text-[clamp(0.75rem,0.9vw,0.875rem)] text-white whitespace-nowrap">
+                    <span className="w-fit rounded-full bg-gradient-to-r from-[#0A0E33] to-[#25A6DD] px-[clamp(0.5rem,1vw,1rem)] py-[clamp(0.125rem,0.4vw,0.25rem)] text-[clamp(0.75rem,0.9vw,0.875rem)] text-white whitespace-nowrap">
                       AI / IA
                     </span>
 
-                    <h3 className="mt-1 font-semibold text-[clamp(1.375rem,2vw,1.625rem)] group-hover:text-white whitespace-nowrap">
+                    <h3 className="mt-1 font-semibold text-[clamp(1.25rem,1.5vw,1.5rem)] group-hover:text-white">
                       The Agentic Enterprise: When AI Stops Assisting and Starts Acting
                     </h3>
 
-                    <p className="mt-1 text-gray-500 group-hover:text-white/80 text-[clamp(0.9rem,1.1vw,1.125rem)]">
+                    <p className="mt-1 text-gray-500 group-hover:text-white/80 text-[clamp(0.875rem,1.1vw,1.125rem)]">
                       A comprehensive framework for understanding how autonomous AI agents will reshape enterprise operations, workforce dynamics, and competitive strategy by 2028.
                     </p>
 
@@ -125,11 +125,11 @@ const ResearchSection = () => {
                         Quantum
                       </span>
 
-                      <h4 className="mt-1 font-semibold group-hover:text-white text-[clamp(1.375rem,2vw,1.625rem)]">
+                      <h4 className="mt-1 font-semibold group-hover:text-white text-[clamp(1.25rem,1.5vw,1.5rem)]">
                         Quantum Readiness Index 2026: Enterprise Preparedness Assessment
                       </h4>
 
-                      <p className="mt-1 text-gray-500 group-hover:text-white/80 text-[clamp(0.9rem,1.1vw,1.125rem)]">
+                      <p className="mt-1 text-gray-500 group-hover:text-white/80 text-[clamp(0.875rem,1.1vw,1.125rem)]">
                         Benchmarking Fortune 500 quantum strategies across readiness, talent, and investment vectors.
                       </p>
 
@@ -155,20 +155,20 @@ const ResearchSection = () => {
 
                   <div className="p-4 text-left">
 
-                    <span className="rounded-full bg-gradient-to-r from-[#0A0E33] to-[#25A6DD] px-2 py-[2px] text-[11px] sm:text-[12px] text-white">
+                    <span className="w-fit rounded-full bg-gradient-to-r from-[#0A0E33] to-[#25A6DD] px-[clamp(0.5rem,1vw,1rem)] py-[clamp(0.125rem,0.4vw,0.25rem)] text-[clamp(0.75rem,0.9vw,0.875rem)] text-white whitespace-nowrap">
                       AI / IA
                     </span>
 
-                    <h3 className="mt-1 font-semibold group-hover:text-white text-[clamp(1.25rem,1.5vw,1.375rem)]">
+                    <h3 className="mt-1 font-semibold group-hover:text-white text-[clamp(1.25rem,1.5vw,1.5rem)]">
                       The Agentic Enterprise: When AI Stops Assisting and Starts Acting
                     </h3>
 
-                    <p className="mt-1 text-gray-500 group-hover:text-white/80 text-[clamp(0.875rem,1vw,1rem)]">
+                    <p className="mt-1 text-gray-500 group-hover:text-white/80 text-[clamp(0.875rem,1.1vw,1.125rem)]">
                       A comprehensive framework for understanding how autonomous AI agents will reshape enterprise operations.
                     </p>
 
                     <div className="mt-2 flex items-center justify-between">
-                      <p className="font-bold text-gray-600 group-hover:text-white/80 text-[10px] sm:text-[11px] md:text-[12px]">
+                      <p className="font-bold text-gray-600 group-hover:text-white/80 text-[clamp(0.7rem,0.8vw,0.875rem)] whitespace-nowrap">
                         FEB 2026 · Thought Shaping Paper
                       </p>
 

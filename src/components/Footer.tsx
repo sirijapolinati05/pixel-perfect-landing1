@@ -43,16 +43,16 @@ const Footer = () => {
 
             {/* MENU */}
             <div>
-              <h4 className="mb-4 text-[clamp(1rem,1.2vw,1.25rem)] font-bold text-foreground">
+              <h4 className="mb-4 text-[clamp(1.125rem,1.2vw,1.25rem)] font-bold text-foreground">
                 Menu
               </h4>
 
-              <ul className="space-y-2">
+              <ul className="space-y-3">
                 {menuLinks.map((link) => (
                   <li key={link}>
                     <a
                       href="#"
-                      className="inline-block text-[clamp(0.875rem,1vw,1rem)] text-muted-foreground transition-all duration-300 hover:translate-x-1 hover:text-foreground whitespace-nowrap"
+                      className="inline-block text-[clamp(1.125rem,1.1vw,1.25rem)] text-muted-foreground font-medium transition-all duration-300 hover:translate-x-1 hover:text-foreground whitespace-nowrap"
                     >
                       {link}
                     </a>
@@ -63,7 +63,7 @@ const Footer = () => {
 
             {/* SUBSCRIBE */}
             <div className="w-full max-w-md mx-auto md:mx-0">
-              <h4 className="mb-4 text-[clamp(1rem,1.2vw,1.25rem)] font-bold text-foreground">
+              <h4 className="mb-4 text-[clamp(1.125rem,1.2vw,1.25rem)] font-bold text-foreground">
                 Subscribe
               </h4>
 
@@ -72,18 +72,18 @@ const Footer = () => {
                 <input
                   type="email"
                   placeholder="Email Address"
-                  className="w-full flex-1 bg-muted px-4 py-3 text-[clamp(0.875rem,1vw,1rem)] text-foreground outline-none transition-all duration-300 placeholder:text-muted-foreground focus:ring-2 focus:ring-primary"
+                  className="w-full flex-1 bg-muted px-4 py-3 text-[clamp(1.125rem,1.1vw,1.25rem)] text-foreground outline-none transition-all duration-300 placeholder:text-muted-foreground focus:ring-2 focus:ring-primary font-medium"
                 />
 
                 <button
-                  className="flex items-center justify-center bg-navy px-5 text-primary-foreground transition-all duration-300 hover:bg-navy-light hover:shadow-md active:scale-95"
+                  className="flex items-center justify-center bg-navy px-6 text-primary-foreground transition-all duration-300 hover:bg-navy-light hover:shadow-md active:scale-95"
                 >
-                  <ArrowRightIcon size={18} />
+                  <ArrowRightIcon size={20} />
                 </button>
 
               </div>
 
-              <p className="mt-3 text-[clamp(0.75rem,0.9vw,0.875rem)] text-muted-foreground">
+              <p className="mt-3 text-[clamp(1.125rem,0.9vw,1.125rem)] text-muted-foreground font-medium">
                 *Send Message
               </p>
             </div>
@@ -97,13 +97,13 @@ const Footer = () => {
           {/* ✅ BOTTOM WRAPPER */}
           <div className="w-full px-6 sm:px-10 lg:px-20 xl:px-28 2xl:px-36 mx-auto">
 
-            <div className="flex flex-col sm:flex-row items-center justify-between gap-4 py-6 text-center sm:text-left">
+            <div className="flex flex-col sm:flex-row items-center justify-between gap-4 py-8 text-center sm:text-left">
 
-              <p className="text-[clamp(0.75rem,0.9vw,0.875rem)] text-muted-foreground">
+              <p className="text-[clamp(1.125rem,0.9vw,1.125rem)] text-muted-foreground font-medium">
                 (c) 2022 DIGITALFABRIC. All Rights Reserved
               </p>
 
-              <p className="text-[clamp(0.75rem,0.9vw,0.875rem)] text-muted-foreground">
+              <p className="text-[clamp(1.125rem,0.9vw,1.125rem)] text-muted-foreground font-medium">
                 Hyderabad, Telangana, India
               </p>
 

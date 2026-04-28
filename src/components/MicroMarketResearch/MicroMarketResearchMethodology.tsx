@@ -76,7 +76,7 @@ const MicroMarketResearchMethodology = () => {
         </h2>
 
         {/* Description */}
-        <p className="relative z-10 mt-3 max-w-[720px] text-[clamp(0.9375rem,1.1vw,1.125rem)] leading-relaxed text-[#1d214f]/80">
+        <p className="relative z-10 mt-3 max-w-[720px] text-[clamp(1.125rem,1.1vw,1.25rem)] leading-relaxed text-[#1d214f] font-medium">
           In micro-markets, data is scarce and often unreliable. Our methodology is
           designed to synthesize fragmented data points into a coherent strategic picture.
         </p>
@@ -107,21 +107,21 @@ const MicroMarketResearchMethodology = () => {
                     ${isActive ? "opacity-100" : "opacity-0 group-hover:opacity-100"}
                   `} />
 
-                  <div className={`absolute left-0 top-0 flex h-8 w-8 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-[#64dfc6] text-sm font-semibold text-[#141742] shadow transition-all duration-300 sm:h-9 sm:w-9
+                  <div className={`absolute left-0 top-0 flex h-8 w-8 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-[#64dfc6] text-sm font-bold text-[#141742] shadow transition-all duration-300 sm:h-9 sm:w-9
                     ${isActive ? "bg-white text-[#0b1f3a]" : "group-hover:bg-white group-hover:text-[#0b1f3a]"}
                   `}>
                     {card.step}
                   </div>
 
                   <div className="relative z-10">
-                    <h3 className={`text-[20px] font-medium leading-[1.15] transition-colors duration-300 sm:text-[22px]
+                    <h3 className={`text-[20px] font-bold leading-[1.15] transition-colors duration-300 sm:text-[22px]
                       ${isActive ? "text-white" : "group-hover:text-white"}
                     `}>
                       {card.title}
                     </h3>
 
-                    <p className={`mt-2 text-[16px] leading-6 text-[#141742]/75 transition-colors duration-300
-                      ${isActive ? "text-white/85" : "group-hover:text-white/85"}
+                    <p className={`mt-2 text-[clamp(1.125rem,1vw,1.125rem)] leading-6 text-[#141742] transition-colors duration-300 font-medium
+                      ${isActive ? "text-white/90" : "group-hover:text-white/90"}
                     `}>
                       {card.description}
                     </p>

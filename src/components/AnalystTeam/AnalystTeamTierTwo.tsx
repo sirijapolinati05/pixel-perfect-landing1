@@ -81,15 +81,13 @@ const TierTwoCard = ({ name, subtitle, image }) => (
     <p className="
       mt-2 whitespace-nowrap
 
-      text-[15px]
-      lg:text-[16px]
-      xl:text-[17px]
-      2xl:text-[18px]
+      text-[clamp(1.125rem,1vw,1.125rem)]
 
-      min-[2500px]:text-[20px]
+      min-[2500px]:text-[22px]
 
       text-[#1E4E8C]
-      group-hover:text-white/85
+      group-hover:text-white/90
+      font-bold
     ">
       {subtitle}
     </p>

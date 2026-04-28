@@ -69,41 +69,41 @@ const TechnologyResearchPapers = () => {
 
                 <p className="
                   mt-3
-                  text-[clamp(0.875rem,1vw,1.1rem)]
-                  leading-relaxed text-white/85"
+                  text-[clamp(1.125rem,1vw,1.125rem)]
+                  leading-relaxed text-white/90 font-medium"
                 >
                   {paper.description}
                 </p>
 
-                <div className="mt-4 border-t border-white/25 pt-3">
-                  <div className="flex items-center gap-2">
+                <div className="mt-4 border-t border-white/25 pt-4">
+                  <div className="flex items-center gap-3">
                     <img
                       src={authorImage}
                       alt="Ashwin Gaidhani"
-                      className="h-10 w-10 2xl:h-12 2xl:w-12 rounded-full object-cover"
+                      className="h-12 w-12 rounded-full object-cover"
                     />
                     <div>
-                      <p className="text-[clamp(0.875rem,1vw,1.125rem)] font-semibold leading-none">
+                      <p className="text-[clamp(1.125rem,1vw,1.125rem)] font-bold leading-none">
                         Ashwin Gaidhani
                       </p>
-                      <p className="mt-1 text-[clamp(0.75rem,0.9vw,0.875rem)] text-white/75">
+                      <p className="mt-1 text-[clamp(1.125rem,0.9vw,1.125rem)] text-white/80 font-medium">
                         Research Partner, ResearchFabric
                       </p>
                     </div>
                   </div>
 
                   <div className="
-                    mt-4 inline-flex items-center gap-1.5 
+                    mt-4 inline-flex items-center gap-2 
                     rounded-md bg-[#d9eef8] 
-                    px-3 py-1.5
-                    text-[clamp(0.75rem,0.9vw,0.875rem)]
-                    font-semibold text-[#0d1440]
+                    px-4 py-2
+                    text-[clamp(1.125rem,0.9vw,1.125rem)]
+                    font-bold text-[#0d1440]
                     whitespace-nowrap"
                   >
                     <img
                       src={linkedinBadge}
                       alt=""
-                      className="h-4 w-4 2xl:h-5 2xl:w-5 object-contain"
+                      className="h-5 w-5 object-contain"
                     />
                     Releasing soon on LinkedIn
                   </div>
@@ -121,7 +121,7 @@ const TechnologyResearchPapers = () => {
             inline-flex items-center justify-center
             rounded-lg border border-[#18204e] bg-white
             px-8 py-3
-            text-[clamp(0.9rem,1.1vw,1.25rem)]
+            text-[clamp(1.125rem,1.1vw,1.25rem)]
             font-bold text-[#111741]
             shadow-[0_8px_18px_rgba(17,23,65,0.1)]
             transition-all duration-300 hover:bg-[#0A1F44] hover:text-white hover:scale-95

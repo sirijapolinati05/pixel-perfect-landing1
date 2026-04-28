@@ -61,7 +61,7 @@ const ProcessSection = () => {
               From Inquiry to Industry Narrative
             </h2>
 
-            <p className="mx-auto mb-6 max-w-xl font-serif text-navy/70 text-[14px] sm:text-[16px] md:text-[17px] lg:text-[16px] xl:text-[20px] sm:mb-8 sm:max-w-2xl md:max-w-3xl">
+            <p className="mx-auto mb-6 max-w-xl font-serif text-navy font-medium text-[clamp(1.125rem,1.1vw,1.25rem)] sm:mb-8 sm:max-w-2xl md:max-w-3xl">
               Every Thought Shaping Paper follows a rigorous four-phase methodology that ensures depth, accuracy, and strategic relevance.
             </p>
 
@@ -132,11 +132,11 @@ const ProcessSection = () => {
                         className="mb-3 w-full object-cover h-36 sm:h-40 md:h-40 lg:h-44 xl:h-52"
                       />
 
-                      <h4 className="mb-2 font-serif font-bold text-navy text-[20px] sm:text-[22px] md:text-[24px]">
+                      <h4 className="mb-2 font-serif font-bold text-navy text-[clamp(1.25rem,1.5vw,1.5rem)]">
                         {step.title}
                       </h4>
 
-                      <p className="font-serif text-navy/70 text-[14px] sm:text-[15px] md:text-[16px] leading-relaxed">
+                      <p className="font-serif text-navy/90 text-[clamp(1.125rem,1vw,1.125rem)] leading-relaxed font-medium">
                         {step.description}
                       </p>
 

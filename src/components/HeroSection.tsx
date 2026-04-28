@@ -144,10 +144,10 @@ const HeroSection = () => {
               ${index < 2 ? `border-b ${statDividerClass} lg:border-b-0` : ""}
               ${index < 3 ? `lg:border-r ${statDividerClass}` : ""}`}
             >
-              <h3 className="text-[clamp(1.25rem,2.5vw,2rem)] text-[#5AE0BB] font-serif">
+              <h3 className="text-[clamp(1.25rem,2.5vw,2rem)] text-[#5AE0BB] font-serif font-bold">
                 {item.title}
               </h3>
-              <p className="text-[clamp(0.8rem,1vw,1.1rem)] text-white/60 mt-2">
+              <p className="text-[clamp(1.125rem,1.2vw,1.375rem)] text-white/80 mt-2 font-medium">
                 {item.sub}
               </p>
             </div>
@@ -155,10 +155,10 @@ const HeroSection = () => {
         </div>
 
         <div className={`border-t ${statDividerClass} text-center py-8 flex flex-col items-center`}>
-          <h3 className="text-[clamp(1.25rem,2.5vw,2rem)] text-[#5AE0BB] font-serif">
+          <h3 className="text-[clamp(1.25rem,2.5vw,2rem)] text-[#5AE0BB] font-serif font-bold">
             Practices
           </h3>
-          <p className="text-[clamp(0.8rem,1vw,1.1rem)] text-white/60 mt-2">
+          <p className="text-[clamp(1.125rem,1.2vw,1.375rem)] text-white/80 mt-2 font-medium">
             Research Engineering
           </p>
         </div>

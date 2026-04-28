@@ -29,10 +29,10 @@ const microMarketTags = [
 ];
 
 const tagClassName =
-  "rounded-full border border-[#C7D2E2] bg-white px-4 py-2 text-[clamp(0.8125rem,0.9vw,1rem)] font-medium text-[#0A1F44] whitespace-nowrap transition-all duration-300 hover:bg-[#F0F4F9]";
+  "rounded-full border border-[#C7D2E2] bg-white px-3 py-1.5 lg:px-4 lg:py-2 xl:px-5 xl:py-2.5 text-[clamp(0.75rem,0.8vw,1.125rem)] font-semibold xl:font-bold text-[#0A1F44] transition-all duration-300 hover:bg-[#F0F4F9]";
 
 const buttonClassName =
-  "w-full inline-flex items-center justify-center gap-2 rounded-full h-[clamp(2.5rem,3.5vw,3.5rem)] px-6 text-[clamp(0.875rem,1.1vw,1.125rem)] font-bold text-white bg-[#111B4D] transition-all duration-300 hover:scale-[1.02] hover:bg-[#1A2B6D] whitespace-nowrap";
+  "w-full inline-flex items-center justify-center gap-1.5 lg:gap-2 rounded-full h-[clamp(2.75rem,3.5vw,4rem)] px-3 lg:px-6 xl:px-8 text-[clamp(0.8rem,0.9vw,1.25rem)] font-semibold xl:font-bold text-white bg-[#111B4D] transition-all duration-300 hover:scale-[1.02] hover:bg-[#1A2B6D] whitespace-normal sm:whitespace-nowrap text-center leading-tight";
 
 const cardBaseClass =
   "flex flex-col justify-between rounded-[12px] border border-[#E2E6EE] bg-white shadow-lg transition-all duration-300 hover:shadow-2xl";
@@ -83,10 +83,10 @@ const PracticesSection = () => {
               <img src={tickImg} className="mb-4 h-[clamp(2rem,3vw,3rem)] w-[clamp(2rem,3vw,3rem)]" />
 
               <div className="mb-4">
-                <h3 className="text-[clamp(1.25rem,1.8vw,1.75rem)] font-bold text-[#0A1F44]">
+                <h3 className="text-[clamp(1.1rem,1.4vw,1.75rem)] font-bold text-[#0A1F44]">
                   Technology Research
                 </h3>
-                <p className="mt-2 text-[clamp(0.875rem,1vw,1.1rem)] text-[#5A6B85] leading-relaxed">
+                <p className="mt-2 text-[clamp(0.8rem,0.9vw,1.1rem)] text-[#5A6B85] leading-relaxed">
                   Macro-level research on Generative AI, Quantum Computing, and Strategic Technologies.
                 </p>
               </div>
@@ -117,10 +117,10 @@ const PracticesSection = () => {
               <img src={microIcon} className="mb-4 h-[clamp(2rem,3vw,3rem)] w-[clamp(2rem,3vw,3rem)]" />
 
               <div className="mb-4">
-                <h3 className="text-[clamp(1.25rem,1.8vw,1.75rem)] font-bold text-[#0A1F44]">
+                <h3 className="text-[clamp(1.1rem,1.4vw,1.75rem)] font-bold text-[#0A1F44]">
                   Micro-Market Research
                 </h3>
-                <p className="mt-2 text-[clamp(0.875rem,1vw,1.1rem)] text-[#5A6B85] leading-relaxed">
+                <p className="mt-2 text-[clamp(0.8rem,0.9vw,1.1rem)] text-[#5A6B85] leading-relaxed">
                   Granular analysis of high-growth market segments and emerging economic vectors.
                 </p>
               </div>

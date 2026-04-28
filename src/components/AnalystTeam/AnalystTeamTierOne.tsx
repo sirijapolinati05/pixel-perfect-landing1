@@ -119,14 +119,11 @@ const AnalystTeamTierOne = () => {
                     {/* SUBTITLE */}
                     <p
                       className="
-                        mt-3 text-[#1E4E8C] group-hover:text-white/80
+                        mt-3 text-[#1E4E8C] group-hover:text-white/90
+                        font-bold
+                        text-[clamp(1.125rem,1vw,1.125rem)]
 
-                        text-[16px]
-                        lg:text-[17px]
-                        xl:text-[18px]
-                        2xl:text-[19px]
-
-                        min-[2500px]:text-[20px]
+                        min-[2500px]:text-[22px]
 
                         min-[2500px]:whitespace-nowrap
                         min-[2500px]:overflow-hidden

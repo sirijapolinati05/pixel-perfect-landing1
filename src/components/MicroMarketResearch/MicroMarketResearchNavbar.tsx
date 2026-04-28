@@ -76,7 +76,7 @@ const MicroMarketResearchNavbar = () => {
     const activeLineClass =
       "after:absolute after:bottom-0 after:left-0 after:h-[3px] after:w-full after:origin-left after:rounded-full after:bg-[#63d3c5] after:transition-transform after:duration-300";
 
-    return `relative pb-2 text-[clamp(0.9375rem,1.1vw,1.125rem)] transition-all duration-300 ${activeLineClass} ${
+    return `relative pb-2 text-[clamp(1.125rem,1.1vw,1.375rem)] transition-all duration-300 ${activeLineClass} ${
       showLightNavbar
         ? isActive
           ? "text-[#0B1F3A] font-bold after:scale-x-100"

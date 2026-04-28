@@ -68,9 +68,9 @@ const PartnersSection = () => {
             </h2>
 
             <p className="
-              mx-auto mb-5 max-w-xl
-              text-[14px] sm:text-[16px] md:text-[17px] lg:text-[16px] xl:text-[20px]
-              text-muted-foreground sm:mb-7 sm:max-w-2xl md:max-w-3xl
+              mx-auto mb-5 max-w-xl font-medium
+              text-[clamp(1.125rem,1.1vw,1.375rem)]
+              text-[#5A6B85] sm:mb-7 sm:max-w-2xl md:max-w-3xl
             ">
               Our research is shaped by partners who have spent decades at the forefront of technology research and advisory.
             </p>
@@ -124,11 +124,11 @@ const PartnersSection = () => {
 
                       {/* META */}
                       <div className="mt-1 mb-2 flex flex-col">
-                        <p className="text-[clamp(0.875rem,1vw,1rem)] text-[#38BDF8] font-medium">
+                        <p className="text-[clamp(1.125rem,1vw,1.125rem)] text-[#38BDF8] font-bold">
                           {partner.role}
                         </p>
 
-                        <p className="mt-1 text-[clamp(0.8rem,0.9vw,0.9rem)] text-[#38BDF8]">
+                        <p className="mt-1 text-[clamp(1.125rem,0.9vw,1.125rem)] text-white/90 font-medium">
                           {partner.subtitle}
                         </p>
 

@@ -32,7 +32,7 @@ const MicroMarketResearchHero = () => {
             Defining the Future.
           </h1>
 
-          <p className="micro-market-hero-copy mt-4 text-[clamp(1rem,1.2vw,1.25rem)] leading-relaxed text-white/95 sm:mt-5">
+          <p className="micro-market-hero-copy mt-4 text-[clamp(1.125rem,1.2vw,1.25rem)] leading-relaxed text-white/95 sm:mt-5 font-medium">
             We specialize in identifying, sizing, and forecasting
             high-potential micro-markets within broader technology ecosystems.
             Where others see a rounding error, we see the next billion-dollar
@@ -50,10 +50,10 @@ const MicroMarketResearchHero = () => {
                   key={value}
                   className="micro-market-hero-stat flex-1 px-3 py-4 text-center sm:px-6 sm:py-5 md:px-7"
                 >
-                  <p className="micro-market-hero-stat-value text-[clamp(1.5rem,4vw,3.5rem)] font-semibold leading-none text-[#68e1d0] transition duration-300 group-hover:text-white">
+                  <p className="micro-market-hero-stat-value text-[clamp(1.5rem,4vw,3.5rem)] font-bold leading-none text-[#68e1d0] transition duration-300 group-hover:text-white">
                     {value}
                   </p>
-                  <p className="micro-market-hero-stat-label mt-2 text-[clamp(0.8125rem,1vw,1rem)] leading-tight text-white">
+                  <p className="micro-market-hero-stat-label mt-2 text-[clamp(1.125rem,1vw,1.125rem)] leading-tight text-white font-bold">
                     {lineOne}
                     <br />
                     {lineTwo}
@@ -65,7 +65,7 @@ const MicroMarketResearchHero = () => {
 
           <button
             type="button"
-            className="micro-market-hero-cta mx-auto mt-6 inline-flex items-center justify-center whitespace-nowrap rounded-full bg-[linear-gradient(180deg,#31b9ee_0%,#249fd8_100%)] px-8 py-3 text-[clamp(0.9375rem,1vw,1.125rem)] font-semibold !text-black transition-transform duration-200 hover:-translate-y-0.5 sm:mx-0"
+            className="micro-market-hero-cta mx-auto mt-6 inline-flex items-center justify-center whitespace-nowrap rounded-full bg-[linear-gradient(180deg,#31b9ee_0%,#249fd8_100%)] px-8 py-3 text-[clamp(1.125rem,1vw,1.25rem)] font-bold !text-black transition-transform duration-200 hover:-translate-y-0.5 sm:mx-0"
           >
             Explore Capabilities
           </button>

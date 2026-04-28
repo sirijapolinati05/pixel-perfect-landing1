@@ -38,7 +38,7 @@ const TechnologyResearchOffering = () => {
             Thought Shaping Papers that Define Markets
           </h2>
 
-          <p className="mt-4 max-w-[620px] text-[clamp(0.9rem,1.1vw,1.125rem)] text-white/80 leading-relaxed">
+          <p className="mt-4 max-w-[620px] text-[clamp(1.125rem,1.1vw,1.25rem)] text-white/90 leading-relaxed font-medium">
             Our Thought Shaping Papers are co-authored with renowned industry analysts and domain experts.
           </p>
         </div>
@@ -71,7 +71,7 @@ const TechnologyResearchOffering = () => {
                   {feature.title}
                 </h3>
 
-                <p className="mt-3 text-[clamp(0.875rem,1vw,1rem)] leading-relaxed text-[#5A6B85]">
+                <p className="mt-3 text-[clamp(1.125rem,1vw,1.125rem)] leading-relaxed text-[#0d1440]/80 font-medium">
                   {feature.description}
                 </p>
               </div>

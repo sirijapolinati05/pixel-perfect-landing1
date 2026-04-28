@@ -62,14 +62,11 @@ const TierThreeCard = ({ name, image }) => (
       className="
         mt-2 whitespace-nowrap
 
-        text-[18px]
-        sm:text-[19px]
-        lg:text-[20px]
-        xl:text-[22px]
-        2xl:text-[24px]
+        text-[clamp(1.125rem,1.2vw,1.375rem)]
         min-[2500px]:text-[26px]
 
         text-[#17204c]
+        font-bold
         transition-colors duration-300
 
         group-hover:text-white
@@ -105,7 +102,7 @@ const AnalystTeamTierThree = () => {
 
         {/* SUPPORT LEADS */}
         <div className="mb-4">
-          <p className="flex items-center gap-2 text-[clamp(1rem,1.2vw,1.375rem)] font-bold text-[#20254d]">
+          <p className="flex items-center gap-2 text-[clamp(1.125rem,1.2vw,1.375rem)] font-bold text-[#20254d]">
             <span className="h-px w-6 bg-[#20254d]" />
             Support Leads
             <span className="h-px w-6 bg-[#20254d]" />
@@ -118,9 +115,9 @@ const AnalystTeamTierThree = () => {
         </h2>
 
         {/* SPECIALISTS */}
-        <div className="grid gap-10 lg:grid-cols-[160px_1fr]">
+        <div className="grid gap-10 lg:grid-cols-[180px_1fr]">
           <div className="flex items-center">
-            <p className="text-[18px] font-semibold">Research Specialists</p>
+            <p className="text-[clamp(1.125rem,1.1vw,1.25rem)] font-bold text-[#17204c]">Research Specialists</p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
@@ -131,9 +128,9 @@ const AnalystTeamTierThree = () => {
         </div>
 
         {/* ANALYSTS */}
-        <div className="mt-12 grid gap-10 lg:grid-cols-[160px_1fr]">
+        <div className="mt-12 grid gap-10 lg:grid-cols-[180px_1fr]">
           <div className="flex items-center">
-            <p className="text-[18px] font-semibold">Research Analysts</p>
+            <p className="text-[clamp(1.125rem,1.1vw,1.25rem)] font-bold text-[#17204c]">Research Analysts</p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">

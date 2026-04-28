@@ -98,9 +98,10 @@ const AnalystTeamHero = () => {
             mx-auto
             mt-4 sm:mt-5 md:mt-6
             max-w-[860px]
-            text-[clamp(1rem,1.2vw,1.375rem)]
+            text-[clamp(1.125rem,1.2vw,1.375rem)]
             leading-relaxed
-            text-white/90
+            text-white/95
+            font-medium
           "
           >
             A carefully assembled team of practitioners, strategists, and
