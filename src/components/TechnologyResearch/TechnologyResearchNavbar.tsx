@@ -158,7 +158,7 @@ const TechnologyResearchNavbar = () => {
               <MenuIcon size={25} color={mobileMenuIconColor} />
             </button>
 
-            <Link to="/" className={`relative flex items-center p-0 -ml-3 ${techLogoShellClass}`}>
+            <Link to="/" className={`relative -ml-1 flex items-center p-0 ${techLogoShellClass}`}>
               <img src={darkLogo} className={darkLogoClass} />
               <img src={lightLogo} className={lightLogoClass} />
             </Link>

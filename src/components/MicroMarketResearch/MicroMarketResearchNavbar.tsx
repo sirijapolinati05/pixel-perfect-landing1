@@ -165,7 +165,7 @@ const MicroMarketResearchNavbar = () => {
               <MenuIcon size={25} color={mobileMenuIconColor} />
             </button>
 
-            <Link to="/" className={`relative flex items-center -ml-3 ${logoShellClass}`}>
+            <Link to="/" className={`relative -ml-1 flex items-center ${logoShellClass}`}>
               <img src={darkLogo} className={darkLogoClass} />
               <img src={lightLogo} className={lightLogoClass} />
             </Link>

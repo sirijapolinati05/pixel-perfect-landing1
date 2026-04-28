@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 import processOne from "@/assets/TechnologyResearch/HPC-QuantumComputing.png";
 import processTwo from "@/assets/TechnologyResearch/Chipset-AIHardware.png";
 import processThree from "@/assets/TechnologyResearch/AI-IntelligenceAugmentation.png";
@@ -27,14 +25,10 @@ const domains = [
 ];
 
 const TechnologyResearchDomains = () => {
-  // ✅ ONLY ONE ACTIVE CARD
-  const [activeIndex, setActiveIndex] = useState<number | null>(null);
-
   return (
     <section
       id="domains"
-      className="
-      relative overflow-hidden bg-white
+      className="relative overflow-hidden bg-white
       py-10 sm:py-12 md:py-14 lg:py-12 xl:py-14 2xl:py-16
       text-[#141742]"
     >
@@ -62,43 +56,35 @@ const TechnologyResearchDomains = () => {
           <span className="h-[1px] w-4 bg-current opacity-40"></span>
         </div>
 
-        <h2 className="
-        mt-2
-        text-[clamp(1.75rem,4vw,3rem)]
+        <h2 className="mt-2 text-[clamp(1.75rem,4vw,3rem)]
         font-bold leading-[1.05] tracking-[-0.03em]">
           Three Pillars Shaping the Future of Technology
         </h2>
 
-        <p className="
-        mt-3
-        max-w-[900px]
+        <p className="mt-3 max-w-[900px]
         text-[clamp(1.125rem,1.1vw,1.25rem)]
-        leading-relaxed
-        text-[#202453]/88">
+        leading-relaxed text-[#202453]/88">
           Our research is concentrated across three transformative domains where deep
           analysis and expert perspective create outsized strategic value.
         </p>
 
-        <div className="
-        mt-6
+        <div className="mt-6
         grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3
         gap-5 sm:gap-6 md:gap-7 lg:gap-6">
 
-          {domains.map((domain, index) => {
-            const isActive = activeIndex === index;
-
+          {domains.map((domain) => {
             return (
               <article
                 key={domain.title}
-                onClick={() => setActiveIndex(index)}
-                className={`
+                className="
                   group flex flex-col h-full
                   p-4 sm:p-5 md:p-6
                   transition-all duration-300
                   cursor-pointer
-                  ${isActive ? "bg-[#26A9E0]" : "bg-white"}
+                  bg-white
+                  hover:bg-[#26A9E0]
                   hover:-translate-y-1 hover:scale-[1.02]
-                `}
+                "
               >
                 <div className="aspect-[1.02/0.72] overflow-hidden bg-[#11153b]">
                   <img
@@ -108,17 +94,30 @@ const TechnologyResearchDomains = () => {
                   />
                 </div>
 
-                <h3 className="mt-3 text-[clamp(1.25rem,1.5vw,1.5rem)] font-bold leading-tight text-[#111111] break-words">
+                <h3 className="
+                  mt-3 text-[clamp(1.25rem,1.5vw,1.5rem)]
+                  font-bold leading-tight break-words
+                  text-[#111111]
+                ">
                   {domain.title}
                 </h3>
 
-                <p className="mt-2 text-[clamp(1.125rem,1vw,1.125rem)] leading-relaxed text-[#202453]/90 break-words flex-grow font-medium">
+                <p className="
+                  mt-2 text-[clamp(1.125rem,1vw,1.125rem)]
+                  leading-relaxed break-words flex-grow font-medium
+                  text-[#202453]/90
+                ">
                   {domain.description}
                 </p>
 
                 <a
                   href="#papers"
-                  className="mt-4 inline-flex items-center gap-2 text-[clamp(1.125rem,1vw,1.125rem)] font-bold uppercase text-[#111111]"
+                  className="
+                    mt-4 inline-flex items-center gap-2
+                    text-[clamp(1.125rem,1vw,1.125rem)]
+                    font-bold uppercase
+                    text-[#111111]
+                  "
                 >
                   Explore Research →
                 </a>

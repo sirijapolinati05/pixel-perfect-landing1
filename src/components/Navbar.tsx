@@ -223,7 +223,7 @@ const Navbar = () => {
 
               <button
                 onClick={handleLogoClick}
-                className={`relative ${logoShellClass} -ml-3`}
+                className={`relative -ml-1 ${logoShellClass}`}
               >
                 <img src={logo} className={darkLogoClass} />
                 <img src={lightLogo} className={lightLogoClass} />
