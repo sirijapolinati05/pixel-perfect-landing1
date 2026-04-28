@@ -6,13 +6,12 @@ import research4 from "../assets/LandingPage/Agentic-Enterprise1.png";
 
 const ResearchSection = () => {
   return (
-    <div> {/* ✅ FULL WRAPPER */}
+    <div>
 
       <section id="latest-research" className="scroll-mt-24 bg-white py-8 sm:py-10 md:py-12 lg:py-14 xl:py-16">
 
         <div className="w-full px-6 sm:px-10 lg:px-20 xl:px-28 2xl:px-36">
 
-          {/* ✅ HEADING BLOCK */}
           <div>
 
             <div className="mb-2 flex items-center justify-center gap-2 sm:gap-3">
@@ -35,7 +34,6 @@ const ResearchSection = () => {
 
           </div>
 
-          {/* ✅ CARDS WRAPPER */}
           <div className="flex justify-center">
             <div className="w-full">
 
@@ -82,8 +80,8 @@ const ResearchSection = () => {
                 {/* SECOND COLUMN */}
                 <div className="flex flex-col gap-4">
 
-                  {/* CHIPSET CARD */}
-                  <div className="relative overflow-hidden rounded-2xl shadow-md h-[160px] sm:h-[180px] md:h-[180px] lg:h-[190px] xl:h-[200px]">
+                  {/* CHIPSET CARD (LIGHT INCREASE ONLY) */}
+                  <div className="relative overflow-hidden rounded-2xl shadow-md h-[180px] sm:h-[180px] md:h-[180px] lg:h-[190px] xl:h-[200px]">
 
                     <img src={research2} className="absolute inset-0 h-full w-full object-cover" />
 

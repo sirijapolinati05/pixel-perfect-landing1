@@ -32,6 +32,7 @@ const TechnologyResearchNavbar = () => {
   const isTechnologyResearch = pathname === "/technology-research";
   const isMicroMarketResearch = pathname === "/micro-market-research";
   const mobileHeaderActive = mobileOpen || isScrolled;
+  const mobileMenuIconColor = mobileHeaderActive ? "#0B1F3A" : "#FFFFFF";
 
   useEffect(() => {
     setMobileOpen(false);
@@ -102,7 +103,7 @@ const TechnologyResearchNavbar = () => {
           : "border-b border-transparent bg-transparent"
       }`}
     >
-      <div className="w-full px-6 sm:px-10 lg:px-20 xl:px-28 2xl:px-36 relative flex items-center py-4 sm:py-5">
+      <div className="relative flex w-full items-center px-3 py-4 sm:px-10 lg:px-20 xl:px-28 2xl:px-36">
 
         {/* 🔥 DESKTOP LAYOUT (UNCHANGED) */}
         <div className="hidden lg:flex w-full items-center">
@@ -152,14 +153,12 @@ const TechnologyResearchNavbar = () => {
             <button
               type="button"
               onClick={() => setMobileOpen((prev) => !prev)}
-              className={`relative z-20 -ml-3 flex h-11 w-11 shrink-0 items-center justify-center ${
-                mobileHeaderActive ? "text-[#0B1F3A]" : "text-white"
-              }`}
+              className="flex h-11 w-11 shrink-0 items-center justify-center -ml-2"
             >
-              <MenuIcon size={25} />
+              <MenuIcon size={25} color={mobileMenuIconColor} />
             </button>
 
-            <Link to="/" className={`relative z-10 -ml-2 flex items-center p-0 ${techLogoShellClass}`}>
+            <Link to="/" className={`relative flex items-center p-0 -ml-3 ${techLogoShellClass}`}>
               <img src={darkLogo} className={darkLogoClass} />
               <img src={lightLogo} className={lightLogoClass} />
             </Link>

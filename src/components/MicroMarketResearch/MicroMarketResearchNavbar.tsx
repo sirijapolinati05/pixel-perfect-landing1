@@ -32,6 +32,7 @@ const MicroMarketResearchNavbar = () => {
   const mobileHeaderActive = mobileOpen || isScrolled;
   const showLightNavbar = isScrolled;
   const showLightLogo = mobileHeaderActive;
+  const mobileMenuIconColor = mobileHeaderActive ? "#0B1F3A" : "#FFFFFF";
 
   useEffect(() => {
     setMobileOpen(false);
@@ -106,7 +107,7 @@ const MicroMarketResearchNavbar = () => {
       }
     `}
     >
-      <div className="w-full px-6 sm:px-10 lg:px-20 xl:px-28 2xl:px-36 relative flex items-center py-4 sm:py-5">
+      <div className="relative flex w-full items-center px-3 py-4 sm:px-10 lg:px-20 xl:px-28 2xl:px-36">
 
         {/* 🔥 DESKTOP LAYOUT (45/55 SPLIT) */}
         <div className="hidden lg:flex w-full items-center">
@@ -159,14 +160,12 @@ const MicroMarketResearchNavbar = () => {
             <button
               type="button"
               onClick={() => setMobileOpen((prev) => !prev)}
-              className={`relative z-20 -mr-1 flex h-11 w-11 shrink-0 items-center justify-center ${
-                mobileHeaderActive ? "text-[#0B1F3A]" : "text-white"
-              }`}
+              className="flex h-11 w-11 shrink-0 items-center justify-center -ml-2"
             >
-              <MenuIcon size={25} />
+              <MenuIcon size={25} color={mobileMenuIconColor} />
             </button>
 
-            <Link to="/" className={`relative z-10 -ml-2 flex items-center ${logoShellClass}`}>
+            <Link to="/" className={`relative flex items-center -ml-3 ${logoShellClass}`}>
               <img src={darkLogo} className={darkLogoClass} />
               <img src={lightLogo} className={lightLogoClass} />
             </Link>
