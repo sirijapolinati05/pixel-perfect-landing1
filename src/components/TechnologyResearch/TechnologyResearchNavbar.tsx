@@ -146,13 +146,13 @@ const TechnologyResearchNavbar = () => {
           </div>
         </div>
 
-        {/* 🔥 MOBILE (ONLY 1 CHANGE HERE) */}
+        {/* 🔥 MOBILE (ONLY CHANGE DONE HERE) */}
         <div className="lg:hidden flex w-full items-center justify-between">
           <div className="flex items-center">
             <button
               type="button"
               onClick={() => setMobileOpen((prev) => !prev)}
-              className={`relative z-20 -ml-1 flex h-11 w-11 shrink-0 items-center justify-center ${
+              className={`relative z-20 -ml-3 flex h-11 w-11 shrink-0 items-center justify-center ${
                 mobileHeaderActive ? "text-[#0B1F3A]" : "text-white"
               }`}
             >
