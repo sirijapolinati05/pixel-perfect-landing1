@@ -71,8 +71,8 @@ const HeroSection = () => {
 
       </div>
 
-      {/* 🔹 MOBILE (UNCHANGED) */}
-      <div className="page-shell relative z-10 pt-0 pb-20 lg:hidden">
+      {/* 🔹 MOBILE */}
+      <div className="page-shell relative z-10 pt-0 pb-6 lg:hidden">
 
         <div className="relative w-screen left-1/2 -translate-x-1/2 h-[420px] sm:h-[480px] md:h-[560px] overflow-hidden">
 
@@ -130,7 +130,7 @@ const HeroSection = () => {
       </div>
 
       {/* 🔸 GRID */}
-      <div className="mt-2 lg:mt-[10px]">
+      <div className="-mt-2 lg:mt-[10px]">
         <div className="grid grid-cols-2 text-center lg:grid-cols-4 auto-rows-fr">
           {[
             { title: "Technology", sub: "Deep Tech Capabilities" },
