@@ -22,7 +22,7 @@ const tierCardClass =
   "group mx-auto flex h-full w-full sm:max-w-[clamp(240px,18vw,360px)] max-sm:max-w-[340px] flex-col rounded-xl border border-[#dfe4ea] bg-white px-4 pt-6 pb-6 text-center shadow-[0_4px_10px_rgba(8,18,59,0.15)] transition-all duration-300 hover:-translate-y-2 hover:border-[#17204c] hover:bg-[#17204c] hover:shadow-[0_20px_34px_rgba(8,18,59,0.24)] sm:min-h-[clamp(300px,22vw,480px)] max-sm:min-h-[380px] sm:mx-0";
 
 const tierGridClass =
-  "grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3";
+  "grid grid-cols-1 gap-8 sm:grid-cols-2 md:flex md:flex-wrap md:justify-start lg:gap-10 xl:gap-12";
 
 const TierThreeCard = ({ name, image }) => (
   <article className={tierCardClass}>
@@ -69,7 +69,6 @@ const AnalystTeamTierThree = () => {
     >
       <div className="mx-auto w-full px-6 sm:px-10 lg:px-20 xl:px-28 2xl:px-36">
         <div className="max-w-[1200px]">
-
           <div className="mb-4">
             <p className="flex items-center gap-2 text-[clamp(1.125rem,1.2vw,1.375rem)] font-bold text-[#20254d]">
               <span className="h-px w-6 bg-[#20254d]" />
@@ -83,49 +82,29 @@ const AnalystTeamTierThree = () => {
           </h2>
 
           <div className="mt-12 space-y-12 lg:mt-16">
-
-            {/* Specialists (unchanged) */}
             <div className="grid gap-6 lg:grid-cols-[180px_1fr]">
               <p className="flex items-center text-[18px] font-semibold lg:min-h-[44px]">
                 Research Specialists
               </p>
 
               <div className={tierGridClass}>
-                {researchSpecialists.map((member, index) => (
-                  <div
-                    key={member.name}
-                    className={index === 1 ? "md:translate-x-4 lg:translate-x-8" : ""}
-                  >
-                    <TierThreeCard {...member} />
-                  </div>
+                {researchSpecialists.map((member) => (
+                  <TierThreeCard key={member.name} {...member} />
                 ))}
               </div>
             </div>
 
-            {/* Analysts (ONLY Shatakshi changed) */}
             <div className="grid gap-6 lg:grid-cols-[180px_1fr]">
               <p className="flex items-center text-[18px] font-semibold lg:min-h-[44px]">
                 Research Analysts
               </p>
 
               <div className={tierGridClass}>
-                {researchAnalysts.map((member, index) => (
-                  <div
-                    key={member.name}
-                    className={
-                      index === 1
-                        ? "md:translate-x-4 lg:translate-x-8"
-                        : index === 2
-                        ? "md:translate-x-8 lg:translate-x-16"  // ✅ only this changed
-                        : ""
-                    }
-                  >
-                    <TierThreeCard {...member} />
-                  </div>
+                {researchAnalysts.map((member) => (
+                  <TierThreeCard key={member.name} {...member} />
                 ))}
               </div>
             </div>
-
           </div>
         </div>
       </div>

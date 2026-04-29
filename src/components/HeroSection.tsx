@@ -2,11 +2,9 @@ import heroImg from "@/assets/LandingPage/home-hero.png";
 
 const HeroSection = () => {
 
+  // ✅ CONSISTENT BUTTON STYLE (ALL BROWSERS SAME)
   const ctaBaseClass =
-    "flex justify-center items-center whitespace-nowrap rounded-full px-4 py-2.5 text-[15px] font-semibold text-[#081A34] transition-all duration-200 hover:-translate-y-0.5 hover:scale-[1.02]";
-
-  const cta2xlClass =
-    "2xl:px-8 2xl:py-5 2xl:text-[20px] 2xl:rounded-[999px] 2xl:hover:scale-105";
+    "flex justify-center items-center whitespace-nowrap rounded-full px-5 py-3 text-[16px] sm:px-6 sm:py-3.5 sm:text-[17px] lg:px-6 lg:py-3.5 lg:text-[18px] font-semibold text-[#081A34] transition-all duration-200 hover:-translate-y-0.5 hover:scale-[1.03]";
 
   const descriptionText = (
     <>
@@ -24,9 +22,9 @@ const HeroSection = () => {
       {/* 🔥 DESKTOP */}
       <div className="hidden lg:flex relative w-full">
 
-        <div className="w-[45%] z-10 pl-20 xl:pl-28 2xl:pl-36 pt-44 xl:pt-48 2xl:pt-56">
+        <div className="w-[45%] z-10 pl-20 xl:pl-28 pt-44 xl:pt-48">
 
-          <h1 className="font-serif leading-[1.05] lg:leading-[1.05] text-[clamp(2.5rem,5vw,4.5rem)] lg:text-[clamp(3rem,4.5vw,5.5rem)]">
+          <h1 className="font-serif leading-[1.05] text-[clamp(2.5rem,5vw,4.5rem)] lg:text-[clamp(3rem,4.5vw,5.5rem)]">
             <span className="block">Thought-Shaping</span>
             <span className="block">Intelligence on</span>
 
@@ -48,11 +46,12 @@ const HeroSection = () => {
             </span>
           </h1>
 
-          <div className="mt-10 flex gap-4 2xl:gap-6">
-            <div className={`${ctaBaseClass} ${cta2xlClass} bg-[#3CC8FF]`}>
+          {/* ✅ BUTTONS */}
+          <div className="mt-10 flex gap-4 xl:gap-5">
+            <div className={`${ctaBaseClass} bg-[#3CC8FF]`}>
               Explore Our Practices
             </div>
-            <div className={`${ctaBaseClass} ${cta2xlClass} bg-[#43E0B1]`}>
+            <div className={`${ctaBaseClass} bg-[#43E0B1]`}>
               CXO AI Research
             </div>
           </div>
@@ -108,11 +107,12 @@ const HeroSection = () => {
                 </span>
               </h1>
 
+              {/* ✅ MOBILE BUTTONS */}
               <div className="mt-6 flex gap-3 flex-wrap">
-                <div className={`${ctaBaseClass} ${cta2xlClass} bg-[#3CC8FF]`}>
+                <div className={`${ctaBaseClass} bg-[#3CC8FF]`}>
                   Explore Our Practices
                 </div>
-                <div className={`${ctaBaseClass} ${cta2xlClass} bg-[#43E0B1]`}>
+                <div className={`${ctaBaseClass} bg-[#43E0B1]`}>
                   CXO AI Research
                 </div>
               </div>
@@ -130,7 +130,7 @@ const HeroSection = () => {
       </div>
 
       {/* 🔸 GRID */}
-      <div className="mt-2 lg:mt-[12px] px-6 sm:px-10 lg:px-20 xl:px-28 2xl:px-36">
+      <div className="mt-2 lg:mt-[12px] px-6 sm:px-10 lg:px-20 xl:px-28">
 
         <div className="grid grid-cols-2 text-center lg:grid-cols-4 auto-rows-fr">
 
@@ -157,7 +157,6 @@ const HeroSection = () => {
           ))}
         </div>
 
-        {/* Bottom Line */}
         <div className="border-t border-white/100 text-center py-8 flex flex-col items-center">
           <h3 className="text-[clamp(1.25rem,2.5vw,2rem)] text-[#5AE0BB] font-serif font-bold">
             Practices

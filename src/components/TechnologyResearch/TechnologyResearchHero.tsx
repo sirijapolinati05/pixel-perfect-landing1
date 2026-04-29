@@ -21,7 +21,7 @@ const TechnologyResearchHero = () => {
       <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(8,15,67,0.94)_0%,rgba(8,15,67,0.82)_38%,rgba(8,15,67,0.52)_64%,rgba(8,15,67,0.24)_100%)]" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_28%,rgba(52,90,255,0.22),transparent_34%)]" />
 
-      <div className="w-full px-6 sm:px-10 lg:px-20 xl:px-28 2xl:px-36 relative z-10 mx-auto">
+      <div className="w-full px-6 sm:px-10 lg:px-20 xl:px-28 relative z-10 mx-auto">
         <div className="max-w-[860px] pt-6 sm:pt-8 md:pt-10 lg:pt-20">
           <h1 className="technology-research-hero-title text-[clamp(2rem,5vw,3.5rem)] font-semibold leading-[1.05] tracking-[-0.03em]">
             Thought Shaping Research for Quantum, Chipsets & AI
@@ -55,10 +55,10 @@ const TechnologyResearchHero = () => {
             </div>
           </div>
 
-          {/* ✅ FIXED BUTTON */}
+          {/* ✅ CONSISTENT BUTTON */}
           <button
             type="button"
-            className="technology-research-hero-cta mx-auto mt-6 inline-flex items-center justify-center whitespace-nowrap rounded-full bg-[linear-gradient(180deg,#31b9ee_0%,#249fd8_100%)] px-4 py-2.5 2xl:px-8 2xl:py-5 text-[clamp(0.9375rem,1vw,1.125rem)] font-semibold !text-black transition-transform duration-200 hover:-translate-y-0.5 sm:mx-0"
+            className="technology-research-hero-cta mx-auto mt-6 inline-flex items-center justify-center whitespace-nowrap rounded-full bg-[linear-gradient(180deg,#31b9ee_0%,#249fd8_100%)] px-5 py-3 sm:px-6 sm:py-3.5 lg:px-6 lg:py-3.5 text-[16px] sm:text-[17px] lg:text-[18px] font-semibold !text-black transition-transform duration-200 hover:-translate-y-0.5 hover:scale-[1.03] sm:mx-0"
           >
             Explore Thought Shaping
           </button>
