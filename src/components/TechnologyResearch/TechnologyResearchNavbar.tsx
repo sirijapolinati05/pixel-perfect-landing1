@@ -117,12 +117,13 @@ const TechnologyResearchNavbar = () => {
               <img src={lightLogo} className={lightLogoClass} />
             </Link>
 
-            <Link
-              to="/technology-research"
-              className={getNavLinkClassName(isTechnologyResearch)}
-            >
-              Technology Research
-            </Link>
+              <Link
+                to="/technology-research"
+                className={getNavLinkClassName(isTechnologyResearch)}
+                style={{ transform: "translateX(20px)" }}
+              >
+                Technology Research
+              </Link>
           </div>
 
           <div className="w-[55%] flex items-center justify-between gap-6">

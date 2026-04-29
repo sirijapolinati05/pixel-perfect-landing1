@@ -119,18 +119,19 @@ const MicroMarketResearchNavbar = () => {
               <img src={darkLogo} className={darkLogoClass} />
               <img src={lightLogo} className={lightLogoClass} />
             </Link>
-
-            <Link
-              to="/technology-research"
-              className={getLinkClassName(pathname === "/technology-research")}
-            >
-              Technology Research
-            </Link>
           </div>
 
           {/* 🔸 RIGHT (55%) → Remaining Items & Subscribe */}
-          <div className="w-[55%] flex items-center justify-between">
+          <div className="w-[55%] flex items-center justify-between gap-6">
             <div className="flex gap-6 xl:gap-8 2xl:gap-10">
+              <Link
+                to="/technology-research"
+                className={getLinkClassName(pathname === "/technology-research")}
+                style={{ transform: "translateX(20px)" }}
+              >
+                Technology Research
+              </Link>
+
               <Link
                 to="/micro-market-research"
                 className={getLinkClassName(pathname === "/micro-market-research")}
