@@ -26,7 +26,7 @@ const HeroSection = () => {
 
         <div className="w-[45%] z-10 pl-20 xl:pl-28 2xl:pl-36 pt-44 xl:pt-48 2xl:pt-56">
 
-          <h1 className="font-serif leading-[1.05] text-[clamp(2.5rem,5vw,4.5rem)] lg:text-[clamp(3rem,4.5vw,5.5rem)]">
+          <h1 className="font-serif leading-[1.05] lg:leading-[1.05] text-[clamp(2.5rem,5vw,4.5rem)] lg:text-[clamp(3rem,4.5vw,5.5rem)]">
             <span className="block">Thought-Shaping</span>
             <span className="block">Intelligence on</span>
 
@@ -129,8 +129,8 @@ const HeroSection = () => {
 
       </div>
 
-      {/* 🔸 GRID (ONLY INNER LINES) */}
-      <div className="-mt-2 lg:mt-[10px] px-6 sm:px-10 lg:px-20 xl:px-28 2xl:px-36">
+      {/* 🔸 GRID */}
+      <div className="mt-2 lg:mt-[12px] px-6 sm:px-10 lg:px-20 xl:px-28 2xl:px-36">
 
         <div className="grid grid-cols-2 text-center lg:grid-cols-4 auto-rows-fr">
 
@@ -157,7 +157,7 @@ const HeroSection = () => {
           ))}
         </div>
 
-        {/* ONLY THIS LINE REMAINS */}
+        {/* Bottom Line */}
         <div className="border-t border-white/100 text-center py-8 flex flex-col items-center">
           <h3 className="text-[clamp(1.25rem,2.5vw,2rem)] text-[#5AE0BB] font-serif font-bold">
             Practices
