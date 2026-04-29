@@ -8,8 +8,6 @@ const HeroSection = () => {
   const cta2xlClass =
     "2xl:px-8 2xl:py-5 2xl:text-[20px] 2xl:rounded-[999px] 2xl:hover:scale-105";
 
-  const statDividerClass = "border-white border-opacity-100";
-
   const descriptionText = (
     <>
       RESEARCHFABRIC™ delivers practitioner-led Smart research on{" "}
@@ -26,13 +24,8 @@ const HeroSection = () => {
       {/* 🔥 DESKTOP */}
       <div className="hidden lg:flex relative w-full">
 
-        <div className="
-          w-[45%] z-10
-          pl-20 xl:pl-28 2xl:pl-36
-          pt-44 xl:pt-48 2xl:pt-56
-        ">
+        <div className="w-[45%] z-10 pl-20 xl:pl-28 2xl:pl-36 pt-44 xl:pt-48 2xl:pt-56">
 
-          {/* ✅ FIXED LINE HEIGHT */}
           <h1 className="font-serif leading-[1.05] text-[clamp(2.5rem,5vw,4.5rem)] lg:text-[clamp(3rem,4.5vw,5.5rem)]">
             <span className="block">Thought-Shaping</span>
             <span className="block">Intelligence on</span>
@@ -93,7 +86,6 @@ const HeroSection = () => {
           <div className="absolute inset-0 flex flex-col justify-center px-6">
             <div className="mt-12 sm:mt-16 md:mt-20">
 
-              {/* ✅ MOBILE FIX */}
               <h1 className="font-serif leading-[1.1] text-[clamp(2rem,8vw,3rem)]">
                 <span className="block">Thought-Shaping</span>
                 <span className="block">Intelligence on</span>
@@ -137,20 +129,23 @@ const HeroSection = () => {
 
       </div>
 
-      {/* 🔸 GRID (UNCHANGED) */}
-      <div className="-mt-2 lg:mt-[10px]">
+      {/* 🔸 GRID (ONLY INNER LINES) */}
+      <div className="-mt-2 lg:mt-[10px] px-6 sm:px-10 lg:px-20 xl:px-28 2xl:px-36">
+
         <div className="grid grid-cols-2 text-center lg:grid-cols-4 auto-rows-fr">
+
           {[
             { title: "Technology", sub: "Deep Tech Capabilities" },
             { title: "Markets", sub: "B2B, B2C & B2G" },
             { title: "Products", sub: "Focused Functionalities" },
             { title: "Business", sub: "Sub & Micro-Sectors" },
           ].map((item, index) => (
-            <div key={item.title}
+            <div
+              key={item.title}
               className={`flex flex-col justify-center items-center px-3 pt-8 pb-6
-              ${index % 2 === 0 ? `border-r ${statDividerClass}` : ""}
-              ${index < 2 ? `border-b ${statDividerClass} lg:border-b-0` : ""}
-              ${index < 3 ? `lg:border-r ${statDividerClass}` : ""}`}
+              ${index % 2 === 0 ? `border-r border-white/100` : ""}
+              ${index < 2 ? `border-b border-white/100 lg:border-b-0` : ""}
+              ${index < 3 ? `lg:border-r border-white/100` : ""}`}
             >
               <h3 className="text-[clamp(1.25rem,2.5vw,2rem)] text-[#5AE0BB] font-serif font-bold">
                 {item.title}
@@ -162,7 +157,8 @@ const HeroSection = () => {
           ))}
         </div>
 
-        <div className={`border-t ${statDividerClass} text-center py-8 flex flex-col items-center`}>
+        {/* ONLY THIS LINE REMAINS */}
+        <div className="border-t border-white/100 text-center py-8 flex flex-col items-center">
           <h3 className="text-[clamp(1.25rem,2.5vw,2rem)] text-[#5AE0BB] font-serif font-bold">
             Practices
           </h3>
@@ -170,6 +166,7 @@ const HeroSection = () => {
             Research Engineering
           </p>
         </div>
+
       </div>
 
     </section>
