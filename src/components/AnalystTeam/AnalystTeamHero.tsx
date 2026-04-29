@@ -52,20 +52,13 @@ const AnalystTeamHero = () => {
         />
       </div>
 
-      {/* CURVES */}
-      <div className="absolute bottom-0 right-0 h-[140px] w-[160px] sm:h-[180px] sm:w-[210px] md:h-[220px] md:w-[260px] lg:h-[260px] lg:w-[300px] xl:h-[300px] xl:w-[340px] 2xl:h-[360px] 2xl:w-[420px] rounded-tl-[80px] sm:rounded-tl-[110px] md:rounded-tl-[140px] xl:rounded-tl-[180px] border-l border-t border-[#2A49A5]/60 opacity-80" />
-
-      <div className="absolute bottom-0 right-0 h-[120px] w-[140px] sm:h-[150px] sm:w-[180px] md:h-[190px] md:w-[220px] lg:h-[220px] lg:w-[260px] xl:h-[250px] xl:w-[300px] 2xl:h-[300px] 2xl:w-[360px] rounded-tl-[70px] sm:rounded-tl-[100px] md:rounded-tl-[120px] xl:rounded-tl-[150px] border-l border-t border-[#2A49A5]/60 opacity-70" />
-
-      <div className="absolute bottom-0 right-0 h-[100px] w-[120px] sm:h-[130px] sm:w-[150px] md:h-[160px] md:w-[190px] lg:h-[190px] lg:w-[220px] xl:h-[210px] xl:w-[260px] 2xl:h-[260px] 2xl:w-[300px] rounded-tl-[60px] sm:rounded-tl-[80px] md:rounded-tl-[100px] xl:rounded-tl-[130px] border-l border-t border-[#2A49A5]/60 opacity-60" />
-
       {/* CONTENT */}
       <div
         className="
         w-full px-6 sm:px-10 lg:px-20 xl:px-28 2xl:px-36 
         relative z-10 mx-auto flex justify-center text-center
 
-        /* 🔥 MOVED UP */
+        /* MOVED UP */
         pt-[74px]
         sm:pt-[88px]
         md:pt-[108px]

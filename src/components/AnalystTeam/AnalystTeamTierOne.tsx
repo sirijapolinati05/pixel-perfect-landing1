@@ -48,7 +48,7 @@ const AnalystTeamTierOne = () => {
           </h2>
         </div>
 
-        {/* GRID â†’ FLEX */}
+        {/* GRID TO FLEX */}
         <div className="mt-12 lg:mt-16">
           <div className="
             grid
@@ -100,7 +100,7 @@ const AnalystTeamTierOne = () => {
                   {/* CONTENT */}
                   <div className="flex flex-col items-center flex-grow w-full">
 
-                    {/* NAME ðŸ”¥ INCREASED EVERYWHERE */}
+                    {/* NAME */}
                     <h3
                       className="
                         font-normal leading-snug group-hover:text-white
