@@ -37,15 +37,12 @@ const ProcessSection = () => {
 
   return (
     <div>
-
       <section
         id="process"
         className="overflow-hidden bg-process-blue py-10 sm:py-12 md:py-14 lg:py-12 xl:py-14 2xl:py-16"
       >
         <div className="w-full px-6 sm:px-10 lg:px-20 xl:px-28 2xl:px-36 text-center">
-
           <div>
-
             <div className="mb-2 flex items-center justify-center gap-2 sm:gap-3">
               <span className="w-4 sm:w-6 h-[1px] bg-current opacity-40"></span>
 
@@ -63,11 +60,9 @@ const ProcessSection = () => {
             <p className="mx-auto mb-6 max-w-xl font-serif text-navy font-medium text-[clamp(1.125rem,1.1vw,1.25rem)] sm:mb-8 sm:max-w-2xl md:max-w-3xl whitespace-nowrap">
               Every Thought Shaping Paper follows a rigorous four-phase methodology that ensures depth, accuracy, and strategic relevance.
             </p>
-
           </div>
 
           <div className="relative">
-
             <div className="hidden lg:block absolute top-[12px] left-0 right-0 h-[2px] bg-navy/30 z-0" />
 
             <div className="relative z-10 mb-4 hidden lg:grid grid-cols-4">
@@ -87,18 +82,13 @@ const ProcessSection = () => {
                 </div>
               ))}
             </div>
-
           </div>
 
           <div className="flex justify-center">
-
             <div className="w-full">
-
               <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-4 lg:gap-6">
-
                 {steps.map((step, index) => (
                   <div key={step.title} className="relative">
-
                     {index === 3 && (
                       <img
                         src={typographicImg}
@@ -121,11 +111,11 @@ const ProcessSection = () => {
                           : "hover:bg-white hover:shadow-[0_18px_40px_rgba(10,31,68,0.16)]"
                       }`}
                     >
-
+                      {/* ✅ Updated Image Height */}
                       <img
                         src={step.image}
                         alt={step.title}
-                        className="mb-3 w-full object-cover h-36 sm:h-40 md:h-40 lg:h-44 xl:h-52"
+                        className="mb-3 w-full object-cover h-36 sm:h-40 md:h-40 lg:h-32 xl:h-36"
                       />
 
                       <h4 className="mb-2 font-serif font-bold text-navy text-[clamp(1.25rem,1.5vw,1.5rem)]">
@@ -135,19 +125,14 @@ const ProcessSection = () => {
                       <p className="font-serif text-navy/90 text-[clamp(1.125rem,1vw,1.125rem)] leading-relaxed font-medium">
                         {step.description}
                       </p>
-
                     </button>
                   </div>
                 ))}
-
               </div>
-
             </div>
           </div>
-
         </div>
       </section>
-
     </div>
   );
 };

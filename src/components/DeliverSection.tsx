@@ -34,8 +34,7 @@ const deliverables = [
 
 const DeliverSection = () => {
   return (
-    <div> {/* ✅ FULL WRAPPER */}
-
+    <div>
       <section className="relative overflow-hidden bg-[#031126] py-10 sm:py-12 md:py-14 lg:py-16 xl:py-20">
 
         {/* BACKGROUND */}
@@ -49,20 +48,14 @@ const DeliverSection = () => {
 
         <div className="w-full px-6 sm:px-10 lg:px-20 xl:px-28 2xl:px-36 relative z-10">
 
-          {/* ✅ HEADING + CARDS IN ONE DIV */}
           <div>
 
             {/* HEADING */}
-            <h3
-              className="
-              mb-6 inline-block border-b border-white/40 pb-2
-              text-[clamp(1.625rem,3.5vw,2.5rem)]
-              font-serif text-white
-            ">
+            <h3 className="mb-6 inline-block border-b border-white/40 pb-2 text-[clamp(1.625rem,3.5vw,2.5rem)] font-serif text-white">
               What We Deliver
             </h3>
 
-            {/* ✅ GRID CARDS (RESPONSIVE) */}
+            {/* GRID */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
 
               {deliverables.map((item) => (
@@ -86,10 +79,11 @@ const DeliverSection = () => {
                     className="mb-3 sm:mb-4 h-7 w-7 sm:h-8 sm:w-8"
                   />
 
+                  {/* ✅ UPDATED HEADING SIZE */}
                   <h4
                     className="
                     mb-2 font-bold text-[#0A1F44] font-serif
-                    text-[clamp(1.375rem,2vw,1.75rem)]
+                    text-[clamp(1.2rem,1.5vw,1.5rem)]
                   ">
                     {item.title}
                   </h4>
@@ -112,7 +106,6 @@ const DeliverSection = () => {
 
         </div>
       </section>
-
     </div>
   );
 };
